@@ -1,5 +1,6 @@
 
 using System.Runtime.InteropServices;
+using Microsoft.VisualBasic;
 
 namespace ClinicManagementSystemFinal
 {
@@ -125,8 +126,27 @@ namespace ClinicManagementSystemFinal
             }
         }
 
+        private void btnClinics_Click(object sender, EventArgs e)
+        {
 
+            loadform(new Clinic());
+        }
 
+        private void loadform(object Form)
+        {
+            if (this.panelDesktop.Controls.Count > 0)
+                this.panelDesktop.Controls.RemoveAt(0);
+            Form f = Form as Form;
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            this.panelDesktop.Controls.Add(f);
+            this.panelDesktop.Tag = f;
+            f.Show();
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Create an account to access the software!");
+        }
     }
 }

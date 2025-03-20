@@ -38,12 +38,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             pictureBox1 = new PictureBox();
-            Dashboard = new Label();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
             label4 = new Label();
-            panel1 = new Panel();
             panel2 = new Panel();
             label5 = new Label();
             button1 = new Button();
@@ -51,14 +46,14 @@
             panelTitleBar = new Guna.UI2.WinForms.Guna2Panel();
             guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            pictureBox2 = new PictureBox();
+            panelDesktop = new Guna.UI2.WinForms.Guna2Panel();
+            pictureBox4 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
-            guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            panelDesktop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -71,54 +66,6 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // Dashboard
-            // 
-            Dashboard.AutoSize = true;
-            Dashboard.Cursor = Cursors.Hand;
-            Dashboard.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Dashboard.ForeColor = Color.Navy;
-            Dashboard.Location = new Point(323, 41);
-            Dashboard.Name = "Dashboard";
-            Dashboard.Size = new Size(97, 20);
-            Dashboard.TabIndex = 3;
-            Dashboard.Text = "Dashboard";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Cursor = Cursors.Hand;
-            label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Navy;
-            label1.Location = new Point(448, 41);
-            label1.Name = "label1";
-            label1.Size = new Size(61, 20);
-            label1.TabIndex = 4;
-            label1.Text = "Clinics";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Cursor = Cursors.Hand;
-            label2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.Navy;
-            label2.Location = new Point(536, 41);
-            label2.Name = "label2";
-            label2.Size = new Size(77, 20);
-            label2.TabIndex = 5;
-            label2.Text = "Services";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Cursor = Cursors.Hand;
-            label3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.Navy;
-            label3.Location = new Point(636, 41);
-            label3.Name = "label3";
-            label3.Size = new Size(73, 20);
-            label3.TabIndex = 6;
-            label3.Text = "Support";
-            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -129,14 +76,6 @@
             label4.Size = new Size(350, 90);
             label4.TabIndex = 7;
             label4.Text = "Clinic Management\r\nSystem\r\n";
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.MidnightBlue;
-            panel1.Location = new Point(342, 63);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(56, 3);
-            panel1.TabIndex = 8;
             // 
             // panel2
             // 
@@ -170,6 +109,7 @@
             button1.TabIndex = 11;
             button1.Text = "Learn More";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -192,11 +132,6 @@
             panelTitleBar.Controls.Add(guna2PictureBox2);
             panelTitleBar.Controls.Add(guna2PictureBox1);
             panelTitleBar.Controls.Add(pictureBox1);
-            panelTitleBar.Controls.Add(label3);
-            panelTitleBar.Controls.Add(panel1);
-            panelTitleBar.Controls.Add(Dashboard);
-            panelTitleBar.Controls.Add(label1);
-            panelTitleBar.Controls.Add(label2);
             panelTitleBar.CustomizableEdges = customizableEdges5;
             panelTitleBar.Dock = DockStyle.Top;
             panelTitleBar.Location = new Point(0, 0);
@@ -232,37 +167,37 @@
             guna2PictureBox1.TabIndex = 9;
             guna2PictureBox1.TabStop = false;
             // 
-            // guna2Panel1
+            // panelDesktop
             // 
-            guna2Panel1.Controls.Add(label5);
-            guna2Panel1.Controls.Add(pictureBox2);
-            guna2Panel1.Controls.Add(label4);
-            guna2Panel1.Controls.Add(button2);
-            guna2Panel1.Controls.Add(panel2);
-            guna2Panel1.Controls.Add(button1);
-            guna2Panel1.CustomizableEdges = customizableEdges7;
-            guna2Panel1.Location = new Point(0, 135);
-            guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Panel1.Size = new Size(925, 428);
-            guna2Panel1.TabIndex = 15;
+            panelDesktop.Controls.Add(pictureBox4);
+            panelDesktop.Controls.Add(label5);
+            panelDesktop.Controls.Add(label4);
+            panelDesktop.Controls.Add(button2);
+            panelDesktop.Controls.Add(panel2);
+            panelDesktop.Controls.Add(button1);
+            panelDesktop.CustomizableEdges = customizableEdges7;
+            panelDesktop.Location = new Point(0, 135);
+            panelDesktop.Name = "panelDesktop";
+            panelDesktop.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            panelDesktop.Size = new Size(922, 428);
+            panelDesktop.TabIndex = 15;
             // 
-            // pictureBox2
+            // pictureBox4
             // 
-            pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
-            pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox2.Location = new Point(414, -12);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(511, 437);
-            pictureBox2.TabIndex = 14;
-            pictureBox2.TabStop = false;
+            pictureBox4.BackgroundImage = (Image)resources.GetObject("pictureBox4.BackgroundImage");
+            pictureBox4.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox4.Location = new Point(414, -9);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(511, 437);
+            pictureBox4.TabIndex = 15;
+            pictureBox4.TabStop = false;
             // 
             // FrontPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(925, 565);
-            Controls.Add(guna2Panel1);
+            Controls.Add(panelDesktop);
             Controls.Add(panelTitleBar);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrontPage";
@@ -270,12 +205,11 @@
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panelTitleBar.ResumeLayout(false);
-            panelTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
-            guna2Panel1.ResumeLayout(false);
-            guna2Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            panelDesktop.ResumeLayout(false);
+            panelDesktop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
         }
 
@@ -283,12 +217,10 @@
 
         private PictureBox pictureBox1;
         private PictureBox pictureBox3;
-        private Label Dashboard;
         private Label label1;
         private Label label2;
         private Label label3;
         private Label label4;
-        private Panel panel1;
         private Panel panel2;
         private Label label5;
         private Button button1;
@@ -299,5 +231,7 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private PictureBox pictureBox2;
+        private Guna.UI2.WinForms.Guna2Panel panelDesktop;
+        private PictureBox pictureBox4;
     }
 }

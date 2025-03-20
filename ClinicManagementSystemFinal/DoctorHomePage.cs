@@ -200,6 +200,16 @@ namespace ClinicManagementSystemFinal
             HomePage HP = new HomePage();
             HP.Show();
         }
+
+        private void btnDoctor_Click(object sender, EventArgs e)
+        {
+            loadform(new ManageClinic());
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            loadform(new ManageClients());
+        }
     }
 }
 

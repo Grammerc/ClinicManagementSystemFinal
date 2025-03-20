@@ -40,6 +40,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panelMenu = new Guna.UI2.WinForms.Guna2Panel();
+            iconButton1 = new FontAwesome.Sharp.IconButton();
             btnSignOut = new FontAwesome.Sharp.IconButton();
             btnDoctor = new FontAwesome.Sharp.IconButton();
             btnAppointment = new FontAwesome.Sharp.IconButton();
@@ -52,7 +53,6 @@
             nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
             label2 = new Label();
             panelDesktop = new Guna.UI2.WinForms.Guna2Panel();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
             panelMenu.SuspendLayout();
             guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -75,6 +75,26 @@
             panelMenu.ShadowDecoration.CustomizableEdges = customizableEdges4;
             panelMenu.Size = new Size(230, 565);
             panelMenu.TabIndex = 0;
+            // 
+            // iconButton1
+            // 
+            iconButton1.Dock = DockStyle.Top;
+            iconButton1.FlatAppearance.BorderSize = 0;
+            iconButton1.FlatStyle = FlatStyle.Flat;
+            iconButton1.IconChar = FontAwesome.Sharp.IconChar.Users;
+            iconButton1.IconColor = Color.Black;
+            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton1.IconSize = 30;
+            iconButton1.ImageAlign = ContentAlignment.MiddleLeft;
+            iconButton1.Location = new Point(0, 271);
+            iconButton1.Name = "iconButton1";
+            iconButton1.Padding = new Padding(10, 15, 0, 5);
+            iconButton1.Size = new Size(230, 49);
+            iconButton1.TabIndex = 9;
+            iconButton1.Tag = "        Manage Clients";
+            iconButton1.Text = "        Manage Clients";
+            iconButton1.UseVisualStyleBackColor = true;
+            iconButton1.Click += iconButton1_Click;
             // 
             // btnSignOut
             // 
@@ -114,6 +134,7 @@
             btnDoctor.Tag = "   Edit Clinic";
             btnDoctor.Text = "   Edit Clinic";
             btnDoctor.UseVisualStyleBackColor = true;
+            btnDoctor.Click += btnDoctor_Click;
             // 
             // btnAppointment
             // 
@@ -270,25 +291,6 @@
             panelDesktop.Size = new Size(695, 509);
             panelDesktop.TabIndex = 2;
             panelDesktop.Paint += panelDesktop_Paint;
-            // 
-            // iconButton1
-            // 
-            iconButton1.Dock = DockStyle.Top;
-            iconButton1.FlatAppearance.BorderSize = 0;
-            iconButton1.FlatStyle = FlatStyle.Flat;
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.Users;
-            iconButton1.IconColor = Color.Black;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.IconSize = 30;
-            iconButton1.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton1.Location = new Point(0, 271);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Padding = new Padding(10, 15, 0, 5);
-            iconButton1.Size = new Size(230, 49);
-            iconButton1.TabIndex = 9;
-            iconButton1.Tag = "        Manage Clients";
-            iconButton1.Text = "        Manage Clients";
-            iconButton1.UseVisualStyleBackColor = true;
             // 
             // DoctorHomePage
             // 

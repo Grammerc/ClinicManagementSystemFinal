@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace ClinicManagementSystemFinal
 {
-    public partial class Services: Form
+    public partial class Services : Form
     {
         public Services()
         {
             InitializeComponent();
+        }
+
+        private void guna2PictureBox43_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

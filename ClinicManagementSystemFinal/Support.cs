@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace ClinicManagementSystemFinal
 {
-    public partial class Support: Form
+    public partial class Support : Form
     {
         public Support()
         {
             InitializeComponent();
+        }
+
+        private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -83,55 +83,55 @@
             // 
             Dashboard.AutoSize = true;
             Dashboard.Cursor = Cursors.Hand;
-            Dashboard.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Dashboard.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Dashboard.ForeColor = Color.Navy;
             Dashboard.Location = new Point(351, 39);
             Dashboard.Name = "Dashboard";
-            Dashboard.Size = new Size(95, 19);
+            Dashboard.Size = new Size(97, 20);
             Dashboard.TabIndex = 3;
             Dashboard.Text = "Dashboard";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Navy;
             label1.Location = new Point(476, 39);
             label1.Name = "label1";
-            label1.Size = new Size(65, 19);
+            label1.Size = new Size(72, 20);
             label1.TabIndex = 4;
             label1.Text = "Doctors";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Navy;
             label2.Location = new Point(564, 39);
             label2.Name = "label2";
-            label2.Size = new Size(71, 19);
+            label2.Size = new Size(77, 20);
             label2.TabIndex = 5;
             label2.Text = "Services";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Navy;
             label3.Location = new Point(664, 39);
             label3.Name = "label3";
-            label3.Size = new Size(68, 19);
+            label3.Size = new Size(73, 20);
             label3.TabIndex = 6;
             label3.Text = "Support";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Century Gothic", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Font = new Font("Microsoft Sans Serif", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.SlateGray;
-            label4.Location = new Point(-2, 171);
+            label4.Location = new Point(12, 166);
             label4.Name = "label4";
-            label4.Size = new Size(355, 84);
+            label4.Size = new Size(314, 78);
             label4.TabIndex = 7;
             label4.Text = "Clinic Management\r\nSystem\r\n";
             // 
@@ -154,11 +154,11 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.SlateGray;
             label5.Location = new Point(55, 343);
             label5.Name = "label5";
-            label5.Size = new Size(53, 20);
+            label5.Size = new Size(46, 18);
             label5.TabIndex = 10;
             label5.Text = "label5";
             // 

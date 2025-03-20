@@ -35,13 +35,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panelMenu = new Guna.UI2.WinForms.Guna2Panel();
             btnSignOut = new FontAwesome.Sharp.IconButton();
-            btnAbout = new FontAwesome.Sharp.IconButton();
             btnSupport = new FontAwesome.Sharp.IconButton();
             btnServices = new FontAwesome.Sharp.IconButton();
             btnDoctor = new FontAwesome.Sharp.IconButton();
@@ -51,10 +50,10 @@
             pictureBox1 = new PictureBox();
             btnMenu = new FontAwesome.Sharp.IconButton();
             panelTitleBar = new Guna.UI2.WinForms.Guna2Panel();
+            btnSwitch = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
             label2 = new Label();
             panelDesktop = new Guna.UI2.WinForms.Guna2Panel();
-            guna2ToggleSwitch1 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             panelMenu.SuspendLayout();
             guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -63,9 +62,8 @@
             // 
             // panelMenu
             // 
-            panelMenu.BackColor = Color.FromArgb(114, 137, 218);
+            panelMenu.BackColor = Color.CornflowerBlue;
             panelMenu.Controls.Add(btnSignOut);
-            panelMenu.Controls.Add(btnAbout);
             panelMenu.Controls.Add(btnSupport);
             panelMenu.Controls.Add(btnServices);
             panelMenu.Controls.Add(btnDoctor);
@@ -98,32 +96,14 @@
             btnSignOut.Tag = "Sign Out";
             btnSignOut.Text = "Sign Out";
             btnSignOut.UseVisualStyleBackColor = true;
-            btnSignOut.Click += this.btnSignOut_Click;
-            // 
-            // btnAbout
-            // 
-            btnAbout.Dock = DockStyle.Top;
-            btnAbout.FlatAppearance.BorderSize = 0;
-            btnAbout.FlatStyle = FlatStyle.Flat;
-            btnAbout.IconChar = FontAwesome.Sharp.IconChar.Anchor;
-            btnAbout.IconColor = Color.Black;
-            btnAbout.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnAbout.IconSize = 30;
-            btnAbout.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAbout.Location = new Point(0, 369);
-            btnAbout.Name = "btnAbout";
-            btnAbout.Padding = new Padding(10, 15, 0, 5);
-            btnAbout.Size = new Size(230, 49);
-            btnAbout.TabIndex = 6;
-            btnAbout.Tag = "About";
-            btnAbout.Text = "About";
-            btnAbout.UseVisualStyleBackColor = true;
+            btnSignOut.Click += btnSignOut_Click;
             // 
             // btnSupport
             // 
             btnSupport.Dock = DockStyle.Top;
             btnSupport.FlatAppearance.BorderSize = 0;
             btnSupport.FlatStyle = FlatStyle.Flat;
+            btnSupport.Font = new Font("Franklin Gothic Medium", 12F);
             btnSupport.IconChar = FontAwesome.Sharp.IconChar.PersonCircleQuestion;
             btnSupport.IconColor = Color.Black;
             btnSupport.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -137,12 +117,14 @@
             btnSupport.Tag = "Support";
             btnSupport.Text = "  Support";
             btnSupport.UseVisualStyleBackColor = true;
+            btnSupport.Click += btnSupport_Click;
             // 
             // btnServices
             // 
             btnServices.Dock = DockStyle.Top;
             btnServices.FlatAppearance.BorderSize = 0;
             btnServices.FlatStyle = FlatStyle.Flat;
+            btnServices.Font = new Font("Franklin Gothic Medium", 12F);
             btnServices.IconChar = FontAwesome.Sharp.IconChar.Hospital;
             btnServices.IconColor = Color.Black;
             btnServices.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -153,15 +135,17 @@
             btnServices.Padding = new Padding(10, 15, 0, 5);
             btnServices.Size = new Size(230, 49);
             btnServices.TabIndex = 4;
-            btnServices.Tag = "Services";
-            btnServices.Text = " Services";
+            btnServices.Tag = "  Services";
+            btnServices.Text = "  Services";
             btnServices.UseVisualStyleBackColor = true;
+            btnServices.Click += btnServices_Click;
             // 
             // btnDoctor
             // 
             btnDoctor.Dock = DockStyle.Top;
             btnDoctor.FlatAppearance.BorderSize = 0;
             btnDoctor.FlatStyle = FlatStyle.Flat;
+            btnDoctor.Font = new Font("Franklin Gothic Medium", 12F);
             btnDoctor.IconChar = FontAwesome.Sharp.IconChar.HospitalUser;
             btnDoctor.IconColor = Color.Black;
             btnDoctor.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -175,12 +159,14 @@
             btnDoctor.Tag = "Clinics";
             btnDoctor.Text = "Clinics";
             btnDoctor.UseVisualStyleBackColor = true;
+            btnDoctor.Click += btnDoctor_Click;
             // 
             // btnAppointment
             // 
             btnAppointment.Dock = DockStyle.Top;
             btnAppointment.FlatAppearance.BorderSize = 0;
             btnAppointment.FlatStyle = FlatStyle.Flat;
+            btnAppointment.Font = new Font("Franklin Gothic Medium", 12F);
             btnAppointment.IconChar = FontAwesome.Sharp.IconChar.Calendar;
             btnAppointment.IconColor = Color.Black;
             btnAppointment.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -191,15 +177,17 @@
             btnAppointment.Padding = new Padding(10, 15, 0, 5);
             btnAppointment.Size = new Size(230, 49);
             btnAppointment.TabIndex = 2;
-            btnAppointment.Tag = "           Appointment";
-            btnAppointment.Text = "           Appointment";
+            btnAppointment.Tag = "            Appointment";
+            btnAppointment.Text = "            Appointment";
             btnAppointment.UseVisualStyleBackColor = true;
+            btnAppointment.Click += btnAppointment_Click;
             // 
             // btnHome
             // 
             btnHome.Dock = DockStyle.Top;
             btnHome.FlatAppearance.BorderSize = 0;
             btnHome.FlatStyle = FlatStyle.Flat;
+            btnHome.Font = new Font("Franklin Gothic Medium", 12F);
             btnHome.IconChar = FontAwesome.Sharp.IconChar.HomeLg;
             btnHome.IconColor = Color.Black;
             btnHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -213,7 +201,7 @@
             btnHome.Tag = "Home";
             btnHome.Text = "Home";
             btnHome.UseVisualStyleBackColor = true;
-            btnHome.Click += this.btnHome_Click;
+            btnHome.Click += btnHome_Click;
             // 
             // guna2Panel2
             // 
@@ -250,12 +238,12 @@
             btnMenu.Size = new Size(46, 44);
             btnMenu.TabIndex = 1;
             btnMenu.UseVisualStyleBackColor = true;
-            btnMenu.Click += this.btnMenu_Click;
+            btnMenu.Click += btnMenu_Click;
             // 
             // panelTitleBar
             // 
             panelTitleBar.BackColor = Color.White;
-            panelTitleBar.Controls.Add(guna2ToggleSwitch1);
+            panelTitleBar.Controls.Add(btnSwitch);
             panelTitleBar.Controls.Add(nightControlBox1);
             panelTitleBar.Controls.Add(label2);
             panelTitleBar.CustomizableEdges = customizableEdges7;
@@ -265,8 +253,26 @@
             panelTitleBar.ShadowDecoration.CustomizableEdges = customizableEdges8;
             panelTitleBar.Size = new Size(695, 56);
             panelTitleBar.TabIndex = 1;
-            panelTitleBar.Paint += this.panelTitleBar_Paint;
-            panelTitleBar.MouseDown += this.panelTitleBar_MouseDown;
+            panelTitleBar.Paint += panelTitleBar_Paint;
+            panelTitleBar.MouseDown += panelTitleBar_MouseDown;
+            // 
+            // btnSwitch
+            // 
+            btnSwitch.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
+            btnSwitch.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
+            btnSwitch.CheckedState.InnerBorderColor = Color.White;
+            btnSwitch.CheckedState.InnerColor = Color.White;
+            btnSwitch.CustomizableEdges = customizableEdges5;
+            btnSwitch.Location = new Point(515, 22);
+            btnSwitch.Name = "btnSwitch";
+            btnSwitch.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnSwitch.Size = new Size(35, 20);
+            btnSwitch.TabIndex = 6;
+            btnSwitch.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
+            btnSwitch.UncheckedState.FillColor = Color.FromArgb(125, 137, 149);
+            btnSwitch.UncheckedState.InnerBorderColor = Color.White;
+            btnSwitch.UncheckedState.InnerColor = Color.White;
+            btnSwitch.CheckedChanged += btnSwitch_CheckedChanged;
             // 
             // nightControlBox1
             // 
@@ -298,9 +304,9 @@
             label2.ForeColor = Color.Navy;
             label2.Location = new Point(6, 9);
             label2.Name = "label2";
-            label2.Size = new Size(166, 33);
+            label2.Size = new Size(264, 33);
             label2.TabIndex = 5;
-            label2.Text = "Dashboard";
+            label2.Text = "User's Dashboard";
             // 
             // panelDesktop
             // 
@@ -312,24 +318,7 @@
             panelDesktop.ShadowDecoration.CustomizableEdges = customizableEdges10;
             panelDesktop.Size = new Size(695, 509);
             panelDesktop.TabIndex = 2;
-            panelDesktop.Paint += this.panelDesktop_Paint;
-            // 
-            // guna2ToggleSwitch1
-            // 
-            guna2ToggleSwitch1.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2ToggleSwitch1.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
-            guna2ToggleSwitch1.CheckedState.InnerBorderColor = Color.White;
-            guna2ToggleSwitch1.CheckedState.InnerColor = Color.White;
-            guna2ToggleSwitch1.CustomizableEdges = customizableEdges5;
-            guna2ToggleSwitch1.Location = new Point(515, 22);
-            guna2ToggleSwitch1.Name = "guna2ToggleSwitch1";
-            guna2ToggleSwitch1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2ToggleSwitch1.Size = new Size(35, 20);
-            guna2ToggleSwitch1.TabIndex = 6;
-            guna2ToggleSwitch1.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
-            guna2ToggleSwitch1.UncheckedState.FillColor = Color.FromArgb(125, 137, 149);
-            guna2ToggleSwitch1.UncheckedState.InnerBorderColor = Color.White;
-            guna2ToggleSwitch1.UncheckedState.InnerColor = Color.White;
+            panelDesktop.Paint += panelDesktop_Paint;
             // 
             // HomePage
             // 
@@ -367,6 +356,6 @@
         private Label label2;
         private ReaLTaiizor.Controls.NightControlBox nightControlBox1;
         private PictureBox pictureBox1;
-        private Guna.UI2.WinForms.Guna2ToggleSwitch guna2ToggleSwitch1;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch btnSwitch;
     }
 }

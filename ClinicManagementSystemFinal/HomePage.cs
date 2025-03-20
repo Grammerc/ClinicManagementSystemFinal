@@ -170,7 +170,7 @@ namespace ClinicManagementSystemFinal
             }
         }
 
-        private void loadform(object Form)
+        public void loadform(object Form)
         {
             if (this.panelDesktop.Controls.Count > 0)
                 this.panelDesktop.Controls.RemoveAt(0);
@@ -192,6 +192,33 @@ namespace ClinicManagementSystemFinal
             this.Hide();
             FrontPage fp = new FrontPage();
             fp.Show();
+        }
+
+        private void btnSwitch_CheckedChanged(object sender, EventArgs e)
+        {
+            this.Hide();
+            DoctorHomePage DHP = new DoctorHomePage();
+            DHP.Show();
+        }
+
+        private void btnAppointment_Click(object sender, EventArgs e)
+        {
+            loadform(new AppointmentForm());
+        }
+
+        private void btnDoctor_Click(object sender, EventArgs e)
+        {
+            loadform(new Clinic());
+        }
+
+        private void btnServices_Click(object sender, EventArgs e)
+        {
+            loadform(new Services());
+        }
+
+        private void btnSupport_Click(object sender, EventArgs e)
+        {
+            loadform(new Support());
         }
     }
 }

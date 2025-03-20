@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DoctorHomePage));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panelMenu = new Guna.UI2.WinForms.Guna2Panel();
             btnSignOut = new FontAwesome.Sharp.IconButton();
             btnDoctor = new FontAwesome.Sharp.IconButton();
@@ -52,6 +52,7 @@
             nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
             label2 = new Label();
             panelDesktop = new Guna.UI2.WinForms.Guna2Panel();
+            iconButton1 = new FontAwesome.Sharp.IconButton();
             panelMenu.SuspendLayout();
             guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -61,16 +62,17 @@
             // panelMenu
             // 
             panelMenu.BackColor = Color.FromArgb(114, 137, 218);
+            panelMenu.Controls.Add(iconButton1);
             panelMenu.Controls.Add(btnSignOut);
             panelMenu.Controls.Add(btnDoctor);
             panelMenu.Controls.Add(btnAppointment);
             panelMenu.Controls.Add(btnHome);
             panelMenu.Controls.Add(guna2Panel2);
-            panelMenu.CustomizableEdges = customizableEdges13;
+            panelMenu.CustomizableEdges = customizableEdges3;
             panelMenu.Dock = DockStyle.Left;
             panelMenu.Location = new Point(0, 0);
             panelMenu.Name = "panelMenu";
-            panelMenu.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            panelMenu.ShadowDecoration.CustomizableEdges = customizableEdges4;
             panelMenu.Size = new Size(230, 565);
             panelMenu.TabIndex = 0;
             // 
@@ -109,8 +111,8 @@
             btnDoctor.Padding = new Padding(10, 15, 0, 5);
             btnDoctor.Size = new Size(230, 49);
             btnDoctor.TabIndex = 3;
-            btnDoctor.Tag = "    Edit Clinic";
-            btnDoctor.Text = "    Edit Clinic";
+            btnDoctor.Tag = "   Edit Clinic";
+            btnDoctor.Text = "   Edit Clinic";
             btnDoctor.UseVisualStyleBackColor = true;
             // 
             // btnAppointment
@@ -129,7 +131,7 @@
             btnAppointment.Size = new Size(230, 49);
             btnAppointment.TabIndex = 2;
             btnAppointment.Tag = "          Appointments";
-            btnAppointment.Text = "           Appointments";
+            btnAppointment.Text = "          Appointments";
             btnAppointment.UseVisualStyleBackColor = true;
             // 
             // btnHome
@@ -156,11 +158,11 @@
             // 
             guna2Panel2.Controls.Add(pictureBox1);
             guna2Panel2.Controls.Add(btnMenu);
-            guna2Panel2.CustomizableEdges = customizableEdges11;
+            guna2Panel2.CustomizableEdges = customizableEdges1;
             guna2Panel2.Dock = DockStyle.Top;
             guna2Panel2.Location = new Point(0, 0);
             guna2Panel2.Name = "guna2Panel2";
-            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Panel2.Size = new Size(230, 124);
             guna2Panel2.TabIndex = 0;
             // 
@@ -195,11 +197,11 @@
             panelTitleBar.Controls.Add(btnSwitch);
             panelTitleBar.Controls.Add(nightControlBox1);
             panelTitleBar.Controls.Add(label2);
-            panelTitleBar.CustomizableEdges = customizableEdges17;
+            panelTitleBar.CustomizableEdges = customizableEdges7;
             panelTitleBar.Dock = DockStyle.Top;
             panelTitleBar.Location = new Point(230, 0);
             panelTitleBar.Name = "panelTitleBar";
-            panelTitleBar.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            panelTitleBar.ShadowDecoration.CustomizableEdges = customizableEdges8;
             panelTitleBar.Size = new Size(695, 56);
             panelTitleBar.TabIndex = 1;
             panelTitleBar.Paint += panelTitleBar_Paint;
@@ -211,16 +213,17 @@
             btnSwitch.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
             btnSwitch.CheckedState.InnerBorderColor = Color.White;
             btnSwitch.CheckedState.InnerColor = Color.White;
-            btnSwitch.CustomizableEdges = customizableEdges15;
+            btnSwitch.CustomizableEdges = customizableEdges5;
             btnSwitch.Location = new Point(515, 22);
             btnSwitch.Name = "btnSwitch";
-            btnSwitch.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnSwitch.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnSwitch.Size = new Size(35, 20);
             btnSwitch.TabIndex = 6;
             btnSwitch.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
             btnSwitch.UncheckedState.FillColor = Color.FromArgb(125, 137, 149);
             btnSwitch.UncheckedState.InnerBorderColor = Color.White;
             btnSwitch.UncheckedState.InnerColor = Color.White;
+            btnSwitch.CheckedChanged += btnSwitch_CheckedChanged;
             // 
             // nightControlBox1
             // 
@@ -259,14 +262,33 @@
             // panelDesktop
             // 
             panelDesktop.BackColor = Color.FromArgb(66, 69, 73);
-            panelDesktop.CustomizableEdges = customizableEdges19;
+            panelDesktop.CustomizableEdges = customizableEdges9;
             panelDesktop.Dock = DockStyle.Fill;
             panelDesktop.Location = new Point(230, 56);
             panelDesktop.Name = "panelDesktop";
-            panelDesktop.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            panelDesktop.ShadowDecoration.CustomizableEdges = customizableEdges10;
             panelDesktop.Size = new Size(695, 509);
             panelDesktop.TabIndex = 2;
             panelDesktop.Paint += panelDesktop_Paint;
+            // 
+            // iconButton1
+            // 
+            iconButton1.Dock = DockStyle.Top;
+            iconButton1.FlatAppearance.BorderSize = 0;
+            iconButton1.FlatStyle = FlatStyle.Flat;
+            iconButton1.IconChar = FontAwesome.Sharp.IconChar.Users;
+            iconButton1.IconColor = Color.Black;
+            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton1.IconSize = 30;
+            iconButton1.ImageAlign = ContentAlignment.MiddleLeft;
+            iconButton1.Location = new Point(0, 271);
+            iconButton1.Name = "iconButton1";
+            iconButton1.Padding = new Padding(10, 15, 0, 5);
+            iconButton1.Size = new Size(230, 49);
+            iconButton1.TabIndex = 9;
+            iconButton1.Tag = "        Manage Clients";
+            iconButton1.Text = "        Manage Clients";
+            iconButton1.UseVisualStyleBackColor = true;
             // 
             // DoctorHomePage
             // 
@@ -302,5 +324,6 @@
         private ReaLTaiizor.Controls.NightControlBox nightControlBox1;
         private PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2ToggleSwitch btnSwitch;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }

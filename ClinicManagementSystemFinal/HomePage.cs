@@ -63,7 +63,7 @@ namespace ClinicManagementSystemFinal
             const int HTBOTTOMRIGHT = 17;
 
             if (m.Msg == WM_NCHITTEST)
-            { //If the windows m is WM_NCHITTEST
+            { 
                 base.WndProc(ref m);
                 if (this.WindowState == FormWindowState.Normal)
                 {
@@ -127,10 +127,10 @@ namespace ClinicManagementSystemFinal
         {
             switch (this.WindowState)
             {
-                case FormWindowState.Maximized: //Maximized form (After)
+                case FormWindowState.Maximized: 
                     this.Padding = new Padding(8, 8, 8, 0);
                     break;
-                case FormWindowState.Normal: //Restored form (After)
+                case FormWindowState.Normal:
                     if (this.Padding.Top != borderSize)
                         this.Padding = new Padding(borderSize);
                     break;
@@ -185,6 +185,13 @@ namespace ClinicManagementSystemFinal
         private void btnHome_Click(object sender, EventArgs e)
         {
             loadform(new HomeForm());
+        }
+
+        private void btnSignOut_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrontPage fp = new FrontPage();
+            fp.Show();
         }
     }
 }

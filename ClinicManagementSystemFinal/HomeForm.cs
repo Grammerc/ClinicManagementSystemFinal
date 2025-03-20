@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ClinicManagementSystemFinal
 {
-    public partial class HomePage : Form
+    public partial class HomeForm: Form
     {
-        public HomePage()
+        public HomeForm()
         {
             InitializeComponent();
         }

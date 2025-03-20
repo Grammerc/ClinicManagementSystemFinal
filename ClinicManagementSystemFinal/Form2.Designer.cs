@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
+            pictureBox1 = new PictureBox();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             textBox3 = new TextBox();
@@ -44,8 +44,8 @@
             label5 = new Label();
             checkBox1 = new CheckBox();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -58,6 +58,15 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(450, 565);
             panel1.TabIndex = 0;
+            panel1.Paint += panel1_Paint;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Location = new Point(0, 0);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(450, 67);
+            pictureBox2.TabIndex = 1;
+            pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -67,14 +76,6 @@
             pictureBox1.Size = new Size(296, 258);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Location = new Point(0, 0);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(450, 67);
-            pictureBox2.TabIndex = 1;
-            pictureBox2.TabStop = false;
             // 
             // textBox1
             // 
@@ -125,55 +126,55 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.MidnightBlue;
             label2.Location = new Point(482, 48);
             label2.Name = "label2";
-            label2.Size = new Size(58, 19);
+            label2.Size = new Size(55, 20);
             label2.TabIndex = 8;
             label2.Text = "Name";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Navy;
             label1.Location = new Point(482, 126);
             label1.Name = "label1";
-            label1.Size = new Size(93, 19);
+            label1.Size = new Size(98, 20);
             label1.TabIndex = 9;
             label1.Text = "User Name";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Navy;
             label3.Location = new Point(482, 210);
             label3.Name = "label3";
-            label3.Size = new Size(52, 19);
+            label3.Size = new Size(53, 20);
             label3.TabIndex = 10;
             label3.Text = "Email";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.Navy;
             label4.Location = new Point(482, 305);
             label4.Name = "label4";
-            label4.Size = new Size(80, 19);
+            label4.Size = new Size(86, 20);
             label4.TabIndex = 11;
             label4.Text = "Password";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.SlateGray;
             label5.Location = new Point(482, 509);
             label5.Name = "label5";
-            label5.Size = new Size(294, 20);
+            label5.Size = new Size(260, 18);
             label5.TabIndex = 11;
             label5.Text = "Already registered? Click here for login";
             // 
@@ -209,8 +210,8 @@
             Name = "Form2";
             Text = "Form2";
             panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }

@@ -41,13 +41,13 @@
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             panel1 = new Panel();
             dungeonLabel1 = new ReaLTaiizor.Controls.DungeonLabel();
-            tbxEmail = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
+            tbxName = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             dungeonLabel2 = new ReaLTaiizor.Controls.DungeonLabel();
-            materialTextBoxEdit1 = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
+            tbxUsername = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             dungeonLabel3 = new ReaLTaiizor.Controls.DungeonLabel();
-            materialTextBoxEdit2 = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
+            tbxEmail = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             dungeonLabel4 = new ReaLTaiizor.Controls.DungeonLabel();
-            materialTextBoxEdit3 = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
+            tbxPassword = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             btnRegister = new ReaLTaiizor.Controls.Button();
             dungeonLabel5 = new ReaLTaiizor.Controls.DungeonLabel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -187,35 +187,35 @@
             dungeonLabel1.TabIndex = 21;
             dungeonLabel1.Text = "NAME";
             // 
-            // tbxEmail
+            // tbxName
             // 
-            tbxEmail.AnimateReadOnly = false;
-            tbxEmail.AutoCompleteMode = AutoCompleteMode.None;
-            tbxEmail.AutoCompleteSource = AutoCompleteSource.None;
-            tbxEmail.BackgroundImageLayout = ImageLayout.None;
-            tbxEmail.CharacterCasing = CharacterCasing.Normal;
-            tbxEmail.Depth = 0;
-            tbxEmail.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            tbxEmail.HideSelection = true;
-            tbxEmail.LeadingIcon = null;
-            tbxEmail.Location = new Point(482, 53);
-            tbxEmail.MaxLength = 32767;
-            tbxEmail.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
-            tbxEmail.Name = "tbxEmail";
-            tbxEmail.PasswordChar = '\0';
-            tbxEmail.PrefixSuffixText = null;
-            tbxEmail.ReadOnly = false;
-            tbxEmail.RightToLeft = RightToLeft.No;
-            tbxEmail.SelectedText = "";
-            tbxEmail.SelectionLength = 0;
-            tbxEmail.SelectionStart = 0;
-            tbxEmail.ShortcutsEnabled = true;
-            tbxEmail.Size = new Size(390, 48);
-            tbxEmail.TabIndex = 20;
-            tbxEmail.TabStop = false;
-            tbxEmail.TextAlign = HorizontalAlignment.Left;
-            tbxEmail.TrailingIcon = null;
-            tbxEmail.UseSystemPasswordChar = false;
+            tbxName.AnimateReadOnly = false;
+            tbxName.AutoCompleteMode = AutoCompleteMode.None;
+            tbxName.AutoCompleteSource = AutoCompleteSource.None;
+            tbxName.BackgroundImageLayout = ImageLayout.None;
+            tbxName.CharacterCasing = CharacterCasing.Normal;
+            tbxName.Depth = 0;
+            tbxName.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            tbxName.HideSelection = true;
+            tbxName.LeadingIcon = null;
+            tbxName.Location = new Point(482, 53);
+            tbxName.MaxLength = 32767;
+            tbxName.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            tbxName.Name = "tbxName";
+            tbxName.PasswordChar = '\0';
+            tbxName.PrefixSuffixText = null;
+            tbxName.ReadOnly = false;
+            tbxName.RightToLeft = RightToLeft.No;
+            tbxName.SelectedText = "";
+            tbxName.SelectionLength = 0;
+            tbxName.SelectionStart = 0;
+            tbxName.ShortcutsEnabled = true;
+            tbxName.Size = new Size(390, 48);
+            tbxName.TabIndex = 20;
+            tbxName.TabStop = false;
+            tbxName.TextAlign = HorizontalAlignment.Left;
+            tbxName.TrailingIcon = null;
+            tbxName.UseSystemPasswordChar = false;
             // 
             // dungeonLabel2
             // 
@@ -229,35 +229,35 @@
             dungeonLabel2.TabIndex = 23;
             dungeonLabel2.Text = "USERNAME";
             // 
-            // materialTextBoxEdit1
+            // tbxUsername
             // 
-            materialTextBoxEdit1.AnimateReadOnly = false;
-            materialTextBoxEdit1.AutoCompleteMode = AutoCompleteMode.None;
-            materialTextBoxEdit1.AutoCompleteSource = AutoCompleteSource.None;
-            materialTextBoxEdit1.BackgroundImageLayout = ImageLayout.None;
-            materialTextBoxEdit1.CharacterCasing = CharacterCasing.Normal;
-            materialTextBoxEdit1.Depth = 0;
-            materialTextBoxEdit1.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialTextBoxEdit1.HideSelection = true;
-            materialTextBoxEdit1.LeadingIcon = null;
-            materialTextBoxEdit1.Location = new Point(482, 148);
-            materialTextBoxEdit1.MaxLength = 32767;
-            materialTextBoxEdit1.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
-            materialTextBoxEdit1.Name = "materialTextBoxEdit1";
-            materialTextBoxEdit1.PasswordChar = '\0';
-            materialTextBoxEdit1.PrefixSuffixText = null;
-            materialTextBoxEdit1.ReadOnly = false;
-            materialTextBoxEdit1.RightToLeft = RightToLeft.No;
-            materialTextBoxEdit1.SelectedText = "";
-            materialTextBoxEdit1.SelectionLength = 0;
-            materialTextBoxEdit1.SelectionStart = 0;
-            materialTextBoxEdit1.ShortcutsEnabled = true;
-            materialTextBoxEdit1.Size = new Size(390, 48);
-            materialTextBoxEdit1.TabIndex = 22;
-            materialTextBoxEdit1.TabStop = false;
-            materialTextBoxEdit1.TextAlign = HorizontalAlignment.Left;
-            materialTextBoxEdit1.TrailingIcon = null;
-            materialTextBoxEdit1.UseSystemPasswordChar = false;
+            tbxUsername.AnimateReadOnly = false;
+            tbxUsername.AutoCompleteMode = AutoCompleteMode.None;
+            tbxUsername.AutoCompleteSource = AutoCompleteSource.None;
+            tbxUsername.BackgroundImageLayout = ImageLayout.None;
+            tbxUsername.CharacterCasing = CharacterCasing.Normal;
+            tbxUsername.Depth = 0;
+            tbxUsername.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            tbxUsername.HideSelection = true;
+            tbxUsername.LeadingIcon = null;
+            tbxUsername.Location = new Point(482, 148);
+            tbxUsername.MaxLength = 32767;
+            tbxUsername.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            tbxUsername.Name = "tbxUsername";
+            tbxUsername.PasswordChar = '\0';
+            tbxUsername.PrefixSuffixText = null;
+            tbxUsername.ReadOnly = false;
+            tbxUsername.RightToLeft = RightToLeft.No;
+            tbxUsername.SelectedText = "";
+            tbxUsername.SelectionLength = 0;
+            tbxUsername.SelectionStart = 0;
+            tbxUsername.ShortcutsEnabled = true;
+            tbxUsername.Size = new Size(390, 48);
+            tbxUsername.TabIndex = 22;
+            tbxUsername.TabStop = false;
+            tbxUsername.TextAlign = HorizontalAlignment.Left;
+            tbxUsername.TrailingIcon = null;
+            tbxUsername.UseSystemPasswordChar = false;
             // 
             // dungeonLabel3
             // 
@@ -271,35 +271,35 @@
             dungeonLabel3.TabIndex = 25;
             dungeonLabel3.Text = "EMAIL";
             // 
-            // materialTextBoxEdit2
+            // tbxEmail
             // 
-            materialTextBoxEdit2.AnimateReadOnly = false;
-            materialTextBoxEdit2.AutoCompleteMode = AutoCompleteMode.None;
-            materialTextBoxEdit2.AutoCompleteSource = AutoCompleteSource.None;
-            materialTextBoxEdit2.BackgroundImageLayout = ImageLayout.None;
-            materialTextBoxEdit2.CharacterCasing = CharacterCasing.Normal;
-            materialTextBoxEdit2.Depth = 0;
-            materialTextBoxEdit2.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialTextBoxEdit2.HideSelection = true;
-            materialTextBoxEdit2.LeadingIcon = null;
-            materialTextBoxEdit2.Location = new Point(482, 243);
-            materialTextBoxEdit2.MaxLength = 32767;
-            materialTextBoxEdit2.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
-            materialTextBoxEdit2.Name = "materialTextBoxEdit2";
-            materialTextBoxEdit2.PasswordChar = '\0';
-            materialTextBoxEdit2.PrefixSuffixText = null;
-            materialTextBoxEdit2.ReadOnly = false;
-            materialTextBoxEdit2.RightToLeft = RightToLeft.No;
-            materialTextBoxEdit2.SelectedText = "";
-            materialTextBoxEdit2.SelectionLength = 0;
-            materialTextBoxEdit2.SelectionStart = 0;
-            materialTextBoxEdit2.ShortcutsEnabled = true;
-            materialTextBoxEdit2.Size = new Size(390, 48);
-            materialTextBoxEdit2.TabIndex = 24;
-            materialTextBoxEdit2.TabStop = false;
-            materialTextBoxEdit2.TextAlign = HorizontalAlignment.Left;
-            materialTextBoxEdit2.TrailingIcon = null;
-            materialTextBoxEdit2.UseSystemPasswordChar = false;
+            tbxEmail.AnimateReadOnly = false;
+            tbxEmail.AutoCompleteMode = AutoCompleteMode.None;
+            tbxEmail.AutoCompleteSource = AutoCompleteSource.None;
+            tbxEmail.BackgroundImageLayout = ImageLayout.None;
+            tbxEmail.CharacterCasing = CharacterCasing.Normal;
+            tbxEmail.Depth = 0;
+            tbxEmail.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            tbxEmail.HideSelection = true;
+            tbxEmail.LeadingIcon = null;
+            tbxEmail.Location = new Point(482, 243);
+            tbxEmail.MaxLength = 32767;
+            tbxEmail.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            tbxEmail.Name = "tbxEmail";
+            tbxEmail.PasswordChar = '\0';
+            tbxEmail.PrefixSuffixText = null;
+            tbxEmail.ReadOnly = false;
+            tbxEmail.RightToLeft = RightToLeft.No;
+            tbxEmail.SelectedText = "";
+            tbxEmail.SelectionLength = 0;
+            tbxEmail.SelectionStart = 0;
+            tbxEmail.ShortcutsEnabled = true;
+            tbxEmail.Size = new Size(390, 48);
+            tbxEmail.TabIndex = 24;
+            tbxEmail.TabStop = false;
+            tbxEmail.TextAlign = HorizontalAlignment.Left;
+            tbxEmail.TrailingIcon = null;
+            tbxEmail.UseSystemPasswordChar = false;
             // 
             // dungeonLabel4
             // 
@@ -312,35 +312,35 @@
             dungeonLabel4.Size = new Size(0, 20);
             dungeonLabel4.TabIndex = 27;
             // 
-            // materialTextBoxEdit3
+            // tbxPassword
             // 
-            materialTextBoxEdit3.AnimateReadOnly = false;
-            materialTextBoxEdit3.AutoCompleteMode = AutoCompleteMode.None;
-            materialTextBoxEdit3.AutoCompleteSource = AutoCompleteSource.None;
-            materialTextBoxEdit3.BackgroundImageLayout = ImageLayout.None;
-            materialTextBoxEdit3.CharacterCasing = CharacterCasing.Normal;
-            materialTextBoxEdit3.Depth = 0;
-            materialTextBoxEdit3.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialTextBoxEdit3.HideSelection = true;
-            materialTextBoxEdit3.LeadingIcon = null;
-            materialTextBoxEdit3.Location = new Point(482, 330);
-            materialTextBoxEdit3.MaxLength = 32767;
-            materialTextBoxEdit3.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
-            materialTextBoxEdit3.Name = "materialTextBoxEdit3";
-            materialTextBoxEdit3.PasswordChar = '\0';
-            materialTextBoxEdit3.PrefixSuffixText = null;
-            materialTextBoxEdit3.ReadOnly = false;
-            materialTextBoxEdit3.RightToLeft = RightToLeft.No;
-            materialTextBoxEdit3.SelectedText = "";
-            materialTextBoxEdit3.SelectionLength = 0;
-            materialTextBoxEdit3.SelectionStart = 0;
-            materialTextBoxEdit3.ShortcutsEnabled = true;
-            materialTextBoxEdit3.Size = new Size(390, 48);
-            materialTextBoxEdit3.TabIndex = 26;
-            materialTextBoxEdit3.TabStop = false;
-            materialTextBoxEdit3.TextAlign = HorizontalAlignment.Left;
-            materialTextBoxEdit3.TrailingIcon = null;
-            materialTextBoxEdit3.UseSystemPasswordChar = false;
+            tbxPassword.AnimateReadOnly = false;
+            tbxPassword.AutoCompleteMode = AutoCompleteMode.None;
+            tbxPassword.AutoCompleteSource = AutoCompleteSource.None;
+            tbxPassword.BackgroundImageLayout = ImageLayout.None;
+            tbxPassword.CharacterCasing = CharacterCasing.Normal;
+            tbxPassword.Depth = 0;
+            tbxPassword.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            tbxPassword.HideSelection = true;
+            tbxPassword.LeadingIcon = null;
+            tbxPassword.Location = new Point(482, 330);
+            tbxPassword.MaxLength = 32767;
+            tbxPassword.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            tbxPassword.Name = "tbxPassword";
+            tbxPassword.PasswordChar = '\0';
+            tbxPassword.PrefixSuffixText = null;
+            tbxPassword.ReadOnly = false;
+            tbxPassword.RightToLeft = RightToLeft.No;
+            tbxPassword.SelectedText = "";
+            tbxPassword.SelectionLength = 0;
+            tbxPassword.SelectionStart = 0;
+            tbxPassword.ShortcutsEnabled = true;
+            tbxPassword.Size = new Size(390, 48);
+            tbxPassword.TabIndex = 26;
+            tbxPassword.TabStop = false;
+            tbxPassword.TextAlign = HorizontalAlignment.Left;
+            tbxPassword.TrailingIcon = null;
+            tbxPassword.UseSystemPasswordChar = false;
             // 
             // btnRegister
             // 
@@ -383,15 +383,15 @@
             Controls.Add(dungeonLabel5);
             Controls.Add(btnRegister);
             Controls.Add(dungeonLabel4);
-            Controls.Add(materialTextBoxEdit3);
+            Controls.Add(tbxPassword);
             Controls.Add(dungeonLabel3);
-            Controls.Add(materialTextBoxEdit2);
+            Controls.Add(tbxEmail);
             Controls.Add(dungeonLabel2);
-            Controls.Add(materialTextBoxEdit1);
+            Controls.Add(tbxUsername);
             Controls.Add(dungeonLabel1);
             Controls.Add(nightControlBox1);
             Controls.Add(linkRR);
-            Controls.Add(tbxEmail);
+            Controls.Add(tbxName);
             Controls.Add(label6);
             Controls.Add(checkBox1);
             Controls.Add(label5);
@@ -427,12 +427,12 @@
         private Panel panel1;
         private ReaLTaiizor.Controls.DungeonLabel dungeonLabel2;
         private ReaLTaiizor.Controls.DungeonLabel dungeonLabel1;
-        private ReaLTaiizor.Controls.MaterialTextBoxEdit tbxEmail;
-        private ReaLTaiizor.Controls.MaterialTextBoxEdit materialTextBoxEdit1;
+        private ReaLTaiizor.Controls.MaterialTextBoxEdit tbxName;
+        private ReaLTaiizor.Controls.MaterialTextBoxEdit tbxUsername;
         private ReaLTaiizor.Controls.DungeonLabel dungeonLabel3;
-        private ReaLTaiizor.Controls.MaterialTextBoxEdit materialTextBoxEdit2;
+        private ReaLTaiizor.Controls.MaterialTextBoxEdit tbxEmail;
         private ReaLTaiizor.Controls.DungeonLabel dungeonLabel4;
-        private ReaLTaiizor.Controls.MaterialTextBoxEdit materialTextBoxEdit3;
+        private ReaLTaiizor.Controls.MaterialTextBoxEdit tbxPassword;
         private ReaLTaiizor.Controls.Button btnRegister;
         private ReaLTaiizor.Controls.DungeonLabel dungeonLabel5;
     }

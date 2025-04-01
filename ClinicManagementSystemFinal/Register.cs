@@ -47,31 +47,54 @@ namespace ClinicManagementSystemFinal
             {
                 try
                 {
+                    
                     conn.Open();
 
-                    if (string.IsNullOrWhiteSpace(tbxUsername.Text) || string.IsNullOrWhiteSpace(tbxPassword.Text) || string.IsNullOrWhiteSpace(tbxName.Text))
+                    
+                    if (string.IsNullOrWhiteSpace(tbxUsername.Text) || string.IsNullOrWhiteSpace(tbxPassword.Text) || string.IsNullOrWhiteSpace(tbxName.Text) || string.IsNullOrWhiteSpace(tbxEmail.Text))
                     {
                         MessageBox.Show("Please fill in all the required fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
 
+                    
                     string query = "INSERT INTO Account ([username], [password], [RoleID], [ClinicID], [Name]) VALUES (?, ?, ?, ?, ?)";
 
                     using (OleDbCommand cmd = new OleDbCommand(query, conn))
                     {
-                        // Add parameters to the command
-                        cmd.Parameters.AddWithValue("?", tbxUsername.Text); 
-                        cmd.Parameters.AddWithValue("?", tbxPassword.Text);
-                        cmd.Parameters.AddWithValue("?", 1); 
-                        cmd.Parameters.AddWithValue("?", 1); 
-                        cmd.Parameters.AddWithValue("?", tbxName.Text);
+                        
+                        cmd.Parameters.AddWithValue("?", tbxUsername.Text);  
+                        cmd.Parameters.AddWithValue("?", tbxPassword.Text);  
+                        cmd.Parameters.AddWithValue("?", 1);  
+                        cmd.Parameters.AddWithValue("?", 1);  
+                        cmd.Parameters.AddWithValue("?", tbxName.Text);      
 
-                        // Execute the command
+                        
                         int rowsAffected = cmd.ExecuteNonQuery();
 
                         if (rowsAffected > 0)
                         {
-                            MessageBox.Show("Registration successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            
+                            cmd.CommandText = "SELECT @@IDENTITY"; 
+                            int loginID = Convert.ToInt32(cmd.ExecuteScalar());
+
+                           
+                            string infoQuery = "INSERT INTO Information (UserInfoID, [Email], [Name]) VALUES (?, ?, ?)";
+                            OleDbCommand infoCmd = new OleDbCommand(infoQuery, conn);
+                            infoCmd.Parameters.AddWithValue("?", loginID);  
+                            infoCmd.Parameters.AddWithValue("?", tbxEmail.Text);  
+                            infoCmd.Parameters.AddWithValue("?", tbxName.Text); 
+
+                            int infoRowsAffected = infoCmd.ExecuteNonQuery();
+
+                            if (infoRowsAffected > 0)
+                            {
+                                MessageBox.Show("Registration successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Failed to save information.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                         else
                         {
@@ -88,6 +111,7 @@ namespace ClinicManagementSystemFinal
                     conn.Close();
                 }
             }
+
 
             this.Hide();
             SignIn rp = new SignIn();

@@ -154,9 +154,9 @@
             dungeonLabel2.ForeColor = Color.FromArgb(76, 76, 77);
             dungeonLabel2.Location = new Point(19, 19);
             dungeonLabel2.Name = "dungeonLabel2";
-            dungeonLabel2.Size = new Size(51, 20);
+            dungeonLabel2.Size = new Size(86, 20);
             dungeonLabel2.TabIndex = 5;
-            dungeonLabel2.Text = "EMAIL";
+            dungeonLabel2.Text = "USERNAME";
             // 
             // dungeonLabel1
             // 

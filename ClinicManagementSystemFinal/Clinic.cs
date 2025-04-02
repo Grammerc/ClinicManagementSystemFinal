@@ -34,7 +34,7 @@ namespace ClinicManagementSystemFinal
 
             foreach (Form openForm in openFormsList)
             {
-                if (openForm is HomePage homePage)
+                if (openForm is HomePage_User homePage)
                 {
                     homePage.loadform(new AppointmentForm()); 
                     return; 
@@ -48,7 +48,7 @@ namespace ClinicManagementSystemFinal
 
             foreach (Form openForm in openFormsList)
             {
-                if (openForm is HomePage homePage)
+                if (openForm is HomePage_User homePage)
                 {
                     homePage.loadform(new AppointmentForm());
                     return;

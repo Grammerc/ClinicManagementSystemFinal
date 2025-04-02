@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace ClinicManagementSystemFinal
 {
-    public partial class HomePage : Form
+    public partial class HomePage_User : Form
     {
         private int borderSize = 2;
         private Size formSize;
-        public HomePage()
+        public HomePage_User()
         {
             InitializeComponent();
             formSize = this.ClientSize;
@@ -196,9 +196,7 @@ namespace ClinicManagementSystemFinal
 
         private void btnSwitch_CheckedChanged(object sender, EventArgs e)
         {
-            this.Hide();
-            DoctorHomePage DHP = new DoctorHomePage();
-            DHP.Show();
+         
         }
 
         private void btnAppointment_Click(object sender, EventArgs e)

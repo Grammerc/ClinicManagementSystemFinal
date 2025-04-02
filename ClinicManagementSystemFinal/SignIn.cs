@@ -45,7 +45,7 @@ namespace ClinicManagementSystemFinal
             if(count == 1)
             {
                 this.Hide();
-                HomePage hm = new HomePage();
+                HomePage_User hm = new HomePage_User();
                 hm.Show();
             }
             else
@@ -85,7 +85,7 @@ namespace ClinicManagementSystemFinal
             if (or.HasRows)
             {
                 this.Hide(); 
-                HomePage hm = new HomePage();
+                HomePage_User hm = new HomePage_User();
                 hm.Show();
             }
             else

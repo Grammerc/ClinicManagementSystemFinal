@@ -63,7 +63,7 @@ namespace ClinicManagementSystemFinal
             const int HTBOTTOMRIGHT = 17;
 
             if (m.Msg == WM_NCHITTEST)
-            { 
+            {
                 base.WndProc(ref m);
                 if (this.WindowState == FormWindowState.Normal)
                 {
@@ -127,7 +127,7 @@ namespace ClinicManagementSystemFinal
         {
             switch (this.WindowState)
             {
-                case FormWindowState.Maximized: 
+                case FormWindowState.Maximized:
                     this.Padding = new Padding(8, 8, 8, 0);
                     break;
                 case FormWindowState.Normal:
@@ -147,7 +147,6 @@ namespace ClinicManagementSystemFinal
             if (this.panelMenu.Width > 200)
             {
                 panelMenu.Width = 100;
-                pictureBox1.Visible = false;
                 btnMenu.Dock = DockStyle.Top;
                 foreach (Button menuButton in panelMenu.Controls.OfType<Button>())
                 {
@@ -159,7 +158,6 @@ namespace ClinicManagementSystemFinal
             else
             {
                 panelMenu.Width = 230;
-                pictureBox1.Visible = true;
                 btnMenu.Dock = DockStyle.None;
                 foreach (Button menuButton in panelMenu.Controls.OfType<Button>())
                 {
@@ -196,7 +194,7 @@ namespace ClinicManagementSystemFinal
 
         private void btnSwitch_CheckedChanged(object sender, EventArgs e)
         {
-         
+
         }
 
         private void btnAppointment_Click(object sender, EventArgs e)
@@ -216,7 +214,16 @@ namespace ClinicManagementSystemFinal
 
         private void btnSupport_Click(object sender, EventArgs e)
         {
-            loadform(new Support());
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void HomePage_User_Load(object sender, EventArgs e)
+        {
+            guna2ShadowForm1.SetShadowForm(this);
         }
     }
 }

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ClinicManagementSystemFinal.UserControls_Doctors
 {
-    public partial class DoctorNotes: Form
+    public partial class DoctorNotes : UserControl
     {
         public DoctorNotes()
         {

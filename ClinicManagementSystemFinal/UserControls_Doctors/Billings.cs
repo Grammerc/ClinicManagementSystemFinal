@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ClinicManagementSystemFinal
+namespace ClinicManagementSystemFinal.UserControls_Doctors
 {
-    public partial class Billing: Form
+    public partial class Billings : UserControl
     {
-        public Billing()
+        public Billings()
         {
             InitializeComponent();
         }

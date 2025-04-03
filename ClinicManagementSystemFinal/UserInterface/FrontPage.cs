@@ -9,6 +9,17 @@ namespace ClinicManagementSystemFinal
 
         private int borderSize = 2;
         private Size formSize;
+
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams handleParams = base.CreateParams;
+                handleParams.ExStyle = 0x02000000;
+                    return handleParams;
+            }
+        }
+
         public FrontPage()
         {
             InitializeComponent();

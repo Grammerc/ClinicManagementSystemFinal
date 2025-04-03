@@ -19,8 +19,8 @@ namespace ClinicManagementSystemFinal
         public SignIn()
         {
             InitializeComponent();
-            conn.ConnectionString = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:\Users\Raphael Perocho\source\repos\ClinicManagementSystemFinal\ProjectClinic\ClinicManagementSystemFinal\Login.accdb;
-            Persist Security Info=False;" ;
+            conn.ConnectionString = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:\Users\Raphael\source\repos\ClinicManagementSystemFinal\ClinicManagementSystemFinal\Login.accdb;
+            Persist Security Info=False;";
         }
 
         private void SignIn_Load(object sender, EventArgs e)

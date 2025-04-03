@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ClinicManagementSystemFinal.UserControls_Doctors
+namespace ClinicManagementSystemFinal.UserControls_User
 {
-    public partial class Patient: Form
+    public partial class Services : UserControl
     {
-        public Patient()
+        public Services()
         {
             InitializeComponent();
         }

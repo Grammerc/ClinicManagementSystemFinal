@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ClinicManagementSystemFinal
+namespace ClinicManagementSystemFinal.UserControls_Doctors
 {
-    public partial class MedicalHistory: Form
+    public partial class MedicalHistory : UserControl
     {
         public MedicalHistory()
         {

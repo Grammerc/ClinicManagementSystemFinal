@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ClinicManagementSystemFinal
+namespace ClinicManagementSystemFinal.UserControls_Doctors
 {
-    public partial class Calendar: Form
+    public partial class Calendar_Doctor : UserControl
     {
-        public Calendar()
+        public Calendar_Doctor()
         {
             InitializeComponent();
         }

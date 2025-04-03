@@ -29,16 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrontPage));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             pictureBox1 = new PictureBox();
             label4 = new Label();
             panel2 = new Panel();
@@ -46,7 +44,6 @@
             button1 = new Button();
             button2 = new Button();
             panelTitleBar = new Guna.UI2.WinForms.Guna2Panel();
-            guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             panelDesktop = new Guna.UI2.WinForms.Guna2Panel();
@@ -132,43 +129,26 @@
             // 
             // panelTitleBar
             // 
-            panelTitleBar.Controls.Add(guna2DateTimePicker1);
             panelTitleBar.Controls.Add(guna2PictureBox2);
             panelTitleBar.Controls.Add(guna2PictureBox1);
             panelTitleBar.Controls.Add(pictureBox1);
-            panelTitleBar.CustomizableEdges = customizableEdges7;
+            panelTitleBar.CustomizableEdges = customizableEdges5;
             panelTitleBar.Dock = DockStyle.Top;
             panelTitleBar.Location = new Point(0, 0);
             panelTitleBar.Name = "panelTitleBar";
-            panelTitleBar.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            panelTitleBar.ShadowDecoration.CustomizableEdges = customizableEdges6;
             panelTitleBar.Size = new Size(925, 139);
             panelTitleBar.TabIndex = 14;
             panelTitleBar.MouseDown += panelTitleBar_MouseDown;
             // 
-            // guna2DateTimePicker1
-            // 
-            guna2DateTimePicker1.CausesValidation = false;
-            guna2DateTimePicker1.Checked = true;
-            guna2DateTimePicker1.CustomizableEdges = customizableEdges1;
-            guna2DateTimePicker1.Font = new Font("Segoe UI", 9F);
-            guna2DateTimePicker1.Format = DateTimePickerFormat.Time;
-            guna2DateTimePicker1.Location = new Point(454, 95);
-            guna2DateTimePicker1.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            guna2DateTimePicker1.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            guna2DateTimePicker1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2DateTimePicker1.Size = new Size(200, 36);
-            guna2DateTimePicker1.TabIndex = 11;
-            guna2DateTimePicker1.Value = new DateTime(2025, 4, 1, 0, 0, 0, 0);
-            // 
             // guna2PictureBox2
             // 
-            guna2PictureBox2.CustomizableEdges = customizableEdges3;
+            guna2PictureBox2.CustomizableEdges = customizableEdges1;
             guna2PictureBox2.Image = (Image)resources.GetObject("guna2PictureBox2.Image");
             guna2PictureBox2.ImageRotate = 0F;
             guna2PictureBox2.Location = new Point(743, 0);
             guna2PictureBox2.Name = "guna2PictureBox2";
-            guna2PictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2PictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2PictureBox2.Size = new Size(182, 129);
             guna2PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             guna2PictureBox2.TabIndex = 10;
@@ -176,12 +156,12 @@
             // 
             // guna2PictureBox1
             // 
-            guna2PictureBox1.CustomizableEdges = customizableEdges5;
+            guna2PictureBox1.CustomizableEdges = customizableEdges3;
             guna2PictureBox1.Image = (Image)resources.GetObject("guna2PictureBox1.Image");
             guna2PictureBox1.ImageRotate = 0F;
             guna2PictureBox1.Location = new Point(0, 0);
             guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2PictureBox1.Size = new Size(182, 129);
             guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             guna2PictureBox1.TabIndex = 9;
@@ -195,10 +175,10 @@
             panelDesktop.Controls.Add(button2);
             panelDesktop.Controls.Add(panel2);
             panelDesktop.Controls.Add(button1);
-            panelDesktop.CustomizableEdges = customizableEdges9;
+            panelDesktop.CustomizableEdges = customizableEdges7;
             panelDesktop.Location = new Point(0, 135);
             panelDesktop.Name = "panelDesktop";
-            panelDesktop.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            panelDesktop.ShadowDecoration.CustomizableEdges = customizableEdges8;
             panelDesktop.Size = new Size(922, 428);
             panelDesktop.TabIndex = 15;
             // 
@@ -253,6 +233,5 @@
         private PictureBox pictureBox2;
         private Guna.UI2.WinForms.Guna2Panel panelDesktop;
         private PictureBox pictureBox4;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
     }
 }

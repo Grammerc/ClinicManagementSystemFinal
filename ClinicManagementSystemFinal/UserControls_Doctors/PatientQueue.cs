@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ClinicManagementSystemFinal.UserControls_Doctors
 {
-    public partial class PatientQueue: Form
+    public partial class PatientQueue : UserControl
     {
         public PatientQueue()
         {

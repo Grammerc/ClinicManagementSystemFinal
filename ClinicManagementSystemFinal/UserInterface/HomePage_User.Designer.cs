@@ -67,10 +67,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel10 = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
@@ -95,10 +95,9 @@
             guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
             guna2Panel11 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2Panel12 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2ImageButton3 = new Guna.UI2.WinForms.Guna2ImageButton();
             guna2ImageButton4 = new Guna.UI2.WinForms.Guna2ImageButton();
-            tableLayoutPanel1 = new TableLayoutPanel();
+            guna2ImageButton3 = new Guna.UI2.WinForms.Guna2ImageButton();
+            guna2Panel12 = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel1.SuspendLayout();
             guna2Panel8.SuspendLayout();
             guna2Panel7.SuspendLayout();
@@ -108,7 +107,6 @@
             guna2Panel3.SuspendLayout();
             guna2Panel2.SuspendLayout();
             guna2Panel11.SuspendLayout();
-            guna2Panel12.SuspendLayout();
             SuspendLayout();
             // 
             // guna2Panel1
@@ -412,16 +410,19 @@
             guna2Panel11.Size = new Size(793, 80);
             guna2Panel11.TabIndex = 4;
             // 
-            // guna2Panel12
+            // guna2ImageButton4
             // 
-            guna2Panel12.Controls.Add(tableLayoutPanel1);
-            guna2Panel12.CustomizableEdges = customizableEdges40;
-            guna2Panel12.Dock = DockStyle.Fill;
-            guna2Panel12.Location = new Point(221, 80);
-            guna2Panel12.Name = "guna2Panel12";
-            guna2Panel12.ShadowDecoration.CustomizableEdges = customizableEdges41;
-            guna2Panel12.Size = new Size(793, 662);
-            guna2Panel12.TabIndex = 5;
+            guna2ImageButton4.CheckedState.ImageSize = new Size(64, 64);
+            guna2ImageButton4.HoverState.ImageSize = new Size(64, 64);
+            guna2ImageButton4.Image = (Image)resources.GetObject("guna2ImageButton4.Image");
+            guna2ImageButton4.ImageOffset = new Point(0, 0);
+            guna2ImageButton4.ImageRotate = 0F;
+            guna2ImageButton4.Location = new Point(688, 12);
+            guna2ImageButton4.Name = "guna2ImageButton4";
+            guna2ImageButton4.PressedState.ImageSize = new Size(64, 64);
+            guna2ImageButton4.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            guna2ImageButton4.Size = new Size(64, 54);
+            guna2ImageButton4.TabIndex = 1;
             // 
             // guna2ImageButton3
             // 
@@ -437,35 +438,15 @@
             guna2ImageButton3.Size = new Size(64, 54);
             guna2ImageButton3.TabIndex = 0;
             // 
-            // guna2ImageButton4
+            // guna2Panel12
             // 
-            guna2ImageButton4.CheckedState.ImageSize = new Size(64, 64);
-            guna2ImageButton4.HoverState.ImageSize = new Size(64, 64);
-            guna2ImageButton4.Image = (Image)resources.GetObject("guna2ImageButton4.Image");
-            guna2ImageButton4.ImageOffset = new Point(0, 0);
-            guna2ImageButton4.ImageRotate = 0F;
-            guna2ImageButton4.Location = new Point(688, 12);
-            guna2ImageButton4.Name = "guna2ImageButton4";
-            guna2ImageButton4.PressedState.ImageSize = new Size(64, 64);
-            guna2ImageButton4.ShadowDecoration.CustomizableEdges = customizableEdges36;
-            guna2ImageButton4.Size = new Size(64, 54);
-            guna2ImageButton4.TabIndex = 1;
-            // 
-            // tableLayoutPanel1
-            // 
-            tableLayoutPanel1.ColumnCount = 4;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutPanel1.Dock = DockStyle.Top;
-            tableLayoutPanel1.Location = new Point(0, 0);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 2;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(793, 127);
-            tableLayoutPanel1.TabIndex = 0;
+            guna2Panel12.CustomizableEdges = customizableEdges40;
+            guna2Panel12.Dock = DockStyle.Fill;
+            guna2Panel12.Location = new Point(221, 80);
+            guna2Panel12.Name = "guna2Panel12";
+            guna2Panel12.ShadowDecoration.CustomizableEdges = customizableEdges41;
+            guna2Panel12.Size = new Size(793, 662);
+            guna2Panel12.TabIndex = 5;
             // 
             // HomePage_User
             // 
@@ -492,7 +473,6 @@
             guna2Panel2.ResumeLayout(false);
             guna2Panel2.PerformLayout();
             guna2Panel11.ResumeLayout(false);
-            guna2Panel12.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -539,6 +519,5 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel12;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton4;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton3;
-        private TableLayoutPanel tableLayoutPanel1;
     }
 }

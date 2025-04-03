@@ -32,36 +32,36 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            CbxDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            CbxTimeSlot = new Guna.UI2.WinForms.Guna2ComboBox();
-            tbxClinic = new Guna.UI2.WinForms.Guna2TextBox();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            tableLayoutPanel1 = new TableLayoutPanel();
-            cbxDocPhys = new Guna.UI2.WinForms.Guna2ComboBox();
-            label5 = new Label();
-            cbxReasonforVisit = new Guna.UI2.WinForms.Guna2ComboBox();
             label6 = new Label();
+            guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             btnSubmit = new Guna.UI2.WinForms.Guna2Button();
+            guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            cbxReasonforVisit = new Guna.UI2.WinForms.Guna2ComboBox();
+            label5 = new Label();
+            cbxDocPhys = new Guna.UI2.WinForms.Guna2ComboBox();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            tbxClinic = new Guna.UI2.WinForms.Guna2TextBox();
+            CbxTimeSlot = new Guna.UI2.WinForms.Guna2ComboBox();
+            CbxDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             guna2Panel1.SuspendLayout();
             guna2Panel2.SuspendLayout();
             guna2Panel3.SuspendLayout();
@@ -79,6 +79,16 @@
             guna2Panel1.Size = new Size(793, 77);
             guna2Panel1.TabIndex = 0;
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Location = new Point(3, 23);
+            label6.Name = "label6";
+            label6.Size = new Size(203, 25);
+            label6.TabIndex = 1;
+            label6.Text = "Appointment Form";
+            // 
             // guna2Panel2
             // 
             guna2Panel2.Controls.Add(btnSubmit);
@@ -90,6 +100,22 @@
             guna2Panel2.Size = new Size(793, 100);
             guna2Panel2.TabIndex = 1;
             // 
+            // btnSubmit
+            // 
+            btnSubmit.CustomizableEdges = customizableEdges3;
+            btnSubmit.DisabledState.BorderColor = Color.DarkGray;
+            btnSubmit.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnSubmit.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnSubmit.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnSubmit.Font = new Font("Segoe UI", 9F);
+            btnSubmit.ForeColor = Color.White;
+            btnSubmit.Location = new Point(564, 22);
+            btnSubmit.Name = "btnSubmit";
+            btnSubmit.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnSubmit.Size = new Size(177, 56);
+            btnSubmit.TabIndex = 0;
+            btnSubmit.Text = "Submit";
+            // 
             // guna2Panel3
             // 
             guna2Panel3.Controls.Add(tableLayoutPanel1);
@@ -100,105 +126,6 @@
             guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges18;
             guna2Panel3.Size = new Size(793, 465);
             guna2Panel3.TabIndex = 2;
-            // 
-            // CbxDate
-            // 
-            CbxDate.Checked = true;
-            CbxDate.CustomizableEdges = customizableEdges15;
-            CbxDate.Dock = DockStyle.Fill;
-            CbxDate.Font = new Font("Segoe UI", 9F);
-            CbxDate.Format = DateTimePickerFormat.Long;
-            CbxDate.Location = new Point(3, 122);
-            CbxDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            CbxDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            CbxDate.Name = "CbxDate";
-            CbxDate.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            CbxDate.Size = new Size(787, 59);
-            CbxDate.TabIndex = 2;
-            CbxDate.Value = new DateTime(2025, 4, 3, 12, 40, 6, 172);
-            // 
-            // CbxTimeSlot
-            // 
-            CbxTimeSlot.BackColor = Color.Transparent;
-            CbxTimeSlot.CustomizableEdges = customizableEdges13;
-            CbxTimeSlot.Dock = DockStyle.Fill;
-            CbxTimeSlot.DrawMode = DrawMode.OwnerDrawFixed;
-            CbxTimeSlot.DropDownStyle = ComboBoxStyle.DropDownList;
-            CbxTimeSlot.FocusedColor = Color.FromArgb(94, 148, 255);
-            CbxTimeSlot.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            CbxTimeSlot.Font = new Font("Segoe UI", 10F);
-            CbxTimeSlot.ForeColor = Color.FromArgb(68, 88, 112);
-            CbxTimeSlot.ItemHeight = 30;
-            CbxTimeSlot.Items.AddRange(new object[] { "8:00 A.M. - 9:00 A.M.", "9:00 A.M. - 10:00 A.M", "10:00 A.M. - 11:00 A.M.", "11:00 A.M. - 12:00 A.M. ", "12:00 A.M. - 1:00 A.M.", "1:00 A.M. - 2:00 A.M.", "2:00 A.M. - 3:00 A.M.", "3:00 A.M. - 4:00 A.M.", "4:00 A.M. - 5:00 A.M.", "5:00 A.M. - 6:00 A.M." });
-            CbxTimeSlot.Location = new Point(3, 214);
-            CbxTimeSlot.Name = "CbxTimeSlot";
-            CbxTimeSlot.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            CbxTimeSlot.Size = new Size(787, 36);
-            CbxTimeSlot.TabIndex = 3;
-            // 
-            // tbxClinic
-            // 
-            tbxClinic.CustomizableEdges = customizableEdges11;
-            tbxClinic.DefaultText = "";
-            tbxClinic.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            tbxClinic.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            tbxClinic.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            tbxClinic.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            tbxClinic.Dock = DockStyle.Fill;
-            tbxClinic.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbxClinic.Font = new Font("Segoe UI", 9F);
-            tbxClinic.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbxClinic.Location = new Point(3, 30);
-            tbxClinic.Name = "tbxClinic";
-            tbxClinic.PlaceholderText = "";
-            tbxClinic.SelectedText = "";
-            tbxClinic.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            tbxClinic.Size = new Size(787, 59);
-            tbxClinic.TabIndex = 1;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Dock = DockStyle.Fill;
-            label1.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(3, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(787, 27);
-            label1.TabIndex = 0;
-            label1.Text = "Clinic Name";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Dock = DockStyle.Fill;
-            label2.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(3, 92);
-            label2.Name = "label2";
-            label2.Size = new Size(787, 27);
-            label2.TabIndex = 4;
-            label2.Text = "Date";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Dock = DockStyle.Fill;
-            label3.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(3, 184);
-            label3.Name = "label3";
-            label3.Size = new Size(787, 27);
-            label3.TabIndex = 5;
-            label3.Text = "Time Slot";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Dock = DockStyle.Fill;
-            label4.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(3, 276);
-            label4.Name = "label4";
-            label4.Size = new Size(787, 27);
-            label4.TabIndex = 6;
-            label4.Text = "Doctor/Physician";
             // 
             // tableLayoutPanel1
             // 
@@ -231,35 +158,6 @@
             tableLayoutPanel1.Size = new Size(793, 465);
             tableLayoutPanel1.TabIndex = 0;
             // 
-            // cbxDocPhys
-            // 
-            cbxDocPhys.BackColor = Color.Transparent;
-            cbxDocPhys.CustomizableEdges = customizableEdges9;
-            cbxDocPhys.Dock = DockStyle.Fill;
-            cbxDocPhys.DrawMode = DrawMode.OwnerDrawFixed;
-            cbxDocPhys.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbxDocPhys.FocusedColor = Color.FromArgb(94, 148, 255);
-            cbxDocPhys.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            cbxDocPhys.Font = new Font("Segoe UI", 10F);
-            cbxDocPhys.ForeColor = Color.FromArgb(68, 88, 112);
-            cbxDocPhys.ItemHeight = 30;
-            cbxDocPhys.Location = new Point(3, 306);
-            cbxDocPhys.Name = "cbxDocPhys";
-            cbxDocPhys.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            cbxDocPhys.Size = new Size(787, 36);
-            cbxDocPhys.TabIndex = 7;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Dock = DockStyle.Fill;
-            label5.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(3, 368);
-            label5.Name = "label5";
-            label5.Size = new Size(787, 27);
-            label5.TabIndex = 8;
-            label5.Text = "Reason for Visit";
-            // 
             // cbxReasonforVisit
             // 
             cbxReasonforVisit.BackColor = Color.Transparent;
@@ -278,31 +176,133 @@
             cbxReasonforVisit.Size = new Size(787, 36);
             cbxReasonforVisit.TabIndex = 9;
             // 
-            // label6
+            // label5
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(3, 23);
-            label6.Name = "label6";
-            label6.Size = new Size(203, 25);
-            label6.TabIndex = 1;
-            label6.Text = "Appointment Form";
+            label5.AutoSize = true;
+            label5.Dock = DockStyle.Fill;
+            label5.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Location = new Point(3, 368);
+            label5.Name = "label5";
+            label5.Size = new Size(787, 27);
+            label5.TabIndex = 8;
+            label5.Text = "Reason for Visit";
             // 
-            // btnSubmit
+            // cbxDocPhys
             // 
-            btnSubmit.CustomizableEdges = customizableEdges3;
-            btnSubmit.DisabledState.BorderColor = Color.DarkGray;
-            btnSubmit.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnSubmit.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnSubmit.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnSubmit.Font = new Font("Segoe UI", 9F);
-            btnSubmit.ForeColor = Color.White;
-            btnSubmit.Location = new Point(564, 22);
-            btnSubmit.Name = "btnSubmit";
-            btnSubmit.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnSubmit.Size = new Size(177, 56);
-            btnSubmit.TabIndex = 0;
-            btnSubmit.Text = "Submit";
+            cbxDocPhys.BackColor = Color.Transparent;
+            cbxDocPhys.CustomizableEdges = customizableEdges9;
+            cbxDocPhys.Dock = DockStyle.Fill;
+            cbxDocPhys.DrawMode = DrawMode.OwnerDrawFixed;
+            cbxDocPhys.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbxDocPhys.FocusedColor = Color.FromArgb(94, 148, 255);
+            cbxDocPhys.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cbxDocPhys.Font = new Font("Segoe UI", 10F);
+            cbxDocPhys.ForeColor = Color.FromArgb(68, 88, 112);
+            cbxDocPhys.ItemHeight = 30;
+            cbxDocPhys.Location = new Point(3, 306);
+            cbxDocPhys.Name = "cbxDocPhys";
+            cbxDocPhys.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            cbxDocPhys.Size = new Size(787, 36);
+            cbxDocPhys.TabIndex = 7;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Dock = DockStyle.Fill;
+            label4.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(3, 276);
+            label4.Name = "label4";
+            label4.Size = new Size(787, 27);
+            label4.TabIndex = 6;
+            label4.Text = "Doctor/Physician";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Dock = DockStyle.Fill;
+            label3.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(3, 184);
+            label3.Name = "label3";
+            label3.Size = new Size(787, 27);
+            label3.TabIndex = 5;
+            label3.Text = "Time Slot";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Dock = DockStyle.Fill;
+            label2.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(3, 92);
+            label2.Name = "label2";
+            label2.Size = new Size(787, 27);
+            label2.TabIndex = 4;
+            label2.Text = "Date";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Dock = DockStyle.Fill;
+            label1.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(3, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(787, 27);
+            label1.TabIndex = 0;
+            label1.Text = "Clinic Name";
+            // 
+            // tbxClinic
+            // 
+            tbxClinic.CustomizableEdges = customizableEdges11;
+            tbxClinic.DefaultText = "";
+            tbxClinic.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            tbxClinic.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            tbxClinic.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            tbxClinic.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            tbxClinic.Dock = DockStyle.Fill;
+            tbxClinic.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            tbxClinic.Font = new Font("Segoe UI", 9F);
+            tbxClinic.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            tbxClinic.Location = new Point(3, 30);
+            tbxClinic.Name = "tbxClinic";
+            tbxClinic.PlaceholderText = "";
+            tbxClinic.SelectedText = "";
+            tbxClinic.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            tbxClinic.Size = new Size(787, 59);
+            tbxClinic.TabIndex = 1;
+            // 
+            // CbxTimeSlot
+            // 
+            CbxTimeSlot.BackColor = Color.Transparent;
+            CbxTimeSlot.CustomizableEdges = customizableEdges13;
+            CbxTimeSlot.Dock = DockStyle.Fill;
+            CbxTimeSlot.DrawMode = DrawMode.OwnerDrawFixed;
+            CbxTimeSlot.DropDownStyle = ComboBoxStyle.DropDownList;
+            CbxTimeSlot.FocusedColor = Color.FromArgb(94, 148, 255);
+            CbxTimeSlot.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            CbxTimeSlot.Font = new Font("Segoe UI", 10F);
+            CbxTimeSlot.ForeColor = Color.FromArgb(68, 88, 112);
+            CbxTimeSlot.ItemHeight = 30;
+            CbxTimeSlot.Items.AddRange(new object[] { "8:00 A.M. - 9:00 A.M.", "9:00 A.M. - 10:00 A.M", "10:00 A.M. - 11:00 A.M.", "11:00 A.M. - 12:00 A.M. ", "12:00 A.M. - 1:00 A.M.", "1:00 A.M. - 2:00 A.M.", "2:00 A.M. - 3:00 A.M.", "3:00 A.M. - 4:00 A.M.", "4:00 A.M. - 5:00 A.M.", "5:00 A.M. - 6:00 A.M." });
+            CbxTimeSlot.Location = new Point(3, 214);
+            CbxTimeSlot.Name = "CbxTimeSlot";
+            CbxTimeSlot.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            CbxTimeSlot.Size = new Size(787, 36);
+            CbxTimeSlot.TabIndex = 3;
+            // 
+            // CbxDate
+            // 
+            CbxDate.Checked = true;
+            CbxDate.CustomizableEdges = customizableEdges15;
+            CbxDate.Dock = DockStyle.Fill;
+            CbxDate.Font = new Font("Segoe UI", 9F);
+            CbxDate.Format = DateTimePickerFormat.Long;
+            CbxDate.Location = new Point(3, 122);
+            CbxDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            CbxDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            CbxDate.Name = "CbxDate";
+            CbxDate.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            CbxDate.Size = new Size(787, 59);
+            CbxDate.TabIndex = 2;
+            CbxDate.Value = new DateTime(2025, 4, 3, 12, 40, 6, 172);
             // 
             // Appointments_User
             // 

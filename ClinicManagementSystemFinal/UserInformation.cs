@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ClinicManagementSystemFinal.UserControls_User
+namespace ClinicManagementSystemFinal
 {
-    public partial class UserInformation: UserControl
+    public partial class UserInformation : UserControl
     {
         public UserInformation()
         {

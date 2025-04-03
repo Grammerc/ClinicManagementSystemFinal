@@ -282,7 +282,6 @@
             ClientSize = new Size(925, 565);
             Controls.Add(nightControlBox1);
             Controls.Add(panelMainSignIn);
-            DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
             Name = "SignIn";
             StartPosition = FormStartPosition.CenterScreen;

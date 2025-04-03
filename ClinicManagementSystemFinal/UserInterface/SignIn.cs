@@ -23,16 +23,6 @@ namespace ClinicManagementSystemFinal
             Persist Security Info=False;";
         }
 
-        protected override CreateParams CreateParams
-        {
-            get
-            {
-                CreateParams handleParams = base.CreateParams;
-                handleParams.ExStyle = 0x02000000;
-                return handleParams;
-            }
-        }
-
         private void SignIn_Load(object sender, EventArgs e)
         {
 

@@ -61,8 +61,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage_User));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -70,8 +70,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            ReaLTaiizor.ControlRenderer controlRenderer1 = new ReaLTaiizor.ControlRenderer();
-            ReaLTaiizor.MSColorTable msColorTable1 = new ReaLTaiizor.MSColorTable();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel10 = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
@@ -98,7 +96,6 @@
             guna2Panel11 = new Guna.UI2.WinForms.Guna2Panel();
             guna2ImageButton3 = new Guna.UI2.WinForms.Guna2ImageButton();
             panelMainDesktop = new Guna.UI2.WinForms.Guna2Panel();
-            formContextMenuStrip1 = new ReaLTaiizor.Controls.FormContextMenuStrip();
             guna2Panel1.SuspendLayout();
             guna2Panel8.SuspendLayout();
             guna2Panel7.SuspendLayout();
@@ -339,13 +336,13 @@
             guna2CircleButton1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2CircleButton1.Font = new Font("Segoe UI", 9F);
             guna2CircleButton1.ForeColor = Color.White;
-            guna2CircleButton1.Location = new Point(67, 58);
+            guna2CircleButton1.Image = (Image)resources.GetObject("guna2CircleButton1.Image");
+            guna2CircleButton1.Location = new Point(67, 62);
             guna2CircleButton1.Name = "guna2CircleButton1";
             guna2CircleButton1.ShadowDecoration.CustomizableEdges = customizableEdges29;
             guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CircleButton1.Size = new Size(78, 80);
+            guna2CircleButton1.Size = new Size(77, 75);
             guna2CircleButton1.TabIndex = 0;
-            guna2CircleButton1.Text = "guna2CircleButton1";
             // 
             // label1
             // 
@@ -371,9 +368,9 @@
             label2.ForeColor = SystemColors.AppWorkspace;
             label2.Location = new Point(67, 177);
             label2.Name = "label2";
-            label2.Size = new Size(28, 12);
+            label2.Size = new Size(29, 12);
             label2.TabIndex = 2;
-            label2.Text = "Role";
+            label2.Text = "User";
             // 
             // guna2ImageButton1
             // 
@@ -411,7 +408,7 @@
             guna2Panel11.Location = new Point(221, 0);
             guna2Panel11.Name = "guna2Panel11";
             guna2Panel11.ShadowDecoration.CustomizableEdges = customizableEdges38;
-            guna2Panel11.Size = new Size(793, 50);
+            guna2Panel11.Size = new Size(793, 80);
             guna2Panel11.TabIndex = 4;
             // 
             // guna2ImageButton3
@@ -421,11 +418,11 @@
             guna2ImageButton3.Image = (Image)resources.GetObject("guna2ImageButton3.Image");
             guna2ImageButton3.ImageOffset = new Point(0, 0);
             guna2ImageButton3.ImageRotate = 0F;
-            guna2ImageButton3.Location = new Point(654, 6);
+            guna2ImageButton3.Location = new Point(619, 17);
             guna2ImageButton3.Name = "guna2ImageButton3";
             guna2ImageButton3.PressedState.ImageSize = new Size(64, 64);
             guna2ImageButton3.ShadowDecoration.CustomizableEdges = customizableEdges36;
-            guna2ImageButton3.Size = new Size(46, 38);
+            guna2ImageButton3.Size = new Size(53, 49);
             guna2ImageButton3.TabIndex = 0;
             // 
             // panelMainDesktop
@@ -433,19 +430,11 @@
             panelMainDesktop.BackColor = Color.WhiteSmoke;
             panelMainDesktop.CustomizableEdges = customizableEdges39;
             panelMainDesktop.Dock = DockStyle.Fill;
-            panelMainDesktop.Location = new Point(221, 50);
+            panelMainDesktop.Location = new Point(221, 80);
             panelMainDesktop.Name = "panelMainDesktop";
             panelMainDesktop.ShadowDecoration.CustomizableEdges = customizableEdges40;
-            panelMainDesktop.Size = new Size(793, 692);
+            panelMainDesktop.Size = new Size(793, 662);
             panelMainDesktop.TabIndex = 5;
-            // 
-            // formContextMenuStrip1
-            // 
-            formContextMenuStrip1.Name = "formContextMenuStrip1";
-            controlRenderer1.ColorTable = msColorTable1;
-            controlRenderer1.RoundedEdges = true;
-            formContextMenuStrip1.Renderer = controlRenderer1;
-            formContextMenuStrip1.Size = new Size(61, 4);
             // 
             // HomePage_User
             // 
@@ -517,6 +506,5 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel11;
         private Guna.UI2.WinForms.Guna2Panel panelDesktop;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton3;
-        private ReaLTaiizor.Controls.FormContextMenuStrip formContextMenuStrip1;
     }
 }

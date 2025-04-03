@@ -58,10 +58,11 @@
             // guna2Panel1
             // 
             guna2Panel1.CustomizableEdges = customizableEdges1;
-            guna2Panel1.Location = new Point(12, 86);
+            guna2Panel1.Dock = DockStyle.Fill;
+            guna2Panel1.Location = new Point(0, 56);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Panel1.Size = new Size(200, 100);
+            guna2Panel1.Size = new Size(793, 586);
             guna2Panel1.TabIndex = 7;
             // 
             // Calendar_Doctor

@@ -24,8 +24,6 @@ namespace ClinicManagementSystemFinal
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            pbx1.Visible = true;
-            pbx2.Visible = true;
         }
 
         private void pbx1_Click(object sender, EventArgs e)
@@ -36,8 +34,8 @@ namespace ClinicManagementSystemFinal
             {
                 if (openForm is HomePage_User homePage)
                 {
-                    homePage.loadform(new AppointmentForm()); 
-                    return; 
+                    homePage.loadform(new AppointmentForm());
+                    return;
                 }
             }
         }
@@ -54,6 +52,11 @@ namespace ClinicManagementSystemFinal
                     return;
                 }
             }
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

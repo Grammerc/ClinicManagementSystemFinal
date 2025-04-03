@@ -34,91 +34,91 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MyClinics));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MyClinics));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             label4 = new Label();
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
             panelClinic9 = new TableLayoutPanel();
+            imgClinic9 = new Guna.UI2.WinForms.Guna2ImageButton();
             tableLayoutPanel19 = new TableLayoutPanel();
+            btnEdit9 = new Label();
             guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
             panelClinic8 = new TableLayoutPanel();
+            imgClinic8 = new Guna.UI2.WinForms.Guna2ImageButton();
             tableLayoutPanel18 = new TableLayoutPanel();
+            btnEdit8 = new Label();
             guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
             panelClinic7 = new TableLayoutPanel();
+            imgClinic7 = new Guna.UI2.WinForms.Guna2ImageButton();
             tableLayoutPanel17 = new TableLayoutPanel();
+            btnEdit7 = new Label();
             guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
             panelClinic6 = new TableLayoutPanel();
+            imgClinic6 = new Guna.UI2.WinForms.Guna2ImageButton();
             tableLayoutPanel16 = new TableLayoutPanel();
+            btnEdit6 = new Label();
             guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             panelClinic5 = new TableLayoutPanel();
+            imgClinic5 = new Guna.UI2.WinForms.Guna2ImageButton();
             tableLayoutPanel15 = new TableLayoutPanel();
+            btnEdit5 = new Label();
             guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             panelClinic4 = new TableLayoutPanel();
+            imgClinic4 = new Guna.UI2.WinForms.Guna2ImageButton();
             tableLayoutPanel14 = new TableLayoutPanel();
+            btnEdit4 = new Label();
             guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             panelClinic3 = new TableLayoutPanel();
+            imgClinic3 = new Guna.UI2.WinForms.Guna2ImageButton();
             tableLayoutPanel13 = new TableLayoutPanel();
+            btnEdit3 = new Label();
             guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             panelClinic2 = new TableLayoutPanel();
+            imgClinic2 = new Guna.UI2.WinForms.Guna2ImageButton();
             tableLayoutPanel12 = new TableLayoutPanel();
-            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            clinicName2 = new Label();
+            btnEdit2 = new Guna.UI2.WinForms.Guna2Button();
             panelClinic1 = new TableLayoutPanel();
             tableLayoutPanel11 = new TableLayoutPanel();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            btnEdit1 = new Guna.UI2.WinForms.Guna2Button();
+            clinicName1 = new Label();
+            imgClinic1 = new Guna.UI2.WinForms.Guna2ImageButton();
             guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             label1 = new Label();
             guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            imgClinic1 = new Guna.UI2.WinForms.Guna2ImageButton();
-            imgClinic2 = new Guna.UI2.WinForms.Guna2ImageButton();
-            imgClinic3 = new Guna.UI2.WinForms.Guna2ImageButton();
-            imgClinic4 = new Guna.UI2.WinForms.Guna2ImageButton();
-            imgClinic5 = new Guna.UI2.WinForms.Guna2ImageButton();
-            imgClinic6 = new Guna.UI2.WinForms.Guna2ImageButton();
-            imgClinic7 = new Guna.UI2.WinForms.Guna2ImageButton();
-            imgClinic8 = new Guna.UI2.WinForms.Guna2ImageButton();
-            imgClinic9 = new Guna.UI2.WinForms.Guna2ImageButton();
-            label2 = new Label();
-            label3 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            label9 = new Label();
-            label10 = new Label();
-            label11 = new Label();
             guna2Panel1.SuspendLayout();
             guna2Panel2.SuspendLayout();
             guna2Panel4.SuspendLayout();
@@ -228,12 +228,27 @@
             panelClinic9.Size = new Size(258, 155);
             panelClinic9.TabIndex = 8;
             // 
+            // imgClinic9
+            // 
+            imgClinic9.CheckedState.ImageSize = new Size(64, 64);
+            imgClinic9.Dock = DockStyle.Fill;
+            imgClinic9.HoverState.ImageSize = new Size(64, 64);
+            imgClinic9.Image = (Image)resources.GetObject("imgClinic9.Image");
+            imgClinic9.ImageOffset = new Point(0, 0);
+            imgClinic9.ImageRotate = 0F;
+            imgClinic9.Location = new Point(3, 49);
+            imgClinic9.Name = "imgClinic9";
+            imgClinic9.PressedState.ImageSize = new Size(64, 64);
+            imgClinic9.ShadowDecoration.CustomizableEdges = customizableEdges3;
+            imgClinic9.Size = new Size(252, 103);
+            imgClinic9.TabIndex = 2;
+            // 
             // tableLayoutPanel19
             // 
             tableLayoutPanel19.ColumnCount = 2;
             tableLayoutPanel19.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel19.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel19.Controls.Add(label11, 0, 0);
+            tableLayoutPanel19.Controls.Add(btnEdit9, 0, 0);
             tableLayoutPanel19.Controls.Add(guna2Button9, 1, 0);
             tableLayoutPanel19.Dock = DockStyle.Fill;
             tableLayoutPanel19.Location = new Point(3, 3);
@@ -243,6 +258,16 @@
             tableLayoutPanel19.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel19.Size = new Size(252, 40);
             tableLayoutPanel19.TabIndex = 1;
+            // 
+            // btnEdit9
+            // 
+            btnEdit9.Anchor = AnchorStyles.None;
+            btnEdit9.AutoSize = true;
+            btnEdit9.Location = new Point(41, 12);
+            btnEdit9.Name = "btnEdit9";
+            btnEdit9.Size = new Size(44, 15);
+            btnEdit9.TabIndex = 2;
+            btnEdit9.Text = "label11";
             // 
             // guna2Button9
             // 
@@ -274,12 +299,27 @@
             panelClinic8.Size = new Size(258, 155);
             panelClinic8.TabIndex = 7;
             // 
+            // imgClinic8
+            // 
+            imgClinic8.CheckedState.ImageSize = new Size(64, 64);
+            imgClinic8.Dock = DockStyle.Fill;
+            imgClinic8.HoverState.ImageSize = new Size(64, 64);
+            imgClinic8.Image = (Image)resources.GetObject("imgClinic8.Image");
+            imgClinic8.ImageOffset = new Point(0, 0);
+            imgClinic8.ImageRotate = 0F;
+            imgClinic8.Location = new Point(3, 49);
+            imgClinic8.Name = "imgClinic8";
+            imgClinic8.PressedState.ImageSize = new Size(64, 64);
+            imgClinic8.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            imgClinic8.Size = new Size(252, 103);
+            imgClinic8.TabIndex = 2;
+            // 
             // tableLayoutPanel18
             // 
             tableLayoutPanel18.ColumnCount = 2;
             tableLayoutPanel18.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel18.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel18.Controls.Add(label10, 0, 0);
+            tableLayoutPanel18.Controls.Add(btnEdit8, 0, 0);
             tableLayoutPanel18.Controls.Add(guna2Button8, 1, 0);
             tableLayoutPanel18.Dock = DockStyle.Fill;
             tableLayoutPanel18.Location = new Point(3, 3);
@@ -289,6 +329,16 @@
             tableLayoutPanel18.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel18.Size = new Size(252, 40);
             tableLayoutPanel18.TabIndex = 1;
+            // 
+            // btnEdit8
+            // 
+            btnEdit8.Anchor = AnchorStyles.None;
+            btnEdit8.AutoSize = true;
+            btnEdit8.Location = new Point(41, 12);
+            btnEdit8.Name = "btnEdit8";
+            btnEdit8.Size = new Size(44, 15);
+            btnEdit8.TabIndex = 2;
+            btnEdit8.Text = "label10";
             // 
             // guna2Button8
             // 
@@ -320,12 +370,27 @@
             panelClinic7.Size = new Size(258, 155);
             panelClinic7.TabIndex = 6;
             // 
+            // imgClinic7
+            // 
+            imgClinic7.CheckedState.ImageSize = new Size(64, 64);
+            imgClinic7.Dock = DockStyle.Fill;
+            imgClinic7.HoverState.ImageSize = new Size(64, 64);
+            imgClinic7.Image = (Image)resources.GetObject("imgClinic7.Image");
+            imgClinic7.ImageOffset = new Point(0, 0);
+            imgClinic7.ImageRotate = 0F;
+            imgClinic7.Location = new Point(3, 49);
+            imgClinic7.Name = "imgClinic7";
+            imgClinic7.PressedState.ImageSize = new Size(64, 64);
+            imgClinic7.ShadowDecoration.CustomizableEdges = customizableEdges9;
+            imgClinic7.Size = new Size(252, 103);
+            imgClinic7.TabIndex = 2;
+            // 
             // tableLayoutPanel17
             // 
             tableLayoutPanel17.ColumnCount = 2;
             tableLayoutPanel17.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel17.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel17.Controls.Add(label9, 0, 0);
+            tableLayoutPanel17.Controls.Add(btnEdit7, 0, 0);
             tableLayoutPanel17.Controls.Add(guna2Button7, 1, 0);
             tableLayoutPanel17.Dock = DockStyle.Fill;
             tableLayoutPanel17.Location = new Point(3, 3);
@@ -335,6 +400,16 @@
             tableLayoutPanel17.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel17.Size = new Size(252, 40);
             tableLayoutPanel17.TabIndex = 1;
+            // 
+            // btnEdit7
+            // 
+            btnEdit7.Anchor = AnchorStyles.None;
+            btnEdit7.AutoSize = true;
+            btnEdit7.Location = new Point(44, 12);
+            btnEdit7.Name = "btnEdit7";
+            btnEdit7.Size = new Size(38, 15);
+            btnEdit7.TabIndex = 2;
+            btnEdit7.Text = "label9";
             // 
             // guna2Button7
             // 
@@ -366,12 +441,27 @@
             panelClinic6.Size = new Size(258, 155);
             panelClinic6.TabIndex = 5;
             // 
+            // imgClinic6
+            // 
+            imgClinic6.CheckedState.ImageSize = new Size(64, 64);
+            imgClinic6.Dock = DockStyle.Fill;
+            imgClinic6.HoverState.ImageSize = new Size(64, 64);
+            imgClinic6.Image = (Image)resources.GetObject("imgClinic6.Image");
+            imgClinic6.ImageOffset = new Point(0, 0);
+            imgClinic6.ImageRotate = 0F;
+            imgClinic6.Location = new Point(3, 49);
+            imgClinic6.Name = "imgClinic6";
+            imgClinic6.PressedState.ImageSize = new Size(64, 64);
+            imgClinic6.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            imgClinic6.Size = new Size(252, 103);
+            imgClinic6.TabIndex = 2;
+            // 
             // tableLayoutPanel16
             // 
             tableLayoutPanel16.ColumnCount = 2;
             tableLayoutPanel16.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel16.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel16.Controls.Add(label8, 0, 0);
+            tableLayoutPanel16.Controls.Add(btnEdit6, 0, 0);
             tableLayoutPanel16.Controls.Add(guna2Button6, 1, 0);
             tableLayoutPanel16.Dock = DockStyle.Fill;
             tableLayoutPanel16.Location = new Point(3, 3);
@@ -381,6 +471,16 @@
             tableLayoutPanel16.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel16.Size = new Size(252, 40);
             tableLayoutPanel16.TabIndex = 1;
+            // 
+            // btnEdit6
+            // 
+            btnEdit6.Anchor = AnchorStyles.None;
+            btnEdit6.AutoSize = true;
+            btnEdit6.Location = new Point(44, 12);
+            btnEdit6.Name = "btnEdit6";
+            btnEdit6.Size = new Size(38, 15);
+            btnEdit6.TabIndex = 2;
+            btnEdit6.Text = "label8";
             // 
             // guna2Button6
             // 
@@ -412,12 +512,27 @@
             panelClinic5.Size = new Size(258, 155);
             panelClinic5.TabIndex = 4;
             // 
+            // imgClinic5
+            // 
+            imgClinic5.CheckedState.ImageSize = new Size(64, 64);
+            imgClinic5.Dock = DockStyle.Fill;
+            imgClinic5.HoverState.ImageSize = new Size(64, 64);
+            imgClinic5.Image = (Image)resources.GetObject("imgClinic5.Image");
+            imgClinic5.ImageOffset = new Point(0, 0);
+            imgClinic5.ImageRotate = 0F;
+            imgClinic5.Location = new Point(3, 49);
+            imgClinic5.Name = "imgClinic5";
+            imgClinic5.PressedState.ImageSize = new Size(64, 64);
+            imgClinic5.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            imgClinic5.Size = new Size(252, 103);
+            imgClinic5.TabIndex = 2;
+            // 
             // tableLayoutPanel15
             // 
             tableLayoutPanel15.ColumnCount = 2;
             tableLayoutPanel15.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel15.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel15.Controls.Add(label7, 0, 0);
+            tableLayoutPanel15.Controls.Add(btnEdit5, 0, 0);
             tableLayoutPanel15.Controls.Add(guna2Button5, 1, 0);
             tableLayoutPanel15.Dock = DockStyle.Fill;
             tableLayoutPanel15.Location = new Point(3, 3);
@@ -427,6 +542,16 @@
             tableLayoutPanel15.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel15.Size = new Size(252, 40);
             tableLayoutPanel15.TabIndex = 1;
+            // 
+            // btnEdit5
+            // 
+            btnEdit5.Anchor = AnchorStyles.None;
+            btnEdit5.AutoSize = true;
+            btnEdit5.Location = new Point(44, 12);
+            btnEdit5.Name = "btnEdit5";
+            btnEdit5.Size = new Size(38, 15);
+            btnEdit5.TabIndex = 2;
+            btnEdit5.Text = "label7";
             // 
             // guna2Button5
             // 
@@ -458,12 +583,27 @@
             panelClinic4.Size = new Size(258, 155);
             panelClinic4.TabIndex = 3;
             // 
+            // imgClinic4
+            // 
+            imgClinic4.CheckedState.ImageSize = new Size(64, 64);
+            imgClinic4.Dock = DockStyle.Fill;
+            imgClinic4.HoverState.ImageSize = new Size(64, 64);
+            imgClinic4.Image = (Image)resources.GetObject("imgClinic4.Image");
+            imgClinic4.ImageOffset = new Point(0, 0);
+            imgClinic4.ImageRotate = 0F;
+            imgClinic4.Location = new Point(3, 49);
+            imgClinic4.Name = "imgClinic4";
+            imgClinic4.PressedState.ImageSize = new Size(64, 64);
+            imgClinic4.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            imgClinic4.Size = new Size(252, 103);
+            imgClinic4.TabIndex = 2;
+            // 
             // tableLayoutPanel14
             // 
             tableLayoutPanel14.ColumnCount = 2;
             tableLayoutPanel14.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel14.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel14.Controls.Add(label6, 0, 0);
+            tableLayoutPanel14.Controls.Add(btnEdit4, 0, 0);
             tableLayoutPanel14.Controls.Add(guna2Button4, 1, 0);
             tableLayoutPanel14.Dock = DockStyle.Fill;
             tableLayoutPanel14.Location = new Point(3, 3);
@@ -473,6 +613,16 @@
             tableLayoutPanel14.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel14.Size = new Size(252, 40);
             tableLayoutPanel14.TabIndex = 1;
+            // 
+            // btnEdit4
+            // 
+            btnEdit4.Anchor = AnchorStyles.None;
+            btnEdit4.AutoSize = true;
+            btnEdit4.Location = new Point(44, 12);
+            btnEdit4.Name = "btnEdit4";
+            btnEdit4.Size = new Size(38, 15);
+            btnEdit4.TabIndex = 2;
+            btnEdit4.Text = "label6";
             // 
             // guna2Button4
             // 
@@ -504,12 +654,27 @@
             panelClinic3.Size = new Size(258, 155);
             panelClinic3.TabIndex = 2;
             // 
+            // imgClinic3
+            // 
+            imgClinic3.CheckedState.ImageSize = new Size(64, 64);
+            imgClinic3.Dock = DockStyle.Fill;
+            imgClinic3.HoverState.ImageSize = new Size(64, 64);
+            imgClinic3.Image = (Image)resources.GetObject("imgClinic3.Image");
+            imgClinic3.ImageOffset = new Point(0, 0);
+            imgClinic3.ImageRotate = 0F;
+            imgClinic3.Location = new Point(3, 49);
+            imgClinic3.Name = "imgClinic3";
+            imgClinic3.PressedState.ImageSize = new Size(64, 64);
+            imgClinic3.ShadowDecoration.CustomizableEdges = customizableEdges21;
+            imgClinic3.Size = new Size(252, 103);
+            imgClinic3.TabIndex = 2;
+            // 
             // tableLayoutPanel13
             // 
             tableLayoutPanel13.ColumnCount = 2;
             tableLayoutPanel13.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel13.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel13.Controls.Add(label5, 0, 0);
+            tableLayoutPanel13.Controls.Add(btnEdit3, 0, 0);
             tableLayoutPanel13.Controls.Add(guna2Button3, 1, 0);
             tableLayoutPanel13.Dock = DockStyle.Fill;
             tableLayoutPanel13.Location = new Point(3, 3);
@@ -519,6 +684,16 @@
             tableLayoutPanel13.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel13.Size = new Size(252, 40);
             tableLayoutPanel13.TabIndex = 1;
+            // 
+            // btnEdit3
+            // 
+            btnEdit3.Anchor = AnchorStyles.None;
+            btnEdit3.AutoSize = true;
+            btnEdit3.Location = new Point(44, 12);
+            btnEdit3.Name = "btnEdit3";
+            btnEdit3.Size = new Size(38, 15);
+            btnEdit3.TabIndex = 2;
+            btnEdit3.Text = "label5";
             // 
             // guna2Button3
             // 
@@ -550,13 +725,28 @@
             panelClinic2.Size = new Size(258, 155);
             panelClinic2.TabIndex = 1;
             // 
+            // imgClinic2
+            // 
+            imgClinic2.CheckedState.ImageSize = new Size(64, 64);
+            imgClinic2.Dock = DockStyle.Fill;
+            imgClinic2.HoverState.ImageSize = new Size(64, 64);
+            imgClinic2.Image = (Image)resources.GetObject("imgClinic2.Image");
+            imgClinic2.ImageOffset = new Point(0, 0);
+            imgClinic2.ImageRotate = 0F;
+            imgClinic2.Location = new Point(3, 49);
+            imgClinic2.Name = "imgClinic2";
+            imgClinic2.PressedState.ImageSize = new Size(64, 64);
+            imgClinic2.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            imgClinic2.Size = new Size(252, 103);
+            imgClinic2.TabIndex = 2;
+            // 
             // tableLayoutPanel12
             // 
             tableLayoutPanel12.ColumnCount = 2;
             tableLayoutPanel12.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel12.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel12.Controls.Add(label3, 0, 0);
-            tableLayoutPanel12.Controls.Add(guna2Button2, 1, 0);
+            tableLayoutPanel12.Controls.Add(clinicName2, 0, 0);
+            tableLayoutPanel12.Controls.Add(btnEdit2, 1, 0);
             tableLayoutPanel12.Dock = DockStyle.Fill;
             tableLayoutPanel12.Location = new Point(3, 3);
             tableLayoutPanel12.Name = "tableLayoutPanel12";
@@ -566,21 +756,31 @@
             tableLayoutPanel12.Size = new Size(252, 40);
             tableLayoutPanel12.TabIndex = 1;
             // 
-            // guna2Button2
+            // clinicName2
             // 
-            guna2Button2.CustomizableEdges = customizableEdges25;
-            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button2.Font = new Font("Segoe UI", 9F);
-            guna2Button2.ForeColor = Color.White;
-            guna2Button2.Location = new Point(129, 3);
-            guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges26;
-            guna2Button2.Size = new Size(120, 34);
-            guna2Button2.TabIndex = 0;
-            guna2Button2.Text = "Edit";
+            clinicName2.Anchor = AnchorStyles.None;
+            clinicName2.AutoSize = true;
+            clinicName2.Location = new Point(44, 12);
+            clinicName2.Name = "clinicName2";
+            clinicName2.Size = new Size(38, 15);
+            clinicName2.TabIndex = 2;
+            clinicName2.Text = "label3";
+            // 
+            // btnEdit2
+            // 
+            btnEdit2.CustomizableEdges = customizableEdges25;
+            btnEdit2.DisabledState.BorderColor = Color.DarkGray;
+            btnEdit2.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnEdit2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnEdit2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnEdit2.Font = new Font("Segoe UI", 9F);
+            btnEdit2.ForeColor = Color.White;
+            btnEdit2.Location = new Point(129, 3);
+            btnEdit2.Name = "btnEdit2";
+            btnEdit2.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            btnEdit2.Size = new Size(120, 34);
+            btnEdit2.TabIndex = 0;
+            btnEdit2.Text = "Edit";
             // 
             // panelClinic1
             // 
@@ -601,8 +801,8 @@
             tableLayoutPanel11.ColumnCount = 2;
             tableLayoutPanel11.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel11.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel11.Controls.Add(guna2Button1, 1, 0);
-            tableLayoutPanel11.Controls.Add(label2, 0, 0);
+            tableLayoutPanel11.Controls.Add(btnEdit1, 1, 0);
+            tableLayoutPanel11.Controls.Add(clinicName1, 0, 0);
             tableLayoutPanel11.Dock = DockStyle.Fill;
             tableLayoutPanel11.Location = new Point(3, 3);
             tableLayoutPanel11.Name = "tableLayoutPanel11";
@@ -613,21 +813,47 @@
             tableLayoutPanel11.TabIndex = 0;
             tableLayoutPanel11.Paint += tableLayoutPanel11_Paint;
             // 
-            // guna2Button1
+            // btnEdit1
             // 
-            guna2Button1.CustomizableEdges = customizableEdges27;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.Font = new Font("Segoe UI", 9F);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(129, 3);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges28;
-            guna2Button1.Size = new Size(120, 34);
-            guna2Button1.TabIndex = 0;
-            guna2Button1.Text = "Edit";
+            btnEdit1.CustomizableEdges = customizableEdges27;
+            btnEdit1.DisabledState.BorderColor = Color.DarkGray;
+            btnEdit1.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnEdit1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnEdit1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnEdit1.Font = new Font("Segoe UI", 9F);
+            btnEdit1.ForeColor = Color.White;
+            btnEdit1.Location = new Point(129, 3);
+            btnEdit1.Name = "btnEdit1";
+            btnEdit1.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            btnEdit1.Size = new Size(120, 34);
+            btnEdit1.TabIndex = 0;
+            btnEdit1.Text = "Edit";
+            // 
+            // clinicName1
+            // 
+            clinicName1.Anchor = AnchorStyles.None;
+            clinicName1.AutoSize = true;
+            clinicName1.Location = new Point(44, 12);
+            clinicName1.Name = "clinicName1";
+            clinicName1.Size = new Size(38, 15);
+            clinicName1.TabIndex = 1;
+            clinicName1.Text = "label2";
+            // 
+            // imgClinic1
+            // 
+            imgClinic1.CheckedState.ImageSize = new Size(64, 64);
+            imgClinic1.Dock = DockStyle.Fill;
+            imgClinic1.HoverState.ImageSize = new Size(64, 64);
+            imgClinic1.Image = (Image)resources.GetObject("imgClinic1.Image");
+            imgClinic1.ImageOffset = new Point(0, 0);
+            imgClinic1.ImageRotate = 0F;
+            imgClinic1.Location = new Point(3, 49);
+            imgClinic1.Name = "imgClinic1";
+            imgClinic1.PressedState.ImageSize = new Size(64, 64);
+            imgClinic1.ShadowDecoration.CustomizableEdges = customizableEdges29;
+            imgClinic1.Size = new Size(252, 103);
+            imgClinic1.TabIndex = 1;
+            imgClinic1.Click += imgClinic1_Click;
             // 
             // guna2Panel5
             // 
@@ -658,231 +884,6 @@
             guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges35;
             guna2Panel3.Size = new Size(793, 75);
             guna2Panel3.TabIndex = 1;
-            // 
-            // imgClinic1
-            // 
-            imgClinic1.CheckedState.ImageSize = new Size(64, 64);
-            imgClinic1.Dock = DockStyle.Fill;
-            imgClinic1.HoverState.ImageSize = new Size(64, 64);
-            imgClinic1.Image = (Image)resources.GetObject("imgClinic1.Image");
-            imgClinic1.ImageOffset = new Point(0, 0);
-            imgClinic1.ImageRotate = 0F;
-            imgClinic1.Location = new Point(3, 49);
-            imgClinic1.Name = "imgClinic1";
-            imgClinic1.PressedState.ImageSize = new Size(64, 64);
-            imgClinic1.ShadowDecoration.CustomizableEdges = customizableEdges29;
-            imgClinic1.Size = new Size(252, 103);
-            imgClinic1.TabIndex = 1;
-            // 
-            // imgClinic2
-            // 
-            imgClinic2.CheckedState.ImageSize = new Size(64, 64);
-            imgClinic2.Dock = DockStyle.Fill;
-            imgClinic2.HoverState.ImageSize = new Size(64, 64);
-            imgClinic2.Image = (Image)resources.GetObject("imgClinic2.Image");
-            imgClinic2.ImageOffset = new Point(0, 0);
-            imgClinic2.ImageRotate = 0F;
-            imgClinic2.Location = new Point(3, 49);
-            imgClinic2.Name = "imgClinic2";
-            imgClinic2.PressedState.ImageSize = new Size(64, 64);
-            imgClinic2.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            imgClinic2.Size = new Size(252, 103);
-            imgClinic2.TabIndex = 2;
-            // 
-            // imgClinic3
-            // 
-            imgClinic3.CheckedState.ImageSize = new Size(64, 64);
-            imgClinic3.Dock = DockStyle.Fill;
-            imgClinic3.HoverState.ImageSize = new Size(64, 64);
-            imgClinic3.Image = (Image)resources.GetObject("imgClinic3.Image");
-            imgClinic3.ImageOffset = new Point(0, 0);
-            imgClinic3.ImageRotate = 0F;
-            imgClinic3.Location = new Point(3, 49);
-            imgClinic3.Name = "imgClinic3";
-            imgClinic3.PressedState.ImageSize = new Size(64, 64);
-            imgClinic3.ShadowDecoration.CustomizableEdges = customizableEdges21;
-            imgClinic3.Size = new Size(252, 103);
-            imgClinic3.TabIndex = 2;
-            // 
-            // imgClinic4
-            // 
-            imgClinic4.CheckedState.ImageSize = new Size(64, 64);
-            imgClinic4.Dock = DockStyle.Fill;
-            imgClinic4.HoverState.ImageSize = new Size(64, 64);
-            imgClinic4.Image = (Image)resources.GetObject("imgClinic4.Image");
-            imgClinic4.ImageOffset = new Point(0, 0);
-            imgClinic4.ImageRotate = 0F;
-            imgClinic4.Location = new Point(3, 49);
-            imgClinic4.Name = "imgClinic4";
-            imgClinic4.PressedState.ImageSize = new Size(64, 64);
-            imgClinic4.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            imgClinic4.Size = new Size(252, 103);
-            imgClinic4.TabIndex = 2;
-            // 
-            // imgClinic5
-            // 
-            imgClinic5.CheckedState.ImageSize = new Size(64, 64);
-            imgClinic5.Dock = DockStyle.Fill;
-            imgClinic5.HoverState.ImageSize = new Size(64, 64);
-            imgClinic5.Image = (Image)resources.GetObject("imgClinic5.Image");
-            imgClinic5.ImageOffset = new Point(0, 0);
-            imgClinic5.ImageRotate = 0F;
-            imgClinic5.Location = new Point(3, 49);
-            imgClinic5.Name = "imgClinic5";
-            imgClinic5.PressedState.ImageSize = new Size(64, 64);
-            imgClinic5.ShadowDecoration.CustomizableEdges = customizableEdges15;
-            imgClinic5.Size = new Size(252, 103);
-            imgClinic5.TabIndex = 2;
-            // 
-            // imgClinic6
-            // 
-            imgClinic6.CheckedState.ImageSize = new Size(64, 64);
-            imgClinic6.Dock = DockStyle.Fill;
-            imgClinic6.HoverState.ImageSize = new Size(64, 64);
-            imgClinic6.Image = (Image)resources.GetObject("imgClinic6.Image");
-            imgClinic6.ImageOffset = new Point(0, 0);
-            imgClinic6.ImageRotate = 0F;
-            imgClinic6.Location = new Point(3, 49);
-            imgClinic6.Name = "imgClinic6";
-            imgClinic6.PressedState.ImageSize = new Size(64, 64);
-            imgClinic6.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            imgClinic6.Size = new Size(252, 103);
-            imgClinic6.TabIndex = 2;
-            // 
-            // imgClinic7
-            // 
-            imgClinic7.CheckedState.ImageSize = new Size(64, 64);
-            imgClinic7.Dock = DockStyle.Fill;
-            imgClinic7.HoverState.ImageSize = new Size(64, 64);
-            imgClinic7.Image = (Image)resources.GetObject("imgClinic7.Image");
-            imgClinic7.ImageOffset = new Point(0, 0);
-            imgClinic7.ImageRotate = 0F;
-            imgClinic7.Location = new Point(3, 49);
-            imgClinic7.Name = "imgClinic7";
-            imgClinic7.PressedState.ImageSize = new Size(64, 64);
-            imgClinic7.ShadowDecoration.CustomizableEdges = customizableEdges9;
-            imgClinic7.Size = new Size(252, 103);
-            imgClinic7.TabIndex = 2;
-            // 
-            // imgClinic8
-            // 
-            imgClinic8.CheckedState.ImageSize = new Size(64, 64);
-            imgClinic8.Dock = DockStyle.Fill;
-            imgClinic8.HoverState.ImageSize = new Size(64, 64);
-            imgClinic8.Image = (Image)resources.GetObject("imgClinic8.Image");
-            imgClinic8.ImageOffset = new Point(0, 0);
-            imgClinic8.ImageRotate = 0F;
-            imgClinic8.Location = new Point(3, 49);
-            imgClinic8.Name = "imgClinic8";
-            imgClinic8.PressedState.ImageSize = new Size(64, 64);
-            imgClinic8.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            imgClinic8.Size = new Size(252, 103);
-            imgClinic8.TabIndex = 2;
-            // 
-            // imgClinic9
-            // 
-            imgClinic9.CheckedState.ImageSize = new Size(64, 64);
-            imgClinic9.Dock = DockStyle.Fill;
-            imgClinic9.HoverState.ImageSize = new Size(64, 64);
-            imgClinic9.Image = (Image)resources.GetObject("imgClinic9.Image");
-            imgClinic9.ImageOffset = new Point(0, 0);
-            imgClinic9.ImageRotate = 0F;
-            imgClinic9.Location = new Point(3, 49);
-            imgClinic9.Name = "imgClinic9";
-            imgClinic9.PressedState.ImageSize = new Size(64, 64);
-            imgClinic9.ShadowDecoration.CustomizableEdges = customizableEdges3;
-            imgClinic9.Size = new Size(252, 103);
-            imgClinic9.TabIndex = 2;
-            // 
-            // label2
-            // 
-            label2.Anchor = AnchorStyles.None;
-            label2.AutoSize = true;
-            label2.Location = new Point(44, 12);
-            label2.Name = "label2";
-            label2.Size = new Size(38, 15);
-            label2.TabIndex = 1;
-            label2.Text = "label2";
-            // 
-            // label3
-            // 
-            label3.Anchor = AnchorStyles.None;
-            label3.AutoSize = true;
-            label3.Location = new Point(44, 12);
-            label3.Name = "label3";
-            label3.Size = new Size(38, 15);
-            label3.TabIndex = 2;
-            label3.Text = "label3";
-            // 
-            // label5
-            // 
-            label5.Anchor = AnchorStyles.None;
-            label5.AutoSize = true;
-            label5.Location = new Point(44, 12);
-            label5.Name = "label5";
-            label5.Size = new Size(38, 15);
-            label5.TabIndex = 2;
-            label5.Text = "label5";
-            // 
-            // label6
-            // 
-            label6.Anchor = AnchorStyles.None;
-            label6.AutoSize = true;
-            label6.Location = new Point(44, 12);
-            label6.Name = "label6";
-            label6.Size = new Size(38, 15);
-            label6.TabIndex = 2;
-            label6.Text = "label6";
-            // 
-            // label7
-            // 
-            label7.Anchor = AnchorStyles.None;
-            label7.AutoSize = true;
-            label7.Location = new Point(44, 12);
-            label7.Name = "label7";
-            label7.Size = new Size(38, 15);
-            label7.TabIndex = 2;
-            label7.Text = "label7";
-            // 
-            // label8
-            // 
-            label8.Anchor = AnchorStyles.None;
-            label8.AutoSize = true;
-            label8.Location = new Point(44, 12);
-            label8.Name = "label8";
-            label8.Size = new Size(38, 15);
-            label8.TabIndex = 2;
-            label8.Text = "label8";
-            // 
-            // label9
-            // 
-            label9.Anchor = AnchorStyles.None;
-            label9.AutoSize = true;
-            label9.Location = new Point(44, 12);
-            label9.Name = "label9";
-            label9.Size = new Size(38, 15);
-            label9.TabIndex = 2;
-            label9.Text = "label9";
-            // 
-            // label10
-            // 
-            label10.Anchor = AnchorStyles.None;
-            label10.AutoSize = true;
-            label10.Location = new Point(41, 12);
-            label10.Name = "label10";
-            label10.Size = new Size(44, 15);
-            label10.TabIndex = 2;
-            label10.Text = "label10";
-            // 
-            // label11
-            // 
-            label11.Anchor = AnchorStyles.None;
-            label11.AutoSize = true;
-            label11.Location = new Point(41, 12);
-            label11.Name = "label11";
-            label11.Size = new Size(44, 15);
-            label11.TabIndex = 2;
-            label11.Text = "label11";
             // 
             // MyClinics
             // 
@@ -963,26 +964,26 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnEdit2;
+        private Guna.UI2.WinForms.Guna2Button btnEdit1;
         private Label label1;
         private Guna.UI2.WinForms.Guna2ImageButton imgClinic9;
-        private Label label11;
+        private Label btnEdit9;
         private Guna.UI2.WinForms.Guna2ImageButton imgClinic8;
-        private Label label10;
+        private Label btnEdit8;
         private Guna.UI2.WinForms.Guna2ImageButton imgClinic7;
-        private Label label9;
+        private Label btnEdit7;
         private Guna.UI2.WinForms.Guna2ImageButton imgClinic6;
-        private Label label8;
+        private Label btnEdit6;
         private Guna.UI2.WinForms.Guna2ImageButton imgClinic5;
-        private Label label7;
+        private Label btnEdit5;
         private Guna.UI2.WinForms.Guna2ImageButton imgClinic4;
-        private Label label6;
+        private Label btnEdit4;
         private Guna.UI2.WinForms.Guna2ImageButton imgClinic3;
-        private Label label5;
+        private Label btnEdit3;
         private Guna.UI2.WinForms.Guna2ImageButton imgClinic2;
-        private Label label3;
-        private Label label2;
+        private Label clinicName2;
+        private Label clinicName1;
         private Guna.UI2.WinForms.Guna2ImageButton imgClinic1;
     }
 }

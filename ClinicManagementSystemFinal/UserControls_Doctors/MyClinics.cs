@@ -21,5 +21,10 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
         {
 
         }
+
+        private void imgClinic1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

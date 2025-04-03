@@ -171,11 +171,10 @@ namespace ClinicManagementSystemFinal
 
         public void LoadControl(Control c)
         {
-            // Remove any existing control
             if (panelMainDesktop.Controls.Count > 0)
                 panelMainDesktop.Controls.RemoveAt(0);
 
-            // If c is a Form, treat it as a Form
+   
             if (c is Form childForm)
             {
                 childForm.TopLevel = false;
@@ -185,7 +184,6 @@ namespace ClinicManagementSystemFinal
                 panelMainDesktop.Tag = childForm;
                 childForm.Show();
             }
-            // If c is a UserControl
             else
             {
                 c.Dock = DockStyle.Fill;

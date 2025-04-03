@@ -118,7 +118,6 @@
             linkForgotPassword.Size = new Size(144, 18);
             linkForgotPassword.TabIndex = 9;
             linkForgotPassword.Text = "Forgot your password?";
-            linkForgotPassword.Click += linkForgotPassword_Click;
             // 
             // linkRegister
             // 

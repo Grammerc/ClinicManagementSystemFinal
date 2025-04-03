@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ClinicManagementSystemFinal.UserControls_Doctors
 {
-    public partial class ManageClinics: Form
+    public partial class MyClinics : UserControl
     {
-        public ManageClinics()
+        public MyClinics()
         {
             InitializeComponent();
         }

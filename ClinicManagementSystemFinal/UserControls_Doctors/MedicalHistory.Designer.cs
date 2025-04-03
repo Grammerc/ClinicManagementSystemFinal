@@ -40,9 +40,9 @@
             label4 = new Label();
             guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel2 = new TableLayoutPanel();
-            guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            panelMedicalHistory = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel1.SuspendLayout();
             guna2Panel3.SuspendLayout();
             guna2Panel2.SuspendLayout();
@@ -74,7 +74,7 @@
             guna2Panel3.Controls.Add(tableLayoutPanel1);
             guna2Panel3.CustomizableEdges = customizableEdges3;
             guna2Panel3.Dock = DockStyle.Top;
-            guna2Panel3.Location = new Point(0, 156);
+            guna2Panel3.Location = new Point(0, 186);
             guna2Panel3.Name = "guna2Panel3";
             guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2Panel3.Size = new Size(793, 82);
@@ -88,8 +88,22 @@
             guna2Panel2.Location = new Point(0, 56);
             guna2Panel2.Name = "guna2Panel2";
             guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Panel2.Size = new Size(793, 100);
+            guna2Panel2.Size = new Size(793, 130);
             guna2Panel2.TabIndex = 1;
+            // 
+            // tableLayoutPanel2
+            // 
+            tableLayoutPanel2.ColumnCount = 3;
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 19.74318F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 40.12841F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 40.12841F));
+            tableLayoutPanel2.Dock = DockStyle.Fill;
+            tableLayoutPanel2.Location = new Point(0, 0);
+            tableLayoutPanel2.Name = "tableLayoutPanel2";
+            tableLayoutPanel2.RowCount = 1;
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel2.Size = new Size(793, 130);
+            tableLayoutPanel2.TabIndex = 1;
             // 
             // tableLayoutPanel1
             // 
@@ -102,37 +116,25 @@
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel1.Size = new Size(793, 82);
-            tableLayoutPanel1.TabIndex = 1;
+            tableLayoutPanel1.TabIndex = 0;
             // 
-            // tableLayoutPanel2
+            // panelMedicalHistory
             // 
-            tableLayoutPanel2.ColumnCount = 3;
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 13.043479F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 43.47826F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 43.47826F));
-            tableLayoutPanel2.Dock = DockStyle.Fill;
-            tableLayoutPanel2.Location = new Point(0, 0);
-            tableLayoutPanel2.Name = "tableLayoutPanel2";
-            tableLayoutPanel2.RowCount = 1;
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel2.Size = new Size(793, 100);
-            tableLayoutPanel2.TabIndex = 0;
-            // 
-            // guna2Panel4
-            // 
-            guna2Panel4.CustomizableEdges = customizableEdges7;
-            guna2Panel4.Location = new Point(275, 367);
-            guna2Panel4.Name = "guna2Panel4";
-            guna2Panel4.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Panel4.Size = new Size(200, 100);
-            guna2Panel4.TabIndex = 3;
+            panelMedicalHistory.CustomizableEdges = customizableEdges7;
+            panelMedicalHistory.Dock = DockStyle.Fill;
+            panelMedicalHistory.Location = new Point(0, 268);
+            panelMedicalHistory.Name = "panelMedicalHistory";
+            panelMedicalHistory.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            panelMedicalHistory.Size = new Size(793, 394);
+            panelMedicalHistory.TabIndex = 3;
             // 
             // MedicalHistory
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(guna2Panel4);
+            Controls.Add(panelMedicalHistory);
             Controls.Add(guna2Panel3);
             Controls.Add(guna2Panel2);
             Controls.Add(guna2Panel1);
@@ -150,9 +152,9 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Label label4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private TableLayoutPanel tableLayoutPanel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private TableLayoutPanel tableLayoutPanel1;
         private TableLayoutPanel tableLayoutPanel2;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
+        private Guna.UI2.WinForms.Guna2Panel panelMedicalHistory;
     }
 }

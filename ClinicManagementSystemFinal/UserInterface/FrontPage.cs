@@ -140,7 +140,7 @@ namespace ClinicManagementSystemFinal
         private void btnClinics_Click(object sender, EventArgs e)
         {
 
-            loadform(new Clinic());
+ 
         }
 
         private void loadform(object Form)

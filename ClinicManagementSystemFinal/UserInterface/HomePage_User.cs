@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClinicManagementSystemFinal.UserControls_User;
 
 namespace ClinicManagementSystemFinal
 {
@@ -168,28 +169,30 @@ namespace ClinicManagementSystemFinal
             }
         }
 
-        public void loadform(object Form)
+        public void LoadControl(Control c)
         {
-            if (this.panelDesktop.Controls.Count > 0)
-                this.panelDesktop.Controls.RemoveAt(0);
-            Form f = Form as Form;
-            f.TopLevel = false;
-            f.Dock = DockStyle.Fill;
-            this.panelDesktop.Controls.Add(f);
-            this.panelDesktop.Tag = f;
-            f.Show();
-        }
+            // Remove any existing control
+            if (panelMainDesktop.Controls.Count > 0)
+                panelMainDesktop.Controls.RemoveAt(0);
 
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            loadform(new HomeForm());
-        }
-
-        private void btnSignOut_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FrontPage fp = new FrontPage();
-            fp.Show();
+            // If c is a Form, treat it as a Form
+            if (c is Form childForm)
+            {
+                childForm.TopLevel = false;
+                childForm.FormBorderStyle = FormBorderStyle.None;
+                childForm.Dock = DockStyle.Fill;
+                panelMainDesktop.Controls.Add(childForm);
+                panelMainDesktop.Tag = childForm;
+                childForm.Show();
+            }
+            // If c is a UserControl
+            else
+            {
+                c.Dock = DockStyle.Fill;
+                panelMainDesktop.Controls.Add(c);
+                panelMainDesktop.Tag = c;
+                c.BringToFront();
+            }
         }
 
         private void btnSwitch_CheckedChanged(object sender, EventArgs e)
@@ -199,17 +202,16 @@ namespace ClinicManagementSystemFinal
 
         private void btnAppointment_Click(object sender, EventArgs e)
         {
-            loadform(new AppointmentForm());
+            LoadControl(new AppointmentForm());
         }
 
         private void btnDoctor_Click(object sender, EventArgs e)
         {
-            loadform(new Clinic());
         }
 
         private void btnServices_Click(object sender, EventArgs e)
         {
-            loadform(new Services());
+
         }
 
         private void btnSupport_Click(object sender, EventArgs e)
@@ -224,6 +226,26 @@ namespace ClinicManagementSystemFinal
         private void HomePage_User_Load(object sender, EventArgs e)
         {
             guna2ShadowForm1.SetShadowForm(this);
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            LoadControl(new Dashboard_User321());
+        }
+
+        private void btnAppointments_Click(object sender, EventArgs e)
+        {
+            LoadControl(new Appointments_User());
+        }
+
+        private void btnClinics_Click(object sender, EventArgs e)
+        {
+            LoadControl(new Clinics());
+        }
+
+        private void btnService_Click(object sender, EventArgs e)
+        {
+            LoadControl(new Services());
         }
     }
 }

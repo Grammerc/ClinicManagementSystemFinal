@@ -37,7 +37,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            pictureBox1 = new PictureBox();
             label4 = new Label();
             panel2 = new Panel();
             label5 = new Label();
@@ -48,23 +47,14 @@
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             panelDesktop = new Guna.UI2.WinForms.Guna2Panel();
             pictureBox4 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            pictureBox1 = new PictureBox();
             panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             panelDesktop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(188, 12);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(123, 91);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
             // 
             // label4
             // 
@@ -192,6 +182,16 @@
             pictureBox4.TabIndex = 15;
             pictureBox4.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(188, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(123, 91);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
             // FrontPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -203,19 +203,17 @@
             Name = "FrontPage";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panelTitleBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             panelDesktop.ResumeLayout(false);
             panelDesktop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private PictureBox pictureBox1;
         private PictureBox pictureBox3;
         private Label label1;
         private Label label2;
@@ -233,5 +231,6 @@
         private PictureBox pictureBox2;
         private Guna.UI2.WinForms.Guna2Panel panelDesktop;
         private PictureBox pictureBox4;
+        private PictureBox pictureBox1;
     }
 }

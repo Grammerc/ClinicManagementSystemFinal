@@ -16,5 +16,10 @@ namespace ClinicManagementSystemFinal.UserControls_User
         {
             InitializeComponent();
         }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

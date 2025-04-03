@@ -39,7 +39,7 @@
             panelTitle = new Guna.UI2.WinForms.Guna2Panel();
             dungeonLabel3 = new ReaLTaiizor.Controls.DungeonLabel();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            foxLinkLabel2 = new ReaLTaiizor.Controls.FoxLinkLabel();
+            linkForgotPassword = new ReaLTaiizor.Controls.FoxLinkLabel();
             linkRegister = new ReaLTaiizor.Controls.FoxLinkLabel();
             labelEdit2 = new ReaLTaiizor.Controls.LabelEdit();
             dungeonLabel2 = new ReaLTaiizor.Controls.DungeonLabel();
@@ -90,7 +90,7 @@
             // 
             // guna2Panel1
             // 
-            guna2Panel1.Controls.Add(foxLinkLabel2);
+            guna2Panel1.Controls.Add(linkForgotPassword);
             guna2Panel1.Controls.Add(linkRegister);
             guna2Panel1.Controls.Add(labelEdit2);
             guna2Panel1.Controls.Add(dungeonLabel2);
@@ -105,19 +105,20 @@
             guna2Panel1.Size = new Size(438, 348);
             guna2Panel1.TabIndex = 1;
             // 
-            // foxLinkLabel2
+            // linkForgotPassword
             // 
-            foxLinkLabel2.BackColor = Color.Transparent;
-            foxLinkLabel2.DownColor = Color.FromArgb(255, 149, 0);
-            foxLinkLabel2.EnabledCalc = true;
-            foxLinkLabel2.Font = new Font("Segoe UI", 10F);
-            foxLinkLabel2.ForeColor = Color.FromArgb(0, 149, 221);
-            foxLinkLabel2.Location = new Point(19, 192);
-            foxLinkLabel2.Name = "foxLinkLabel2";
-            foxLinkLabel2.OverColor = Color.FromArgb(23, 140, 229);
-            foxLinkLabel2.Size = new Size(144, 18);
-            foxLinkLabel2.TabIndex = 9;
-            foxLinkLabel2.Text = "Forgot your password?";
+            linkForgotPassword.BackColor = Color.SeaShell;
+            linkForgotPassword.DownColor = Color.FromArgb(255, 149, 0);
+            linkForgotPassword.EnabledCalc = true;
+            linkForgotPassword.Font = new Font("Segoe UI", 10F);
+            linkForgotPassword.ForeColor = Color.FromArgb(0, 149, 221);
+            linkForgotPassword.Location = new Point(19, 192);
+            linkForgotPassword.Name = "linkForgotPassword";
+            linkForgotPassword.OverColor = Color.FromArgb(23, 140, 229);
+            linkForgotPassword.Size = new Size(144, 18);
+            linkForgotPassword.TabIndex = 9;
+            linkForgotPassword.Text = "Forgot your password?";
+            linkForgotPassword.Click += linkForgotPassword_Click;
             // 
             // linkRegister
             // 
@@ -308,7 +309,7 @@
         private ReaLTaiizor.Controls.DungeonLabel dungeonLabel2;
         private ReaLTaiizor.Controls.DungeonLabel dungeonLabel1;
         private ReaLTaiizor.Controls.DungeonLabel dungeonLabel3;
-        private ReaLTaiizor.Controls.FoxLinkLabel foxLinkLabel2;
+        private ReaLTaiizor.Controls.FoxLinkLabel linkForgotPassword;
         private ReaLTaiizor.Controls.FoxLinkLabel linkRegister;
         private ReaLTaiizor.Controls.NightControlBox nightControlBox1;
     }

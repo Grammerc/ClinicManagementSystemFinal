@@ -2,12 +2,12 @@
 {
     partial class Dashboard_User
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,27 +20,80 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Component Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            panel1 = new Panel();
+            panel2 = new Panel();
+            guna2Panel2.SuspendLayout();
             SuspendLayout();
+            // 
+            // guna2Panel1
+            // 
+            guna2Panel1.CustomizableEdges = customizableEdges1;
+            guna2Panel1.Dock = DockStyle.Top;
+            guna2Panel1.Location = new Point(0, 0);
+            guna2Panel1.Name = "guna2Panel1";
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Panel1.Size = new Size(793, 56);
+            guna2Panel1.TabIndex = 0;
+            // 
+            // guna2Panel2
+            // 
+            guna2Panel2.Controls.Add(panel2);
+            guna2Panel2.Controls.Add(panel1);
+            guna2Panel2.CustomizableEdges = customizableEdges3;
+            guna2Panel2.Dock = DockStyle.Fill;
+            guna2Panel2.Location = new Point(0, 56);
+            guna2Panel2.Name = "guna2Panel2";
+            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2Panel2.Size = new Size(793, 606);
+            guna2Panel2.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(793, 94);
+            panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            panel2.Dock = DockStyle.Bottom;
+            panel2.Location = new Point(0, 423);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(793, 183);
+            panel2.TabIndex = 1;
             // 
             // Dashboard_User
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(793, 662);
-            FormBorderStyle = FormBorderStyle.None;
+            Controls.Add(guna2Panel2);
+            Controls.Add(guna2Panel1);
             Name = "Dashboard_User";
-            Text = "Dashboard_User";
+            Size = new Size(793, 662);
+            guna2Panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
+
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Panel panel2;
+        private Panel panel1;
     }
 }

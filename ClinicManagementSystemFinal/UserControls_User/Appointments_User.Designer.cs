@@ -94,7 +94,7 @@
             guna2Panel2.Controls.Add(btnSubmit);
             guna2Panel2.CustomizableEdges = customizableEdges5;
             guna2Panel2.Dock = DockStyle.Bottom;
-            guna2Panel2.Location = new Point(0, 542);
+            guna2Panel2.Location = new Point(0, 562);
             guna2Panel2.Name = "guna2Panel2";
             guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2Panel2.Size = new Size(793, 100);
@@ -124,7 +124,7 @@
             guna2Panel3.Location = new Point(0, 77);
             guna2Panel3.Name = "guna2Panel3";
             guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            guna2Panel3.Size = new Size(793, 465);
+            guna2Panel3.Size = new Size(793, 485);
             guna2Panel3.TabIndex = 2;
             // 
             // tableLayoutPanel1
@@ -145,7 +145,7 @@
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 10;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 5.99999952F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 6F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 14F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 5.99999952F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 14F));
@@ -155,7 +155,7 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 14F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 5.99999952F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 14F));
-            tableLayoutPanel1.Size = new Size(793, 465);
+            tableLayoutPanel1.Size = new Size(793, 485);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // cbxReasonforVisit
@@ -170,7 +170,7 @@
             cbxReasonforVisit.Font = new Font("Segoe UI", 10F);
             cbxReasonforVisit.ForeColor = Color.FromArgb(68, 88, 112);
             cbxReasonforVisit.ItemHeight = 30;
-            cbxReasonforVisit.Location = new Point(3, 398);
+            cbxReasonforVisit.Location = new Point(3, 416);
             cbxReasonforVisit.Name = "cbxReasonforVisit";
             cbxReasonforVisit.ShadowDecoration.CustomizableEdges = customizableEdges8;
             cbxReasonforVisit.Size = new Size(787, 36);
@@ -181,9 +181,9 @@
             label5.AutoSize = true;
             label5.Dock = DockStyle.Fill;
             label5.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(3, 368);
+            label5.Location = new Point(3, 384);
             label5.Name = "label5";
-            label5.Size = new Size(787, 27);
+            label5.Size = new Size(787, 29);
             label5.TabIndex = 8;
             label5.Text = "Reason for Visit";
             // 
@@ -199,7 +199,7 @@
             cbxDocPhys.Font = new Font("Segoe UI", 10F);
             cbxDocPhys.ForeColor = Color.FromArgb(68, 88, 112);
             cbxDocPhys.ItemHeight = 30;
-            cbxDocPhys.Location = new Point(3, 306);
+            cbxDocPhys.Location = new Point(3, 320);
             cbxDocPhys.Name = "cbxDocPhys";
             cbxDocPhys.ShadowDecoration.CustomizableEdges = customizableEdges10;
             cbxDocPhys.Size = new Size(787, 36);
@@ -210,9 +210,9 @@
             label4.AutoSize = true;
             label4.Dock = DockStyle.Fill;
             label4.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(3, 276);
+            label4.Location = new Point(3, 288);
             label4.Name = "label4";
-            label4.Size = new Size(787, 27);
+            label4.Size = new Size(787, 29);
             label4.TabIndex = 6;
             label4.Text = "Doctor/Physician";
             // 
@@ -221,9 +221,9 @@
             label3.AutoSize = true;
             label3.Dock = DockStyle.Fill;
             label3.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(3, 184);
+            label3.Location = new Point(3, 192);
             label3.Name = "label3";
-            label3.Size = new Size(787, 27);
+            label3.Size = new Size(787, 29);
             label3.TabIndex = 5;
             label3.Text = "Time Slot";
             // 
@@ -232,9 +232,9 @@
             label2.AutoSize = true;
             label2.Dock = DockStyle.Fill;
             label2.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(3, 92);
+            label2.Location = new Point(3, 96);
             label2.Name = "label2";
-            label2.Size = new Size(787, 27);
+            label2.Size = new Size(787, 29);
             label2.TabIndex = 4;
             label2.Text = "Date";
             // 
@@ -245,7 +245,7 @@
             label1.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(3, 0);
             label1.Name = "label1";
-            label1.Size = new Size(787, 27);
+            label1.Size = new Size(787, 29);
             label1.TabIndex = 0;
             label1.Text = "Clinic Name";
             // 
@@ -257,16 +257,16 @@
             tbxClinic.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             tbxClinic.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             tbxClinic.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            tbxClinic.Dock = DockStyle.Fill;
+            tbxClinic.Dock = DockStyle.Top;
             tbxClinic.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             tbxClinic.Font = new Font("Segoe UI", 9F);
             tbxClinic.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbxClinic.Location = new Point(3, 30);
+            tbxClinic.Location = new Point(3, 32);
             tbxClinic.Name = "tbxClinic";
             tbxClinic.PlaceholderText = "";
             tbxClinic.SelectedText = "";
             tbxClinic.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            tbxClinic.Size = new Size(787, 59);
+            tbxClinic.Size = new Size(787, 44);
             tbxClinic.TabIndex = 1;
             // 
             // CbxTimeSlot
@@ -282,7 +282,7 @@
             CbxTimeSlot.ForeColor = Color.FromArgb(68, 88, 112);
             CbxTimeSlot.ItemHeight = 30;
             CbxTimeSlot.Items.AddRange(new object[] { "8:00 A.M. - 9:00 A.M.", "9:00 A.M. - 10:00 A.M", "10:00 A.M. - 11:00 A.M.", "11:00 A.M. - 12:00 A.M. ", "12:00 A.M. - 1:00 A.M.", "1:00 A.M. - 2:00 A.M.", "2:00 A.M. - 3:00 A.M.", "3:00 A.M. - 4:00 A.M.", "4:00 A.M. - 5:00 A.M.", "5:00 A.M. - 6:00 A.M." });
-            CbxTimeSlot.Location = new Point(3, 214);
+            CbxTimeSlot.Location = new Point(3, 224);
             CbxTimeSlot.Name = "CbxTimeSlot";
             CbxTimeSlot.ShadowDecoration.CustomizableEdges = customizableEdges14;
             CbxTimeSlot.Size = new Size(787, 36);
@@ -295,12 +295,12 @@
             CbxDate.Dock = DockStyle.Fill;
             CbxDate.Font = new Font("Segoe UI", 9F);
             CbxDate.Format = DateTimePickerFormat.Long;
-            CbxDate.Location = new Point(3, 122);
+            CbxDate.Location = new Point(3, 128);
             CbxDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             CbxDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             CbxDate.Name = "CbxDate";
             CbxDate.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            CbxDate.Size = new Size(787, 59);
+            CbxDate.Size = new Size(787, 61);
             CbxDate.TabIndex = 2;
             CbxDate.Value = new DateTime(2025, 4, 3, 12, 40, 6, 172);
             // 
@@ -312,7 +312,7 @@
             Controls.Add(guna2Panel2);
             Controls.Add(guna2Panel1);
             Name = "Appointments_User";
-            Size = new Size(793, 642);
+            Size = new Size(793, 662);
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();
             guna2Panel2.ResumeLayout(false);

@@ -19,7 +19,7 @@ namespace ClinicManagementSystemFinal
         public SignIn()
         {
             InitializeComponent();
-            conn.ConnectionString = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:\Users\Raphael\source\repos\ClinicManagementSystemFinal\ClinicManagementSystemFinal\Login.accdb;
+            conn.ConnectionString = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:\Users\Raphael Perocho\source\repos\ClinicManagementSystemFinal\ProjectClinic\ClinicManagementSystemFinal\Login.accdb;
             Persist Security Info=False;";
         }
 
@@ -43,7 +43,7 @@ namespace ClinicManagementSystemFinal
             conn.Open();
             OleDbCommand cmd = new OleDbCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "select * from Account where username = '" + tbxEmail.Text+ "' and password='" + tbxPassword.Text;
+            cmd.CommandText = "select * from Account where username = '" + tbxEmail.Text + "' and password='" + tbxPassword.Text;
 
             OleDbDataReader or = cmd.ExecuteReader();
 
@@ -52,7 +52,7 @@ namespace ClinicManagementSystemFinal
             {
                 count = count + 1;
             }
-            if(count == 1)
+            if (count == 1)
             {
                 this.Hide();
                 HomePage_User hm = new HomePage_User();
@@ -63,7 +63,7 @@ namespace ClinicManagementSystemFinal
                 MessageBox.Show("Incorrect username and Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             conn.Close();
-            
+
         }
 
         private void linkRegister_Click(object sender, EventArgs e)
@@ -94,7 +94,7 @@ namespace ClinicManagementSystemFinal
 
             if (or.HasRows)
             {
-                this.Hide(); 
+                this.Hide();
                 HomePage_User hm = new HomePage_User();
                 hm.Show();
             }
@@ -104,6 +104,12 @@ namespace ClinicManagementSystemFinal
             }
 
             conn.Close();
+        }
+
+        private void linkForgotPassword_Click(object sender, EventArgs e)
+        {
+            ForgotPassword forgotPasswordForm = new ForgotPassword();
+            forgotPasswordForm.ShowDialog();
         }
     }
 }

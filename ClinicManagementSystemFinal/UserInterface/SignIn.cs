@@ -22,6 +22,9 @@ namespace ClinicManagementSystemFinal
             InitializeComponent();
             conn.ConnectionString = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = ""B:\Downloads\Login.accdb"";
             Persist Security Info=False;";
+            tbxPassword.UseSystemPasswordChar = true;
+            tbxEmail.ForeColor = Color.DarkGray;
+     
         }
 
         protected override CreateParams CreateParams
@@ -39,32 +42,49 @@ namespace ClinicManagementSystemFinal
 
         }
 
-        private void btnLogIn_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
             conn.Open();
+
             OleDbCommand cmd = new OleDbCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "select * from Account where username = '" + tbxEmail.Text + "' and password='" + tbxPassword.Text;
+
+            cmd.CommandText = "SELECT LoginID, RoleID FROM Account WHERE username = @username AND password = @password";
+
+            cmd.Parameters.AddWithValue("@username", tbxEmail.Text);
+            cmd.Parameters.AddWithValue("@password", tbxPassword.Text);
 
             OleDbDataReader or = cmd.ExecuteReader();
 
-            int count = 0;
-            while (or.Read())
+            if (or.Read())
             {
-                count = count + 1;
-            }
-            if (count == 1)
-            {
+                string loginId = or["LoginID"].ToString();
+                string roleID = or["RoleID"].ToString();
+
                 this.Hide();
-                HomePage_User hm = new HomePage_User();
-                hm.Show();
+
+                if (roleID == "1")
+                {
+                    HomePage_Doctor doctorHome = new HomePage_Doctor(loginId);
+                    doctorHome.Show();
+                }
+                else if (roleID == "3")
+                {
+                    HomePage_User userHome = new HomePage_User();
+                    userHome.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Unknown RoleID detected.");
+                    this.Show();
+                }
             }
             else
             {
-                MessageBox.Show("Incorrect username and Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Incorrect username or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            conn.Close();
 
+            conn.Close();
         }
 
         private void linkRegister_Click(object sender, EventArgs e)
@@ -79,53 +99,52 @@ namespace ClinicManagementSystemFinal
 
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void btnShow_MouseDown(object sender, MouseEventArgs e)
         {
-            conn.Open();
+            tbxPassword.UseSystemPasswordChar = false;
+        }
 
-            OleDbCommand cmd = new OleDbCommand();
-            cmd.Connection = conn;
+        private void btnShow_MouseUp(object sender, MouseEventArgs e)
+        {
+            tbxPassword.UseSystemPasswordChar = true;
+        }
 
-            cmd.CommandText = "SELECT RoleID FROM Account WHERE username = @username AND password = @password";
-
-            cmd.Parameters.AddWithValue("@username", tbxEmail.Text);
-            cmd.Parameters.AddWithValue("@password", tbxPassword.Text);
-
-            OleDbDataReader or = cmd.ExecuteReader();
-
-            if (or.Read())
+        private void tbxPassword_Click(object sender, EventArgs e)
+        {
+            if (tbxPassword.Text == "Enter Password")
             {
-                string roleID = or["RoleID"].ToString(); // Since RoleID is stored as Short Text
-
-                this.Hide();
-
-                if (roleID == "1")
-                {
-                    HomePage_Doctor doctorHome = new HomePage_Doctor();
-                    doctorHome.Show();
-                }
-               /* else if (roleID == "2")
-                {
-                    HomePage_Secretary secHome = new HomePage_Secretary();
-                    secHome.Show();
-               } */
-                else if (roleID == "3")
-                {
-                    HomePage_User userHome = new HomePage_User();
-                    userHome.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Unknown RoleID detected.");
-                    this.Show(); // fallback
-                }
-            }
-            else
-            {
-                MessageBox.Show("Incorrect username or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tbxPassword.Clear();
+                tbxPassword.UseSystemPasswordChar = true;
+                tbxPassword.ForeColor = Color.Black;
             }
 
-            conn.Close();
+            if (tbxEmail.Text.Length < 1)
+            {
+                tbxEmail.ForeColor = Color.DarkGray;
+                tbxEmail.Text = "Enter Username";
+                tbxEmail.ForeColor = Color.DarkGray;
+
+
+            }
+        }
+
+        private void tbxEmail_Click(object sender, EventArgs e)
+        {
+            if (tbxEmail.Text == "Enter Username")
+            {
+          
+                tbxEmail.Clear();
+                tbxEmail.ForeColor = Color.Black;
+            }
+
+            if(tbxPassword.Text.Length < 1)
+            {
+                tbxPassword.ForeColor = Color.DarkGray;
+                tbxPassword.UseSystemPasswordChar = false;
+                tbxPassword.Text = "Enter Password";
+                tbxPassword.ForeColor = Color.DarkGray;
+            }
+       
         }
     }
 }

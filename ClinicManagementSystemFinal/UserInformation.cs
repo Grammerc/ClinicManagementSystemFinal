@@ -16,5 +16,10 @@ namespace ClinicManagementSystemFinal
         {
             InitializeComponent();
         }
+
+        private void tbxAllergies_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -39,6 +39,7 @@
             panelTitle = new Guna.UI2.WinForms.Guna2Panel();
             dungeonLabel3 = new ReaLTaiizor.Controls.DungeonLabel();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            btnShow = new Label();
             linkForgotPassword = new ReaLTaiizor.Controls.FoxLinkLabel();
             linkRegister = new ReaLTaiizor.Controls.FoxLinkLabel();
             labelEdit2 = new ReaLTaiizor.Controls.LabelEdit();
@@ -90,6 +91,7 @@
             // 
             // guna2Panel1
             // 
+            guna2Panel1.Controls.Add(btnShow);
             guna2Panel1.Controls.Add(linkForgotPassword);
             guna2Panel1.Controls.Add(linkRegister);
             guna2Panel1.Controls.Add(labelEdit2);
@@ -105,9 +107,22 @@
             guna2Panel1.Size = new Size(438, 348);
             guna2Panel1.TabIndex = 1;
             // 
+            // btnShow
+            // 
+            btnShow.AutoSize = true;
+            btnShow.BackColor = Color.Transparent;
+            btnShow.ForeColor = Color.Black;
+            btnShow.Location = new Point(354, 156);
+            btnShow.Name = "btnShow";
+            btnShow.Size = new Size(36, 15);
+            btnShow.TabIndex = 10;
+            btnShow.Text = "Show";
+            btnShow.MouseDown += btnShow_MouseDown;
+            btnShow.MouseUp += btnShow_MouseUp;
+            // 
             // linkForgotPassword
             // 
-            linkForgotPassword.BackColor = Color.SeaShell;
+            linkForgotPassword.BackColor = Color.Transparent;
             linkForgotPassword.DownColor = Color.FromArgb(255, 149, 0);
             linkForgotPassword.EnabledCalc = true;
             linkForgotPassword.Font = new Font("Segoe UI", 10F);
@@ -219,6 +234,7 @@
             tbxPassword.TextAlign = HorizontalAlignment.Left;
             tbxPassword.TrailingIcon = null;
             tbxPassword.UseSystemPasswordChar = false;
+            tbxPassword.Click += tbxPassword_Click;
             // 
             // tbxEmail
             // 
@@ -249,6 +265,7 @@
             tbxEmail.TextAlign = HorizontalAlignment.Left;
             tbxEmail.TrailingIcon = null;
             tbxEmail.UseSystemPasswordChar = false;
+            tbxEmail.Click += tbxEmail_Click;
             // 
             // nightControlBox1
             // 
@@ -311,5 +328,6 @@
         private ReaLTaiizor.Controls.FoxLinkLabel linkForgotPassword;
         private ReaLTaiizor.Controls.FoxLinkLabel linkRegister;
         private ReaLTaiizor.Controls.NightControlBox nightControlBox1;
+        private Label btnShow;
     }
 }

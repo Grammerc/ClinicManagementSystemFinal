@@ -28,12 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel2 = new Panel();
             label4 = new Label();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             panel2.SuspendLayout();
+            guna2Panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel2
@@ -57,13 +61,26 @@
             // 
             // guna2Panel1
             // 
-            guna2Panel1.CustomizableEdges = customizableEdges1;
+            guna2Panel1.Controls.Add(guna2GroupBox1);
+            guna2Panel1.CustomizableEdges = customizableEdges3;
             guna2Panel1.Dock = DockStyle.Fill;
             guna2Panel1.Location = new Point(0, 56);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2Panel1.Size = new Size(793, 586);
             guna2Panel1.TabIndex = 7;
+            // 
+            // guna2GroupBox1
+            // 
+            guna2GroupBox1.CustomizableEdges = customizableEdges1;
+            guna2GroupBox1.Font = new Font("Segoe UI", 9F);
+            guna2GroupBox1.ForeColor = Color.FromArgb(125, 137, 149);
+            guna2GroupBox1.Location = new Point(193, 28);
+            guna2GroupBox1.Name = "guna2GroupBox1";
+            guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2GroupBox1.Size = new Size(300, 200);
+            guna2GroupBox1.TabIndex = 0;
+            guna2GroupBox1.Text = "guna2GroupBox1";
             // 
             // Calendar_Doctor
             // 
@@ -75,6 +92,7 @@
             Size = new Size(793, 642);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            guna2Panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -83,5 +101,6 @@
         private Panel panel2;
         private Label label4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
     }
 }

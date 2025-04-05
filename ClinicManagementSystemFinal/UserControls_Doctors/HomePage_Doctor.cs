@@ -12,9 +12,15 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
 {
     public partial class HomePage_Doctor : Form
     {
-        public HomePage_Doctor()
+        private string doctorLoginId;
+        private MyClinics myClinicsControl;
+        public HomePage_Doctor(string loginId)
         {
             InitializeComponent();
+            doctorLoginId = loginId;
+
+            myClinicsControl = new MyClinics();
+            myClinicsControl.LoadMyClinics(doctorLoginId);
         }
 
         public void LoadControl(Control c)
@@ -43,7 +49,7 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
 
         private void HomePage_Doctor_Load(object sender, EventArgs e)
         {
-
+            myClinicsControl.LoadMyClinics(doctorLoginId);
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
@@ -63,7 +69,7 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
 
         private void btnMyClinics_Click(object sender, EventArgs e)
         {
-            LoadControl(new PatientQueue());
+            LoadControl(myClinicsControl);
         }
     }
 }

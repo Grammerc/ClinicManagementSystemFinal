@@ -258,6 +258,7 @@
             tbxAllergies.ShadowDecoration.CustomizableEdges = customizableEdges12;
             tbxAllergies.Size = new Size(629, 50);
             tbxAllergies.TabIndex = 13;
+            tbxAllergies.TextChanged += tbxAllergies_TextChanged;
             // 
             // label7
             // 

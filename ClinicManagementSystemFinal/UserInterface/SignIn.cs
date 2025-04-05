@@ -20,7 +20,7 @@ namespace ClinicManagementSystemFinal
         public SignIn()
         {
             InitializeComponent();
-            conn.ConnectionString = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = ""C:\Users\Raphael\Downloads\Login.accdb"";
+            conn.ConnectionString = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = ""B:\Downloads\Login.accdb"";
             Persist Security Info=False;";
         }
 

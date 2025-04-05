@@ -34,8 +34,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -46,26 +46,35 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             label6 = new Label();
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             btnSubmit = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
-            cbxReasonforVisit = new Guna.UI2.WinForms.Guna2ComboBox();
             label5 = new Label();
             cbxDocPhys = new Guna.UI2.WinForms.Guna2ComboBox();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            tbxClinic = new Guna.UI2.WinForms.Guna2TextBox();
             CbxTimeSlot = new Guna.UI2.WinForms.Guna2ComboBox();
             CbxDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            cbxClinicName = new Guna.UI2.WinForms.Guna2ComboBox();
+            tableLayoutPanel2 = new TableLayoutPanel();
+            panel1 = new Panel();
+            cbxReasonForVisit = new Guna.UI2.WinForms.Guna2ComboBox();
+            panel2 = new Panel();
+            tbxOtherConcerns = new Guna.UI2.WinForms.Guna2TextBox();
             guna2Panel1.SuspendLayout();
             guna2Panel2.SuspendLayout();
             guna2Panel3.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
+            tableLayoutPanel2.SuspendLayout();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // guna2Panel1
@@ -94,10 +103,10 @@
             guna2Panel2.Controls.Add(btnSubmit);
             guna2Panel2.CustomizableEdges = customizableEdges5;
             guna2Panel2.Dock = DockStyle.Bottom;
-            guna2Panel2.Location = new Point(0, 562);
+            guna2Panel2.Location = new Point(0, 582);
             guna2Panel2.Name = "guna2Panel2";
             guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Panel2.Size = new Size(793, 100);
+            guna2Panel2.Size = new Size(793, 80);
             guna2Panel2.TabIndex = 1;
             // 
             // btnSubmit
@@ -119,62 +128,44 @@
             // guna2Panel3
             // 
             guna2Panel3.Controls.Add(tableLayoutPanel1);
-            guna2Panel3.CustomizableEdges = customizableEdges17;
+            guna2Panel3.CustomizableEdges = customizableEdges19;
             guna2Panel3.Dock = DockStyle.Fill;
             guna2Panel3.Location = new Point(0, 77);
             guna2Panel3.Name = "guna2Panel3";
-            guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            guna2Panel3.Size = new Size(793, 485);
+            guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            guna2Panel3.Size = new Size(793, 505);
             guna2Panel3.TabIndex = 2;
             // 
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 1;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Controls.Add(cbxReasonforVisit, 0, 9);
             tableLayoutPanel1.Controls.Add(label5, 0, 8);
             tableLayoutPanel1.Controls.Add(cbxDocPhys, 0, 7);
             tableLayoutPanel1.Controls.Add(label4, 0, 6);
             tableLayoutPanel1.Controls.Add(label3, 0, 4);
             tableLayoutPanel1.Controls.Add(label2, 0, 2);
             tableLayoutPanel1.Controls.Add(label1, 0, 0);
-            tableLayoutPanel1.Controls.Add(tbxClinic, 0, 1);
             tableLayoutPanel1.Controls.Add(CbxTimeSlot, 0, 5);
             tableLayoutPanel1.Controls.Add(CbxDate, 0, 3);
+            tableLayoutPanel1.Controls.Add(cbxClinicName, 0, 1);
+            tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 0, 9);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 10;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 6F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 14F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 5.99999952F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 14F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 5.99999952F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 14F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 5.99999952F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 14F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 5.99999952F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 14F));
-            tableLayoutPanel1.Size = new Size(793, 485);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 5.769231F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 13.4615383F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 5.76923037F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 13.4615383F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 5.76923037F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 13.4615383F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 5.76923037F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 13.4615383F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 5.76923037F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 17.3076916F));
+            tableLayoutPanel1.Size = new Size(793, 505);
             tableLayoutPanel1.TabIndex = 0;
-            // 
-            // cbxReasonforVisit
-            // 
-            cbxReasonforVisit.BackColor = Color.Transparent;
-            cbxReasonforVisit.CustomizableEdges = customizableEdges7;
-            cbxReasonforVisit.Dock = DockStyle.Fill;
-            cbxReasonforVisit.DrawMode = DrawMode.OwnerDrawFixed;
-            cbxReasonforVisit.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbxReasonforVisit.FocusedColor = Color.FromArgb(94, 148, 255);
-            cbxReasonforVisit.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            cbxReasonforVisit.Font = new Font("Segoe UI", 10F);
-            cbxReasonforVisit.ForeColor = Color.FromArgb(68, 88, 112);
-            cbxReasonforVisit.ItemHeight = 30;
-            cbxReasonforVisit.Location = new Point(3, 416);
-            cbxReasonforVisit.Name = "cbxReasonforVisit";
-            cbxReasonforVisit.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            cbxReasonforVisit.Size = new Size(787, 36);
-            cbxReasonforVisit.TabIndex = 9;
             // 
             // label5
             // 
@@ -190,7 +181,7 @@
             // cbxDocPhys
             // 
             cbxDocPhys.BackColor = Color.Transparent;
-            cbxDocPhys.CustomizableEdges = customizableEdges9;
+            cbxDocPhys.CustomizableEdges = customizableEdges7;
             cbxDocPhys.Dock = DockStyle.Fill;
             cbxDocPhys.DrawMode = DrawMode.OwnerDrawFixed;
             cbxDocPhys.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -201,7 +192,7 @@
             cbxDocPhys.ItemHeight = 30;
             cbxDocPhys.Location = new Point(3, 320);
             cbxDocPhys.Name = "cbxDocPhys";
-            cbxDocPhys.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            cbxDocPhys.ShadowDecoration.CustomizableEdges = customizableEdges8;
             cbxDocPhys.Size = new Size(787, 36);
             cbxDocPhys.TabIndex = 7;
             // 
@@ -249,30 +240,10 @@
             label1.TabIndex = 0;
             label1.Text = "Clinic Name";
             // 
-            // tbxClinic
-            // 
-            tbxClinic.CustomizableEdges = customizableEdges11;
-            tbxClinic.DefaultText = "";
-            tbxClinic.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            tbxClinic.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            tbxClinic.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            tbxClinic.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            tbxClinic.Dock = DockStyle.Top;
-            tbxClinic.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbxClinic.Font = new Font("Segoe UI", 9F);
-            tbxClinic.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbxClinic.Location = new Point(3, 32);
-            tbxClinic.Name = "tbxClinic";
-            tbxClinic.PlaceholderText = "";
-            tbxClinic.SelectedText = "";
-            tbxClinic.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            tbxClinic.Size = new Size(787, 44);
-            tbxClinic.TabIndex = 1;
-            // 
             // CbxTimeSlot
             // 
             CbxTimeSlot.BackColor = Color.Transparent;
-            CbxTimeSlot.CustomizableEdges = customizableEdges13;
+            CbxTimeSlot.CustomizableEdges = customizableEdges9;
             CbxTimeSlot.Dock = DockStyle.Fill;
             CbxTimeSlot.DrawMode = DrawMode.OwnerDrawFixed;
             CbxTimeSlot.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -284,14 +255,14 @@
             CbxTimeSlot.Items.AddRange(new object[] { "8:00 A.M. - 9:00 A.M.", "9:00 A.M. - 10:00 A.M", "10:00 A.M. - 11:00 A.M.", "11:00 A.M. - 12:00 A.M. ", "12:00 A.M. - 1:00 A.M.", "1:00 A.M. - 2:00 A.M.", "2:00 A.M. - 3:00 A.M.", "3:00 A.M. - 4:00 A.M.", "4:00 A.M. - 5:00 A.M.", "5:00 A.M. - 6:00 A.M." });
             CbxTimeSlot.Location = new Point(3, 224);
             CbxTimeSlot.Name = "CbxTimeSlot";
-            CbxTimeSlot.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            CbxTimeSlot.ShadowDecoration.CustomizableEdges = customizableEdges10;
             CbxTimeSlot.Size = new Size(787, 36);
             CbxTimeSlot.TabIndex = 3;
             // 
             // CbxDate
             // 
             CbxDate.Checked = true;
-            CbxDate.CustomizableEdges = customizableEdges15;
+            CbxDate.CustomizableEdges = customizableEdges11;
             CbxDate.Dock = DockStyle.Fill;
             CbxDate.Font = new Font("Segoe UI", 9F);
             CbxDate.Format = DateTimePickerFormat.Long;
@@ -299,10 +270,97 @@
             CbxDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             CbxDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             CbxDate.Name = "CbxDate";
-            CbxDate.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            CbxDate.ShadowDecoration.CustomizableEdges = customizableEdges12;
             CbxDate.Size = new Size(787, 61);
             CbxDate.TabIndex = 2;
             CbxDate.Value = new DateTime(2025, 4, 3, 12, 40, 6, 172);
+            // 
+            // cbxClinicName
+            // 
+            cbxClinicName.BackColor = Color.Transparent;
+            cbxClinicName.CustomizableEdges = customizableEdges13;
+            cbxClinicName.DrawMode = DrawMode.OwnerDrawFixed;
+            cbxClinicName.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbxClinicName.FocusedColor = Color.FromArgb(94, 148, 255);
+            cbxClinicName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cbxClinicName.Font = new Font("Segoe UI", 10F);
+            cbxClinicName.ForeColor = Color.FromArgb(68, 88, 112);
+            cbxClinicName.ItemHeight = 30;
+            cbxClinicName.Location = new Point(3, 32);
+            cbxClinicName.Name = "cbxClinicName";
+            cbxClinicName.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            cbxClinicName.Size = new Size(787, 36);
+            cbxClinicName.TabIndex = 10;
+            // 
+            // tableLayoutPanel2
+            // 
+            tableLayoutPanel2.ColumnCount = 1;
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel2.Controls.Add(panel1, 0, 0);
+            tableLayoutPanel2.Controls.Add(panel2, 0, 1);
+            tableLayoutPanel2.Dock = DockStyle.Fill;
+            tableLayoutPanel2.Location = new Point(3, 416);
+            tableLayoutPanel2.Name = "tableLayoutPanel2";
+            tableLayoutPanel2.RowCount = 2;
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel2.Size = new Size(787, 86);
+            tableLayoutPanel2.TabIndex = 11;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(cbxReasonForVisit);
+            panel1.Location = new Point(3, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(781, 37);
+            panel1.TabIndex = 0;
+            // 
+            // cbxReasonForVisit
+            // 
+            cbxReasonForVisit.BackColor = Color.Transparent;
+            cbxReasonForVisit.CustomizableEdges = customizableEdges15;
+            cbxReasonForVisit.Dock = DockStyle.Fill;
+            cbxReasonForVisit.DrawMode = DrawMode.OwnerDrawFixed;
+            cbxReasonForVisit.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbxReasonForVisit.FocusedColor = Color.FromArgb(94, 148, 255);
+            cbxReasonForVisit.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cbxReasonForVisit.Font = new Font("Segoe UI", 10F);
+            cbxReasonForVisit.ForeColor = Color.FromArgb(68, 88, 112);
+            cbxReasonForVisit.ItemHeight = 30;
+            cbxReasonForVisit.Items.AddRange(new object[] { "General Check-Up", "Follow-Up Appointment", "Prescription Refill", "Laboratory Test", "Vaccination", "Medical Certification", "Chronic Condition Management", "Diagnostic Imaging (e.g. X-ray, Ultrasound)", "Consultation for Symptoms", "Injury or Wound Care", "Mental Health Consultation", "Pre-Employment Exam", "Minor Procedure", "Referral from Another Doctor", "Pediatric Check-up", "OB-GYN Consultation", "Dental Cleaning / Check-Up", "Physical Therapy Session", "Blood Pressure Monitoring", "Health Clearance", "Other Concerns" });
+            cbxReasonForVisit.Location = new Point(0, 0);
+            cbxReasonForVisit.Name = "cbxReasonForVisit";
+            cbxReasonForVisit.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            cbxReasonForVisit.Size = new Size(781, 36);
+            cbxReasonForVisit.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(tbxOtherConcerns);
+            panel2.Location = new Point(3, 46);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(781, 37);
+            panel2.TabIndex = 1;
+            // 
+            // tbxOtherConcerns
+            // 
+            tbxOtherConcerns.CustomizableEdges = customizableEdges17;
+            tbxOtherConcerns.DefaultText = "";
+            tbxOtherConcerns.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            tbxOtherConcerns.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            tbxOtherConcerns.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            tbxOtherConcerns.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            tbxOtherConcerns.Dock = DockStyle.Fill;
+            tbxOtherConcerns.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            tbxOtherConcerns.Font = new Font("Segoe UI", 9F);
+            tbxOtherConcerns.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            tbxOtherConcerns.Location = new Point(0, 0);
+            tbxOtherConcerns.Name = "tbxOtherConcerns";
+            tbxOtherConcerns.PlaceholderText = "";
+            tbxOtherConcerns.SelectedText = "";
+            tbxOtherConcerns.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            tbxOtherConcerns.Size = new Size(781, 37);
+            tbxOtherConcerns.TabIndex = 0;
             // 
             // Appointments_User
             // 
@@ -319,6 +377,9 @@
             guna2Panel3.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
+            tableLayoutPanel2.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -330,7 +391,6 @@
         private Label label6;
         private Guna.UI2.WinForms.Guna2Button btnSubmit;
         private TableLayoutPanel tableLayoutPanel1;
-        private Guna.UI2.WinForms.Guna2ComboBox cbxReasonforVisit;
         private Label label5;
         private Guna.UI2.WinForms.Guna2ComboBox cbxDocPhys;
         private Label label4;
@@ -340,5 +400,11 @@
         private Guna.UI2.WinForms.Guna2TextBox tbxClinic;
         private Guna.UI2.WinForms.Guna2ComboBox CbxTimeSlot;
         private Guna.UI2.WinForms.Guna2DateTimePicker CbxDate;
+        private Guna.UI2.WinForms.Guna2ComboBox cbxClinicName;
+        private TableLayoutPanel tableLayoutPanel2;
+        private Panel panel1;
+        private Guna.UI2.WinForms.Guna2ComboBox cbxReasonForVisit;
+        private Panel panel2;
+        private Guna.UI2.WinForms.Guna2TextBox tbxOtherConcerns;
     }
 }

@@ -200,7 +200,7 @@ namespace ClinicManagementSystemFinal
 
         private void btnAppointment_Click(object sender, EventArgs e)
         {
-            LoadControl(new AppointmentForm());
+            LoadControl(new Appointments_User());
         }
 
         private void btnDoctor_Click(object sender, EventArgs e)
@@ -228,7 +228,7 @@ namespace ClinicManagementSystemFinal
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            LoadControl(new Dashboard_User321());
+
         }
 
         private void btnAppointments_Click(object sender, EventArgs e)

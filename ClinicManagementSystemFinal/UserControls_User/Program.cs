@@ -1,4 +1,4 @@
-namespace ClinicManagementSystemFinal
+namespace ClinicManagementSystemFinal.UserControls_User
 {
     internal static class Program
     {

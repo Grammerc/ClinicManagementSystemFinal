@@ -17,6 +17,7 @@ namespace ClinicManagementSystemFinal
     {
 
         private OleDbConnection conn = new OleDbConnection();
+        private string userLoginId;
         public SignIn()
         {
             InitializeComponent();
@@ -26,6 +27,8 @@ namespace ClinicManagementSystemFinal
             tbxEmail.ForeColor = Color.DarkGray;
      
         }
+
+   
 
         protected override CreateParams CreateParams
         {
@@ -70,7 +73,8 @@ namespace ClinicManagementSystemFinal
                 }
                 else if (roleID == "3")
                 {
-                    HomePage_User userHome = new HomePage_User();
+                    loginId = or["LoginID"].ToString();
+                    HomePage_User userHome = new HomePage_User(loginId);
                     userHome.Show();
                 }
                 else

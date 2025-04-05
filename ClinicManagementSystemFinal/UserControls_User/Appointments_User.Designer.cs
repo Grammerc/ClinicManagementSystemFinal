@@ -55,13 +55,13 @@
             guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
             label5 = new Label();
-            cbxDocPhys = new Guna.UI2.WinForms.Guna2ComboBox();
+            cbxDoctor = new Guna.UI2.WinForms.Guna2ComboBox();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            CbxTimeSlot = new Guna.UI2.WinForms.Guna2ComboBox();
-            CbxDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            cbxTimeSlot = new Guna.UI2.WinForms.Guna2ComboBox();
+            cbxDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             cbxClinicName = new Guna.UI2.WinForms.Guna2ComboBox();
             tableLayoutPanel2 = new TableLayoutPanel();
             panel1 = new Panel();
@@ -124,6 +124,7 @@
             btnSubmit.Size = new Size(177, 56);
             btnSubmit.TabIndex = 0;
             btnSubmit.Text = "Submit";
+            btnSubmit.Click += btnSubmit_Click;
             // 
             // guna2Panel3
             // 
@@ -141,13 +142,13 @@
             tableLayoutPanel1.ColumnCount = 1;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.Controls.Add(label5, 0, 8);
-            tableLayoutPanel1.Controls.Add(cbxDocPhys, 0, 7);
+            tableLayoutPanel1.Controls.Add(cbxDoctor, 0, 7);
             tableLayoutPanel1.Controls.Add(label4, 0, 6);
             tableLayoutPanel1.Controls.Add(label3, 0, 4);
             tableLayoutPanel1.Controls.Add(label2, 0, 2);
             tableLayoutPanel1.Controls.Add(label1, 0, 0);
-            tableLayoutPanel1.Controls.Add(CbxTimeSlot, 0, 5);
-            tableLayoutPanel1.Controls.Add(CbxDate, 0, 3);
+            tableLayoutPanel1.Controls.Add(cbxTimeSlot, 0, 5);
+            tableLayoutPanel1.Controls.Add(cbxDate, 0, 3);
             tableLayoutPanel1.Controls.Add(cbxClinicName, 0, 1);
             tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 0, 9);
             tableLayoutPanel1.Dock = DockStyle.Fill;
@@ -178,23 +179,23 @@
             label5.TabIndex = 8;
             label5.Text = "Reason for Visit";
             // 
-            // cbxDocPhys
+            // cbxDoctor
             // 
-            cbxDocPhys.BackColor = Color.Transparent;
-            cbxDocPhys.CustomizableEdges = customizableEdges7;
-            cbxDocPhys.Dock = DockStyle.Fill;
-            cbxDocPhys.DrawMode = DrawMode.OwnerDrawFixed;
-            cbxDocPhys.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbxDocPhys.FocusedColor = Color.FromArgb(94, 148, 255);
-            cbxDocPhys.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            cbxDocPhys.Font = new Font("Segoe UI", 10F);
-            cbxDocPhys.ForeColor = Color.FromArgb(68, 88, 112);
-            cbxDocPhys.ItemHeight = 30;
-            cbxDocPhys.Location = new Point(3, 320);
-            cbxDocPhys.Name = "cbxDocPhys";
-            cbxDocPhys.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            cbxDocPhys.Size = new Size(787, 36);
-            cbxDocPhys.TabIndex = 7;
+            cbxDoctor.BackColor = Color.Transparent;
+            cbxDoctor.CustomizableEdges = customizableEdges7;
+            cbxDoctor.Dock = DockStyle.Fill;
+            cbxDoctor.DrawMode = DrawMode.OwnerDrawFixed;
+            cbxDoctor.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbxDoctor.FocusedColor = Color.FromArgb(94, 148, 255);
+            cbxDoctor.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cbxDoctor.Font = new Font("Segoe UI", 10F);
+            cbxDoctor.ForeColor = Color.FromArgb(68, 88, 112);
+            cbxDoctor.ItemHeight = 30;
+            cbxDoctor.Location = new Point(3, 320);
+            cbxDoctor.Name = "cbxDoctor";
+            cbxDoctor.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            cbxDoctor.Size = new Size(787, 36);
+            cbxDoctor.TabIndex = 7;
             // 
             // label4
             // 
@@ -240,40 +241,40 @@
             label1.TabIndex = 0;
             label1.Text = "Clinic Name";
             // 
-            // CbxTimeSlot
+            // cbxTimeSlot
             // 
-            CbxTimeSlot.BackColor = Color.Transparent;
-            CbxTimeSlot.CustomizableEdges = customizableEdges9;
-            CbxTimeSlot.Dock = DockStyle.Fill;
-            CbxTimeSlot.DrawMode = DrawMode.OwnerDrawFixed;
-            CbxTimeSlot.DropDownStyle = ComboBoxStyle.DropDownList;
-            CbxTimeSlot.FocusedColor = Color.FromArgb(94, 148, 255);
-            CbxTimeSlot.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            CbxTimeSlot.Font = new Font("Segoe UI", 10F);
-            CbxTimeSlot.ForeColor = Color.FromArgb(68, 88, 112);
-            CbxTimeSlot.ItemHeight = 30;
-            CbxTimeSlot.Items.AddRange(new object[] { "8:00 A.M. - 9:00 A.M.", "9:00 A.M. - 10:00 A.M", "10:00 A.M. - 11:00 A.M.", "11:00 A.M. - 12:00 A.M. ", "12:00 A.M. - 1:00 A.M.", "1:00 A.M. - 2:00 A.M.", "2:00 A.M. - 3:00 A.M.", "3:00 A.M. - 4:00 A.M.", "4:00 A.M. - 5:00 A.M.", "5:00 A.M. - 6:00 A.M." });
-            CbxTimeSlot.Location = new Point(3, 224);
-            CbxTimeSlot.Name = "CbxTimeSlot";
-            CbxTimeSlot.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            CbxTimeSlot.Size = new Size(787, 36);
-            CbxTimeSlot.TabIndex = 3;
+            cbxTimeSlot.BackColor = Color.Transparent;
+            cbxTimeSlot.CustomizableEdges = customizableEdges9;
+            cbxTimeSlot.Dock = DockStyle.Fill;
+            cbxTimeSlot.DrawMode = DrawMode.OwnerDrawFixed;
+            cbxTimeSlot.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbxTimeSlot.FocusedColor = Color.FromArgb(94, 148, 255);
+            cbxTimeSlot.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cbxTimeSlot.Font = new Font("Segoe UI", 10F);
+            cbxTimeSlot.ForeColor = Color.FromArgb(68, 88, 112);
+            cbxTimeSlot.ItemHeight = 30;
+            cbxTimeSlot.Items.AddRange(new object[] { "8:00 A.M. - 9:00 A.M.", "9:00 A.M. - 10:00 A.M", "10:00 A.M. - 11:00 A.M.", "11:00 A.M. - 12:00 A.M. ", "12:00 A.M. - 1:00 A.M.", "1:00 A.M. - 2:00 A.M.", "2:00 A.M. - 3:00 A.M.", "3:00 A.M. - 4:00 A.M.", "4:00 A.M. - 5:00 A.M.", "5:00 A.M. - 6:00 A.M." });
+            cbxTimeSlot.Location = new Point(3, 224);
+            cbxTimeSlot.Name = "cbxTimeSlot";
+            cbxTimeSlot.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            cbxTimeSlot.Size = new Size(787, 36);
+            cbxTimeSlot.TabIndex = 3;
             // 
-            // CbxDate
+            // cbxDate
             // 
-            CbxDate.Checked = true;
-            CbxDate.CustomizableEdges = customizableEdges11;
-            CbxDate.Dock = DockStyle.Fill;
-            CbxDate.Font = new Font("Segoe UI", 9F);
-            CbxDate.Format = DateTimePickerFormat.Long;
-            CbxDate.Location = new Point(3, 128);
-            CbxDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            CbxDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            CbxDate.Name = "CbxDate";
-            CbxDate.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            CbxDate.Size = new Size(787, 61);
-            CbxDate.TabIndex = 2;
-            CbxDate.Value = new DateTime(2025, 4, 3, 12, 40, 6, 172);
+            cbxDate.Checked = true;
+            cbxDate.CustomizableEdges = customizableEdges11;
+            cbxDate.Dock = DockStyle.Fill;
+            cbxDate.Font = new Font("Segoe UI", 9F);
+            cbxDate.Format = DateTimePickerFormat.Long;
+            cbxDate.Location = new Point(3, 128);
+            cbxDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            cbxDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            cbxDate.Name = "cbxDate";
+            cbxDate.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            cbxDate.Size = new Size(787, 61);
+            cbxDate.TabIndex = 2;
+            cbxDate.Value = new DateTime(2025, 4, 3, 12, 40, 6, 172);
             // 
             // cbxClinicName
             // 
@@ -392,14 +393,14 @@
         private Guna.UI2.WinForms.Guna2Button btnSubmit;
         private TableLayoutPanel tableLayoutPanel1;
         private Label label5;
-        private Guna.UI2.WinForms.Guna2ComboBox cbxDocPhys;
+        private Guna.UI2.WinForms.Guna2ComboBox cbxDoctor;
         private Label label4;
         private Label label3;
         private Label label2;
         private Label label1;
         private Guna.UI2.WinForms.Guna2TextBox tbxClinic;
-        private Guna.UI2.WinForms.Guna2ComboBox CbxTimeSlot;
-        private Guna.UI2.WinForms.Guna2DateTimePicker CbxDate;
+        private Guna.UI2.WinForms.Guna2ComboBox cbxTimeSlot;
+        private Guna.UI2.WinForms.Guna2DateTimePicker cbxDate;
         private Guna.UI2.WinForms.Guna2ComboBox cbxClinicName;
         private TableLayoutPanel tableLayoutPanel2;
         private Panel panel1;

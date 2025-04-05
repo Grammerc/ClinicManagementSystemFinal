@@ -161,7 +161,7 @@
             guna2Panel35 = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel34 = new Guna.UI2.WinForms.Guna2Panel();
             guna2ImageButton7 = new Guna.UI2.WinForms.Guna2ImageButton();
-            guna2Panel33 = new Guna.UI2.WinForms.Guna2Panel();
+            patientName7 = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel32 = new Guna.UI2.WinForms.Guna2Panel();
             guna2CirclePictureBox7 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             guna2Panel31 = new Guna.UI2.WinForms.Guna2Panel();
@@ -200,6 +200,7 @@
             guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
             guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
+            label1 = new Label();
             guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             panel1 = new Panel();
@@ -224,36 +225,66 @@
             guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             pbxClinic = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            label1 = new Label();
+            patientName1 = new Label();
+            patientName2 = new Label();
+            patientName3 = new Label();
+            patientName4 = new Label();
+            patientName5 = new Label();
+            patientName6 = new Label();
+            label9 = new Label();
+            patientName8 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            label8 = new Label();
+            label10 = new Label();
+            label11 = new Label();
             panelTitlePatientQueue.SuspendLayout();
             guna2Panel2.SuspendLayout();
             panelPatientQueue.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             guna2Panel38.SuspendLayout();
+            guna2Panel37.SuspendLayout();
             guna2Panel36.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox8).BeginInit();
+            guna2Panel35.SuspendLayout();
             guna2Panel34.SuspendLayout();
+            patientName7.SuspendLayout();
             guna2Panel32.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox7).BeginInit();
+            guna2Panel31.SuspendLayout();
             guna2Panel30.SuspendLayout();
+            guna2Panel29.SuspendLayout();
             guna2Panel28.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox6).BeginInit();
+            guna2Panel27.SuspendLayout();
             guna2Panel26.SuspendLayout();
+            guna2Panel25.SuspendLayout();
             guna2Panel24.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox5).BeginInit();
+            guna2Panel23.SuspendLayout();
             guna2Panel22.SuspendLayout();
+            guna2Panel21.SuspendLayout();
             guna2Panel20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox4).BeginInit();
+            guna2Panel19.SuspendLayout();
             guna2Panel18.SuspendLayout();
+            guna2Panel17.SuspendLayout();
             guna2Panel16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox3).BeginInit();
+            guna2Panel15.SuspendLayout();
             guna2Panel14.SuspendLayout();
+            guna2Panel13.SuspendLayout();
             guna2Panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox2).BeginInit();
+            guna2Panel11.SuspendLayout();
             guna2Panel10.SuspendLayout();
             guna2Panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).BeginInit();
             guna2Panel8.SuspendLayout();
+            guna2Panel7.SuspendLayout();
             panel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             guna2Panel42.SuspendLayout();
@@ -328,7 +359,7 @@
             tableLayoutPanel1.Controls.Add(guna2Panel36, 1, 7);
             tableLayoutPanel1.Controls.Add(guna2Panel35, 0, 7);
             tableLayoutPanel1.Controls.Add(guna2Panel34, 3, 6);
-            tableLayoutPanel1.Controls.Add(guna2Panel33, 2, 6);
+            tableLayoutPanel1.Controls.Add(patientName7, 2, 6);
             tableLayoutPanel1.Controls.Add(guna2Panel32, 1, 6);
             tableLayoutPanel1.Controls.Add(guna2Panel31, 0, 6);
             tableLayoutPanel1.Controls.Add(guna2Panel30, 3, 5);
@@ -397,6 +428,7 @@
             // 
             // guna2Panel37
             // 
+            guna2Panel37.Controls.Add(patientName8);
             guna2Panel37.CustomizableEdges = customizableEdges6;
             guna2Panel37.Location = new Point(114, 332);
             guna2Panel37.Name = "guna2Panel37";
@@ -428,6 +460,7 @@
             // 
             // guna2Panel35
             // 
+            guna2Panel35.Controls.Add(label11);
             guna2Panel35.CustomizableEdges = customizableEdges11;
             guna2Panel35.Location = new Point(3, 332);
             guna2Panel35.Name = "guna2Panel35";
@@ -460,14 +493,15 @@
             guna2ImageButton7.Size = new Size(74, 41);
             guna2ImageButton7.TabIndex = 1;
             // 
-            // guna2Panel33
+            // patientName7
             // 
-            guna2Panel33.CustomizableEdges = customizableEdges16;
-            guna2Panel33.Location = new Point(114, 285);
-            guna2Panel33.Name = "guna2Panel33";
-            guna2Panel33.ShadowDecoration.CustomizableEdges = customizableEdges17;
-            guna2Panel33.Size = new Size(590, 41);
-            guna2Panel33.TabIndex = 26;
+            patientName7.Controls.Add(label9);
+            patientName7.CustomizableEdges = customizableEdges16;
+            patientName7.Location = new Point(114, 285);
+            patientName7.Name = "patientName7";
+            patientName7.ShadowDecoration.CustomizableEdges = customizableEdges17;
+            patientName7.Size = new Size(590, 41);
+            patientName7.TabIndex = 26;
             // 
             // guna2Panel32
             // 
@@ -493,6 +527,7 @@
             // 
             // guna2Panel31
             // 
+            guna2Panel31.Controls.Add(label10);
             guna2Panel31.CustomizableEdges = customizableEdges21;
             guna2Panel31.Location = new Point(3, 285);
             guna2Panel31.Name = "guna2Panel31";
@@ -527,6 +562,7 @@
             // 
             // guna2Panel29
             // 
+            guna2Panel29.Controls.Add(patientName6);
             guna2Panel29.CustomizableEdges = customizableEdges26;
             guna2Panel29.Location = new Point(114, 238);
             guna2Panel29.Name = "guna2Panel29";
@@ -558,6 +594,7 @@
             // 
             // guna2Panel27
             // 
+            guna2Panel27.Controls.Add(label8);
             guna2Panel27.CustomizableEdges = customizableEdges31;
             guna2Panel27.Location = new Point(3, 238);
             guna2Panel27.Name = "guna2Panel27";
@@ -592,6 +629,7 @@
             // 
             // guna2Panel25
             // 
+            guna2Panel25.Controls.Add(patientName5);
             guna2Panel25.CustomizableEdges = customizableEdges36;
             guna2Panel25.Location = new Point(114, 191);
             guna2Panel25.Name = "guna2Panel25";
@@ -623,6 +661,7 @@
             // 
             // guna2Panel23
             // 
+            guna2Panel23.Controls.Add(label7);
             guna2Panel23.CustomizableEdges = customizableEdges41;
             guna2Panel23.Location = new Point(3, 191);
             guna2Panel23.Name = "guna2Panel23";
@@ -657,6 +696,7 @@
             // 
             // guna2Panel21
             // 
+            guna2Panel21.Controls.Add(patientName4);
             guna2Panel21.CustomizableEdges = customizableEdges46;
             guna2Panel21.Location = new Point(114, 144);
             guna2Panel21.Name = "guna2Panel21";
@@ -688,6 +728,7 @@
             // 
             // guna2Panel19
             // 
+            guna2Panel19.Controls.Add(label6);
             guna2Panel19.CustomizableEdges = customizableEdges51;
             guna2Panel19.Location = new Point(3, 144);
             guna2Panel19.Name = "guna2Panel19";
@@ -722,6 +763,7 @@
             // 
             // guna2Panel17
             // 
+            guna2Panel17.Controls.Add(patientName3);
             guna2Panel17.CustomizableEdges = customizableEdges56;
             guna2Panel17.Location = new Point(114, 97);
             guna2Panel17.Name = "guna2Panel17";
@@ -753,6 +795,7 @@
             // 
             // guna2Panel15
             // 
+            guna2Panel15.Controls.Add(label5);
             guna2Panel15.CustomizableEdges = customizableEdges61;
             guna2Panel15.Location = new Point(3, 97);
             guna2Panel15.Name = "guna2Panel15";
@@ -787,6 +830,7 @@
             // 
             // guna2Panel13
             // 
+            guna2Panel13.Controls.Add(patientName2);
             guna2Panel13.CustomizableEdges = customizableEdges66;
             guna2Panel13.Location = new Point(114, 50);
             guna2Panel13.Name = "guna2Panel13";
@@ -818,12 +862,14 @@
             // 
             // guna2Panel11
             // 
+            guna2Panel11.Controls.Add(label3);
             guna2Panel11.CustomizableEdges = customizableEdges71;
             guna2Panel11.Location = new Point(3, 50);
             guna2Panel11.Name = "guna2Panel11";
             guna2Panel11.ShadowDecoration.CustomizableEdges = customizableEdges72;
             guna2Panel11.Size = new Size(40, 41);
             guna2Panel11.TabIndex = 4;
+            guna2Panel11.Tag = "";
             // 
             // guna2Panel10
             // 
@@ -874,6 +920,7 @@
             // 
             // guna2Panel8
             // 
+            guna2Panel8.Controls.Add(label2);
             guna2Panel8.Controls.Add(label1);
             guna2Panel8.CustomizableEdges = customizableEdges79;
             guna2Panel8.Location = new Point(3, 3);
@@ -882,8 +929,20 @@
             guna2Panel8.Size = new Size(40, 41);
             guna2Panel8.TabIndex = 1;
             // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            label1.AutoSize = true;
+            label1.Location = new Point(13, 14);
+            label1.Name = "label1";
+            label1.Size = new Size(13, 15);
+            label1.TabIndex = 0;
+            label1.Text = "1";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // guna2Panel7
             // 
+            guna2Panel7.Controls.Add(patientName1);
             guna2Panel7.CustomizableEdges = customizableEdges81;
             guna2Panel7.Location = new Point(114, 3);
             guna2Panel7.Name = "guna2Panel7";
@@ -1184,15 +1243,165 @@
             pbxClinic.TabIndex = 0;
             pbxClinic.TabStop = false;
             // 
-            // label1
+            // patientName1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(10, 14);
-            label1.Name = "label1";
-            label1.Size = new Size(13, 15);
-            label1.TabIndex = 0;
-            label1.Text = "1";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            patientName1.AutoSize = true;
+            patientName1.Location = new Point(13, 14);
+            patientName1.Name = "patientName1";
+            patientName1.Size = new Size(38, 15);
+            patientName1.TabIndex = 0;
+            patientName1.Text = "label2";
+            // 
+            // patientName2
+            // 
+            patientName2.AutoSize = true;
+            patientName2.Location = new Point(13, 15);
+            patientName2.Name = "patientName2";
+            patientName2.Size = new Size(38, 15);
+            patientName2.TabIndex = 1;
+            patientName2.Text = "label3";
+            // 
+            // patientName3
+            // 
+            patientName3.AutoSize = true;
+            patientName3.Location = new Point(13, 16);
+            patientName3.Name = "patientName3";
+            patientName3.Size = new Size(38, 15);
+            patientName3.TabIndex = 2;
+            patientName3.Text = "label5";
+            // 
+            // patientName4
+            // 
+            patientName4.AutoSize = true;
+            patientName4.Location = new Point(13, 15);
+            patientName4.Name = "patientName4";
+            patientName4.Size = new Size(38, 15);
+            patientName4.TabIndex = 3;
+            patientName4.Text = "label6";
+            // 
+            // patientName5
+            // 
+            patientName5.AutoSize = true;
+            patientName5.Location = new Point(13, 14);
+            patientName5.Name = "patientName5";
+            patientName5.Size = new Size(38, 15);
+            patientName5.TabIndex = 4;
+            patientName5.Text = "label7";
+            // 
+            // patientName6
+            // 
+            patientName6.AutoSize = true;
+            patientName6.Location = new Point(13, 14);
+            patientName6.Name = "patientName6";
+            patientName6.Size = new Size(38, 15);
+            patientName6.TabIndex = 5;
+            patientName6.Text = "label8";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(13, 15);
+            label9.Name = "label9";
+            label9.Size = new Size(38, 15);
+            label9.TabIndex = 6;
+            label9.Text = "label9";
+            // 
+            // patientName8
+            // 
+            patientName8.AutoSize = true;
+            patientName8.Location = new Point(13, 13);
+            patientName8.Name = "patientName8";
+            patientName8.Size = new Size(44, 15);
+            patientName8.TabIndex = 7;
+            patientName8.Text = "label10";
+            // 
+            // label2
+            // 
+            label2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            label2.AutoSize = true;
+            label2.Location = new Point(14, 13);
+            label2.Name = "label2";
+            label2.Size = new Size(13, 15);
+            label2.TabIndex = 1;
+            label2.Text = "1";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            label3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            label3.AutoSize = true;
+            label3.Location = new Point(14, 13);
+            label3.Name = "label3";
+            label3.Size = new Size(13, 15);
+            label3.TabIndex = 2;
+            label3.Text = "2";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            label5.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            label5.AutoSize = true;
+            label5.Location = new Point(14, 13);
+            label5.Name = "label5";
+            label5.Size = new Size(13, 15);
+            label5.TabIndex = 2;
+            label5.Text = "3";
+            label5.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            label6.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            label6.AutoSize = true;
+            label6.Location = new Point(14, 13);
+            label6.Name = "label6";
+            label6.Size = new Size(13, 15);
+            label6.TabIndex = 2;
+            label6.Text = "4";
+            label6.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            label7.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            label7.AutoSize = true;
+            label7.Location = new Point(14, 13);
+            label7.Name = "label7";
+            label7.Size = new Size(13, 15);
+            label7.TabIndex = 2;
+            label7.Text = "5";
+            label7.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label8
+            // 
+            label8.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            label8.AutoSize = true;
+            label8.Location = new Point(14, 13);
+            label8.Name = "label8";
+            label8.Size = new Size(13, 15);
+            label8.TabIndex = 2;
+            label8.Text = "6";
+            label8.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label10
+            // 
+            label10.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            label10.AutoSize = true;
+            label10.Location = new Point(14, 13);
+            label10.Name = "label10";
+            label10.Size = new Size(13, 15);
+            label10.TabIndex = 2;
+            label10.Text = "7";
+            label10.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label11
+            // 
+            label11.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            label11.AutoSize = true;
+            label11.Location = new Point(14, 13);
+            label11.Name = "label11";
+            label11.Size = new Size(13, 15);
+            label11.TabIndex = 2;
+            label11.Text = "8";
+            label11.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // PatientQueue
             // 
@@ -1208,31 +1417,61 @@
             panelPatientQueue.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
             guna2Panel38.ResumeLayout(false);
+            guna2Panel37.ResumeLayout(false);
+            guna2Panel37.PerformLayout();
             guna2Panel36.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox8).EndInit();
+            guna2Panel35.ResumeLayout(false);
+            guna2Panel35.PerformLayout();
             guna2Panel34.ResumeLayout(false);
+            patientName7.ResumeLayout(false);
+            patientName7.PerformLayout();
             guna2Panel32.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox7).EndInit();
+            guna2Panel31.ResumeLayout(false);
+            guna2Panel31.PerformLayout();
             guna2Panel30.ResumeLayout(false);
+            guna2Panel29.ResumeLayout(false);
+            guna2Panel29.PerformLayout();
             guna2Panel28.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox6).EndInit();
+            guna2Panel27.ResumeLayout(false);
+            guna2Panel27.PerformLayout();
             guna2Panel26.ResumeLayout(false);
+            guna2Panel25.ResumeLayout(false);
+            guna2Panel25.PerformLayout();
             guna2Panel24.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox5).EndInit();
+            guna2Panel23.ResumeLayout(false);
+            guna2Panel23.PerformLayout();
             guna2Panel22.ResumeLayout(false);
+            guna2Panel21.ResumeLayout(false);
+            guna2Panel21.PerformLayout();
             guna2Panel20.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox4).EndInit();
+            guna2Panel19.ResumeLayout(false);
+            guna2Panel19.PerformLayout();
             guna2Panel18.ResumeLayout(false);
+            guna2Panel17.ResumeLayout(false);
+            guna2Panel17.PerformLayout();
             guna2Panel16.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox3).EndInit();
+            guna2Panel15.ResumeLayout(false);
+            guna2Panel15.PerformLayout();
             guna2Panel14.ResumeLayout(false);
+            guna2Panel13.ResumeLayout(false);
+            guna2Panel13.PerformLayout();
             guna2Panel12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox2).EndInit();
+            guna2Panel11.ResumeLayout(false);
+            guna2Panel11.PerformLayout();
             guna2Panel10.ResumeLayout(false);
             guna2Panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).EndInit();
             guna2Panel8.ResumeLayout(false);
             guna2Panel8.PerformLayout();
+            guna2Panel7.ResumeLayout(false);
+            guna2Panel7.PerformLayout();
             panel1.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
             guna2Panel42.ResumeLayout(false);
@@ -1273,7 +1512,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel35;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel34;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton7;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel33;
+        private Guna.UI2.WinForms.Guna2Panel patientName7;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel32;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel31;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel30;
@@ -1345,5 +1584,21 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel44;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
         private Label label1;
+        private Label patientName1;
+        private Label patientName8;
+        private Label label9;
+        private Label patientName6;
+        private Label patientName5;
+        private Label patientName4;
+        private Label patientName3;
+        private Label patientName2;
+        private Label label11;
+        private Label label10;
+        private Label label8;
+        private Label label7;
+        private Label label6;
+        private Label label5;
+        private Label label3;
+        private Label label2;
     }
 }

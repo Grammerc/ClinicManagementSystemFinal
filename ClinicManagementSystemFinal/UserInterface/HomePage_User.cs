@@ -16,9 +16,11 @@ namespace ClinicManagementSystemFinal
     {
         private int borderSize = 2;
         private Size formSize;
+        private string userLoginId;
         public HomePage_User()
         {
             InitializeComponent();
+            userLoginId = userLoginId;
             formSize = this.ClientSize;
             this.Padding = new Padding(borderSize);
             this.BackColor = Color.FromArgb(114, 137, 218);
@@ -43,6 +45,16 @@ namespace ClinicManagementSystemFinal
         private void panelTitleBar_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        public HomePage_User(string loginId)
+        {
+            InitializeComponent();
+            userLoginId = loginId;
+
+            formSize = this.ClientSize;
+            this.Padding = new Padding(borderSize);
+            this.BackColor = Color.FromArgb(114, 137, 218);
         }
 
         protected override void WndProc(ref Message m)
@@ -200,7 +212,7 @@ namespace ClinicManagementSystemFinal
 
         private void btnAppointment_Click(object sender, EventArgs e)
         {
-            LoadControl(new Appointments_User());
+            LoadControl(new Appointments_User(userLoginId));
         }
 
         private void btnDoctor_Click(object sender, EventArgs e)
@@ -233,7 +245,7 @@ namespace ClinicManagementSystemFinal
 
         private void btnAppointments_Click(object sender, EventArgs e)
         {
-            LoadControl(new Appointments_User());
+            LoadControl(new Appointments_User(userLoginId));
         }
 
         private void btnClinics_Click(object sender, EventArgs e)

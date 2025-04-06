@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -37,8 +38,8 @@
             linkLogin = new ReaLTaiizor.Controls.FoxLinkLabel();
             linkRR = new ReaLTaiizor.Controls.FoxLinkLabel();
             nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
-            pictureBox1 = new PictureBox();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            pbxProfilePicture = new PictureBox();
+            btnChangeImage = new Guna.UI2.WinForms.Guna2Button();
             panel1 = new Panel();
             dungeonLabel1 = new ReaLTaiizor.Controls.DungeonLabel();
             tbxName = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
@@ -50,7 +51,11 @@
             tbxPassword = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             btnRegister = new ReaLTaiizor.Controls.Button();
             dungeonLabel5 = new ReaLTaiizor.Controls.DungeonLabel();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(components);
+            guna2RadioButton1 = new Guna.UI2.WinForms.Guna2RadioButton();
+            guna2RadioButton2 = new Guna.UI2.WinForms.Guna2RadioButton();
+            guna2RadioButton3 = new Guna.UI2.WinForms.Guna2RadioButton();
+            ((System.ComponentModel.ISupportInitialize)pbxProfilePicture).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -137,37 +142,42 @@
             nightControlBox1.Size = new Size(139, 31);
             nightControlBox1.TabIndex = 18;
             // 
-            // pictureBox1
+            // pbxProfilePicture
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(72, 92);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(296, 258);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            pbxProfilePicture.Image = (Image)resources.GetObject("pbxProfilePicture.Image");
+            pbxProfilePicture.Location = new Point(72, 92);
+            pbxProfilePicture.Name = "pbxProfilePicture";
+            pbxProfilePicture.Size = new Size(296, 258);
+            pbxProfilePicture.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbxProfilePicture.TabIndex = 0;
+            pbxProfilePicture.TabStop = false;
+            pbxProfilePicture.Click += pbxProfilePicture_Click;
             // 
-            // guna2Button1
+            // btnChangeImage
             // 
-            guna2Button1.CustomizableEdges = customizableEdges1;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.Font = new Font("Segoe UI", 9F);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(127, 398);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button1.Size = new Size(180, 45);
-            guna2Button1.TabIndex = 3;
-            guna2Button1.Text = "Change Image";
+            btnChangeImage.CustomizableEdges = customizableEdges1;
+            btnChangeImage.DisabledState.BorderColor = Color.DarkGray;
+            btnChangeImage.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnChangeImage.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnChangeImage.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnChangeImage.Font = new Font("Segoe UI", 9F);
+            btnChangeImage.ForeColor = Color.White;
+            btnChangeImage.Location = new Point(127, 398);
+            btnChangeImage.Name = "btnChangeImage";
+            btnChangeImage.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnChangeImage.Size = new Size(180, 45);
+            btnChangeImage.TabIndex = 3;
+            btnChangeImage.Text = "Change Image";
+            btnChangeImage.Click += btnChangeImage_Click;
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(86, 116, 127);
-            panel1.Controls.Add(guna2Button1);
-            panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(guna2RadioButton3);
+            panel1.Controls.Add(guna2RadioButton2);
+            panel1.Controls.Add(guna2RadioButton1);
+            panel1.Controls.Add(btnChangeImage);
+            panel1.Controls.Add(pbxProfilePicture);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
@@ -374,6 +384,60 @@
             dungeonLabel5.TabIndex = 29;
             dungeonLabel5.Text = "PASSWORD";
             // 
+            // guna2RadioButton1
+            // 
+            guna2RadioButton1.AutoSize = true;
+            guna2RadioButton1.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2RadioButton1.CheckedState.BorderThickness = 0;
+            guna2RadioButton1.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
+            guna2RadioButton1.CheckedState.InnerColor = Color.White;
+            guna2RadioButton1.CheckedState.InnerOffset = -4;
+            guna2RadioButton1.Location = new Point(26, 12);
+            guna2RadioButton1.Name = "guna2RadioButton1";
+            guna2RadioButton1.Size = new Size(48, 19);
+            guna2RadioButton1.TabIndex = 4;
+            guna2RadioButton1.Text = "User";
+            guna2RadioButton1.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
+            guna2RadioButton1.UncheckedState.BorderThickness = 2;
+            guna2RadioButton1.UncheckedState.FillColor = Color.Transparent;
+            guna2RadioButton1.UncheckedState.InnerColor = Color.Transparent;
+            // 
+            // guna2RadioButton2
+            // 
+            guna2RadioButton2.AutoSize = true;
+            guna2RadioButton2.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2RadioButton2.CheckedState.BorderThickness = 0;
+            guna2RadioButton2.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
+            guna2RadioButton2.CheckedState.InnerColor = Color.White;
+            guna2RadioButton2.CheckedState.InnerOffset = -4;
+            guna2RadioButton2.Location = new Point(26, 37);
+            guna2RadioButton2.Name = "guna2RadioButton2";
+            guna2RadioButton2.Size = new Size(73, 19);
+            guna2RadioButton2.TabIndex = 5;
+            guna2RadioButton2.Text = "Secretary";
+            guna2RadioButton2.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
+            guna2RadioButton2.UncheckedState.BorderThickness = 2;
+            guna2RadioButton2.UncheckedState.FillColor = Color.Transparent;
+            guna2RadioButton2.UncheckedState.InnerColor = Color.Transparent;
+            // 
+            // guna2RadioButton3
+            // 
+            guna2RadioButton3.AutoSize = true;
+            guna2RadioButton3.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2RadioButton3.CheckedState.BorderThickness = 0;
+            guna2RadioButton3.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
+            guna2RadioButton3.CheckedState.InnerColor = Color.White;
+            guna2RadioButton3.CheckedState.InnerOffset = -4;
+            guna2RadioButton3.Location = new Point(26, 62);
+            guna2RadioButton3.Name = "guna2RadioButton3";
+            guna2RadioButton3.Size = new Size(61, 19);
+            guna2RadioButton3.TabIndex = 6;
+            guna2RadioButton3.Text = "Doctor";
+            guna2RadioButton3.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
+            guna2RadioButton3.UncheckedState.BorderThickness = 2;
+            guna2RadioButton3.UncheckedState.FillColor = Color.Transparent;
+            guna2RadioButton3.UncheckedState.InnerColor = Color.Transparent;
+            // 
             // Register
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -400,8 +464,9 @@
             Name = "Register";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form2";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbxProfilePicture).EndInit();
             panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -421,9 +486,9 @@
         private ReaLTaiizor.Controls.FoxLinkLabel linkLogin;
         private ReaLTaiizor.Controls.FoxLinkLabel linkRR;
         private ReaLTaiizor.Controls.NightControlBox nightControlBox1;
-        private PictureBox pictureBox1;
+        private PictureBox pbxProfilePicture;
         private PictureBox pictureBox2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnChangeImage;
         private Panel panel1;
         private ReaLTaiizor.Controls.DungeonLabel dungeonLabel2;
         private ReaLTaiizor.Controls.DungeonLabel dungeonLabel1;
@@ -435,5 +500,9 @@
         private ReaLTaiizor.Controls.MaterialTextBoxEdit tbxPassword;
         private ReaLTaiizor.Controls.Button btnRegister;
         private ReaLTaiizor.Controls.DungeonLabel dungeonLabel5;
+        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
+        private Guna.UI2.WinForms.Guna2RadioButton guna2RadioButton3;
+        private Guna.UI2.WinForms.Guna2RadioButton guna2RadioButton2;
+        private Guna.UI2.WinForms.Guna2RadioButton guna2RadioButton1;
     }
 }

@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -186,7 +188,7 @@ namespace ClinicManagementSystemFinal
             if (panelMainDesktop.Controls.Count > 0)
                 panelMainDesktop.Controls.RemoveAt(0);
 
-   
+
             if (c is Form childForm)
             {
                 childForm.TopLevel = false;
@@ -238,6 +240,49 @@ namespace ClinicManagementSystemFinal
         private void HomePage_User_Load(object sender, EventArgs e)
         {
             guna2ShadowForm1.SetShadowForm(this);
+            LoadProfilePicture(userLoginId);
+        }
+
+        private void LoadProfilePicture(string loginId)
+        {
+            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;";
+            using (OleDbConnection conn = new OleDbConnection(connStr))
+            {
+                conn.Open();
+                OleDbCommand cmd = new OleDbCommand("SELECT ProfilePicture FROM Information WHERE LoginID = @loginId", conn);
+                cmd.Parameters.AddWithValue("@loginId", loginId);
+                object result = cmd.ExecuteScalar();
+
+                if (result != null && result != DBNull.Value)
+                {
+                    byte[] imageBytes = (byte[])result;
+                    using (MemoryStream ms = new MemoryStream(imageBytes))
+                    {
+                        Image original = Image.FromStream(ms);
+                        pbxProfilePic.Image = CropToCircle(original);
+                        pbxProfilePic.SizeMode = PictureBoxSizeMode.Zoom;
+                        pbxProfilePic.BackColor = Color.Transparent;
+                    }
+                }
+
+                conn.Close();
+            }
+        }
+
+        private Image CropToCircle(Image srcImage)
+        {
+            Bitmap dstImage = new Bitmap(srcImage.Width, srcImage.Height);
+            using (Graphics g = Graphics.FromImage(dstImage))
+            {
+                using (Brush brush = new TextureBrush(srcImage))
+                {
+                    g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+                    GraphicsPath path = new GraphicsPath();
+                    path.AddEllipse(0, 0, srcImage.Width, srcImage.Height);
+                    g.FillPath(brush, path);
+                }
+            }
+            return dstImage;
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
@@ -258,6 +303,16 @@ namespace ClinicManagementSystemFinal
         private void btnService_Click(object sender, EventArgs e)
         {
             LoadControl(new Services());
+        }
+
+        private void guna2ImageButton3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

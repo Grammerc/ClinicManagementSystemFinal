@@ -14,7 +14,7 @@ namespace ClinicManagementSystemFinal
 {
     public partial class Register : Form
     {
-        
+
         public Register()
         {
             InitializeComponent();
@@ -22,7 +22,7 @@ namespace ClinicManagementSystemFinal
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
- 
+
         }
 
         private void linkRR_Click(object sender, EventArgs e)
@@ -41,68 +41,57 @@ namespace ClinicManagementSystemFinal
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            string connString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=""B:\Downloads\Login.accdb""; Persist Security Info=False;";
+            string connString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=""B:\Downloads\Login.accdb"";Persist Security Info=False;";
 
             using (OleDbConnection conn = new OleDbConnection(connString))
             {
                 try
                 {
-                    
                     conn.Open();
 
-                    
                     if (string.IsNullOrWhiteSpace(tbxUsername.Text) || string.IsNullOrWhiteSpace(tbxPassword.Text) || string.IsNullOrWhiteSpace(tbxName.Text) || string.IsNullOrWhiteSpace(tbxEmail.Text))
                     {
-                        MessageBox.Show("Please fill in all the required fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Please fill in all required fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
 
-                    
-                    string query = "INSERT INTO Account ([username], [password], [RoleID], [ClinicID], [Name]) VALUES (?, ?, ?, ?, ?)";
-
-                    using (OleDbCommand cmd = new OleDbCommand(query, conn))
+                    string insertAccount = "INSERT INTO Account ([username], [password], [RoleID], [ClinicID]) VALUES (?, ?, ?, ?)";
+                    using (OleDbCommand cmd = new OleDbCommand(insertAccount, conn))
                     {
-                        
-                        cmd.Parameters.AddWithValue("?", tbxUsername.Text);  
-                        cmd.Parameters.AddWithValue("?", tbxPassword.Text);  
-                        cmd.Parameters.AddWithValue("?", 1);  
-                        cmd.Parameters.AddWithValue("?", 1);  
-                        cmd.Parameters.AddWithValue("?", tbxName.Text);      
+                        cmd.Parameters.AddWithValue("?", tbxUsername.Text);
+                        cmd.Parameters.AddWithValue("?", tbxPassword.Text);
+                        cmd.Parameters.AddWithValue("?", 3); // RoleID = 3 = User
+                        cmd.Parameters.AddWithValue("?", 1); // Default ClinicID
+                        cmd.ExecuteNonQuery();
+                    }
 
-                        
-                        int rowsAffected = cmd.ExecuteNonQuery();
+                    OleDbCommand getId = new OleDbCommand("SELECT @@IDENTITY", conn);
+                    int loginID = Convert.ToInt32(getId.ExecuteScalar());
 
-                        if (rowsAffected > 0)
+                    string insertInfo = "INSERT INTO Information (LoginID, Name, Email) VALUES (?, ?, ?)";
+                    OleDbCommand cmdInsertInfo = new OleDbCommand(insertInfo, conn);
+                    cmdInsertInfo.Parameters.AddWithValue("?", loginID);
+                    cmdInsertInfo.Parameters.AddWithValue("?", tbxName.Text);
+                    cmdInsertInfo.Parameters.AddWithValue("?", tbxEmail.Text);
+                    cmdInsertInfo.ExecuteNonQuery();
+
+                    if (pbxProfilePicture.Image != null)
+                    {
+                        using (MemoryStream ms = new MemoryStream())
                         {
-                            
-                            cmd.CommandText = "SELECT @@IDENTITY"; 
-                            int loginID = Convert.ToInt32(cmd.ExecuteScalar());
+                            pbxProfilePicture.Image.Save(ms, pbxProfilePicture.Image.RawFormat);
+                            byte[] imageBytes = ms.ToArray();
 
-
-                            string infoQuery = "INSERT INTO Information ([LoginID], [Email], [Name]) VALUES (?, ?, ?)";
-                            OleDbCommand infoCmd = new OleDbCommand(infoQuery, conn);
-                            infoCmd.Parameters.AddWithValue("?", loginID);        
-                            infoCmd.Parameters.AddWithValue("?", tbxEmail.Text);    
-                            infoCmd.Parameters.AddWithValue("?", tbxName.Text);    
-
-                            int infoRowsAffected = infoCmd.ExecuteNonQuery();
-
-
-
-                            if (infoRowsAffected > 0)
-                            {
-                                MessageBox.Show("Registration successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            }
-                            else
-                            {
-                                MessageBox.Show("Failed to save information.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                        }
-                        else
-                        {
-                            MessageBox.Show("Registration failed, please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            string updatePic = "UPDATE Information SET ProfilePicture = ? WHERE LoginID = ?";
+                            OleDbCommand updateCmd = new OleDbCommand(updatePic, conn);
+                            updateCmd.Parameters.AddWithValue("?", imageBytes);
+                            updateCmd.Parameters.AddWithValue("?", loginID);
+                            updateCmd.ExecuteNonQuery();
                         }
                     }
+
+
+                    MessageBox.Show("Registration successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
@@ -114,13 +103,26 @@ namespace ClinicManagementSystemFinal
                 }
             }
 
-
             this.Hide();
-            SignIn rp = new SignIn();
-            rp.Show();
+            SignIn signIn = new SignIn();
+            signIn.Show();
         }
 
+        private void pbxProfilePicture_Click(object sender, EventArgs e)
+        {
 
+        }
 
+        private void btnChangeImage_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            open.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
+
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                pbxProfilePicture.Image = Image.FromFile(open.FileName);
+                pbxProfilePicture.Tag = open.FileName;
+            }
+        }
     }
 }

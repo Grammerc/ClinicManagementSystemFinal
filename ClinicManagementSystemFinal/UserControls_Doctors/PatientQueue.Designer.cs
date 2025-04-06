@@ -34,6 +34,19 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges51 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientQueue));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -54,118 +67,138 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientQueue));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panelTitlePatientQueue = new Guna.UI2.WinForms.Guna2Panel();
             label4 = new Label();
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             panelPatientQueue = new Guna.UI2.WinForms.Guna2Panel();
-            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            panelPatient6 = new TableLayoutPanel();
+            panel22 = new Panel();
+            number6 = new Label();
+            panel23 = new Panel();
+            pbxProfile6 = new Guna.UI2.WinForms.Guna2ImageButton();
+            panel24 = new Panel();
+            lblName6 = new Label();
+            panel25 = new Panel();
+            pbxStatus6 = new Guna.UI2.WinForms.Guna2ImageButton();
+            panelPatient5 = new TableLayoutPanel();
+            panel18 = new Panel();
+            number5 = new Label();
+            panel19 = new Panel();
+            pbxProfile5 = new Guna.UI2.WinForms.Guna2ImageButton();
+            panel20 = new Panel();
+            lblName5 = new Label();
+            panel21 = new Panel();
+            pbxStatus5 = new Guna.UI2.WinForms.Guna2ImageButton();
+            panelPatient4 = new TableLayoutPanel();
+            panel14 = new Panel();
+            number4 = new Label();
+            panel15 = new Panel();
+            pbxProfile4 = new Guna.UI2.WinForms.Guna2ImageButton();
+            panel16 = new Panel();
+            lblName4 = new Label();
+            panel17 = new Panel();
+            pbxStatus4 = new Guna.UI2.WinForms.Guna2ImageButton();
+            panelPatient3 = new TableLayoutPanel();
+            panel10 = new Panel();
+            number3 = new Label();
+            panel11 = new Panel();
+            pbxProfile3 = new Guna.UI2.WinForms.Guna2ImageButton();
+            panel12 = new Panel();
+            lblName3 = new Label();
+            panel13 = new Panel();
+            pbxStatus3 = new Guna.UI2.WinForms.Guna2ImageButton();
+            panelPatient2 = new TableLayoutPanel();
+            panel6 = new Panel();
+            number2 = new Label();
+            panel7 = new Panel();
+            pbxProfile2 = new Guna.UI2.WinForms.Guna2ImageButton();
+            panel8 = new Panel();
+            lblName2 = new Label();
+            panel9 = new Panel();
+            pbxStatus2 = new Guna.UI2.WinForms.Guna2ImageButton();
+            panelPatient1 = new TableLayoutPanel();
+            panel2 = new Panel();
+            number1 = new Label();
+            panel3 = new Panel();
+            pbxProfile1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            panel4 = new Panel();
+            lblName1 = new Label();
+            panel5 = new Panel();
+            pbxStatus1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            panelInvisible = new Guna.UI2.WinForms.Guna2Panel();
+            lblEmptyQueue = new Label();
             panel1 = new Panel();
             tableLayoutPanel2 = new TableLayoutPanel();
             guna2Panel42 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2ImageButton12 = new Guna.UI2.WinForms.Guna2ImageButton();
+            pbxSkip = new Guna.UI2.WinForms.Guna2ImageButton();
             guna2Panel41 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2ImageButton11 = new Guna.UI2.WinForms.Guna2ImageButton();
+            pbxCancel = new Guna.UI2.WinForms.Guna2ImageButton();
             guna2Panel40 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2ImageButton10 = new Guna.UI2.WinForms.Guna2ImageButton();
+            pbxPending = new Guna.UI2.WinForms.Guna2ImageButton();
             guna2Panel39 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2ImageButton9 = new Guna.UI2.WinForms.Guna2ImageButton();
+            pbxComplete = new Guna.UI2.WinForms.Guna2ImageButton();
             panelPatientQueueClinic = new Guna.UI2.WinForms.Guna2Panel();
             tableLayoutPanel3 = new TableLayoutPanel();
             guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
+            cbxDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             tableLayoutPanel4 = new TableLayoutPanel();
             guna2Panel43 = new Guna.UI2.WinForms.Guna2Panel();
+            cbxPatientQueue = new Guna.UI2.WinForms.Guna2ComboBox();
             guna2Panel44 = new Guna.UI2.WinForms.Guna2Panel();
+            lblClinicLocation = new Label();
             guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             pbxClinic = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            cbxPatientQueue = new Guna.UI2.WinForms.Guna2ComboBox();
-            lblClinicName = new Label();
-            tableLayoutPanel1 = new TableLayoutPanel();
-            panelPatient1 = new TableLayoutPanel();
-            panelPatient2 = new TableLayoutPanel();
-            panelPatient3 = new TableLayoutPanel();
-            panelPatient4 = new TableLayoutPanel();
-            panelPatient5 = new TableLayoutPanel();
-            panelPatient6 = new TableLayoutPanel();
-            panel2 = new Panel();
-            panel3 = new Panel();
-            panel4 = new Panel();
-            panel5 = new Panel();
-            panel6 = new Panel();
-            panel7 = new Panel();
-            panel8 = new Panel();
-            panel9 = new Panel();
-            panel10 = new Panel();
-            panel11 = new Panel();
-            panel12 = new Panel();
-            panel13 = new Panel();
-            panel14 = new Panel();
-            panel15 = new Panel();
-            panel16 = new Panel();
-            panel17 = new Panel();
-            panel18 = new Panel();
-            panel19 = new Panel();
-            panel20 = new Panel();
-            panel21 = new Panel();
-            panel22 = new Panel();
-            panel23 = new Panel();
-            panel24 = new Panel();
-            panel25 = new Panel();
-            number1 = new Label();
-            number2 = new Label();
-            number3 = new Label();
-            number4 = new Label();
-            number5 = new Label();
-            number6 = new Label();
-            pbxProfile1 = new Guna.UI2.WinForms.Guna2ImageButton();
-            pbxProfile2 = new Guna.UI2.WinForms.Guna2ImageButton();
-            pbxProfile3 = new Guna.UI2.WinForms.Guna2ImageButton();
-            pbxProfile4 = new Guna.UI2.WinForms.Guna2ImageButton();
-            pbxProfile5 = new Guna.UI2.WinForms.Guna2ImageButton();
-            pbxProfile6 = new Guna.UI2.WinForms.Guna2ImageButton();
-            lblName1 = new Label();
-            lblName2 = new Label();
-            lblName3 = new Label();
-            lblName4 = new Label();
-            lblName5 = new Label();
-            lblName6 = new Label();
-            pbxStatus1 = new Guna.UI2.WinForms.Guna2ImageButton();
-            pbxStatus2 = new Guna.UI2.WinForms.Guna2ImageButton();
-            pbxStatus3 = new Guna.UI2.WinForms.Guna2ImageButton();
-            pbxStatus4 = new Guna.UI2.WinForms.Guna2ImageButton();
-            pbxStatus5 = new Guna.UI2.WinForms.Guna2ImageButton();
-            pbxStatus6 = new Guna.UI2.WinForms.Guna2ImageButton();
-            cbxDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             panelTitlePatientQueue.SuspendLayout();
             guna2Panel2.SuspendLayout();
             panelPatientQueue.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
+            panelPatient6.SuspendLayout();
+            panel22.SuspendLayout();
+            panel23.SuspendLayout();
+            panel24.SuspendLayout();
+            panel25.SuspendLayout();
+            panelPatient5.SuspendLayout();
+            panel18.SuspendLayout();
+            panel19.SuspendLayout();
+            panel20.SuspendLayout();
+            panel21.SuspendLayout();
+            panelPatient4.SuspendLayout();
+            panel14.SuspendLayout();
+            panel15.SuspendLayout();
+            panel16.SuspendLayout();
+            panel17.SuspendLayout();
+            panelPatient3.SuspendLayout();
+            panel10.SuspendLayout();
+            panel11.SuspendLayout();
+            panel12.SuspendLayout();
+            panel13.SuspendLayout();
+            panelPatient2.SuspendLayout();
+            panel6.SuspendLayout();
+            panel7.SuspendLayout();
+            panel8.SuspendLayout();
+            panel9.SuspendLayout();
+            panelPatient1.SuspendLayout();
+            panel2.SuspendLayout();
+            panel3.SuspendLayout();
+            panel4.SuspendLayout();
+            panel5.SuspendLayout();
+            panelInvisible.SuspendLayout();
             panel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             guna2Panel42.SuspendLayout();
@@ -181,37 +214,6 @@
             guna2Panel44.SuspendLayout();
             guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbxClinic).BeginInit();
-            tableLayoutPanel1.SuspendLayout();
-            panelPatient1.SuspendLayout();
-            panelPatient2.SuspendLayout();
-            panelPatient3.SuspendLayout();
-            panelPatient4.SuspendLayout();
-            panelPatient5.SuspendLayout();
-            panelPatient6.SuspendLayout();
-            panel2.SuspendLayout();
-            panel3.SuspendLayout();
-            panel4.SuspendLayout();
-            panel5.SuspendLayout();
-            panel6.SuspendLayout();
-            panel7.SuspendLayout();
-            panel8.SuspendLayout();
-            panel9.SuspendLayout();
-            panel10.SuspendLayout();
-            panel11.SuspendLayout();
-            panel12.SuspendLayout();
-            panel13.SuspendLayout();
-            panel14.SuspendLayout();
-            panel15.SuspendLayout();
-            panel16.SuspendLayout();
-            panel17.SuspendLayout();
-            panel18.SuspendLayout();
-            panel19.SuspendLayout();
-            panel20.SuspendLayout();
-            panel21.SuspendLayout();
-            panel22.SuspendLayout();
-            panel23.SuspendLayout();
-            panel24.SuspendLayout();
-            panel25.SuspendLayout();
             SuspendLayout();
             // 
             // panelTitlePatientQueue
@@ -250,7 +252,7 @@
             // panelPatientQueue
             // 
             panelPatientQueue.Controls.Add(tableLayoutPanel1);
-            panelPatientQueue.Controls.Add(guna2Panel1);
+            panelPatientQueue.Controls.Add(panelInvisible);
             panelPatientQueue.Controls.Add(panel1);
             panelPatientQueue.CustomizableEdges = customizableEdges29;
             panelPatientQueue.Dock = DockStyle.Fill;
@@ -260,15 +262,674 @@
             panelPatientQueue.Size = new Size(793, 483);
             panelPatientQueue.TabIndex = 1;
             // 
-            // guna2Panel1
+            // tableLayoutPanel1
             // 
-            guna2Panel1.CustomizableEdges = customizableEdges15;
-            guna2Panel1.Dock = DockStyle.Bottom;
-            guna2Panel1.Location = new Point(0, 382);
-            guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2Panel1.Size = new Size(793, 34);
-            guna2Panel1.TabIndex = 2;
+            tableLayoutPanel1.ColumnCount = 1;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.Controls.Add(panelPatient6, 0, 5);
+            tableLayoutPanel1.Controls.Add(panelPatient5, 0, 4);
+            tableLayoutPanel1.Controls.Add(panelPatient4, 0, 3);
+            tableLayoutPanel1.Controls.Add(panelPatient3, 0, 2);
+            tableLayoutPanel1.Controls.Add(panelPatient2, 0, 1);
+            tableLayoutPanel1.Controls.Add(panelPatient1, 0, 0);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(0, 34);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 6;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 12.5F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 12.5F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 12.5F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 12.5F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 12.5F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 12.5F));
+            tableLayoutPanel1.Size = new Size(793, 382);
+            tableLayoutPanel1.TabIndex = 3;
+            // 
+            // panelPatient6
+            // 
+            panelPatient6.ColumnCount = 4;
+            panelPatient6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 9.312265F));
+            panelPatient6.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 80F));
+            panelPatient6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 78.41907F));
+            panelPatient6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 12.2686644F));
+            panelPatient6.Controls.Add(panel22, 0, 0);
+            panelPatient6.Controls.Add(panel23, 1, 0);
+            panelPatient6.Controls.Add(panel24, 2, 0);
+            panelPatient6.Controls.Add(panel25, 3, 0);
+            panelPatient6.Dock = DockStyle.Fill;
+            panelPatient6.Location = new Point(3, 318);
+            panelPatient6.Name = "panelPatient6";
+            panelPatient6.RowCount = 1;
+            panelPatient6.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            panelPatient6.Size = new Size(787, 61);
+            panelPatient6.TabIndex = 5;
+            // 
+            // panel22
+            // 
+            panel22.Controls.Add(number6);
+            panel22.Dock = DockStyle.Fill;
+            panel22.Location = new Point(3, 3);
+            panel22.Name = "panel22";
+            panel22.Size = new Size(59, 55);
+            panel22.TabIndex = 8;
+            // 
+            // number6
+            // 
+            number6.AutoSize = true;
+            number6.Location = new Point(22, 20);
+            number6.Name = "number6";
+            number6.Size = new Size(13, 15);
+            number6.TabIndex = 1;
+            number6.Text = "1";
+            // 
+            // panel23
+            // 
+            panel23.Controls.Add(pbxProfile6);
+            panel23.Dock = DockStyle.Fill;
+            panel23.Location = new Point(68, 3);
+            panel23.Name = "panel23";
+            panel23.Size = new Size(74, 55);
+            panel23.TabIndex = 9;
+            // 
+            // pbxProfile6
+            // 
+            pbxProfile6.CheckedState.ImageSize = new Size(64, 64);
+            pbxProfile6.Dock = DockStyle.Fill;
+            pbxProfile6.HoverState.ImageSize = new Size(64, 64);
+            pbxProfile6.Image = (Image)resources.GetObject("pbxProfile6.Image");
+            pbxProfile6.ImageOffset = new Point(0, 0);
+            pbxProfile6.ImageRotate = 0F;
+            pbxProfile6.Location = new Point(0, 0);
+            pbxProfile6.Name = "pbxProfile6";
+            pbxProfile6.PressedState.ImageSize = new Size(64, 64);
+            pbxProfile6.ShadowDecoration.CustomizableEdges = customizableEdges3;
+            pbxProfile6.Size = new Size(74, 55);
+            pbxProfile6.TabIndex = 1;
+            // 
+            // panel24
+            // 
+            panel24.Controls.Add(lblName6);
+            panel24.Dock = DockStyle.Fill;
+            panel24.Location = new Point(148, 3);
+            panel24.Name = "panel24";
+            panel24.Size = new Size(548, 55);
+            panel24.TabIndex = 10;
+            // 
+            // lblName6
+            // 
+            lblName6.AutoSize = true;
+            lblName6.Location = new Point(4, 4);
+            lblName6.Name = "lblName6";
+            lblName6.Size = new Size(45, 15);
+            lblName6.TabIndex = 1;
+            lblName6.Text = "Name6";
+            // 
+            // panel25
+            // 
+            panel25.Controls.Add(pbxStatus6);
+            panel25.Dock = DockStyle.Fill;
+            panel25.Location = new Point(702, 3);
+            panel25.Name = "panel25";
+            panel25.Size = new Size(82, 55);
+            panel25.TabIndex = 11;
+            // 
+            // pbxStatus6
+            // 
+            pbxStatus6.CheckedState.ImageSize = new Size(64, 64);
+            pbxStatus6.Dock = DockStyle.Fill;
+            pbxStatus6.HoverState.ImageSize = new Size(64, 64);
+            pbxStatus6.Image = (Image)resources.GetObject("pbxStatus6.Image");
+            pbxStatus6.ImageOffset = new Point(0, 0);
+            pbxStatus6.ImageRotate = 0F;
+            pbxStatus6.Location = new Point(0, 0);
+            pbxStatus6.Name = "pbxStatus6";
+            pbxStatus6.PressedState.ImageSize = new Size(64, 64);
+            pbxStatus6.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            pbxStatus6.Size = new Size(82, 55);
+            pbxStatus6.TabIndex = 1;
+            // 
+            // panelPatient5
+            // 
+            panelPatient5.ColumnCount = 4;
+            panelPatient5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 9.312265F));
+            panelPatient5.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 80F));
+            panelPatient5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 78.41907F));
+            panelPatient5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 12.2686644F));
+            panelPatient5.Controls.Add(panel18, 0, 0);
+            panelPatient5.Controls.Add(panel19, 1, 0);
+            panelPatient5.Controls.Add(panel20, 2, 0);
+            panelPatient5.Controls.Add(panel21, 3, 0);
+            panelPatient5.Dock = DockStyle.Fill;
+            panelPatient5.Location = new Point(3, 255);
+            panelPatient5.Name = "panelPatient5";
+            panelPatient5.RowCount = 1;
+            panelPatient5.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            panelPatient5.Size = new Size(787, 57);
+            panelPatient5.TabIndex = 4;
+            // 
+            // panel18
+            // 
+            panel18.Controls.Add(number5);
+            panel18.Dock = DockStyle.Fill;
+            panel18.Location = new Point(3, 3);
+            panel18.Name = "panel18";
+            panel18.Size = new Size(59, 51);
+            panel18.TabIndex = 8;
+            // 
+            // number5
+            // 
+            number5.AutoSize = true;
+            number5.Location = new Point(22, 18);
+            number5.Name = "number5";
+            number5.Size = new Size(13, 15);
+            number5.TabIndex = 1;
+            number5.Text = "1";
+            // 
+            // panel19
+            // 
+            panel19.Controls.Add(pbxProfile5);
+            panel19.Dock = DockStyle.Fill;
+            panel19.Location = new Point(68, 3);
+            panel19.Name = "panel19";
+            panel19.Size = new Size(74, 51);
+            panel19.TabIndex = 9;
+            // 
+            // pbxProfile5
+            // 
+            pbxProfile5.CheckedState.ImageSize = new Size(64, 64);
+            pbxProfile5.Dock = DockStyle.Fill;
+            pbxProfile5.HoverState.ImageSize = new Size(64, 64);
+            pbxProfile5.Image = (Image)resources.GetObject("pbxProfile5.Image");
+            pbxProfile5.ImageOffset = new Point(0, 0);
+            pbxProfile5.ImageRotate = 0F;
+            pbxProfile5.Location = new Point(0, 0);
+            pbxProfile5.Name = "pbxProfile5";
+            pbxProfile5.PressedState.ImageSize = new Size(64, 64);
+            pbxProfile5.ShadowDecoration.CustomizableEdges = customizableEdges5;
+            pbxProfile5.Size = new Size(74, 51);
+            pbxProfile5.TabIndex = 1;
+            // 
+            // panel20
+            // 
+            panel20.Controls.Add(lblName5);
+            panel20.Dock = DockStyle.Fill;
+            panel20.Location = new Point(148, 3);
+            panel20.Name = "panel20";
+            panel20.Size = new Size(548, 51);
+            panel20.TabIndex = 10;
+            // 
+            // lblName5
+            // 
+            lblName5.AutoSize = true;
+            lblName5.Location = new Point(4, 4);
+            lblName5.Name = "lblName5";
+            lblName5.Size = new Size(45, 15);
+            lblName5.TabIndex = 1;
+            lblName5.Text = "Name5";
+            // 
+            // panel21
+            // 
+            panel21.Controls.Add(pbxStatus5);
+            panel21.Dock = DockStyle.Fill;
+            panel21.Location = new Point(702, 3);
+            panel21.Name = "panel21";
+            panel21.Size = new Size(82, 51);
+            panel21.TabIndex = 11;
+            // 
+            // pbxStatus5
+            // 
+            pbxStatus5.CheckedState.ImageSize = new Size(64, 64);
+            pbxStatus5.Dock = DockStyle.Fill;
+            pbxStatus5.HoverState.ImageSize = new Size(64, 64);
+            pbxStatus5.Image = (Image)resources.GetObject("pbxStatus5.Image");
+            pbxStatus5.ImageOffset = new Point(0, 0);
+            pbxStatus5.ImageRotate = 0F;
+            pbxStatus5.Location = new Point(0, 0);
+            pbxStatus5.Name = "pbxStatus5";
+            pbxStatus5.PressedState.ImageSize = new Size(64, 64);
+            pbxStatus5.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            pbxStatus5.Size = new Size(82, 51);
+            pbxStatus5.TabIndex = 1;
+            // 
+            // panelPatient4
+            // 
+            panelPatient4.ColumnCount = 4;
+            panelPatient4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 9.312265F));
+            panelPatient4.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 80F));
+            panelPatient4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 78.41907F));
+            panelPatient4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 12.2686644F));
+            panelPatient4.Controls.Add(panel14, 0, 0);
+            panelPatient4.Controls.Add(panel15, 1, 0);
+            panelPatient4.Controls.Add(panel16, 2, 0);
+            panelPatient4.Controls.Add(panel17, 3, 0);
+            panelPatient4.Dock = DockStyle.Fill;
+            panelPatient4.Location = new Point(3, 192);
+            panelPatient4.Name = "panelPatient4";
+            panelPatient4.RowCount = 1;
+            panelPatient4.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            panelPatient4.Size = new Size(787, 57);
+            panelPatient4.TabIndex = 3;
+            // 
+            // panel14
+            // 
+            panel14.Controls.Add(number4);
+            panel14.Dock = DockStyle.Fill;
+            panel14.Location = new Point(3, 3);
+            panel14.Name = "panel14";
+            panel14.Size = new Size(59, 51);
+            panel14.TabIndex = 8;
+            // 
+            // number4
+            // 
+            number4.AutoSize = true;
+            number4.Location = new Point(22, 18);
+            number4.Name = "number4";
+            number4.Size = new Size(13, 15);
+            number4.TabIndex = 1;
+            number4.Text = "1";
+            // 
+            // panel15
+            // 
+            panel15.Controls.Add(pbxProfile4);
+            panel15.Dock = DockStyle.Fill;
+            panel15.Location = new Point(68, 3);
+            panel15.Name = "panel15";
+            panel15.Size = new Size(74, 51);
+            panel15.TabIndex = 9;
+            // 
+            // pbxProfile4
+            // 
+            pbxProfile4.CheckedState.ImageSize = new Size(64, 64);
+            pbxProfile4.Dock = DockStyle.Fill;
+            pbxProfile4.HoverState.ImageSize = new Size(64, 64);
+            pbxProfile4.Image = (Image)resources.GetObject("pbxProfile4.Image");
+            pbxProfile4.ImageOffset = new Point(0, 0);
+            pbxProfile4.ImageRotate = 0F;
+            pbxProfile4.Location = new Point(0, 0);
+            pbxProfile4.Name = "pbxProfile4";
+            pbxProfile4.PressedState.ImageSize = new Size(64, 64);
+            pbxProfile4.ShadowDecoration.CustomizableEdges = customizableEdges7;
+            pbxProfile4.Size = new Size(74, 51);
+            pbxProfile4.TabIndex = 1;
+            // 
+            // panel16
+            // 
+            panel16.Controls.Add(lblName4);
+            panel16.Dock = DockStyle.Fill;
+            panel16.Location = new Point(148, 3);
+            panel16.Name = "panel16";
+            panel16.Size = new Size(548, 51);
+            panel16.TabIndex = 10;
+            // 
+            // lblName4
+            // 
+            lblName4.AutoSize = true;
+            lblName4.Location = new Point(4, 4);
+            lblName4.Name = "lblName4";
+            lblName4.Size = new Size(45, 15);
+            lblName4.TabIndex = 1;
+            lblName4.Text = "Name4";
+            // 
+            // panel17
+            // 
+            panel17.Controls.Add(pbxStatus4);
+            panel17.Dock = DockStyle.Fill;
+            panel17.Location = new Point(702, 3);
+            panel17.Name = "panel17";
+            panel17.Size = new Size(82, 51);
+            panel17.TabIndex = 11;
+            // 
+            // pbxStatus4
+            // 
+            pbxStatus4.CheckedState.ImageSize = new Size(64, 64);
+            pbxStatus4.Dock = DockStyle.Fill;
+            pbxStatus4.HoverState.ImageSize = new Size(64, 64);
+            pbxStatus4.Image = (Image)resources.GetObject("pbxStatus4.Image");
+            pbxStatus4.ImageOffset = new Point(0, 0);
+            pbxStatus4.ImageRotate = 0F;
+            pbxStatus4.Location = new Point(0, 0);
+            pbxStatus4.Name = "pbxStatus4";
+            pbxStatus4.PressedState.ImageSize = new Size(64, 64);
+            pbxStatus4.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            pbxStatus4.Size = new Size(82, 51);
+            pbxStatus4.TabIndex = 1;
+            // 
+            // panelPatient3
+            // 
+            panelPatient3.ColumnCount = 4;
+            panelPatient3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 9.312265F));
+            panelPatient3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 80F));
+            panelPatient3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 78.41907F));
+            panelPatient3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 12.2686644F));
+            panelPatient3.Controls.Add(panel10, 0, 0);
+            panelPatient3.Controls.Add(panel11, 1, 0);
+            panelPatient3.Controls.Add(panel12, 2, 0);
+            panelPatient3.Controls.Add(panel13, 3, 0);
+            panelPatient3.Dock = DockStyle.Fill;
+            panelPatient3.Location = new Point(3, 129);
+            panelPatient3.Name = "panelPatient3";
+            panelPatient3.RowCount = 1;
+            panelPatient3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            panelPatient3.Size = new Size(787, 57);
+            panelPatient3.TabIndex = 2;
+            panelPatient3.Paint += panelPatient3_Paint;
+            // 
+            // panel10
+            // 
+            panel10.Controls.Add(number3);
+            panel10.Dock = DockStyle.Fill;
+            panel10.Location = new Point(3, 3);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(59, 51);
+            panel10.TabIndex = 4;
+            // 
+            // number3
+            // 
+            number3.AutoSize = true;
+            number3.Location = new Point(22, 18);
+            number3.Name = "number3";
+            number3.Size = new Size(13, 15);
+            number3.TabIndex = 1;
+            number3.Text = "1";
+            // 
+            // panel11
+            // 
+            panel11.Controls.Add(pbxProfile3);
+            panel11.Dock = DockStyle.Fill;
+            panel11.Location = new Point(68, 3);
+            panel11.Name = "panel11";
+            panel11.Size = new Size(74, 51);
+            panel11.TabIndex = 5;
+            // 
+            // pbxProfile3
+            // 
+            pbxProfile3.CheckedState.ImageSize = new Size(64, 64);
+            pbxProfile3.Dock = DockStyle.Fill;
+            pbxProfile3.HoverState.ImageSize = new Size(64, 64);
+            pbxProfile3.Image = (Image)resources.GetObject("pbxProfile3.Image");
+            pbxProfile3.ImageOffset = new Point(0, 0);
+            pbxProfile3.ImageRotate = 0F;
+            pbxProfile3.Location = new Point(0, 0);
+            pbxProfile3.Name = "pbxProfile3";
+            pbxProfile3.PressedState.ImageSize = new Size(64, 64);
+            pbxProfile3.ShadowDecoration.CustomizableEdges = customizableEdges9;
+            pbxProfile3.Size = new Size(74, 51);
+            pbxProfile3.TabIndex = 1;
+            // 
+            // panel12
+            // 
+            panel12.Controls.Add(lblName3);
+            panel12.Dock = DockStyle.Fill;
+            panel12.Location = new Point(148, 3);
+            panel12.Name = "panel12";
+            panel12.Size = new Size(548, 51);
+            panel12.TabIndex = 6;
+            // 
+            // lblName3
+            // 
+            lblName3.AutoSize = true;
+            lblName3.Location = new Point(4, 4);
+            lblName3.Name = "lblName3";
+            lblName3.Size = new Size(45, 15);
+            lblName3.TabIndex = 1;
+            lblName3.Text = "Name3";
+            lblName3.Click += label9_Click;
+            // 
+            // panel13
+            // 
+            panel13.Controls.Add(pbxStatus3);
+            panel13.Dock = DockStyle.Fill;
+            panel13.Location = new Point(702, 3);
+            panel13.Name = "panel13";
+            panel13.Size = new Size(82, 51);
+            panel13.TabIndex = 7;
+            // 
+            // pbxStatus3
+            // 
+            pbxStatus3.CheckedState.ImageSize = new Size(64, 64);
+            pbxStatus3.Dock = DockStyle.Fill;
+            pbxStatus3.HoverState.ImageSize = new Size(64, 64);
+            pbxStatus3.Image = (Image)resources.GetObject("pbxStatus3.Image");
+            pbxStatus3.ImageOffset = new Point(0, 0);
+            pbxStatus3.ImageRotate = 0F;
+            pbxStatus3.Location = new Point(0, 0);
+            pbxStatus3.Name = "pbxStatus3";
+            pbxStatus3.PressedState.ImageSize = new Size(64, 64);
+            pbxStatus3.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            pbxStatus3.Size = new Size(82, 51);
+            pbxStatus3.TabIndex = 1;
+            // 
+            // panelPatient2
+            // 
+            panelPatient2.ColumnCount = 4;
+            panelPatient2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 9.312265F));
+            panelPatient2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 80F));
+            panelPatient2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 78.41907F));
+            panelPatient2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 12.2686644F));
+            panelPatient2.Controls.Add(panel6, 0, 0);
+            panelPatient2.Controls.Add(panel7, 1, 0);
+            panelPatient2.Controls.Add(panel8, 2, 0);
+            panelPatient2.Controls.Add(panel9, 3, 0);
+            panelPatient2.Dock = DockStyle.Fill;
+            panelPatient2.Location = new Point(3, 66);
+            panelPatient2.Name = "panelPatient2";
+            panelPatient2.RowCount = 1;
+            panelPatient2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            panelPatient2.Size = new Size(787, 57);
+            panelPatient2.TabIndex = 1;
+            // 
+            // panel6
+            // 
+            panel6.Controls.Add(number2);
+            panel6.Dock = DockStyle.Fill;
+            panel6.Location = new Point(3, 3);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(59, 51);
+            panel6.TabIndex = 4;
+            // 
+            // number2
+            // 
+            number2.AutoSize = true;
+            number2.Location = new Point(22, 18);
+            number2.Name = "number2";
+            number2.Size = new Size(13, 15);
+            number2.TabIndex = 1;
+            number2.Text = "1";
+            // 
+            // panel7
+            // 
+            panel7.Controls.Add(pbxProfile2);
+            panel7.Dock = DockStyle.Fill;
+            panel7.Location = new Point(68, 3);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(74, 51);
+            panel7.TabIndex = 5;
+            // 
+            // pbxProfile2
+            // 
+            pbxProfile2.CheckedState.ImageSize = new Size(64, 64);
+            pbxProfile2.Dock = DockStyle.Fill;
+            pbxProfile2.HoverState.ImageSize = new Size(64, 64);
+            pbxProfile2.Image = (Image)resources.GetObject("pbxProfile2.Image");
+            pbxProfile2.ImageOffset = new Point(0, 0);
+            pbxProfile2.ImageRotate = 0F;
+            pbxProfile2.Location = new Point(0, 0);
+            pbxProfile2.Name = "pbxProfile2";
+            pbxProfile2.PressedState.ImageSize = new Size(64, 64);
+            pbxProfile2.ShadowDecoration.CustomizableEdges = customizableEdges11;
+            pbxProfile2.Size = new Size(74, 51);
+            pbxProfile2.TabIndex = 1;
+            // 
+            // panel8
+            // 
+            panel8.Controls.Add(lblName2);
+            panel8.Dock = DockStyle.Fill;
+            panel8.Location = new Point(148, 3);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(548, 51);
+            panel8.TabIndex = 6;
+            // 
+            // lblName2
+            // 
+            lblName2.AutoSize = true;
+            lblName2.Location = new Point(4, 4);
+            lblName2.Name = "lblName2";
+            lblName2.Size = new Size(45, 15);
+            lblName2.TabIndex = 1;
+            lblName2.Text = "Name2";
+            // 
+            // panel9
+            // 
+            panel9.Controls.Add(pbxStatus2);
+            panel9.Dock = DockStyle.Fill;
+            panel9.Location = new Point(702, 3);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(82, 51);
+            panel9.TabIndex = 7;
+            // 
+            // pbxStatus2
+            // 
+            pbxStatus2.CheckedState.ImageSize = new Size(64, 64);
+            pbxStatus2.Dock = DockStyle.Fill;
+            pbxStatus2.HoverState.ImageSize = new Size(64, 64);
+            pbxStatus2.Image = (Image)resources.GetObject("pbxStatus2.Image");
+            pbxStatus2.ImageOffset = new Point(0, 0);
+            pbxStatus2.ImageRotate = 0F;
+            pbxStatus2.Location = new Point(0, 0);
+            pbxStatus2.Name = "pbxStatus2";
+            pbxStatus2.PressedState.ImageSize = new Size(64, 64);
+            pbxStatus2.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            pbxStatus2.Size = new Size(82, 51);
+            pbxStatus2.TabIndex = 1;
+            // 
+            // panelPatient1
+            // 
+            panelPatient1.ColumnCount = 4;
+            panelPatient1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 9.312266F));
+            panelPatient1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 80F));
+            panelPatient1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 78.419075F));
+            panelPatient1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 12.2686653F));
+            panelPatient1.Controls.Add(panel2, 0, 0);
+            panelPatient1.Controls.Add(panel3, 1, 0);
+            panelPatient1.Controls.Add(panel4, 2, 0);
+            panelPatient1.Controls.Add(panel5, 3, 0);
+            panelPatient1.Dock = DockStyle.Fill;
+            panelPatient1.Location = new Point(3, 3);
+            panelPatient1.Name = "panelPatient1";
+            panelPatient1.RowCount = 1;
+            panelPatient1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            panelPatient1.Size = new Size(787, 57);
+            panelPatient1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(number1);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(3, 3);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(59, 51);
+            panel2.TabIndex = 0;
+            // 
+            // number1
+            // 
+            number1.AutoSize = true;
+            number1.Location = new Point(22, 18);
+            number1.Name = "number1";
+            number1.Size = new Size(13, 15);
+            number1.TabIndex = 0;
+            number1.Text = "1";
+            number1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(pbxProfile1);
+            panel3.Dock = DockStyle.Fill;
+            panel3.Location = new Point(68, 3);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(74, 51);
+            panel3.TabIndex = 1;
+            // 
+            // pbxProfile1
+            // 
+            pbxProfile1.CheckedState.ImageSize = new Size(64, 64);
+            pbxProfile1.Dock = DockStyle.Fill;
+            pbxProfile1.HoverState.ImageSize = new Size(64, 64);
+            pbxProfile1.Image = (Image)resources.GetObject("pbxProfile1.Image");
+            pbxProfile1.ImageOffset = new Point(0, 0);
+            pbxProfile1.ImageRotate = 0F;
+            pbxProfile1.Location = new Point(0, 0);
+            pbxProfile1.Name = "pbxProfile1";
+            pbxProfile1.PressedState.ImageSize = new Size(64, 64);
+            pbxProfile1.ShadowDecoration.CustomizableEdges = customizableEdges13;
+            pbxProfile1.Size = new Size(74, 51);
+            pbxProfile1.TabIndex = 0;
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(lblName1);
+            panel4.Dock = DockStyle.Fill;
+            panel4.Location = new Point(148, 3);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(548, 51);
+            panel4.TabIndex = 2;
+            // 
+            // lblName1
+            // 
+            lblName1.AutoSize = true;
+            lblName1.Location = new Point(4, 4);
+            lblName1.Name = "lblName1";
+            lblName1.Size = new Size(45, 15);
+            lblName1.TabIndex = 0;
+            lblName1.Text = "Name1";
+            // 
+            // panel5
+            // 
+            panel5.Controls.Add(pbxStatus1);
+            panel5.Dock = DockStyle.Fill;
+            panel5.Location = new Point(702, 3);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(82, 51);
+            panel5.TabIndex = 3;
+            // 
+            // pbxStatus1
+            // 
+            pbxStatus1.CheckedState.ImageSize = new Size(64, 64);
+            pbxStatus1.Dock = DockStyle.Fill;
+            pbxStatus1.HoverState.ImageSize = new Size(64, 64);
+            pbxStatus1.Image = (Image)resources.GetObject("pbxStatus1.Image");
+            pbxStatus1.ImageOffset = new Point(0, 0);
+            pbxStatus1.ImageRotate = 0F;
+            pbxStatus1.Location = new Point(0, 0);
+            pbxStatus1.Name = "pbxStatus1";
+            pbxStatus1.PressedState.ImageSize = new Size(64, 64);
+            pbxStatus1.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            pbxStatus1.Size = new Size(82, 51);
+            pbxStatus1.TabIndex = 1;
+            pbxStatus1.Click += pbxStatus1_Click;
+            // 
+            // panelInvisible
+            // 
+            panelInvisible.Controls.Add(lblEmptyQueue);
+            panelInvisible.CustomizableEdges = customizableEdges15;
+            panelInvisible.Dock = DockStyle.Top;
+            panelInvisible.Location = new Point(0, 0);
+            panelInvisible.Name = "panelInvisible";
+            panelInvisible.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            panelInvisible.Size = new Size(793, 34);
+            panelInvisible.TabIndex = 2;
+            panelInvisible.Visible = false;
+            // 
+            // lblEmptyQueue
+            // 
+            lblEmptyQueue.AutoSize = true;
+            lblEmptyQueue.Location = new Point(283, 10);
+            lblEmptyQueue.Name = "lblEmptyQueue";
+            lblEmptyQueue.Size = new Size(231, 15);
+            lblEmptyQueue.TabIndex = 0;
+            lblEmptyQueue.Text = "You currently have no Patients at this date!";
             // 
             // panel1
             // 
@@ -300,7 +961,7 @@
             // 
             // guna2Panel42
             // 
-            guna2Panel42.Controls.Add(guna2ImageButton12);
+            guna2Panel42.Controls.Add(pbxSkip);
             guna2Panel42.CustomizableEdges = customizableEdges18;
             guna2Panel42.Location = new Point(597, 3);
             guna2Panel42.Name = "guna2Panel42";
@@ -308,24 +969,24 @@
             guna2Panel42.Size = new Size(192, 61);
             guna2Panel42.TabIndex = 3;
             // 
-            // guna2ImageButton12
+            // pbxSkip
             // 
-            guna2ImageButton12.CheckedState.ImageSize = new Size(64, 64);
-            guna2ImageButton12.Dock = DockStyle.Fill;
-            guna2ImageButton12.HoverState.ImageSize = new Size(64, 64);
-            guna2ImageButton12.Image = (Image)resources.GetObject("guna2ImageButton12.Image");
-            guna2ImageButton12.ImageOffset = new Point(0, 0);
-            guna2ImageButton12.ImageRotate = 0F;
-            guna2ImageButton12.Location = new Point(0, 0);
-            guna2ImageButton12.Name = "guna2ImageButton12";
-            guna2ImageButton12.PressedState.ImageSize = new Size(64, 64);
-            guna2ImageButton12.ShadowDecoration.CustomizableEdges = customizableEdges17;
-            guna2ImageButton12.Size = new Size(192, 61);
-            guna2ImageButton12.TabIndex = 2;
+            pbxSkip.CheckedState.ImageSize = new Size(64, 64);
+            pbxSkip.Dock = DockStyle.Fill;
+            pbxSkip.HoverState.ImageSize = new Size(64, 64);
+            pbxSkip.Image = (Image)resources.GetObject("pbxSkip.Image");
+            pbxSkip.ImageOffset = new Point(0, 0);
+            pbxSkip.ImageRotate = 0F;
+            pbxSkip.Location = new Point(0, 0);
+            pbxSkip.Name = "pbxSkip";
+            pbxSkip.PressedState.ImageSize = new Size(64, 64);
+            pbxSkip.ShadowDecoration.CustomizableEdges = customizableEdges17;
+            pbxSkip.Size = new Size(192, 61);
+            pbxSkip.TabIndex = 2;
             // 
             // guna2Panel41
             // 
-            guna2Panel41.Controls.Add(guna2ImageButton11);
+            guna2Panel41.Controls.Add(pbxCancel);
             guna2Panel41.CustomizableEdges = customizableEdges21;
             guna2Panel41.Location = new Point(399, 3);
             guna2Panel41.Name = "guna2Panel41";
@@ -333,24 +994,24 @@
             guna2Panel41.Size = new Size(192, 61);
             guna2Panel41.TabIndex = 2;
             // 
-            // guna2ImageButton11
+            // pbxCancel
             // 
-            guna2ImageButton11.CheckedState.ImageSize = new Size(64, 64);
-            guna2ImageButton11.Dock = DockStyle.Fill;
-            guna2ImageButton11.HoverState.ImageSize = new Size(64, 64);
-            guna2ImageButton11.Image = (Image)resources.GetObject("guna2ImageButton11.Image");
-            guna2ImageButton11.ImageOffset = new Point(0, 0);
-            guna2ImageButton11.ImageRotate = 0F;
-            guna2ImageButton11.Location = new Point(0, 0);
-            guna2ImageButton11.Name = "guna2ImageButton11";
-            guna2ImageButton11.PressedState.ImageSize = new Size(64, 64);
-            guna2ImageButton11.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            guna2ImageButton11.Size = new Size(192, 61);
-            guna2ImageButton11.TabIndex = 2;
+            pbxCancel.CheckedState.ImageSize = new Size(64, 64);
+            pbxCancel.Dock = DockStyle.Fill;
+            pbxCancel.HoverState.ImageSize = new Size(64, 64);
+            pbxCancel.Image = (Image)resources.GetObject("pbxCancel.Image");
+            pbxCancel.ImageOffset = new Point(0, 0);
+            pbxCancel.ImageRotate = 0F;
+            pbxCancel.Location = new Point(0, 0);
+            pbxCancel.Name = "pbxCancel";
+            pbxCancel.PressedState.ImageSize = new Size(64, 64);
+            pbxCancel.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            pbxCancel.Size = new Size(192, 61);
+            pbxCancel.TabIndex = 2;
             // 
             // guna2Panel40
             // 
-            guna2Panel40.Controls.Add(guna2ImageButton10);
+            guna2Panel40.Controls.Add(pbxPending);
             guna2Panel40.CustomizableEdges = customizableEdges24;
             guna2Panel40.Location = new Point(201, 3);
             guna2Panel40.Name = "guna2Panel40";
@@ -358,24 +1019,24 @@
             guna2Panel40.Size = new Size(192, 61);
             guna2Panel40.TabIndex = 1;
             // 
-            // guna2ImageButton10
+            // pbxPending
             // 
-            guna2ImageButton10.CheckedState.ImageSize = new Size(64, 64);
-            guna2ImageButton10.Dock = DockStyle.Fill;
-            guna2ImageButton10.HoverState.ImageSize = new Size(64, 64);
-            guna2ImageButton10.Image = (Image)resources.GetObject("guna2ImageButton10.Image");
-            guna2ImageButton10.ImageOffset = new Point(0, 0);
-            guna2ImageButton10.ImageRotate = 0F;
-            guna2ImageButton10.Location = new Point(0, 0);
-            guna2ImageButton10.Name = "guna2ImageButton10";
-            guna2ImageButton10.PressedState.ImageSize = new Size(64, 64);
-            guna2ImageButton10.ShadowDecoration.CustomizableEdges = customizableEdges23;
-            guna2ImageButton10.Size = new Size(192, 61);
-            guna2ImageButton10.TabIndex = 2;
+            pbxPending.CheckedState.ImageSize = new Size(64, 64);
+            pbxPending.Dock = DockStyle.Fill;
+            pbxPending.HoverState.ImageSize = new Size(64, 64);
+            pbxPending.Image = (Image)resources.GetObject("pbxPending.Image");
+            pbxPending.ImageOffset = new Point(0, 0);
+            pbxPending.ImageRotate = 0F;
+            pbxPending.Location = new Point(0, 0);
+            pbxPending.Name = "pbxPending";
+            pbxPending.PressedState.ImageSize = new Size(64, 64);
+            pbxPending.ShadowDecoration.CustomizableEdges = customizableEdges23;
+            pbxPending.Size = new Size(192, 61);
+            pbxPending.TabIndex = 2;
             // 
             // guna2Panel39
             // 
-            guna2Panel39.Controls.Add(guna2ImageButton9);
+            guna2Panel39.Controls.Add(pbxComplete);
             guna2Panel39.CustomizableEdges = customizableEdges27;
             guna2Panel39.Location = new Point(3, 3);
             guna2Panel39.Name = "guna2Panel39";
@@ -383,20 +1044,20 @@
             guna2Panel39.Size = new Size(192, 61);
             guna2Panel39.TabIndex = 0;
             // 
-            // guna2ImageButton9
+            // pbxComplete
             // 
-            guna2ImageButton9.CheckedState.ImageSize = new Size(64, 64);
-            guna2ImageButton9.Dock = DockStyle.Fill;
-            guna2ImageButton9.HoverState.ImageSize = new Size(64, 64);
-            guna2ImageButton9.Image = (Image)resources.GetObject("guna2ImageButton9.Image");
-            guna2ImageButton9.ImageOffset = new Point(0, 0);
-            guna2ImageButton9.ImageRotate = 0F;
-            guna2ImageButton9.Location = new Point(0, 0);
-            guna2ImageButton9.Name = "guna2ImageButton9";
-            guna2ImageButton9.PressedState.ImageSize = new Size(64, 64);
-            guna2ImageButton9.ShadowDecoration.CustomizableEdges = customizableEdges26;
-            guna2ImageButton9.Size = new Size(192, 61);
-            guna2ImageButton9.TabIndex = 2;
+            pbxComplete.CheckedState.ImageSize = new Size(64, 64);
+            pbxComplete.Dock = DockStyle.Fill;
+            pbxComplete.HoverState.ImageSize = new Size(64, 64);
+            pbxComplete.Image = (Image)resources.GetObject("pbxComplete.Image");
+            pbxComplete.ImageOffset = new Point(0, 0);
+            pbxComplete.ImageRotate = 0F;
+            pbxComplete.Location = new Point(0, 0);
+            pbxComplete.Name = "pbxComplete";
+            pbxComplete.PressedState.ImageSize = new Size(64, 64);
+            pbxComplete.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            pbxComplete.Size = new Size(192, 61);
+            pbxComplete.TabIndex = 2;
             // 
             // panelPatientQueueClinic
             // 
@@ -447,6 +1108,22 @@
             guna2Panel5.Size = new Size(212, 117);
             guna2Panel5.TabIndex = 2;
             // 
+            // cbxDate
+            // 
+            cbxDate.Checked = true;
+            cbxDate.CustomizableEdges = customizableEdges33;
+            cbxDate.Dock = DockStyle.Fill;
+            cbxDate.Font = new Font("Segoe UI", 9F);
+            cbxDate.Format = DateTimePickerFormat.Long;
+            cbxDate.Location = new Point(0, 0);
+            cbxDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            cbxDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            cbxDate.Name = "cbxDate";
+            cbxDate.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            cbxDate.Size = new Size(212, 117);
+            cbxDate.TabIndex = 3;
+            cbxDate.Value = new DateTime(2025, 4, 3, 12, 40, 6, 172);
+            // 
             // guna2Panel4
             // 
             guna2Panel4.Controls.Add(tableLayoutPanel4);
@@ -482,15 +1159,43 @@
             guna2Panel43.Size = new Size(206, 34);
             guna2Panel43.TabIndex = 0;
             // 
+            // cbxPatientQueue
+            // 
+            cbxPatientQueue.BackColor = Color.Transparent;
+            cbxPatientQueue.CustomizableEdges = customizableEdges37;
+            cbxPatientQueue.Dock = DockStyle.Fill;
+            cbxPatientQueue.DrawMode = DrawMode.OwnerDrawFixed;
+            cbxPatientQueue.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbxPatientQueue.FocusedColor = Color.FromArgb(94, 148, 255);
+            cbxPatientQueue.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cbxPatientQueue.Font = new Font("Segoe UI", 10F);
+            cbxPatientQueue.ForeColor = Color.FromArgb(68, 88, 112);
+            cbxPatientQueue.ItemHeight = 30;
+            cbxPatientQueue.Location = new Point(0, 0);
+            cbxPatientQueue.Name = "cbxPatientQueue";
+            cbxPatientQueue.ShadowDecoration.CustomizableEdges = customizableEdges38;
+            cbxPatientQueue.Size = new Size(206, 36);
+            cbxPatientQueue.TabIndex = 0;
+            cbxPatientQueue.SelectedIndexChanged += cbxPatientQueue_SelectedIndexChanged;
+            // 
             // guna2Panel44
             // 
-            guna2Panel44.Controls.Add(lblClinicName);
+            guna2Panel44.Controls.Add(lblClinicLocation);
             guna2Panel44.CustomizableEdges = customizableEdges41;
             guna2Panel44.Location = new Point(3, 43);
             guna2Panel44.Name = "guna2Panel44";
             guna2Panel44.ShadowDecoration.CustomizableEdges = customizableEdges42;
             guna2Panel44.Size = new Size(206, 71);
             guna2Panel44.TabIndex = 1;
+            // 
+            // lblClinicLocation
+            // 
+            lblClinicLocation.AutoSize = true;
+            lblClinicLocation.Location = new Point(4, 4);
+            lblClinicLocation.Name = "lblClinicLocation";
+            lblClinicLocation.Size = new Size(44, 15);
+            lblClinicLocation.TabIndex = 0;
+            lblClinicLocation.Text = "label12";
             // 
             // guna2Panel3
             // 
@@ -514,695 +1219,6 @@
             pbxClinic.TabIndex = 0;
             pbxClinic.TabStop = false;
             // 
-            // cbxPatientQueue
-            // 
-            cbxPatientQueue.BackColor = Color.Transparent;
-            cbxPatientQueue.CustomizableEdges = customizableEdges37;
-            cbxPatientQueue.Dock = DockStyle.Fill;
-            cbxPatientQueue.DrawMode = DrawMode.OwnerDrawFixed;
-            cbxPatientQueue.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbxPatientQueue.FocusedColor = Color.FromArgb(94, 148, 255);
-            cbxPatientQueue.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            cbxPatientQueue.Font = new Font("Segoe UI", 10F);
-            cbxPatientQueue.ForeColor = Color.FromArgb(68, 88, 112);
-            cbxPatientQueue.ItemHeight = 30;
-            cbxPatientQueue.Location = new Point(0, 0);
-            cbxPatientQueue.Name = "cbxPatientQueue";
-            cbxPatientQueue.ShadowDecoration.CustomizableEdges = customizableEdges38;
-            cbxPatientQueue.Size = new Size(206, 36);
-            cbxPatientQueue.TabIndex = 0;
-            // 
-            // lblClinicName
-            // 
-            lblClinicName.AutoSize = true;
-            lblClinicName.Location = new Point(4, 4);
-            lblClinicName.Name = "lblClinicName";
-            lblClinicName.Size = new Size(44, 15);
-            lblClinicName.TabIndex = 0;
-            lblClinicName.Text = "label12";
-            // 
-            // tableLayoutPanel1
-            // 
-            tableLayoutPanel1.ColumnCount = 1;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.Controls.Add(panelPatient6, 0, 5);
-            tableLayoutPanel1.Controls.Add(panelPatient5, 0, 4);
-            tableLayoutPanel1.Controls.Add(panelPatient4, 0, 3);
-            tableLayoutPanel1.Controls.Add(panelPatient3, 0, 2);
-            tableLayoutPanel1.Controls.Add(panelPatient2, 0, 1);
-            tableLayoutPanel1.Controls.Add(panelPatient1, 0, 0);
-            tableLayoutPanel1.Dock = DockStyle.Fill;
-            tableLayoutPanel1.Location = new Point(0, 0);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 6;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 12.5F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 12.5F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 12.5F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 12.5F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 12.5F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 12.5F));
-            tableLayoutPanel1.Size = new Size(793, 382);
-            tableLayoutPanel1.TabIndex = 3;
-            // 
-            // panelPatient1
-            // 
-            panelPatient1.ColumnCount = 4;
-            panelPatient1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 9.312266F));
-            panelPatient1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 80F));
-            panelPatient1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 78.419075F));
-            panelPatient1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 12.2686653F));
-            panelPatient1.Controls.Add(panel2, 0, 0);
-            panelPatient1.Controls.Add(panel3, 1, 0);
-            panelPatient1.Controls.Add(panel4, 2, 0);
-            panelPatient1.Controls.Add(panel5, 3, 0);
-            panelPatient1.Dock = DockStyle.Fill;
-            panelPatient1.Location = new Point(3, 3);
-            panelPatient1.Name = "panelPatient1";
-            panelPatient1.RowCount = 1;
-            panelPatient1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            panelPatient1.Size = new Size(787, 57);
-            panelPatient1.TabIndex = 0;
-            // 
-            // panelPatient2
-            // 
-            panelPatient2.ColumnCount = 4;
-            panelPatient2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 9.312265F));
-            panelPatient2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 80F));
-            panelPatient2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 78.41907F));
-            panelPatient2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 12.2686644F));
-            panelPatient2.Controls.Add(panel6, 0, 0);
-            panelPatient2.Controls.Add(panel7, 1, 0);
-            panelPatient2.Controls.Add(panel8, 2, 0);
-            panelPatient2.Controls.Add(panel9, 3, 0);
-            panelPatient2.Dock = DockStyle.Fill;
-            panelPatient2.Location = new Point(3, 66);
-            panelPatient2.Name = "panelPatient2";
-            panelPatient2.RowCount = 1;
-            panelPatient2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            panelPatient2.Size = new Size(787, 57);
-            panelPatient2.TabIndex = 1;
-            // 
-            // panelPatient3
-            // 
-            panelPatient3.ColumnCount = 4;
-            panelPatient3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 9.312265F));
-            panelPatient3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 80F));
-            panelPatient3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 78.41907F));
-            panelPatient3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 12.2686644F));
-            panelPatient3.Controls.Add(panel10, 0, 0);
-            panelPatient3.Controls.Add(panel11, 1, 0);
-            panelPatient3.Controls.Add(panel12, 2, 0);
-            panelPatient3.Controls.Add(panel13, 3, 0);
-            panelPatient3.Dock = DockStyle.Fill;
-            panelPatient3.Location = new Point(3, 129);
-            panelPatient3.Name = "panelPatient3";
-            panelPatient3.RowCount = 1;
-            panelPatient3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            panelPatient3.Size = new Size(787, 57);
-            panelPatient3.TabIndex = 2;
-            // 
-            // panelPatient4
-            // 
-            panelPatient4.ColumnCount = 4;
-            panelPatient4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 9.312265F));
-            panelPatient4.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 80F));
-            panelPatient4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 78.41907F));
-            panelPatient4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 12.2686644F));
-            panelPatient4.Controls.Add(panel14, 0, 0);
-            panelPatient4.Controls.Add(panel15, 1, 0);
-            panelPatient4.Controls.Add(panel16, 2, 0);
-            panelPatient4.Controls.Add(panel17, 3, 0);
-            panelPatient4.Dock = DockStyle.Fill;
-            panelPatient4.Location = new Point(3, 192);
-            panelPatient4.Name = "panelPatient4";
-            panelPatient4.RowCount = 1;
-            panelPatient4.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            panelPatient4.Size = new Size(787, 57);
-            panelPatient4.TabIndex = 3;
-            // 
-            // panelPatient5
-            // 
-            panelPatient5.ColumnCount = 4;
-            panelPatient5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 9.312265F));
-            panelPatient5.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 80F));
-            panelPatient5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 78.41907F));
-            panelPatient5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 12.2686644F));
-            panelPatient5.Controls.Add(panel18, 0, 0);
-            panelPatient5.Controls.Add(panel19, 1, 0);
-            panelPatient5.Controls.Add(panel20, 2, 0);
-            panelPatient5.Controls.Add(panel21, 3, 0);
-            panelPatient5.Dock = DockStyle.Fill;
-            panelPatient5.Location = new Point(3, 255);
-            panelPatient5.Name = "panelPatient5";
-            panelPatient5.RowCount = 1;
-            panelPatient5.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            panelPatient5.Size = new Size(787, 57);
-            panelPatient5.TabIndex = 4;
-            // 
-            // panelPatient6
-            // 
-            panelPatient6.ColumnCount = 4;
-            panelPatient6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 9.312265F));
-            panelPatient6.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 80F));
-            panelPatient6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 78.41907F));
-            panelPatient6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 12.2686644F));
-            panelPatient6.Controls.Add(panel22, 0, 0);
-            panelPatient6.Controls.Add(panel23, 1, 0);
-            panelPatient6.Controls.Add(panel24, 2, 0);
-            panelPatient6.Controls.Add(panel25, 3, 0);
-            panelPatient6.Dock = DockStyle.Fill;
-            panelPatient6.Location = new Point(3, 318);
-            panelPatient6.Name = "panelPatient6";
-            panelPatient6.RowCount = 1;
-            panelPatient6.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            panelPatient6.Size = new Size(787, 61);
-            panelPatient6.TabIndex = 5;
-            // 
-            // panel2
-            // 
-            panel2.Controls.Add(number1);
-            panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(3, 3);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(59, 51);
-            panel2.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            panel3.Controls.Add(pbxProfile1);
-            panel3.Dock = DockStyle.Fill;
-            panel3.Location = new Point(68, 3);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(74, 51);
-            panel3.TabIndex = 1;
-            // 
-            // panel4
-            // 
-            panel4.Controls.Add(lblName1);
-            panel4.Dock = DockStyle.Fill;
-            panel4.Location = new Point(148, 3);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(548, 51);
-            panel4.TabIndex = 2;
-            // 
-            // panel5
-            // 
-            panel5.Controls.Add(pbxStatus1);
-            panel5.Dock = DockStyle.Fill;
-            panel5.Location = new Point(702, 3);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(82, 51);
-            panel5.TabIndex = 3;
-            // 
-            // panel6
-            // 
-            panel6.Controls.Add(number2);
-            panel6.Dock = DockStyle.Fill;
-            panel6.Location = new Point(3, 3);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(59, 51);
-            panel6.TabIndex = 4;
-            // 
-            // panel7
-            // 
-            panel7.Controls.Add(pbxProfile2);
-            panel7.Dock = DockStyle.Fill;
-            panel7.Location = new Point(68, 3);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(74, 51);
-            panel7.TabIndex = 5;
-            // 
-            // panel8
-            // 
-            panel8.Controls.Add(lblName2);
-            panel8.Dock = DockStyle.Fill;
-            panel8.Location = new Point(148, 3);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(548, 51);
-            panel8.TabIndex = 6;
-            // 
-            // panel9
-            // 
-            panel9.Controls.Add(pbxStatus2);
-            panel9.Dock = DockStyle.Fill;
-            panel9.Location = new Point(702, 3);
-            panel9.Name = "panel9";
-            panel9.Size = new Size(82, 51);
-            panel9.TabIndex = 7;
-            // 
-            // panel10
-            // 
-            panel10.Controls.Add(number3);
-            panel10.Dock = DockStyle.Fill;
-            panel10.Location = new Point(3, 3);
-            panel10.Name = "panel10";
-            panel10.Size = new Size(59, 51);
-            panel10.TabIndex = 4;
-            // 
-            // panel11
-            // 
-            panel11.Controls.Add(pbxProfile3);
-            panel11.Dock = DockStyle.Fill;
-            panel11.Location = new Point(68, 3);
-            panel11.Name = "panel11";
-            panel11.Size = new Size(74, 51);
-            panel11.TabIndex = 5;
-            // 
-            // panel12
-            // 
-            panel12.Controls.Add(lblName3);
-            panel12.Dock = DockStyle.Fill;
-            panel12.Location = new Point(148, 3);
-            panel12.Name = "panel12";
-            panel12.Size = new Size(548, 51);
-            panel12.TabIndex = 6;
-            // 
-            // panel13
-            // 
-            panel13.Controls.Add(pbxStatus3);
-            panel13.Dock = DockStyle.Fill;
-            panel13.Location = new Point(702, 3);
-            panel13.Name = "panel13";
-            panel13.Size = new Size(82, 51);
-            panel13.TabIndex = 7;
-            // 
-            // panel14
-            // 
-            panel14.Controls.Add(number4);
-            panel14.Dock = DockStyle.Fill;
-            panel14.Location = new Point(3, 3);
-            panel14.Name = "panel14";
-            panel14.Size = new Size(59, 51);
-            panel14.TabIndex = 8;
-            // 
-            // panel15
-            // 
-            panel15.Controls.Add(pbxProfile4);
-            panel15.Dock = DockStyle.Fill;
-            panel15.Location = new Point(68, 3);
-            panel15.Name = "panel15";
-            panel15.Size = new Size(74, 51);
-            panel15.TabIndex = 9;
-            // 
-            // panel16
-            // 
-            panel16.Controls.Add(lblName4);
-            panel16.Dock = DockStyle.Fill;
-            panel16.Location = new Point(148, 3);
-            panel16.Name = "panel16";
-            panel16.Size = new Size(548, 51);
-            panel16.TabIndex = 10;
-            // 
-            // panel17
-            // 
-            panel17.Controls.Add(pbxStatus4);
-            panel17.Dock = DockStyle.Fill;
-            panel17.Location = new Point(702, 3);
-            panel17.Name = "panel17";
-            panel17.Size = new Size(82, 51);
-            panel17.TabIndex = 11;
-            // 
-            // panel18
-            // 
-            panel18.Controls.Add(number5);
-            panel18.Dock = DockStyle.Fill;
-            panel18.Location = new Point(3, 3);
-            panel18.Name = "panel18";
-            panel18.Size = new Size(59, 51);
-            panel18.TabIndex = 8;
-            // 
-            // panel19
-            // 
-            panel19.Controls.Add(pbxProfile5);
-            panel19.Dock = DockStyle.Fill;
-            panel19.Location = new Point(68, 3);
-            panel19.Name = "panel19";
-            panel19.Size = new Size(74, 51);
-            panel19.TabIndex = 9;
-            // 
-            // panel20
-            // 
-            panel20.Controls.Add(lblName5);
-            panel20.Dock = DockStyle.Fill;
-            panel20.Location = new Point(148, 3);
-            panel20.Name = "panel20";
-            panel20.Size = new Size(548, 51);
-            panel20.TabIndex = 10;
-            // 
-            // panel21
-            // 
-            panel21.Controls.Add(pbxStatus5);
-            panel21.Dock = DockStyle.Fill;
-            panel21.Location = new Point(702, 3);
-            panel21.Name = "panel21";
-            panel21.Size = new Size(82, 51);
-            panel21.TabIndex = 11;
-            // 
-            // panel22
-            // 
-            panel22.Controls.Add(number6);
-            panel22.Dock = DockStyle.Fill;
-            panel22.Location = new Point(3, 3);
-            panel22.Name = "panel22";
-            panel22.Size = new Size(59, 55);
-            panel22.TabIndex = 8;
-            // 
-            // panel23
-            // 
-            panel23.Controls.Add(pbxProfile6);
-            panel23.Dock = DockStyle.Fill;
-            panel23.Location = new Point(68, 3);
-            panel23.Name = "panel23";
-            panel23.Size = new Size(74, 55);
-            panel23.TabIndex = 9;
-            // 
-            // panel24
-            // 
-            panel24.Controls.Add(lblName6);
-            panel24.Dock = DockStyle.Fill;
-            panel24.Location = new Point(148, 3);
-            panel24.Name = "panel24";
-            panel24.Size = new Size(548, 55);
-            panel24.TabIndex = 10;
-            // 
-            // panel25
-            // 
-            panel25.Controls.Add(pbxStatus6);
-            panel25.Dock = DockStyle.Fill;
-            panel25.Location = new Point(702, 3);
-            panel25.Name = "panel25";
-            panel25.Size = new Size(82, 55);
-            panel25.TabIndex = 11;
-            // 
-            // number1
-            // 
-            number1.AutoSize = true;
-            number1.Location = new Point(22, 18);
-            number1.Name = "number1";
-            number1.Size = new Size(13, 15);
-            number1.TabIndex = 0;
-            number1.Text = "1";
-            number1.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // number2
-            // 
-            number2.AutoSize = true;
-            number2.Location = new Point(22, 18);
-            number2.Name = "number2";
-            number2.Size = new Size(13, 15);
-            number2.TabIndex = 1;
-            number2.Text = "1";
-            // 
-            // number3
-            // 
-            number3.AutoSize = true;
-            number3.Location = new Point(22, 18);
-            number3.Name = "number3";
-            number3.Size = new Size(13, 15);
-            number3.TabIndex = 1;
-            number3.Text = "1";
-            // 
-            // number4
-            // 
-            number4.AutoSize = true;
-            number4.Location = new Point(22, 18);
-            number4.Name = "number4";
-            number4.Size = new Size(13, 15);
-            number4.TabIndex = 1;
-            number4.Text = "1";
-            // 
-            // number5
-            // 
-            number5.AutoSize = true;
-            number5.Location = new Point(22, 18);
-            number5.Name = "number5";
-            number5.Size = new Size(13, 15);
-            number5.TabIndex = 1;
-            number5.Text = "1";
-            // 
-            // number6
-            // 
-            number6.AutoSize = true;
-            number6.Location = new Point(22, 20);
-            number6.Name = "number6";
-            number6.Size = new Size(13, 15);
-            number6.TabIndex = 1;
-            number6.Text = "1";
-            // 
-            // pbxProfile1
-            // 
-            pbxProfile1.CheckedState.ImageSize = new Size(64, 64);
-            pbxProfile1.Dock = DockStyle.Fill;
-            pbxProfile1.HoverState.ImageSize = new Size(64, 64);
-            pbxProfile1.Image = (Image)resources.GetObject("pbxProfile1.Image");
-            pbxProfile1.ImageOffset = new Point(0, 0);
-            pbxProfile1.ImageRotate = 0F;
-            pbxProfile1.Location = new Point(0, 0);
-            pbxProfile1.Name = "pbxProfile1";
-            pbxProfile1.PressedState.ImageSize = new Size(64, 64);
-            pbxProfile1.ShadowDecoration.CustomizableEdges = customizableEdges13;
-            pbxProfile1.Size = new Size(74, 51);
-            pbxProfile1.TabIndex = 0;
-            // 
-            // pbxProfile2
-            // 
-            pbxProfile2.CheckedState.ImageSize = new Size(64, 64);
-            pbxProfile2.Dock = DockStyle.Fill;
-            pbxProfile2.HoverState.ImageSize = new Size(64, 64);
-            pbxProfile2.Image = (Image)resources.GetObject("pbxProfile2.Image");
-            pbxProfile2.ImageOffset = new Point(0, 0);
-            pbxProfile2.ImageRotate = 0F;
-            pbxProfile2.Location = new Point(0, 0);
-            pbxProfile2.Name = "pbxProfile2";
-            pbxProfile2.PressedState.ImageSize = new Size(64, 64);
-            pbxProfile2.ShadowDecoration.CustomizableEdges = customizableEdges11;
-            pbxProfile2.Size = new Size(74, 51);
-            pbxProfile2.TabIndex = 1;
-            // 
-            // pbxProfile3
-            // 
-            pbxProfile3.CheckedState.ImageSize = new Size(64, 64);
-            pbxProfile3.Dock = DockStyle.Fill;
-            pbxProfile3.HoverState.ImageSize = new Size(64, 64);
-            pbxProfile3.Image = (Image)resources.GetObject("pbxProfile3.Image");
-            pbxProfile3.ImageOffset = new Point(0, 0);
-            pbxProfile3.ImageRotate = 0F;
-            pbxProfile3.Location = new Point(0, 0);
-            pbxProfile3.Name = "pbxProfile3";
-            pbxProfile3.PressedState.ImageSize = new Size(64, 64);
-            pbxProfile3.ShadowDecoration.CustomizableEdges = customizableEdges9;
-            pbxProfile3.Size = new Size(74, 51);
-            pbxProfile3.TabIndex = 1;
-            // 
-            // pbxProfile4
-            // 
-            pbxProfile4.CheckedState.ImageSize = new Size(64, 64);
-            pbxProfile4.Dock = DockStyle.Fill;
-            pbxProfile4.HoverState.ImageSize = new Size(64, 64);
-            pbxProfile4.Image = (Image)resources.GetObject("pbxProfile4.Image");
-            pbxProfile4.ImageOffset = new Point(0, 0);
-            pbxProfile4.ImageRotate = 0F;
-            pbxProfile4.Location = new Point(0, 0);
-            pbxProfile4.Name = "pbxProfile4";
-            pbxProfile4.PressedState.ImageSize = new Size(64, 64);
-            pbxProfile4.ShadowDecoration.CustomizableEdges = customizableEdges7;
-            pbxProfile4.Size = new Size(74, 51);
-            pbxProfile4.TabIndex = 1;
-            // 
-            // pbxProfile5
-            // 
-            pbxProfile5.CheckedState.ImageSize = new Size(64, 64);
-            pbxProfile5.Dock = DockStyle.Fill;
-            pbxProfile5.HoverState.ImageSize = new Size(64, 64);
-            pbxProfile5.Image = (Image)resources.GetObject("pbxProfile5.Image");
-            pbxProfile5.ImageOffset = new Point(0, 0);
-            pbxProfile5.ImageRotate = 0F;
-            pbxProfile5.Location = new Point(0, 0);
-            pbxProfile5.Name = "pbxProfile5";
-            pbxProfile5.PressedState.ImageSize = new Size(64, 64);
-            pbxProfile5.ShadowDecoration.CustomizableEdges = customizableEdges5;
-            pbxProfile5.Size = new Size(74, 51);
-            pbxProfile5.TabIndex = 1;
-            // 
-            // pbxProfile6
-            // 
-            pbxProfile6.CheckedState.ImageSize = new Size(64, 64);
-            pbxProfile6.Dock = DockStyle.Fill;
-            pbxProfile6.HoverState.ImageSize = new Size(64, 64);
-            pbxProfile6.Image = (Image)resources.GetObject("pbxProfile6.Image");
-            pbxProfile6.ImageOffset = new Point(0, 0);
-            pbxProfile6.ImageRotate = 0F;
-            pbxProfile6.Location = new Point(0, 0);
-            pbxProfile6.Name = "pbxProfile6";
-            pbxProfile6.PressedState.ImageSize = new Size(64, 64);
-            pbxProfile6.ShadowDecoration.CustomizableEdges = customizableEdges3;
-            pbxProfile6.Size = new Size(74, 55);
-            pbxProfile6.TabIndex = 1;
-            // 
-            // lblName1
-            // 
-            lblName1.AutoSize = true;
-            lblName1.Location = new Point(4, 4);
-            lblName1.Name = "lblName1";
-            lblName1.Size = new Size(38, 15);
-            lblName1.TabIndex = 0;
-            lblName1.Text = "label7";
-            // 
-            // lblName2
-            // 
-            lblName2.AutoSize = true;
-            lblName2.Location = new Point(4, 4);
-            lblName2.Name = "lblName2";
-            lblName2.Size = new Size(38, 15);
-            lblName2.TabIndex = 1;
-            lblName2.Text = "label8";
-            // 
-            // lblName3
-            // 
-            lblName3.AutoSize = true;
-            lblName3.Location = new Point(4, 4);
-            lblName3.Name = "lblName3";
-            lblName3.Size = new Size(38, 15);
-            lblName3.TabIndex = 1;
-            lblName3.Text = "label9";
-            lblName3.Click += label9_Click;
-            // 
-            // lblName4
-            // 
-            lblName4.AutoSize = true;
-            lblName4.Location = new Point(4, 4);
-            lblName4.Name = "lblName4";
-            lblName4.Size = new Size(44, 15);
-            lblName4.TabIndex = 1;
-            lblName4.Text = "label10";
-            // 
-            // lblName5
-            // 
-            lblName5.AutoSize = true;
-            lblName5.Location = new Point(4, 4);
-            lblName5.Name = "lblName5";
-            lblName5.Size = new Size(44, 15);
-            lblName5.TabIndex = 1;
-            lblName5.Text = "label11";
-            // 
-            // lblName6
-            // 
-            lblName6.AutoSize = true;
-            lblName6.Location = new Point(4, 4);
-            lblName6.Name = "lblName6";
-            lblName6.Size = new Size(44, 15);
-            lblName6.TabIndex = 1;
-            lblName6.Text = "label12";
-            // 
-            // pbxStatus1
-            // 
-            pbxStatus1.CheckedState.ImageSize = new Size(64, 64);
-            pbxStatus1.Dock = DockStyle.Fill;
-            pbxStatus1.HoverState.ImageSize = new Size(64, 64);
-            pbxStatus1.Image = (Image)resources.GetObject("pbxStatus1.Image");
-            pbxStatus1.ImageOffset = new Point(0, 0);
-            pbxStatus1.ImageRotate = 0F;
-            pbxStatus1.Location = new Point(0, 0);
-            pbxStatus1.Name = "pbxStatus1";
-            pbxStatus1.PressedState.ImageSize = new Size(64, 64);
-            pbxStatus1.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            pbxStatus1.Size = new Size(82, 51);
-            pbxStatus1.TabIndex = 1;
-            // 
-            // pbxStatus2
-            // 
-            pbxStatus2.CheckedState.ImageSize = new Size(64, 64);
-            pbxStatus2.Dock = DockStyle.Fill;
-            pbxStatus2.HoverState.ImageSize = new Size(64, 64);
-            pbxStatus2.Image = (Image)resources.GetObject("pbxStatus2.Image");
-            pbxStatus2.ImageOffset = new Point(0, 0);
-            pbxStatus2.ImageRotate = 0F;
-            pbxStatus2.Location = new Point(0, 0);
-            pbxStatus2.Name = "pbxStatus2";
-            pbxStatus2.PressedState.ImageSize = new Size(64, 64);
-            pbxStatus2.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            pbxStatus2.Size = new Size(82, 51);
-            pbxStatus2.TabIndex = 1;
-            // 
-            // pbxStatus3
-            // 
-            pbxStatus3.CheckedState.ImageSize = new Size(64, 64);
-            pbxStatus3.Dock = DockStyle.Fill;
-            pbxStatus3.HoverState.ImageSize = new Size(64, 64);
-            pbxStatus3.Image = (Image)resources.GetObject("pbxStatus3.Image");
-            pbxStatus3.ImageOffset = new Point(0, 0);
-            pbxStatus3.ImageRotate = 0F;
-            pbxStatus3.Location = new Point(0, 0);
-            pbxStatus3.Name = "pbxStatus3";
-            pbxStatus3.PressedState.ImageSize = new Size(64, 64);
-            pbxStatus3.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            pbxStatus3.Size = new Size(82, 51);
-            pbxStatus3.TabIndex = 1;
-            // 
-            // pbxStatus4
-            // 
-            pbxStatus4.CheckedState.ImageSize = new Size(64, 64);
-            pbxStatus4.Dock = DockStyle.Fill;
-            pbxStatus4.HoverState.ImageSize = new Size(64, 64);
-            pbxStatus4.Image = (Image)resources.GetObject("pbxStatus4.Image");
-            pbxStatus4.ImageOffset = new Point(0, 0);
-            pbxStatus4.ImageRotate = 0F;
-            pbxStatus4.Location = new Point(0, 0);
-            pbxStatus4.Name = "pbxStatus4";
-            pbxStatus4.PressedState.ImageSize = new Size(64, 64);
-            pbxStatus4.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            pbxStatus4.Size = new Size(82, 51);
-            pbxStatus4.TabIndex = 1;
-            // 
-            // pbxStatus5
-            // 
-            pbxStatus5.CheckedState.ImageSize = new Size(64, 64);
-            pbxStatus5.Dock = DockStyle.Fill;
-            pbxStatus5.HoverState.ImageSize = new Size(64, 64);
-            pbxStatus5.Image = (Image)resources.GetObject("pbxStatus5.Image");
-            pbxStatus5.ImageOffset = new Point(0, 0);
-            pbxStatus5.ImageRotate = 0F;
-            pbxStatus5.Location = new Point(0, 0);
-            pbxStatus5.Name = "pbxStatus5";
-            pbxStatus5.PressedState.ImageSize = new Size(64, 64);
-            pbxStatus5.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            pbxStatus5.Size = new Size(82, 51);
-            pbxStatus5.TabIndex = 1;
-            // 
-            // pbxStatus6
-            // 
-            pbxStatus6.CheckedState.ImageSize = new Size(64, 64);
-            pbxStatus6.Dock = DockStyle.Fill;
-            pbxStatus6.HoverState.ImageSize = new Size(64, 64);
-            pbxStatus6.Image = (Image)resources.GetObject("pbxStatus6.Image");
-            pbxStatus6.ImageOffset = new Point(0, 0);
-            pbxStatus6.ImageRotate = 0F;
-            pbxStatus6.Location = new Point(0, 0);
-            pbxStatus6.Name = "pbxStatus6";
-            pbxStatus6.PressedState.ImageSize = new Size(64, 64);
-            pbxStatus6.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            pbxStatus6.Size = new Size(82, 55);
-            pbxStatus6.TabIndex = 1;
-            // 
-            // cbxDate
-            // 
-            cbxDate.Checked = true;
-            cbxDate.CustomizableEdges = customizableEdges33;
-            cbxDate.Dock = DockStyle.Fill;
-            cbxDate.Font = new Font("Segoe UI", 9F);
-            cbxDate.Format = DateTimePickerFormat.Long;
-            cbxDate.Location = new Point(0, 0);
-            cbxDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            cbxDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            cbxDate.Name = "cbxDate";
-            cbxDate.ShadowDecoration.CustomizableEdges = customizableEdges34;
-            cbxDate.Size = new Size(212, 117);
-            cbxDate.TabIndex = 3;
-            cbxDate.Value = new DateTime(2025, 4, 3, 12, 40, 6, 172);
-            // 
             // PatientQueue
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1215,6 +1231,51 @@
             panelTitlePatientQueue.PerformLayout();
             guna2Panel2.ResumeLayout(false);
             panelPatientQueue.ResumeLayout(false);
+            tableLayoutPanel1.ResumeLayout(false);
+            panelPatient6.ResumeLayout(false);
+            panel22.ResumeLayout(false);
+            panel22.PerformLayout();
+            panel23.ResumeLayout(false);
+            panel24.ResumeLayout(false);
+            panel24.PerformLayout();
+            panel25.ResumeLayout(false);
+            panelPatient5.ResumeLayout(false);
+            panel18.ResumeLayout(false);
+            panel18.PerformLayout();
+            panel19.ResumeLayout(false);
+            panel20.ResumeLayout(false);
+            panel20.PerformLayout();
+            panel21.ResumeLayout(false);
+            panelPatient4.ResumeLayout(false);
+            panel14.ResumeLayout(false);
+            panel14.PerformLayout();
+            panel15.ResumeLayout(false);
+            panel16.ResumeLayout(false);
+            panel16.PerformLayout();
+            panel17.ResumeLayout(false);
+            panelPatient3.ResumeLayout(false);
+            panel10.ResumeLayout(false);
+            panel10.PerformLayout();
+            panel11.ResumeLayout(false);
+            panel12.ResumeLayout(false);
+            panel12.PerformLayout();
+            panel13.ResumeLayout(false);
+            panelPatient2.ResumeLayout(false);
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
+            panel7.ResumeLayout(false);
+            panel8.ResumeLayout(false);
+            panel8.PerformLayout();
+            panel9.ResumeLayout(false);
+            panelPatient1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            panel5.ResumeLayout(false);
+            panelInvisible.ResumeLayout(false);
+            panelInvisible.PerformLayout();
             panel1.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
             guna2Panel42.ResumeLayout(false);
@@ -1231,49 +1292,6 @@
             guna2Panel44.PerformLayout();
             guna2Panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pbxClinic).EndInit();
-            tableLayoutPanel1.ResumeLayout(false);
-            panelPatient1.ResumeLayout(false);
-            panelPatient2.ResumeLayout(false);
-            panelPatient3.ResumeLayout(false);
-            panelPatient4.ResumeLayout(false);
-            panelPatient5.ResumeLayout(false);
-            panelPatient6.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            panel3.ResumeLayout(false);
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
-            panel5.ResumeLayout(false);
-            panel6.ResumeLayout(false);
-            panel6.PerformLayout();
-            panel7.ResumeLayout(false);
-            panel8.ResumeLayout(false);
-            panel8.PerformLayout();
-            panel9.ResumeLayout(false);
-            panel10.ResumeLayout(false);
-            panel10.PerformLayout();
-            panel11.ResumeLayout(false);
-            panel12.ResumeLayout(false);
-            panel12.PerformLayout();
-            panel13.ResumeLayout(false);
-            panel14.ResumeLayout(false);
-            panel14.PerformLayout();
-            panel15.ResumeLayout(false);
-            panel16.ResumeLayout(false);
-            panel16.PerformLayout();
-            panel17.ResumeLayout(false);
-            panel18.ResumeLayout(false);
-            panel18.PerformLayout();
-            panel19.ResumeLayout(false);
-            panel20.ResumeLayout(false);
-            panel20.PerformLayout();
-            panel21.ResumeLayout(false);
-            panel22.ResumeLayout(false);
-            panel22.PerformLayout();
-            panel23.ResumeLayout(false);
-            panel24.ResumeLayout(false);
-            panel24.PerformLayout();
-            panel25.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -1332,7 +1350,7 @@
         private Panel panel3;
         private Panel panel4;
         private Panel panel5;
-        private Label lblClinicName;
+        private Label lblClinicLocation;
         private Panel panel22;
         private Label number6;
         private Panel panel23;
@@ -1378,5 +1396,11 @@
         private Guna.UI2.WinForms.Guna2ImageButton pbxStatus2;
         private Guna.UI2.WinForms.Guna2ImageButton pbxStatus1;
         private Guna.UI2.WinForms.Guna2DateTimePicker cbxDate;
+        private Label lblEmptyQueue;
+        private Guna.UI2.WinForms.Guna2Panel panelInvisible;
+        private Guna.UI2.WinForms.Guna2ImageButton pbxSkip;
+        private Guna.UI2.WinForms.Guna2ImageButton pbxCancel;
+        private Guna.UI2.WinForms.Guna2ImageButton pbxPending;
+        private Guna.UI2.WinForms.Guna2ImageButton pbxComplete;
     }
 }

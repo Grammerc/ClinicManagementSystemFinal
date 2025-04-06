@@ -64,7 +64,7 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
 
         private void btnPatientQueue_Click(object sender, EventArgs e)
         {
-            LoadControl(new PatientQueue());
+            LoadControl(new PatientQueue(doctorLoginId));
         }
 
         private void btnMyClinics_Click(object sender, EventArgs e)

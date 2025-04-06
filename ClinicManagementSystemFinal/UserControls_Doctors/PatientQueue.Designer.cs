@@ -30,10 +30,10 @@
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges51 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientQueue));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -49,37 +49,29 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panelTitlePatientQueue = new Guna.UI2.WinForms.Guna2Panel();
             label4 = new Label();
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
@@ -143,14 +135,22 @@
             lblEmptyQueue = new Label();
             panel1 = new Panel();
             tableLayoutPanel2 = new TableLayoutPanel();
-            guna2Panel42 = new Guna.UI2.WinForms.Guna2Panel();
-            pbxSkip = new Guna.UI2.WinForms.Guna2ImageButton();
-            guna2Panel41 = new Guna.UI2.WinForms.Guna2Panel();
-            pbxCancel = new Guna.UI2.WinForms.Guna2ImageButton();
-            guna2Panel40 = new Guna.UI2.WinForms.Guna2Panel();
-            pbxPending = new Guna.UI2.WinForms.Guna2ImageButton();
-            guna2Panel39 = new Guna.UI2.WinForms.Guna2Panel();
-            pbxComplete = new Guna.UI2.WinForms.Guna2ImageButton();
+            tableLayoutPanel8 = new TableLayoutPanel();
+            panel29 = new Panel();
+            label5 = new Label();
+            guna2ImageButton4 = new Guna.UI2.WinForms.Guna2ImageButton();
+            tableLayoutPanel7 = new TableLayoutPanel();
+            panel28 = new Panel();
+            label3 = new Label();
+            guna2ImageButton3 = new Guna.UI2.WinForms.Guna2ImageButton();
+            tableLayoutPanel6 = new TableLayoutPanel();
+            panel27 = new Panel();
+            label2 = new Label();
+            guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
+            tableLayoutPanel5 = new TableLayoutPanel();
+            guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            panel26 = new Panel();
+            label1 = new Label();
             panelPatientQueueClinic = new Guna.UI2.WinForms.Guna2Panel();
             tableLayoutPanel3 = new TableLayoutPanel();
             guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
@@ -201,10 +201,14 @@
             panelInvisible.SuspendLayout();
             panel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
-            guna2Panel42.SuspendLayout();
-            guna2Panel41.SuspendLayout();
-            guna2Panel40.SuspendLayout();
-            guna2Panel39.SuspendLayout();
+            tableLayoutPanel8.SuspendLayout();
+            panel29.SuspendLayout();
+            tableLayoutPanel7.SuspendLayout();
+            panel28.SuspendLayout();
+            tableLayoutPanel6.SuspendLayout();
+            panel27.SuspendLayout();
+            tableLayoutPanel5.SuspendLayout();
+            panel26.SuspendLayout();
             panelPatientQueueClinic.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
             guna2Panel5.SuspendLayout();
@@ -241,11 +245,11 @@
             // 
             guna2Panel2.Controls.Add(panelPatientQueue);
             guna2Panel2.Controls.Add(panelPatientQueueClinic);
-            guna2Panel2.CustomizableEdges = customizableEdges50;
+            guna2Panel2.CustomizableEdges = customizableEdges42;
             guna2Panel2.Dock = DockStyle.Fill;
             guna2Panel2.Location = new Point(0, 56);
             guna2Panel2.Name = "guna2Panel2";
-            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges51;
+            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges43;
             guna2Panel2.Size = new Size(793, 606);
             guna2Panel2.TabIndex = 1;
             // 
@@ -254,11 +258,11 @@
             panelPatientQueue.Controls.Add(tableLayoutPanel1);
             panelPatientQueue.Controls.Add(panelInvisible);
             panelPatientQueue.Controls.Add(panel1);
-            panelPatientQueue.CustomizableEdges = customizableEdges29;
+            panelPatientQueue.CustomizableEdges = customizableEdges21;
             panelPatientQueue.Dock = DockStyle.Fill;
             panelPatientQueue.Location = new Point(0, 123);
             panelPatientQueue.Name = "panelPatientQueue";
-            panelPatientQueue.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            panelPatientQueue.ShadowDecoration.CustomizableEdges = customizableEdges22;
             panelPatientQueue.Size = new Size(793, 483);
             panelPatientQueue.TabIndex = 1;
             // 
@@ -924,6 +928,7 @@
             // 
             // lblEmptyQueue
             // 
+            lblEmptyQueue.Anchor = AnchorStyles.None;
             lblEmptyQueue.AutoSize = true;
             lblEmptyQueue.Location = new Point(283, 10);
             lblEmptyQueue.Name = "lblEmptyQueue";
@@ -947,10 +952,10 @@
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutPanel2.Controls.Add(guna2Panel42, 3, 0);
-            tableLayoutPanel2.Controls.Add(guna2Panel41, 2, 0);
-            tableLayoutPanel2.Controls.Add(guna2Panel40, 1, 0);
-            tableLayoutPanel2.Controls.Add(guna2Panel39, 0, 0);
+            tableLayoutPanel2.Controls.Add(tableLayoutPanel8, 3, 0);
+            tableLayoutPanel2.Controls.Add(tableLayoutPanel7, 2, 0);
+            tableLayoutPanel2.Controls.Add(tableLayoutPanel6, 1, 0);
+            tableLayoutPanel2.Controls.Add(tableLayoutPanel5, 0, 0);
             tableLayoutPanel2.Dock = DockStyle.Fill;
             tableLayoutPanel2.Location = new Point(0, 0);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -959,114 +964,202 @@
             tableLayoutPanel2.Size = new Size(793, 67);
             tableLayoutPanel2.TabIndex = 0;
             // 
-            // guna2Panel42
+            // tableLayoutPanel8
             // 
-            guna2Panel42.Controls.Add(pbxSkip);
-            guna2Panel42.CustomizableEdges = customizableEdges18;
-            guna2Panel42.Location = new Point(597, 3);
-            guna2Panel42.Name = "guna2Panel42";
-            guna2Panel42.ShadowDecoration.CustomizableEdges = customizableEdges19;
-            guna2Panel42.Size = new Size(192, 61);
-            guna2Panel42.TabIndex = 3;
+            tableLayoutPanel8.ColumnCount = 2;
+            tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel8.Controls.Add(panel29, 1, 0);
+            tableLayoutPanel8.Controls.Add(guna2ImageButton4, 0, 0);
+            tableLayoutPanel8.Location = new Point(597, 3);
+            tableLayoutPanel8.Name = "tableLayoutPanel8";
+            tableLayoutPanel8.RowCount = 1;
+            tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel8.Size = new Size(192, 61);
+            tableLayoutPanel8.TabIndex = 7;
             // 
-            // pbxSkip
+            // panel29
             // 
-            pbxSkip.CheckedState.ImageSize = new Size(64, 64);
-            pbxSkip.Dock = DockStyle.Fill;
-            pbxSkip.HoverState.ImageSize = new Size(64, 64);
-            pbxSkip.Image = (Image)resources.GetObject("pbxSkip.Image");
-            pbxSkip.ImageOffset = new Point(0, 0);
-            pbxSkip.ImageRotate = 0F;
-            pbxSkip.Location = new Point(0, 0);
-            pbxSkip.Name = "pbxSkip";
-            pbxSkip.PressedState.ImageSize = new Size(64, 64);
-            pbxSkip.ShadowDecoration.CustomizableEdges = customizableEdges17;
-            pbxSkip.Size = new Size(192, 61);
-            pbxSkip.TabIndex = 2;
+            panel29.Controls.Add(label5);
+            panel29.Location = new Point(99, 3);
+            panel29.Name = "panel29";
+            panel29.Size = new Size(90, 55);
+            panel29.TabIndex = 3;
             // 
-            // guna2Panel41
+            // label5
             // 
-            guna2Panel41.Controls.Add(pbxCancel);
-            guna2Panel41.CustomizableEdges = customizableEdges21;
-            guna2Panel41.Location = new Point(399, 3);
-            guna2Panel41.Name = "guna2Panel41";
-            guna2Panel41.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            guna2Panel41.Size = new Size(192, 61);
-            guna2Panel41.TabIndex = 2;
+            label5.Anchor = AnchorStyles.None;
+            label5.AutoSize = true;
+            label5.Location = new Point(26, 20);
+            label5.Name = "label5";
+            label5.Size = new Size(38, 15);
+            label5.TabIndex = 1;
+            label5.Text = "label5";
             // 
-            // pbxCancel
+            // guna2ImageButton4
             // 
-            pbxCancel.CheckedState.ImageSize = new Size(64, 64);
-            pbxCancel.Dock = DockStyle.Fill;
-            pbxCancel.HoverState.ImageSize = new Size(64, 64);
-            pbxCancel.Image = (Image)resources.GetObject("pbxCancel.Image");
-            pbxCancel.ImageOffset = new Point(0, 0);
-            pbxCancel.ImageRotate = 0F;
-            pbxCancel.Location = new Point(0, 0);
-            pbxCancel.Name = "pbxCancel";
-            pbxCancel.PressedState.ImageSize = new Size(64, 64);
-            pbxCancel.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            pbxCancel.Size = new Size(192, 61);
-            pbxCancel.TabIndex = 2;
+            guna2ImageButton4.CheckedState.ImageSize = new Size(64, 64);
+            guna2ImageButton4.Dock = DockStyle.Fill;
+            guna2ImageButton4.HoverState.ImageSize = new Size(64, 64);
+            guna2ImageButton4.Image = (Image)resources.GetObject("guna2ImageButton4.Image");
+            guna2ImageButton4.ImageOffset = new Point(0, 0);
+            guna2ImageButton4.ImageRotate = 0F;
+            guna2ImageButton4.Location = new Point(3, 3);
+            guna2ImageButton4.Name = "guna2ImageButton4";
+            guna2ImageButton4.PressedState.ImageSize = new Size(64, 64);
+            guna2ImageButton4.ShadowDecoration.CustomizableEdges = customizableEdges17;
+            guna2ImageButton4.Size = new Size(90, 55);
+            guna2ImageButton4.TabIndex = 1;
             // 
-            // guna2Panel40
+            // tableLayoutPanel7
             // 
-            guna2Panel40.Controls.Add(pbxPending);
-            guna2Panel40.CustomizableEdges = customizableEdges24;
-            guna2Panel40.Location = new Point(201, 3);
-            guna2Panel40.Name = "guna2Panel40";
-            guna2Panel40.ShadowDecoration.CustomizableEdges = customizableEdges25;
-            guna2Panel40.Size = new Size(192, 61);
-            guna2Panel40.TabIndex = 1;
+            tableLayoutPanel7.ColumnCount = 2;
+            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel7.Controls.Add(panel28, 1, 0);
+            tableLayoutPanel7.Controls.Add(guna2ImageButton3, 0, 0);
+            tableLayoutPanel7.Location = new Point(399, 3);
+            tableLayoutPanel7.Name = "tableLayoutPanel7";
+            tableLayoutPanel7.RowCount = 1;
+            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel7.Size = new Size(192, 61);
+            tableLayoutPanel7.TabIndex = 6;
             // 
-            // pbxPending
+            // panel28
             // 
-            pbxPending.CheckedState.ImageSize = new Size(64, 64);
-            pbxPending.Dock = DockStyle.Fill;
-            pbxPending.HoverState.ImageSize = new Size(64, 64);
-            pbxPending.Image = (Image)resources.GetObject("pbxPending.Image");
-            pbxPending.ImageOffset = new Point(0, 0);
-            pbxPending.ImageRotate = 0F;
-            pbxPending.Location = new Point(0, 0);
-            pbxPending.Name = "pbxPending";
-            pbxPending.PressedState.ImageSize = new Size(64, 64);
-            pbxPending.ShadowDecoration.CustomizableEdges = customizableEdges23;
-            pbxPending.Size = new Size(192, 61);
-            pbxPending.TabIndex = 2;
+            panel28.Controls.Add(label3);
+            panel28.Location = new Point(99, 3);
+            panel28.Name = "panel28";
+            panel28.Size = new Size(90, 55);
+            panel28.TabIndex = 3;
             // 
-            // guna2Panel39
+            // label3
             // 
-            guna2Panel39.Controls.Add(pbxComplete);
-            guna2Panel39.CustomizableEdges = customizableEdges27;
-            guna2Panel39.Location = new Point(3, 3);
-            guna2Panel39.Name = "guna2Panel39";
-            guna2Panel39.ShadowDecoration.CustomizableEdges = customizableEdges28;
-            guna2Panel39.Size = new Size(192, 61);
-            guna2Panel39.TabIndex = 0;
+            label3.Anchor = AnchorStyles.None;
+            label3.AutoSize = true;
+            label3.Location = new Point(26, 20);
+            label3.Name = "label3";
+            label3.Size = new Size(38, 15);
+            label3.TabIndex = 1;
+            label3.Text = "label3";
             // 
-            // pbxComplete
+            // guna2ImageButton3
             // 
-            pbxComplete.CheckedState.ImageSize = new Size(64, 64);
-            pbxComplete.Dock = DockStyle.Fill;
-            pbxComplete.HoverState.ImageSize = new Size(64, 64);
-            pbxComplete.Image = (Image)resources.GetObject("pbxComplete.Image");
-            pbxComplete.ImageOffset = new Point(0, 0);
-            pbxComplete.ImageRotate = 0F;
-            pbxComplete.Location = new Point(0, 0);
-            pbxComplete.Name = "pbxComplete";
-            pbxComplete.PressedState.ImageSize = new Size(64, 64);
-            pbxComplete.ShadowDecoration.CustomizableEdges = customizableEdges26;
-            pbxComplete.Size = new Size(192, 61);
-            pbxComplete.TabIndex = 2;
+            guna2ImageButton3.CheckedState.ImageSize = new Size(64, 64);
+            guna2ImageButton3.Dock = DockStyle.Fill;
+            guna2ImageButton3.HoverState.ImageSize = new Size(64, 64);
+            guna2ImageButton3.Image = (Image)resources.GetObject("guna2ImageButton3.Image");
+            guna2ImageButton3.ImageOffset = new Point(0, 0);
+            guna2ImageButton3.ImageRotate = 0F;
+            guna2ImageButton3.Location = new Point(3, 3);
+            guna2ImageButton3.Name = "guna2ImageButton3";
+            guna2ImageButton3.PressedState.ImageSize = new Size(64, 64);
+            guna2ImageButton3.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            guna2ImageButton3.Size = new Size(90, 55);
+            guna2ImageButton3.TabIndex = 1;
+            // 
+            // tableLayoutPanel6
+            // 
+            tableLayoutPanel6.ColumnCount = 2;
+            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel6.Controls.Add(panel27, 1, 0);
+            tableLayoutPanel6.Controls.Add(guna2ImageButton2, 0, 0);
+            tableLayoutPanel6.Location = new Point(201, 3);
+            tableLayoutPanel6.Name = "tableLayoutPanel6";
+            tableLayoutPanel6.RowCount = 1;
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel6.Size = new Size(192, 61);
+            tableLayoutPanel6.TabIndex = 5;
+            // 
+            // panel27
+            // 
+            panel27.Controls.Add(label2);
+            panel27.Location = new Point(99, 3);
+            panel27.Name = "panel27";
+            panel27.Size = new Size(90, 55);
+            panel27.TabIndex = 3;
+            // 
+            // label2
+            // 
+            label2.Anchor = AnchorStyles.None;
+            label2.AutoSize = true;
+            label2.Location = new Point(26, 20);
+            label2.Name = "label2";
+            label2.Size = new Size(38, 15);
+            label2.TabIndex = 1;
+            label2.Text = "label2";
+            // 
+            // guna2ImageButton2
+            // 
+            guna2ImageButton2.CheckedState.ImageSize = new Size(64, 64);
+            guna2ImageButton2.Dock = DockStyle.Fill;
+            guna2ImageButton2.HoverState.ImageSize = new Size(64, 64);
+            guna2ImageButton2.Image = (Image)resources.GetObject("guna2ImageButton2.Image");
+            guna2ImageButton2.ImageOffset = new Point(0, 0);
+            guna2ImageButton2.ImageRotate = 0F;
+            guna2ImageButton2.Location = new Point(3, 3);
+            guna2ImageButton2.Name = "guna2ImageButton2";
+            guna2ImageButton2.PressedState.ImageSize = new Size(64, 64);
+            guna2ImageButton2.ShadowDecoration.CustomizableEdges = customizableEdges19;
+            guna2ImageButton2.Size = new Size(90, 55);
+            guna2ImageButton2.TabIndex = 1;
+            // 
+            // tableLayoutPanel5
+            // 
+            tableLayoutPanel5.ColumnCount = 2;
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel5.Controls.Add(guna2ImageButton1, 0, 0);
+            tableLayoutPanel5.Controls.Add(panel26, 1, 0);
+            tableLayoutPanel5.Location = new Point(3, 3);
+            tableLayoutPanel5.Name = "tableLayoutPanel5";
+            tableLayoutPanel5.RowCount = 1;
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel5.Size = new Size(192, 61);
+            tableLayoutPanel5.TabIndex = 4;
+            // 
+            // guna2ImageButton1
+            // 
+            guna2ImageButton1.CheckedState.ImageSize = new Size(64, 64);
+            guna2ImageButton1.Dock = DockStyle.Fill;
+            guna2ImageButton1.HoverState.ImageSize = new Size(64, 64);
+            guna2ImageButton1.Image = (Image)resources.GetObject("guna2ImageButton1.Image");
+            guna2ImageButton1.ImageOffset = new Point(0, 0);
+            guna2ImageButton1.ImageRotate = 0F;
+            guna2ImageButton1.Location = new Point(3, 3);
+            guna2ImageButton1.Name = "guna2ImageButton1";
+            guna2ImageButton1.PressedState.ImageSize = new Size(64, 64);
+            guna2ImageButton1.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            guna2ImageButton1.Size = new Size(90, 55);
+            guna2ImageButton1.TabIndex = 1;
+            // 
+            // panel26
+            // 
+            panel26.Controls.Add(label1);
+            panel26.Location = new Point(99, 3);
+            panel26.Name = "panel26";
+            panel26.Size = new Size(90, 55);
+            panel26.TabIndex = 2;
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.None;
+            label1.AutoSize = true;
+            label1.Location = new Point(23, 19);
+            label1.Name = "label1";
+            label1.Size = new Size(38, 15);
+            label1.TabIndex = 0;
+            label1.Text = "label1";
             // 
             // panelPatientQueueClinic
             // 
             panelPatientQueueClinic.Controls.Add(tableLayoutPanel3);
-            panelPatientQueueClinic.CustomizableEdges = customizableEdges48;
+            panelPatientQueueClinic.CustomizableEdges = customizableEdges40;
             panelPatientQueueClinic.Dock = DockStyle.Top;
             panelPatientQueueClinic.Location = new Point(0, 0);
             panelPatientQueueClinic.Name = "panelPatientQueueClinic";
-            panelPatientQueueClinic.ShadowDecoration.CustomizableEdges = customizableEdges49;
+            panelPatientQueueClinic.ShadowDecoration.CustomizableEdges = customizableEdges41;
             panelPatientQueueClinic.Size = new Size(793, 123);
             panelPatientQueueClinic.TabIndex = 0;
             // 
@@ -1091,46 +1184,45 @@
             // 
             // guna2Panel6
             // 
-            guna2Panel6.CustomizableEdges = customizableEdges31;
+            guna2Panel6.CustomizableEdges = customizableEdges23;
             guna2Panel6.Location = new Point(576, 3);
             guna2Panel6.Name = "guna2Panel6";
-            guna2Panel6.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            guna2Panel6.ShadowDecoration.CustomizableEdges = customizableEdges24;
             guna2Panel6.Size = new Size(214, 117);
             guna2Panel6.TabIndex = 3;
             // 
             // guna2Panel5
             // 
             guna2Panel5.Controls.Add(cbxDate);
-            guna2Panel5.CustomizableEdges = customizableEdges35;
+            guna2Panel5.CustomizableEdges = customizableEdges27;
             guna2Panel5.Location = new Point(358, 3);
             guna2Panel5.Name = "guna2Panel5";
-            guna2Panel5.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            guna2Panel5.ShadowDecoration.CustomizableEdges = customizableEdges28;
             guna2Panel5.Size = new Size(212, 117);
             guna2Panel5.TabIndex = 2;
             // 
             // cbxDate
             // 
             cbxDate.Checked = true;
-            cbxDate.CustomizableEdges = customizableEdges33;
-            cbxDate.Dock = DockStyle.Fill;
+            cbxDate.CustomizableEdges = customizableEdges25;
             cbxDate.Font = new Font("Segoe UI", 9F);
             cbxDate.Format = DateTimePickerFormat.Long;
             cbxDate.Location = new Point(0, 0);
             cbxDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             cbxDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             cbxDate.Name = "cbxDate";
-            cbxDate.ShadowDecoration.CustomizableEdges = customizableEdges34;
-            cbxDate.Size = new Size(212, 117);
+            cbxDate.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            cbxDate.Size = new Size(212, 37);
             cbxDate.TabIndex = 3;
             cbxDate.Value = new DateTime(2025, 4, 3, 12, 40, 6, 172);
             // 
             // guna2Panel4
             // 
             guna2Panel4.Controls.Add(tableLayoutPanel4);
-            guna2Panel4.CustomizableEdges = customizableEdges43;
+            guna2Panel4.CustomizableEdges = customizableEdges35;
             guna2Panel4.Location = new Point(140, 3);
             guna2Panel4.Name = "guna2Panel4";
-            guna2Panel4.ShadowDecoration.CustomizableEdges = customizableEdges44;
+            guna2Panel4.ShadowDecoration.CustomizableEdges = customizableEdges36;
             guna2Panel4.Size = new Size(212, 117);
             guna2Panel4.TabIndex = 1;
             // 
@@ -1152,17 +1244,17 @@
             // guna2Panel43
             // 
             guna2Panel43.Controls.Add(cbxPatientQueue);
-            guna2Panel43.CustomizableEdges = customizableEdges39;
+            guna2Panel43.CustomizableEdges = customizableEdges31;
             guna2Panel43.Location = new Point(3, 3);
             guna2Panel43.Name = "guna2Panel43";
-            guna2Panel43.ShadowDecoration.CustomizableEdges = customizableEdges40;
+            guna2Panel43.ShadowDecoration.CustomizableEdges = customizableEdges32;
             guna2Panel43.Size = new Size(206, 34);
             guna2Panel43.TabIndex = 0;
             // 
             // cbxPatientQueue
             // 
             cbxPatientQueue.BackColor = Color.Transparent;
-            cbxPatientQueue.CustomizableEdges = customizableEdges37;
+            cbxPatientQueue.CustomizableEdges = customizableEdges29;
             cbxPatientQueue.Dock = DockStyle.Fill;
             cbxPatientQueue.DrawMode = DrawMode.OwnerDrawFixed;
             cbxPatientQueue.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -1173,7 +1265,7 @@
             cbxPatientQueue.ItemHeight = 30;
             cbxPatientQueue.Location = new Point(0, 0);
             cbxPatientQueue.Name = "cbxPatientQueue";
-            cbxPatientQueue.ShadowDecoration.CustomizableEdges = customizableEdges38;
+            cbxPatientQueue.ShadowDecoration.CustomizableEdges = customizableEdges30;
             cbxPatientQueue.Size = new Size(206, 36);
             cbxPatientQueue.TabIndex = 0;
             cbxPatientQueue.SelectedIndexChanged += cbxPatientQueue_SelectedIndexChanged;
@@ -1181,10 +1273,10 @@
             // guna2Panel44
             // 
             guna2Panel44.Controls.Add(lblClinicLocation);
-            guna2Panel44.CustomizableEdges = customizableEdges41;
+            guna2Panel44.CustomizableEdges = customizableEdges33;
             guna2Panel44.Location = new Point(3, 43);
             guna2Panel44.Name = "guna2Panel44";
-            guna2Panel44.ShadowDecoration.CustomizableEdges = customizableEdges42;
+            guna2Panel44.ShadowDecoration.CustomizableEdges = customizableEdges34;
             guna2Panel44.Size = new Size(206, 71);
             guna2Panel44.TabIndex = 1;
             // 
@@ -1193,17 +1285,17 @@
             lblClinicLocation.AutoSize = true;
             lblClinicLocation.Location = new Point(4, 4);
             lblClinicLocation.Name = "lblClinicLocation";
-            lblClinicLocation.Size = new Size(44, 15);
+            lblClinicLocation.Size = new Size(106, 15);
             lblClinicLocation.TabIndex = 0;
-            lblClinicLocation.Text = "label12";
+            lblClinicLocation.Text = "Name of the Clinic";
             // 
             // guna2Panel3
             // 
             guna2Panel3.Controls.Add(pbxClinic);
-            guna2Panel3.CustomizableEdges = customizableEdges46;
+            guna2Panel3.CustomizableEdges = customizableEdges38;
             guna2Panel3.Location = new Point(3, 3);
             guna2Panel3.Name = "guna2Panel3";
-            guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges47;
+            guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges39;
             guna2Panel3.Size = new Size(131, 117);
             guna2Panel3.TabIndex = 0;
             // 
@@ -1213,7 +1305,7 @@
             pbxClinic.ImageRotate = 0F;
             pbxClinic.Location = new Point(0, 0);
             pbxClinic.Name = "pbxClinic";
-            pbxClinic.ShadowDecoration.CustomizableEdges = customizableEdges45;
+            pbxClinic.ShadowDecoration.CustomizableEdges = customizableEdges37;
             pbxClinic.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             pbxClinic.Size = new Size(131, 117);
             pbxClinic.TabIndex = 0;
@@ -1278,10 +1370,18 @@
             panelInvisible.PerformLayout();
             panel1.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
-            guna2Panel42.ResumeLayout(false);
-            guna2Panel41.ResumeLayout(false);
-            guna2Panel40.ResumeLayout(false);
-            guna2Panel39.ResumeLayout(false);
+            tableLayoutPanel8.ResumeLayout(false);
+            panel29.ResumeLayout(false);
+            panel29.PerformLayout();
+            tableLayoutPanel7.ResumeLayout(false);
+            panel28.ResumeLayout(false);
+            panel28.PerformLayout();
+            tableLayoutPanel6.ResumeLayout(false);
+            panel27.ResumeLayout(false);
+            panel27.PerformLayout();
+            tableLayoutPanel5.ResumeLayout(false);
+            panel26.ResumeLayout(false);
+            panel26.PerformLayout();
             panelPatientQueueClinic.ResumeLayout(false);
             tableLayoutPanel3.ResumeLayout(false);
             guna2Panel5.ResumeLayout(false);
@@ -1310,13 +1410,9 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel42;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton12;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel41;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton11;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel40;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton10;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel39;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton9;
         private Guna.UI2.WinForms.Guna2TextBox tbxPatient8;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox8;
@@ -1398,9 +1494,21 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker cbxDate;
         private Label lblEmptyQueue;
         private Guna.UI2.WinForms.Guna2Panel panelInvisible;
-        private Guna.UI2.WinForms.Guna2ImageButton pbxSkip;
-        private Guna.UI2.WinForms.Guna2ImageButton pbxCancel;
-        private Guna.UI2.WinForms.Guna2ImageButton pbxPending;
-        private Guna.UI2.WinForms.Guna2ImageButton pbxComplete;
+        private TableLayoutPanel tableLayoutPanel8;
+        private Panel panel29;
+        private Label label5;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton4;
+        private TableLayoutPanel tableLayoutPanel7;
+        private Panel panel28;
+        private Label label3;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton3;
+        private TableLayoutPanel tableLayoutPanel6;
+        private Panel panel27;
+        private Label label2;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
+        private TableLayoutPanel tableLayoutPanel5;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
+        private Panel panel26;
+        private Label label1;
     }
 }

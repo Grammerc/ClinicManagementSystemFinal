@@ -37,17 +37,20 @@ namespace ClinicManagementSystemFinal
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ForgotPassword));
             tbxEmail = new Guna.UI2.WinForms.Guna2TextBox();
             label1 = new Label();
             btnSubmit = new Guna.UI2.WinForms.Guna2Button();
             btnCancel = new Guna.UI2.WinForms.Guna2Button();
             label2 = new Label();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // tbxEmail
             // 
             tbxEmail.CustomizableEdges = customizableEdges1;
-            tbxEmail.DefaultText = "e.g. human@gmail.com";
+            tbxEmail.DefaultText = "e.g. person@gmail.com";
             tbxEmail.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             tbxEmail.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             tbxEmail.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
@@ -108,17 +111,28 @@ namespace ClinicManagementSystemFinal
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Verdana", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(32, 163);
+            label2.Location = new Point(31, 182);
             label2.Name = "label2";
             label2.Size = new Size(323, 29);
             label2.TabIndex = 4;
             label2.Text = "Forgot your password?";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(86, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(191, 161);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 5;
+            pictureBox1.TabStop = false;
             // 
             // ForgotPassword
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(391, 450);
+            Controls.Add(pictureBox1);
             Controls.Add(label2);
             Controls.Add(btnCancel);
             Controls.Add(btnSubmit);
@@ -126,6 +140,7 @@ namespace ClinicManagementSystemFinal
             Controls.Add(tbxEmail);
             Name = "ForgotPassword";
             Text = "ForgotPassword";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -137,5 +152,6 @@ namespace ClinicManagementSystemFinal
         private Guna.UI2.WinForms.Guna2Button btnSubmit;
         private Guna.UI2.WinForms.Guna2Button btnCancel;
         private Label label2;
+        private PictureBox pictureBox1;
     }
 }

@@ -230,7 +230,9 @@ namespace ClinicManagementSystemFinal
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+            SignIn loginForm = new SignIn();
+            loginForm.Show();
         }
 
         private void HomePage_User_Load(object sender, EventArgs e)

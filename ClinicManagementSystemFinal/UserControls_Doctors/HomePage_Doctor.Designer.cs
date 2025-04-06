@@ -73,6 +73,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panelMainDesktop = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel11 = new Guna.UI2.WinForms.Guna2Panel();
+            iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
             guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(components);
@@ -97,8 +98,8 @@
             btnBillings = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             guna2Panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             guna2Panel2.SuspendLayout();
             guna2Panel3.SuspendLayout();
             guna2Panel4.SuspendLayout();
@@ -108,7 +109,6 @@
             guna2Panel9.SuspendLayout();
             guna2Panel8.SuspendLayout();
             guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panelMainDesktop
@@ -132,6 +132,20 @@
             guna2Panel11.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2Panel11.Size = new Size(793, 80);
             guna2Panel11.TabIndex = 9;
+            // 
+            // iconPictureBox1
+            // 
+            iconPictureBox1.BackColor = SystemColors.Control;
+            iconPictureBox1.ForeColor = SystemColors.ControlText;
+            iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.None;
+            iconPictureBox1.IconColor = SystemColors.ControlText;
+            iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconPictureBox1.IconSize = 53;
+            iconPictureBox1.Location = new Point(611, 12);
+            iconPictureBox1.Name = "iconPictureBox1";
+            iconPictureBox1.Size = new Size(61, 53);
+            iconPictureBox1.TabIndex = 1;
+            iconPictureBox1.TabStop = false;
             // 
             // guna2ImageButton2
             // 
@@ -346,6 +360,7 @@
             btnLogOut.Size = new Size(221, 53);
             btnLogOut.TabIndex = 15;
             btnLogOut.Text = "Log Out";
+            btnLogOut.Click += btnLogOut_Click;
             // 
             // guna2Panel7
             // 
@@ -442,20 +457,6 @@
             guna2Panel1.Size = new Size(221, 742);
             guna2Panel1.TabIndex = 6;
             // 
-            // iconPictureBox1
-            // 
-            iconPictureBox1.BackColor = SystemColors.Control;
-            iconPictureBox1.ForeColor = SystemColors.ControlText;
-            iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.None;
-            iconPictureBox1.IconColor = SystemColors.ControlText;
-            iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox1.IconSize = 53;
-            iconPictureBox1.Location = new Point(611, 12);
-            iconPictureBox1.Name = "iconPictureBox1";
-            iconPictureBox1.Size = new Size(61, 53);
-            iconPictureBox1.TabIndex = 1;
-            iconPictureBox1.TabStop = false;
-            // 
             // HomePage_Doctor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -471,6 +472,7 @@
             Text = "HomePage_Doctor";
             Load += HomePage_Doctor_Load;
             guna2Panel11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
             guna2Panel2.ResumeLayout(false);
             guna2Panel2.PerformLayout();
             guna2Panel3.ResumeLayout(false);
@@ -481,7 +483,6 @@
             guna2Panel9.ResumeLayout(false);
             guna2Panel8.ResumeLayout(false);
             guna2Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
             ResumeLayout(false);
         }
 

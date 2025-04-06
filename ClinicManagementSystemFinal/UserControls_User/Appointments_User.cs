@@ -71,7 +71,7 @@ namespace ClinicManagementSystemFinal.UserControls_User
 
             string selectedClinic = cbxClinicName.SelectedItem.ToString();
             string selectedDoctor = cbxDoctor.SelectedItem.ToString();
-            string selectedDate = cbxDate.Value.ToString("dddd, d MMMM yyyy");
+            DateTime selectedDate = cbxDate.Value.Date;
             string selectedTime = cbxTimeSlot.SelectedItem.ToString();
 
             string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;";
@@ -89,33 +89,24 @@ namespace ClinicManagementSystemFinal.UserControls_User
                 }
                 int clinicID = Convert.ToInt32(clinicResult);
 
-                OleDbCommand doctorCmd = new OleDbCommand("SELECT DoctorID FROM Doctors WHERE Name = @docName AND ClinicID = @clinicID", conn);
-                doctorCmd.Parameters.AddWithValue("@docName", selectedDoctor);
-                doctorCmd.Parameters.AddWithValue("@clinicID", clinicID);
-                object doctorResult = doctorCmd.ExecuteScalar();
-                if (doctorResult == null)
-                {
-                    MessageBox.Show("Selected doctor not found.");
-                    return;
-                }
-                int doctorID = Convert.ToInt32(doctorResult);
+                int doctorID = Convert.ToInt32(cbxDoctor.SelectedValue);
 
                 int userInfoID = GetUserInfoID(userLoginId);
 
                 OleDbCommand insertCmd = new OleDbCommand(@"
-                  INSERT INTO Appointments (UserInfoID, DoctorID, AppointmentDate, TimeSlot, ReasonForVisit, Status, ClinicID)
-                  VALUES (?, ?, ?, ?, ?, ?, ?)", conn);
+    INSERT INTO Appointments 
+    (UserInfoID, DoctorID, AppointmentDate, TimeSlot, ReasonForVisit, Status, ClinicID)
+    VALUES (?, ?, ?, ?, ?, ?, ?)", conn);
 
                 insertCmd.Parameters.AddWithValue("?", userInfoID);
                 insertCmd.Parameters.AddWithValue("?", doctorID);
-                insertCmd.Parameters.AddWithValue("?", selectedDate);
+                insertCmd.Parameters.AddWithValue("?", selectedDate);  
                 insertCmd.Parameters.AddWithValue("?", selectedTime);
-                insertCmd.Parameters.AddWithValue("?", reason);
-                insertCmd.Parameters.AddWithValue("?", "Pending");
-                insertCmd.Parameters.AddWithValue("?", clinicID);
+                insertCmd.Parameters.AddWithValue("?", reason);       
+                insertCmd.Parameters.AddWithValue("?", "Pending");      
+                insertCmd.Parameters.AddWithValue("?", clinicID);     
 
                 insertCmd.ExecuteNonQuery();
-                conn.Close();
 
                 MessageBox.Show("Appointment successfully booked!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearFields();
@@ -143,8 +134,10 @@ namespace ClinicManagementSystemFinal.UserControls_User
             {
                 conn.Open();
                 OleDbCommand cmd = new OleDbCommand("SELECT UserInfoID FROM Information WHERE LoginID = @loginId", conn);
-                cmd.Parameters.AddWithValue("@loginId", loginId);
+                MessageBox.Show("LoginID Received in getuserinfoId(): " + loginId);
+                cmd.Parameters.AddWithValue("@loginId", Convert.ToInt32(loginId));
                 object result = cmd.ExecuteScalar();
+                MessageBox.Show("UserInfoID Fetched: " + userInfoId);
                 if (result != null)
                 {
                     userInfoId = Convert.ToInt32(result);
@@ -165,7 +158,10 @@ namespace ClinicManagementSystemFinal.UserControls_User
         {
             cbxDoctor.DataSource = null;
 
+            if (cbxClinicName.SelectedItem == null) return;
             string selectedClinic = cbxClinicName.SelectedItem.ToString();
+
+           
 
             using (OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;"))
             {

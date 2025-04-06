@@ -41,7 +41,7 @@ namespace ClinicManagementSystemFinal
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            string connString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael Perocho\source\repos\ClinicManagementSystemFinal\ProjectClinic\ClinicManagementSystemFinal\Login.accdb; Persist Security Info=False;";
+            string connString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=""B:\Downloads\Login.accdb""; Persist Security Info=False;";
 
             using (OleDbConnection conn = new OleDbConnection(connString))
             {
@@ -78,14 +78,16 @@ namespace ClinicManagementSystemFinal
                             cmd.CommandText = "SELECT @@IDENTITY"; 
                             int loginID = Convert.ToInt32(cmd.ExecuteScalar());
 
-                           
-                            string infoQuery = "INSERT INTO Information (UserInfoID, [Email], [Name]) VALUES (?, ?, ?)";
+
+                            string infoQuery = "INSERT INTO Information ([LoginID], [Email], [Name]) VALUES (?, ?, ?)";
                             OleDbCommand infoCmd = new OleDbCommand(infoQuery, conn);
-                            infoCmd.Parameters.AddWithValue("?", loginID);  
-                            infoCmd.Parameters.AddWithValue("?", tbxEmail.Text);  
-                            infoCmd.Parameters.AddWithValue("?", tbxName.Text); 
+                            infoCmd.Parameters.AddWithValue("?", loginID);        
+                            infoCmd.Parameters.AddWithValue("?", tbxEmail.Text);    
+                            infoCmd.Parameters.AddWithValue("?", tbxName.Text);    
 
                             int infoRowsAffected = infoCmd.ExecuteNonQuery();
+
+
 
                             if (infoRowsAffected > 0)
                             {

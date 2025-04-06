@@ -71,5 +71,12 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
         {
             LoadControl(myClinicsControl);
         }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SignIn loginForm = new SignIn();
+            loginForm.Show();
+        }
     }
 }

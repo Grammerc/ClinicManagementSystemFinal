@@ -157,6 +157,7 @@
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.Left;
             label4.AutoSize = true;
             label4.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.Location = new Point(18, 17);
@@ -868,6 +869,7 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Left;
             label1.AutoSize = true;
             label1.Location = new Point(18, 16);
             label1.Name = "label1";

@@ -98,6 +98,7 @@
             btnBillings = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
             guna2Panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             guna2Panel2.SuspendLayout();
@@ -124,6 +125,7 @@
             // 
             // guna2Panel11
             // 
+            guna2Panel11.Controls.Add(nightControlBox1);
             guna2Panel11.Controls.Add(iconPictureBox1);
             guna2Panel11.CustomizableEdges = customizableEdges3;
             guna2Panel11.Dock = DockStyle.Top;
@@ -141,7 +143,7 @@
             iconPictureBox1.IconColor = SystemColors.ControlText;
             iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconPictureBox1.IconSize = 53;
-            iconPictureBox1.Location = new Point(611, 12);
+            iconPictureBox1.Location = new Point(545, 24);
             iconPictureBox1.Name = "iconPictureBox1";
             iconPictureBox1.Size = new Size(61, 53);
             iconPictureBox1.TabIndex = 1;
@@ -457,6 +459,29 @@
             guna2Panel1.Size = new Size(221, 742);
             guna2Panel1.TabIndex = 6;
             // 
+            // nightControlBox1
+            // 
+            nightControlBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            nightControlBox1.BackColor = Color.Transparent;
+            nightControlBox1.CloseHoverColor = Color.FromArgb(199, 80, 80);
+            nightControlBox1.CloseHoverForeColor = Color.White;
+            nightControlBox1.DefaultLocation = true;
+            nightControlBox1.DisableMaximizeColor = Color.FromArgb(105, 105, 105);
+            nightControlBox1.DisableMinimizeColor = Color.FromArgb(105, 105, 105);
+            nightControlBox1.EnableCloseColor = Color.FromArgb(160, 160, 160);
+            nightControlBox1.EnableMaximizeButton = true;
+            nightControlBox1.EnableMaximizeColor = Color.FromArgb(160, 160, 160);
+            nightControlBox1.EnableMinimizeButton = true;
+            nightControlBox1.EnableMinimizeColor = Color.FromArgb(160, 160, 160);
+            nightControlBox1.Location = new Point(651, 3);
+            nightControlBox1.MaximizeHoverColor = Color.FromArgb(15, 255, 255, 255);
+            nightControlBox1.MaximizeHoverForeColor = Color.White;
+            nightControlBox1.MinimizeHoverColor = Color.FromArgb(15, 255, 255, 255);
+            nightControlBox1.MinimizeHoverForeColor = Color.White;
+            nightControlBox1.Name = "nightControlBox1";
+            nightControlBox1.Size = new Size(139, 31);
+            nightControlBox1.TabIndex = 3;
+            // 
             // HomePage_Doctor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -515,5 +540,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Button btnBillings;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private ReaLTaiizor.Controls.NightControlBox nightControlBox1;
     }
 }

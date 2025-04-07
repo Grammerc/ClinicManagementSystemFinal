@@ -43,7 +43,7 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
 
             if (this.FindForm() != null)
             {
-                this.FindForm().Close(); 
+                this.FindForm().Close();
             }
         }
 
@@ -66,5 +66,13 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
         {
             UpdateStatus("Pending", btnPending.Image);
         }
+
+        private void StatusChange_Load(object sender, EventArgs e)
+        {
+
+        }
+        
+       
+        
     }
 }

@@ -55,6 +55,7 @@
             guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2Panel2.Size = new Size(793, 606);
             guna2Panel2.TabIndex = 1;
+            guna2Panel2.Paint += guna2Panel2_Paint;
             // 
             // DoctorNotes
             // 

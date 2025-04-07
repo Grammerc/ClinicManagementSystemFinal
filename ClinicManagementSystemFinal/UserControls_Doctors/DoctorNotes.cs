@@ -16,5 +16,10 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
         {
             InitializeComponent();
         }
+
+        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

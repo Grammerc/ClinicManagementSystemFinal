@@ -104,6 +104,7 @@
             label10.Size = new Size(161, 25);
             label10.TabIndex = 2;
             label10.Text = "Patient Profile";
+            label10.Click += label10_Click;
             // 
             // guna2Panel2
             // 

@@ -134,7 +134,7 @@ namespace ClinicManagementSystemFinal.UserControls_User
                 conn.Close();
             }
         }
-
+        //
         private void cbxLocation_SelectedIndexChanged(object sender, EventArgs e)
         {
 

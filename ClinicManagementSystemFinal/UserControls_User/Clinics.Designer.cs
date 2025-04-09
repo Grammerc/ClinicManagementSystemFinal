@@ -66,42 +66,42 @@
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             panel4 = new Panel();
             tableLayoutPanel2 = new TableLayoutPanel();
-            tableLayoutPanel18 = new TableLayoutPanel();
+            panelClinic6 = new TableLayoutPanel();
             tableLayoutPanel19 = new TableLayoutPanel();
             panel15 = new Panel();
-            label17 = new Label();
+            clinicsName6 = new Label();
             panel16 = new Panel();
-            label18 = new Label();
-            tableLayoutPanel16 = new TableLayoutPanel();
+            clinicTag6 = new Label();
+            panelClinic5 = new TableLayoutPanel();
             tableLayoutPanel17 = new TableLayoutPanel();
             panel13 = new Panel();
-            label15 = new Label();
+            clinicsName5 = new Label();
             panel14 = new Panel();
-            label16 = new Label();
-            tableLayoutPanel14 = new TableLayoutPanel();
+            clinicTag5 = new Label();
+            panelClinic4 = new TableLayoutPanel();
             tableLayoutPanel15 = new TableLayoutPanel();
             panel11 = new Panel();
-            label13 = new Label();
+            clinicsName4 = new Label();
             panel12 = new Panel();
-            label14 = new Label();
-            tableLayoutPanel12 = new TableLayoutPanel();
+            clinicTag4 = new Label();
+            panelClinic3 = new TableLayoutPanel();
             tableLayoutPanel13 = new TableLayoutPanel();
             panel9 = new Panel();
-            label11 = new Label();
+            clinicsName3 = new Label();
             panel10 = new Panel();
-            label12 = new Label();
-            tableLayoutPanel10 = new TableLayoutPanel();
+            clinicTag3 = new Label();
+            panelClinic2 = new TableLayoutPanel();
             tableLayoutPanel11 = new TableLayoutPanel();
             panel7 = new Panel();
-            label9 = new Label();
+            clinicsName2 = new Label();
             panel8 = new Panel();
-            label10 = new Label();
-            tableLayoutPanel8 = new TableLayoutPanel();
+            clinicTag2 = new Label();
+            panelClinic1 = new TableLayoutPanel();
             tableLayoutPanel9 = new TableLayoutPanel();
             panel5 = new Panel();
-            label7 = new Label();
+            clinicsName1 = new Label();
             panel6 = new Panel();
-            label8 = new Label();
+            clinicTag1 = new Label();
             panel3 = new Panel();
             label4 = new Label();
             panel2 = new Panel();
@@ -116,27 +116,27 @@
             guna2Panel2.SuspendLayout();
             panel4.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
-            tableLayoutPanel18.SuspendLayout();
+            panelClinic6.SuspendLayout();
             tableLayoutPanel19.SuspendLayout();
             panel15.SuspendLayout();
             panel16.SuspendLayout();
-            tableLayoutPanel16.SuspendLayout();
+            panelClinic5.SuspendLayout();
             tableLayoutPanel17.SuspendLayout();
             panel13.SuspendLayout();
             panel14.SuspendLayout();
-            tableLayoutPanel14.SuspendLayout();
+            panelClinic4.SuspendLayout();
             tableLayoutPanel15.SuspendLayout();
             panel11.SuspendLayout();
             panel12.SuspendLayout();
-            tableLayoutPanel12.SuspendLayout();
+            panelClinic3.SuspendLayout();
             tableLayoutPanel13.SuspendLayout();
             panel9.SuspendLayout();
             panel10.SuspendLayout();
-            tableLayoutPanel10.SuspendLayout();
+            panelClinic2.SuspendLayout();
             tableLayoutPanel11.SuspendLayout();
             panel7.SuspendLayout();
             panel8.SuspendLayout();
-            tableLayoutPanel8.SuspendLayout();
+            panelClinic1.SuspendLayout();
             tableLayoutPanel9.SuspendLayout();
             panel5.SuspendLayout();
             panel6.SuspendLayout();
@@ -395,6 +395,7 @@
             cbxLocation.ShadowDecoration.CustomizableEdges = customizableEdges14;
             cbxLocation.Size = new Size(252, 36);
             cbxLocation.TabIndex = 1;
+            cbxLocation.SelectedIndexChanged += cbxLocation_SelectedIndexChanged;
             // 
             // panel1
             // 
@@ -433,12 +434,12 @@
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
-            tableLayoutPanel2.Controls.Add(tableLayoutPanel18, 2, 1);
-            tableLayoutPanel2.Controls.Add(tableLayoutPanel16, 1, 1);
-            tableLayoutPanel2.Controls.Add(tableLayoutPanel14, 0, 1);
-            tableLayoutPanel2.Controls.Add(tableLayoutPanel12, 2, 0);
-            tableLayoutPanel2.Controls.Add(tableLayoutPanel10, 1, 0);
-            tableLayoutPanel2.Controls.Add(tableLayoutPanel8, 0, 0);
+            tableLayoutPanel2.Controls.Add(panelClinic6, 2, 1);
+            tableLayoutPanel2.Controls.Add(panelClinic5, 1, 1);
+            tableLayoutPanel2.Controls.Add(panelClinic4, 0, 1);
+            tableLayoutPanel2.Controls.Add(panelClinic3, 2, 0);
+            tableLayoutPanel2.Controls.Add(panelClinic2, 1, 0);
+            tableLayoutPanel2.Controls.Add(panelClinic1, 0, 0);
             tableLayoutPanel2.Dock = DockStyle.Fill;
             tableLayoutPanel2.Location = new Point(0, 0);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -448,19 +449,19 @@
             tableLayoutPanel2.Size = new Size(793, 440);
             tableLayoutPanel2.TabIndex = 0;
             // 
-            // tableLayoutPanel18
+            // panelClinic6
             // 
-            tableLayoutPanel18.ColumnCount = 1;
-            tableLayoutPanel18.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel18.Controls.Add(tableLayoutPanel19, 0, 1);
-            tableLayoutPanel18.Dock = DockStyle.Fill;
-            tableLayoutPanel18.Location = new Point(531, 223);
-            tableLayoutPanel18.Name = "tableLayoutPanel18";
-            tableLayoutPanel18.RowCount = 2;
-            tableLayoutPanel18.RowStyles.Add(new RowStyle(SizeType.Percent, 60F));
-            tableLayoutPanel18.RowStyles.Add(new RowStyle(SizeType.Percent, 40F));
-            tableLayoutPanel18.Size = new Size(259, 214);
-            tableLayoutPanel18.TabIndex = 5;
+            panelClinic6.ColumnCount = 1;
+            panelClinic6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            panelClinic6.Controls.Add(tableLayoutPanel19, 0, 1);
+            panelClinic6.Dock = DockStyle.Fill;
+            panelClinic6.Location = new Point(531, 223);
+            panelClinic6.Name = "panelClinic6";
+            panelClinic6.RowCount = 2;
+            panelClinic6.RowStyles.Add(new RowStyle(SizeType.Percent, 60F));
+            panelClinic6.RowStyles.Add(new RowStyle(SizeType.Percent, 40F));
+            panelClinic6.Size = new Size(259, 214);
+            panelClinic6.TabIndex = 5;
             // 
             // tableLayoutPanel19
             // 
@@ -478,51 +479,51 @@
             // 
             // panel15
             // 
-            panel15.Controls.Add(label17);
+            panel15.Controls.Add(clinicsName6);
             panel15.Location = new Point(3, 3);
             panel15.Name = "panel15";
             panel15.Size = new Size(246, 18);
             panel15.TabIndex = 0;
             // 
-            // label17
+            // clinicsName6
             // 
-            label17.AutoSize = true;
-            label17.Location = new Point(7, 2);
-            label17.Name = "label17";
-            label17.Size = new Size(44, 15);
-            label17.TabIndex = 0;
-            label17.Text = "label17";
+            clinicsName6.AutoSize = true;
+            clinicsName6.Location = new Point(7, 2);
+            clinicsName6.Name = "clinicsName6";
+            clinicsName6.Size = new Size(44, 15);
+            clinicsName6.TabIndex = 0;
+            clinicsName6.Text = "label17";
             // 
             // panel16
             // 
-            panel16.Controls.Add(label18);
+            panel16.Controls.Add(clinicTag6);
             panel16.Location = new Point(3, 27);
             panel16.Name = "panel16";
             panel16.Size = new Size(246, 50);
             panel16.TabIndex = 1;
             // 
-            // label18
+            // clinicTag6
             // 
-            label18.AutoSize = true;
-            label18.Location = new Point(4, 4);
-            label18.Name = "label18";
-            label18.Size = new Size(44, 15);
-            label18.TabIndex = 0;
-            label18.Text = "label18";
+            clinicTag6.AutoSize = true;
+            clinicTag6.Location = new Point(4, 4);
+            clinicTag6.Name = "clinicTag6";
+            clinicTag6.Size = new Size(44, 15);
+            clinicTag6.TabIndex = 0;
+            clinicTag6.Text = "label18";
             // 
-            // tableLayoutPanel16
+            // panelClinic5
             // 
-            tableLayoutPanel16.ColumnCount = 1;
-            tableLayoutPanel16.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel16.Controls.Add(tableLayoutPanel17, 0, 1);
-            tableLayoutPanel16.Dock = DockStyle.Fill;
-            tableLayoutPanel16.Location = new Point(267, 223);
-            tableLayoutPanel16.Name = "tableLayoutPanel16";
-            tableLayoutPanel16.RowCount = 2;
-            tableLayoutPanel16.RowStyles.Add(new RowStyle(SizeType.Percent, 60F));
-            tableLayoutPanel16.RowStyles.Add(new RowStyle(SizeType.Percent, 40F));
-            tableLayoutPanel16.Size = new Size(258, 214);
-            tableLayoutPanel16.TabIndex = 4;
+            panelClinic5.ColumnCount = 1;
+            panelClinic5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            panelClinic5.Controls.Add(tableLayoutPanel17, 0, 1);
+            panelClinic5.Dock = DockStyle.Fill;
+            panelClinic5.Location = new Point(267, 223);
+            panelClinic5.Name = "panelClinic5";
+            panelClinic5.RowCount = 2;
+            panelClinic5.RowStyles.Add(new RowStyle(SizeType.Percent, 60F));
+            panelClinic5.RowStyles.Add(new RowStyle(SizeType.Percent, 40F));
+            panelClinic5.Size = new Size(258, 214);
+            panelClinic5.TabIndex = 4;
             // 
             // tableLayoutPanel17
             // 
@@ -540,51 +541,51 @@
             // 
             // panel13
             // 
-            panel13.Controls.Add(label15);
+            panel13.Controls.Add(clinicsName5);
             panel13.Location = new Point(3, 3);
             panel13.Name = "panel13";
             panel13.Size = new Size(246, 18);
             panel13.TabIndex = 0;
             // 
-            // label15
+            // clinicsName5
             // 
-            label15.AutoSize = true;
-            label15.Location = new Point(7, 2);
-            label15.Name = "label15";
-            label15.Size = new Size(44, 15);
-            label15.TabIndex = 0;
-            label15.Text = "label15";
+            clinicsName5.AutoSize = true;
+            clinicsName5.Location = new Point(7, 2);
+            clinicsName5.Name = "clinicsName5";
+            clinicsName5.Size = new Size(44, 15);
+            clinicsName5.TabIndex = 0;
+            clinicsName5.Text = "label15";
             // 
             // panel14
             // 
-            panel14.Controls.Add(label16);
+            panel14.Controls.Add(clinicTag5);
             panel14.Location = new Point(3, 27);
             panel14.Name = "panel14";
             panel14.Size = new Size(246, 50);
             panel14.TabIndex = 1;
             // 
-            // label16
+            // clinicTag5
             // 
-            label16.AutoSize = true;
-            label16.Location = new Point(4, 4);
-            label16.Name = "label16";
-            label16.Size = new Size(44, 15);
-            label16.TabIndex = 0;
-            label16.Text = "label16";
+            clinicTag5.AutoSize = true;
+            clinicTag5.Location = new Point(4, 4);
+            clinicTag5.Name = "clinicTag5";
+            clinicTag5.Size = new Size(44, 15);
+            clinicTag5.TabIndex = 0;
+            clinicTag5.Text = "label16";
             // 
-            // tableLayoutPanel14
+            // panelClinic4
             // 
-            tableLayoutPanel14.ColumnCount = 1;
-            tableLayoutPanel14.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel14.Controls.Add(tableLayoutPanel15, 0, 1);
-            tableLayoutPanel14.Dock = DockStyle.Fill;
-            tableLayoutPanel14.Location = new Point(3, 223);
-            tableLayoutPanel14.Name = "tableLayoutPanel14";
-            tableLayoutPanel14.RowCount = 2;
-            tableLayoutPanel14.RowStyles.Add(new RowStyle(SizeType.Percent, 60F));
-            tableLayoutPanel14.RowStyles.Add(new RowStyle(SizeType.Percent, 40F));
-            tableLayoutPanel14.Size = new Size(258, 214);
-            tableLayoutPanel14.TabIndex = 3;
+            panelClinic4.ColumnCount = 1;
+            panelClinic4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            panelClinic4.Controls.Add(tableLayoutPanel15, 0, 1);
+            panelClinic4.Dock = DockStyle.Fill;
+            panelClinic4.Location = new Point(3, 223);
+            panelClinic4.Name = "panelClinic4";
+            panelClinic4.RowCount = 2;
+            panelClinic4.RowStyles.Add(new RowStyle(SizeType.Percent, 60F));
+            panelClinic4.RowStyles.Add(new RowStyle(SizeType.Percent, 40F));
+            panelClinic4.Size = new Size(258, 214);
+            panelClinic4.TabIndex = 3;
             // 
             // tableLayoutPanel15
             // 
@@ -602,51 +603,51 @@
             // 
             // panel11
             // 
-            panel11.Controls.Add(label13);
+            panel11.Controls.Add(clinicsName4);
             panel11.Location = new Point(3, 3);
             panel11.Name = "panel11";
             panel11.Size = new Size(246, 18);
             panel11.TabIndex = 0;
             // 
-            // label13
+            // clinicsName4
             // 
-            label13.AutoSize = true;
-            label13.Location = new Point(7, 2);
-            label13.Name = "label13";
-            label13.Size = new Size(44, 15);
-            label13.TabIndex = 0;
-            label13.Text = "label13";
+            clinicsName4.AutoSize = true;
+            clinicsName4.Location = new Point(7, 2);
+            clinicsName4.Name = "clinicsName4";
+            clinicsName4.Size = new Size(44, 15);
+            clinicsName4.TabIndex = 0;
+            clinicsName4.Text = "label13";
             // 
             // panel12
             // 
-            panel12.Controls.Add(label14);
+            panel12.Controls.Add(clinicTag4);
             panel12.Location = new Point(3, 27);
             panel12.Name = "panel12";
             panel12.Size = new Size(246, 50);
             panel12.TabIndex = 1;
             // 
-            // label14
+            // clinicTag4
             // 
-            label14.AutoSize = true;
-            label14.Location = new Point(4, 4);
-            label14.Name = "label14";
-            label14.Size = new Size(44, 15);
-            label14.TabIndex = 0;
-            label14.Text = "label14";
+            clinicTag4.AutoSize = true;
+            clinicTag4.Location = new Point(4, 4);
+            clinicTag4.Name = "clinicTag4";
+            clinicTag4.Size = new Size(44, 15);
+            clinicTag4.TabIndex = 0;
+            clinicTag4.Text = "label14";
             // 
-            // tableLayoutPanel12
+            // panelClinic3
             // 
-            tableLayoutPanel12.ColumnCount = 1;
-            tableLayoutPanel12.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel12.Controls.Add(tableLayoutPanel13, 0, 1);
-            tableLayoutPanel12.Dock = DockStyle.Fill;
-            tableLayoutPanel12.Location = new Point(531, 3);
-            tableLayoutPanel12.Name = "tableLayoutPanel12";
-            tableLayoutPanel12.RowCount = 2;
-            tableLayoutPanel12.RowStyles.Add(new RowStyle(SizeType.Percent, 60F));
-            tableLayoutPanel12.RowStyles.Add(new RowStyle(SizeType.Percent, 40F));
-            tableLayoutPanel12.Size = new Size(259, 214);
-            tableLayoutPanel12.TabIndex = 2;
+            panelClinic3.ColumnCount = 1;
+            panelClinic3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            panelClinic3.Controls.Add(tableLayoutPanel13, 0, 1);
+            panelClinic3.Dock = DockStyle.Fill;
+            panelClinic3.Location = new Point(531, 3);
+            panelClinic3.Name = "panelClinic3";
+            panelClinic3.RowCount = 2;
+            panelClinic3.RowStyles.Add(new RowStyle(SizeType.Percent, 60F));
+            panelClinic3.RowStyles.Add(new RowStyle(SizeType.Percent, 40F));
+            panelClinic3.Size = new Size(259, 214);
+            panelClinic3.TabIndex = 2;
             // 
             // tableLayoutPanel13
             // 
@@ -664,51 +665,51 @@
             // 
             // panel9
             // 
-            panel9.Controls.Add(label11);
+            panel9.Controls.Add(clinicsName3);
             panel9.Location = new Point(3, 3);
             panel9.Name = "panel9";
             panel9.Size = new Size(246, 18);
             panel9.TabIndex = 0;
             // 
-            // label11
+            // clinicsName3
             // 
-            label11.AutoSize = true;
-            label11.Location = new Point(7, 2);
-            label11.Name = "label11";
-            label11.Size = new Size(44, 15);
-            label11.TabIndex = 0;
-            label11.Text = "label11";
+            clinicsName3.AutoSize = true;
+            clinicsName3.Location = new Point(7, 2);
+            clinicsName3.Name = "clinicsName3";
+            clinicsName3.Size = new Size(44, 15);
+            clinicsName3.TabIndex = 0;
+            clinicsName3.Text = "label11";
             // 
             // panel10
             // 
-            panel10.Controls.Add(label12);
+            panel10.Controls.Add(clinicTag3);
             panel10.Location = new Point(3, 27);
             panel10.Name = "panel10";
             panel10.Size = new Size(246, 50);
             panel10.TabIndex = 1;
             // 
-            // label12
+            // clinicTag3
             // 
-            label12.AutoSize = true;
-            label12.Location = new Point(4, 4);
-            label12.Name = "label12";
-            label12.Size = new Size(44, 15);
-            label12.TabIndex = 0;
-            label12.Text = "label12";
+            clinicTag3.AutoSize = true;
+            clinicTag3.Location = new Point(4, 4);
+            clinicTag3.Name = "clinicTag3";
+            clinicTag3.Size = new Size(44, 15);
+            clinicTag3.TabIndex = 0;
+            clinicTag3.Text = "label12";
             // 
-            // tableLayoutPanel10
+            // panelClinic2
             // 
-            tableLayoutPanel10.ColumnCount = 1;
-            tableLayoutPanel10.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel10.Controls.Add(tableLayoutPanel11, 0, 1);
-            tableLayoutPanel10.Dock = DockStyle.Fill;
-            tableLayoutPanel10.Location = new Point(267, 3);
-            tableLayoutPanel10.Name = "tableLayoutPanel10";
-            tableLayoutPanel10.RowCount = 2;
-            tableLayoutPanel10.RowStyles.Add(new RowStyle(SizeType.Percent, 60F));
-            tableLayoutPanel10.RowStyles.Add(new RowStyle(SizeType.Percent, 40F));
-            tableLayoutPanel10.Size = new Size(258, 214);
-            tableLayoutPanel10.TabIndex = 1;
+            panelClinic2.ColumnCount = 1;
+            panelClinic2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            panelClinic2.Controls.Add(tableLayoutPanel11, 0, 1);
+            panelClinic2.Dock = DockStyle.Fill;
+            panelClinic2.Location = new Point(267, 3);
+            panelClinic2.Name = "panelClinic2";
+            panelClinic2.RowCount = 2;
+            panelClinic2.RowStyles.Add(new RowStyle(SizeType.Percent, 60F));
+            panelClinic2.RowStyles.Add(new RowStyle(SizeType.Percent, 40F));
+            panelClinic2.Size = new Size(258, 214);
+            panelClinic2.TabIndex = 1;
             // 
             // tableLayoutPanel11
             // 
@@ -726,51 +727,51 @@
             // 
             // panel7
             // 
-            panel7.Controls.Add(label9);
+            panel7.Controls.Add(clinicsName2);
             panel7.Location = new Point(3, 3);
             panel7.Name = "panel7";
             panel7.Size = new Size(246, 18);
             panel7.TabIndex = 0;
             // 
-            // label9
+            // clinicsName2
             // 
-            label9.AutoSize = true;
-            label9.Location = new Point(7, 2);
-            label9.Name = "label9";
-            label9.Size = new Size(38, 15);
-            label9.TabIndex = 0;
-            label9.Text = "label9";
+            clinicsName2.AutoSize = true;
+            clinicsName2.Location = new Point(7, 2);
+            clinicsName2.Name = "clinicsName2";
+            clinicsName2.Size = new Size(38, 15);
+            clinicsName2.TabIndex = 0;
+            clinicsName2.Text = "label9";
             // 
             // panel8
             // 
-            panel8.Controls.Add(label10);
+            panel8.Controls.Add(clinicTag2);
             panel8.Location = new Point(3, 27);
             panel8.Name = "panel8";
             panel8.Size = new Size(246, 50);
             panel8.TabIndex = 1;
             // 
-            // label10
+            // clinicTag2
             // 
-            label10.AutoSize = true;
-            label10.Location = new Point(4, 4);
-            label10.Name = "label10";
-            label10.Size = new Size(44, 15);
-            label10.TabIndex = 0;
-            label10.Text = "label10";
+            clinicTag2.AutoSize = true;
+            clinicTag2.Location = new Point(4, 4);
+            clinicTag2.Name = "clinicTag2";
+            clinicTag2.Size = new Size(44, 15);
+            clinicTag2.TabIndex = 0;
+            clinicTag2.Text = "label10";
             // 
-            // tableLayoutPanel8
+            // panelClinic1
             // 
-            tableLayoutPanel8.ColumnCount = 1;
-            tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel8.Controls.Add(tableLayoutPanel9, 0, 1);
-            tableLayoutPanel8.Dock = DockStyle.Fill;
-            tableLayoutPanel8.Location = new Point(3, 3);
-            tableLayoutPanel8.Name = "tableLayoutPanel8";
-            tableLayoutPanel8.RowCount = 2;
-            tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Percent, 60F));
-            tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Percent, 40F));
-            tableLayoutPanel8.Size = new Size(258, 214);
-            tableLayoutPanel8.TabIndex = 0;
+            panelClinic1.ColumnCount = 1;
+            panelClinic1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            panelClinic1.Controls.Add(tableLayoutPanel9, 0, 1);
+            panelClinic1.Dock = DockStyle.Fill;
+            panelClinic1.Location = new Point(3, 3);
+            panelClinic1.Name = "panelClinic1";
+            panelClinic1.RowCount = 2;
+            panelClinic1.RowStyles.Add(new RowStyle(SizeType.Percent, 60F));
+            panelClinic1.RowStyles.Add(new RowStyle(SizeType.Percent, 40F));
+            panelClinic1.Size = new Size(258, 214);
+            panelClinic1.TabIndex = 0;
             // 
             // tableLayoutPanel9
             // 
@@ -788,37 +789,37 @@
             // 
             // panel5
             // 
-            panel5.Controls.Add(label7);
+            panel5.Controls.Add(clinicsName1);
             panel5.Location = new Point(3, 3);
             panel5.Name = "panel5";
             panel5.Size = new Size(246, 18);
             panel5.TabIndex = 0;
             // 
-            // label7
+            // clinicsName1
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(7, 2);
-            label7.Name = "label7";
-            label7.Size = new Size(38, 15);
-            label7.TabIndex = 0;
-            label7.Text = "label7";
+            clinicsName1.AutoSize = true;
+            clinicsName1.Location = new Point(7, 2);
+            clinicsName1.Name = "clinicsName1";
+            clinicsName1.Size = new Size(38, 15);
+            clinicsName1.TabIndex = 0;
+            clinicsName1.Text = "label7";
             // 
             // panel6
             // 
-            panel6.Controls.Add(label8);
+            panel6.Controls.Add(clinicTag1);
             panel6.Location = new Point(3, 27);
             panel6.Name = "panel6";
             panel6.Size = new Size(246, 50);
             panel6.TabIndex = 1;
             // 
-            // label8
+            // clinicTag1
             // 
-            label8.AutoSize = true;
-            label8.Location = new Point(4, 4);
-            label8.Name = "label8";
-            label8.Size = new Size(38, 15);
-            label8.TabIndex = 0;
-            label8.Text = "label8";
+            clinicTag1.AutoSize = true;
+            clinicTag1.Location = new Point(4, 4);
+            clinicTag1.Name = "clinicTag1";
+            clinicTag1.Size = new Size(38, 15);
+            clinicTag1.TabIndex = 0;
+            clinicTag1.Text = "label8";
             // 
             // panel3
             // 
@@ -871,37 +872,37 @@
             guna2Panel2.ResumeLayout(false);
             panel4.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
-            tableLayoutPanel18.ResumeLayout(false);
+            panelClinic6.ResumeLayout(false);
             tableLayoutPanel19.ResumeLayout(false);
             panel15.ResumeLayout(false);
             panel15.PerformLayout();
             panel16.ResumeLayout(false);
             panel16.PerformLayout();
-            tableLayoutPanel16.ResumeLayout(false);
+            panelClinic5.ResumeLayout(false);
             tableLayoutPanel17.ResumeLayout(false);
             panel13.ResumeLayout(false);
             panel13.PerformLayout();
             panel14.ResumeLayout(false);
             panel14.PerformLayout();
-            tableLayoutPanel14.ResumeLayout(false);
+            panelClinic4.ResumeLayout(false);
             tableLayoutPanel15.ResumeLayout(false);
             panel11.ResumeLayout(false);
             panel11.PerformLayout();
             panel12.ResumeLayout(false);
             panel12.PerformLayout();
-            tableLayoutPanel12.ResumeLayout(false);
+            panelClinic3.ResumeLayout(false);
             tableLayoutPanel13.ResumeLayout(false);
             panel9.ResumeLayout(false);
             panel9.PerformLayout();
             panel10.ResumeLayout(false);
             panel10.PerformLayout();
-            tableLayoutPanel10.ResumeLayout(false);
+            panelClinic2.ResumeLayout(false);
             tableLayoutPanel11.ResumeLayout(false);
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
             panel8.ResumeLayout(false);
             panel8.PerformLayout();
-            tableLayoutPanel8.ResumeLayout(false);
+            panelClinic1.ResumeLayout(false);
             tableLayoutPanel9.ResumeLayout(false);
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
@@ -944,41 +945,41 @@
         private Guna.UI2.WinForms.Guna2ComboBox cbxSpecialization;
         private Guna.UI2.WinForms.Guna2ComboBox cbxServices;
         private Guna.UI2.WinForms.Guna2ComboBox cbxLocation;
-        private TableLayoutPanel tableLayoutPanel8;
-        private TableLayoutPanel tableLayoutPanel18;
+        private TableLayoutPanel panelClinic1;
+        private TableLayoutPanel panelClinic6;
         private TableLayoutPanel tableLayoutPanel19;
         private Panel panel15;
-        private Label label17;
+        private Label clinicsName6;
         private Panel panel16;
-        private Label label18;
-        private TableLayoutPanel tableLayoutPanel16;
+        private Label clinicTag6;
+        private TableLayoutPanel panelClinic5;
         private TableLayoutPanel tableLayoutPanel17;
         private Panel panel13;
-        private Label label15;
+        private Label clinicsName5;
         private Panel panel14;
-        private Label label16;
-        private TableLayoutPanel tableLayoutPanel14;
+        private Label clinicTag5;
+        private TableLayoutPanel panelClinic4;
         private TableLayoutPanel tableLayoutPanel15;
         private Panel panel11;
-        private Label label13;
+        private Label clinicsName4;
         private Panel panel12;
-        private Label label14;
-        private TableLayoutPanel tableLayoutPanel12;
+        private Label clinicTag4;
+        private TableLayoutPanel panelClinic3;
         private TableLayoutPanel tableLayoutPanel13;
         private Panel panel9;
-        private Label label11;
+        private Label clinicsName3;
         private Panel panel10;
-        private Label label12;
-        private TableLayoutPanel tableLayoutPanel10;
+        private Label clinicTag3;
+        private TableLayoutPanel panelClinic2;
         private TableLayoutPanel tableLayoutPanel11;
         private Panel panel7;
-        private Label label9;
+        private Label clinicsName2;
         private Panel panel8;
-        private Label label10;
+        private Label clinicTag2;
         private TableLayoutPanel tableLayoutPanel9;
         private Panel panel5;
-        private Label label7;
+        private Label clinicsName1;
         private Panel panel6;
-        private Label label8;
+        private Label clinicTag1;
     }
 }

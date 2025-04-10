@@ -36,13 +36,12 @@
             panel2 = new Panel();
             label4 = new Label();
             dgvRead = new Guna.UI2.WinForms.Guna2DataGridView();
-            Clinic = new DataGridViewTextBoxColumn();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewButtonColumn();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            c1 = new DataGridViewTextBoxColumn();
+            c2 = new DataGridViewTextBoxColumn();
+            c3 = new DataGridViewTextBoxColumn();
+            c4 = new DataGridViewTextBoxColumn();
+            c5 = new DataGridViewTextBoxColumn();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvRead).BeginInit();
             guna2Panel1.SuspendLayout();
@@ -81,7 +80,7 @@
             dgvRead.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvRead.ColumnHeadersHeight = 17;
             dgvRead.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvRead.Columns.AddRange(new DataGridViewColumn[] { Clinic, Column1, Column2, Column3, Column4, Column5 });
+            dgvRead.Columns.AddRange(new DataGridViewColumn[] { c1, c2, c3, c4, c5 });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
@@ -119,36 +118,6 @@
             dgvRead.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgvRead.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
-            // Clinic
-            // 
-            Clinic.HeaderText = "Date";
-            Clinic.Name = "Clinic";
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Clinic ";
-            Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Reason For Visit";
-            Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Doctor-In-Charge";
-            Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Status";
-            Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "Edit";
-            Column5.Name = "Column5";
-            // 
             // guna2Panel1
             // 
             guna2Panel1.Controls.Add(dgvRead);
@@ -159,6 +128,31 @@
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Panel1.Size = new Size(793, 606);
             guna2Panel1.TabIndex = 9;
+            // 
+            // c1
+            // 
+            c1.HeaderText = "Date";
+            c1.Name = "c1";
+            // 
+            // c2
+            // 
+            c2.HeaderText = "Clinic ";
+            c2.Name = "c2";
+            // 
+            // c3
+            // 
+            c3.HeaderText = "Reason For Visit";
+            c3.Name = "c3";
+            // 
+            // c4
+            // 
+            c4.HeaderText = "Doctor-In-Charge";
+            c4.Name = "c4";
+            // 
+            // c5
+            // 
+            c5.HeaderText = "Status";
+            c5.Name = "c5";
             // 
             // Appointments_Read
             // 
@@ -182,11 +176,10 @@
         private Label label4;
         private Guna.UI2.WinForms.Guna2DataGridView dgvRead;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private DataGridViewTextBoxColumn Clinic;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewButtonColumn Column5;
+        private DataGridViewTextBoxColumn c1;
+        private DataGridViewTextBoxColumn c2;
+        private DataGridViewTextBoxColumn c3;
+        private DataGridViewTextBoxColumn c4;
+        private DataGridViewTextBoxColumn c5;
     }
 }

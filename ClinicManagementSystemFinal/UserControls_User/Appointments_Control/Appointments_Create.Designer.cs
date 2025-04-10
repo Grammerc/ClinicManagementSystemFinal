@@ -1,6 +1,6 @@
 ﻿namespace ClinicManagementSystemFinal.UserControls_User
 {
-    partial class Appointments_User
+    partial class Appointments_Create
     {
         /// <summary> 
         /// Required designer variable.
@@ -253,7 +253,7 @@
             cbxTimeSlot.Font = new Font("Segoe UI", 10F);
             cbxTimeSlot.ForeColor = Color.FromArgb(68, 88, 112);
             cbxTimeSlot.ItemHeight = 30;
-            cbxTimeSlot.Items.AddRange(new object[] { "8:00 A.M. - 9:00 A.M.", "9:00 A.M. - 10:00 A.M", "10:00 A.M. - 11:00 A.M.", "11:00 A.M. - 12:00 A.M. ", "12:00 A.M. - 1:00 A.M.", "1:00 A.M. - 2:00 A.M.", "2:00 A.M. - 3:00 A.M.", "3:00 A.M. - 4:00 A.M.", "4:00 A.M. - 5:00 A.M.", "5:00 A.M. - 6:00 A.M." });
+            cbxTimeSlot.Items.AddRange(new object[] { "8:00 A.M. - 9:00 A.M.", "9:00 A.M. - 10:00 A.M", "10:00 A.M. - 11:00 A.M.", "11:00 A.M. - 12:00 A.M. ", "12:00 A.M. - 1:00 A.M.", "1:00 P.M. - 2:00  P.M.", "2:00  P.M. - 3:00  P.M.", "3:00  P.M. - 4:00  P.M.", "4:00 P.M. - 5:00  P.M.", "5:00  P.M. - 6:00  P.M." });
             cbxTimeSlot.Location = new Point(3, 224);
             cbxTimeSlot.Name = "cbxTimeSlot";
             cbxTimeSlot.ShadowDecoration.CustomizableEdges = customizableEdges10;
@@ -364,14 +364,14 @@
             tbxOtherConcerns.TabIndex = 0;
             tbxOtherConcerns.Visible = false;
             // 
-            // Appointments_User
+            // Appointments_Create
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(guna2Panel3);
             Controls.Add(guna2Panel2);
             Controls.Add(guna2Panel1);
-            Name = "Appointments_User";
+            Name = "Appointments_Create";
             Size = new Size(793, 662);
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();

@@ -26,17 +26,18 @@ namespace ClinicManagementSystemFinal.UserControls_User.Appointments_Control
             {
                 conn.Open();
                 string query = @"
-            SELECT 
-                A.AppointmentDate AS [Date],
-                C.ClinicName AS [Clinic],
-                A.ReasonForVisit AS [Reason For Visit],
-                D.DoctorName AS [Doctor-In-Charge],
-                A.Status
-            FROM Appointments A
-            INNER JOIN Clinics C ON A.ClinicID = C.ClinicID
-            INNER JOIN Doctors D ON A.DoctorID = D.DoctorID
-            WHERE A.UserInfoID = (SELECT UserInfoID FROM Information WHERE LoginID = @loginId)
-            ORDER BY A.AppointmentDate DESC";
+    SELECT 
+        A.AppointmentDate AS [Date],
+        C.ClinicName AS [Clinic],
+        A.ReasonForVisit AS [Reason For Visit],
+        D.DoctorName AS [Doctor-In-Charge],
+        A.Status
+    FROM ((Appointments A
+    INNER JOIN Clinics C ON A.ClinicID = C.ClinicID)
+    INNER JOIN Doctors D ON A.DoctorID = D.DoctorID)
+    INNER JOIN Information I ON A.UserInfoID = I.UserInfoID
+    WHERE I.LoginID = @loginId
+    ORDER BY A.AppointmentDate DESC";
 
                 OleDbCommand cmd = new OleDbCommand(query, conn);
                 cmd.Parameters.AddWithValue("@loginId", userLoginId);
@@ -44,6 +45,13 @@ namespace ClinicManagementSystemFinal.UserControls_User.Appointments_Control
                 OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
+                dgvRead.AutoGenerateColumns = false;
+
+                dgvRead.Columns["c1"].DataPropertyName = "Date";
+                dgvRead.Columns["c2"].DataPropertyName = "Clinic";
+                dgvRead.Columns["c3"].DataPropertyName = "Reason For Visit";
+                dgvRead.Columns["c4"].DataPropertyName = "Doctor-In-Charge";
+                dgvRead.Columns["c5"].DataPropertyName = "Status";
 
                 dgvRead.DataSource = dt;
 

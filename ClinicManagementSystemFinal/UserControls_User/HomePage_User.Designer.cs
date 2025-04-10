@@ -33,20 +33,20 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -76,19 +76,19 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel10 = new Guna.UI2.WinForms.Guna2Panel();
-            btnService = new Guna.UI2.WinForms.Guna2Button();
+            btnClinics = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
             btnSettings = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
-            btnLogOut = new Guna.UI2.WinForms.Guna2Button();
+            btnService = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
-            btnClinics = new Guna.UI2.WinForms.Guna2Button();
+            btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             menuContainer = new Guna.UI2.WinForms.Guna2Panel();
             flowLayoutPanel1 = new FlowLayoutPanel();
             btnAppointments = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            btnView = new Guna.UI2.WinForms.Guna2Button();
+            btnUpdate = new Guna.UI2.WinForms.Guna2Button();
+            btnDelete = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             btnDashboard = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
@@ -142,11 +142,68 @@
             guna2Panel10.Controls.Add(btnService);
             guna2Panel10.CustomizableEdges = customizableEdges3;
             guna2Panel10.Dock = DockStyle.Top;
-            guna2Panel10.Location = new Point(0, 395);
+            guna2Panel10.Location = new Point(0, 553);
             guna2Panel10.Name = "guna2Panel10";
             guna2Panel10.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2Panel10.Size = new Size(221, 53);
             guna2Panel10.TabIndex = 13;
+            // 
+            // btnClinics
+            // 
+            btnClinics.CustomizableEdges = customizableEdges5;
+            btnClinics.DisabledState.BorderColor = Color.DarkGray;
+            btnClinics.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnClinics.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnClinics.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnClinics.Dock = DockStyle.Fill;
+            btnClinics.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnClinics.ForeColor = Color.White;
+            btnClinics.Location = new Point(0, 0);
+            btnClinics.Name = "btnClinics";
+            btnClinics.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnClinics.Size = new Size(221, 53);
+            btnClinics.TabIndex = 5;
+            btnClinics.Text = "Clinics";
+            btnClinics.Click += btnClinics_Click;
+            // 
+            // guna2Panel8
+            // 
+            guna2Panel8.Controls.Add(btnClinics);
+            guna2Panel8.CustomizableEdges = customizableEdges7;
+            guna2Panel8.Dock = DockStyle.Top;
+            guna2Panel8.Location = new Point(0, 500);
+            guna2Panel8.Name = "guna2Panel8";
+            guna2Panel8.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2Panel8.Size = new Size(221, 53);
+            guna2Panel8.TabIndex = 11;
+            // 
+            // btnSettings
+            // 
+            btnSettings.CustomizableEdges = customizableEdges9;
+            btnSettings.DisabledState.BorderColor = Color.DarkGray;
+            btnSettings.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnSettings.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnSettings.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnSettings.Dock = DockStyle.Fill;
+            btnSettings.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnSettings.ForeColor = Color.White;
+            btnSettings.Location = new Point(0, 0);
+            btnSettings.Name = "btnSettings";
+            btnSettings.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnSettings.Size = new Size(221, 53);
+            btnSettings.TabIndex = 16;
+            btnSettings.Text = "Settings";
+            // 
+            // guna2Panel7
+            // 
+            guna2Panel7.Controls.Add(btnSettings);
+            guna2Panel7.CustomizableEdges = customizableEdges11;
+            guna2Panel7.Dock = DockStyle.Bottom;
+            guna2Panel7.Location = new Point(0, 636);
+            guna2Panel7.Name = "guna2Panel7";
+            guna2Panel7.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2Panel7.Size = new Size(221, 53);
+            guna2Panel7.TabIndex = 10;
             // 
             // btnService
             // 
@@ -166,43 +223,16 @@
             btnService.Text = "Services";
             btnService.Click += btnService_Click;
             // 
-            // guna2Panel8
+            // guna2Panel5
             // 
-            guna2Panel8.Controls.Add(btnSettings);
-            guna2Panel8.CustomizableEdges = customizableEdges7;
-            guna2Panel8.Dock = DockStyle.Bottom;
-            guna2Panel8.Location = new Point(0, 636);
-            guna2Panel8.Name = "guna2Panel8";
-            guna2Panel8.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Panel8.Size = new Size(221, 53);
-            guna2Panel8.TabIndex = 11;
-            // 
-            // btnSettings
-            // 
-            btnSettings.CustomizableEdges = customizableEdges5;
-            btnSettings.DisabledState.BorderColor = Color.DarkGray;
-            btnSettings.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnSettings.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnSettings.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnSettings.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            btnSettings.ForeColor = Color.White;
-            btnSettings.Location = new Point(0, 0);
-            btnSettings.Name = "btnSettings";
-            btnSettings.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnSettings.Size = new Size(221, 53);
-            btnSettings.TabIndex = 16;
-            btnSettings.Text = "Settings";
-            // 
-            // guna2Panel7
-            // 
-            guna2Panel7.Controls.Add(btnClinics);
-            guna2Panel7.CustomizableEdges = customizableEdges11;
-            guna2Panel7.Dock = DockStyle.Top;
-            guna2Panel7.Location = new Point(0, 342);
-            guna2Panel7.Name = "guna2Panel7";
-            guna2Panel7.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2Panel7.Size = new Size(221, 53);
-            guna2Panel7.TabIndex = 10;
+            guna2Panel5.Controls.Add(btnLogOut);
+            guna2Panel5.CustomizableEdges = customizableEdges15;
+            guna2Panel5.Dock = DockStyle.Bottom;
+            guna2Panel5.Location = new Point(0, 689);
+            guna2Panel5.Name = "guna2Panel5";
+            guna2Panel5.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            guna2Panel5.Size = new Size(221, 53);
+            guna2Panel5.TabIndex = 8;
             // 
             // btnLogOut
             // 
@@ -221,55 +251,29 @@
             btnLogOut.Text = "Log Out";
             btnLogOut.Click += btnLogOut_Click;
             // 
-            // guna2Panel5
-            // 
-            guna2Panel5.Controls.Add(btnLogOut);
-            guna2Panel5.CustomizableEdges = customizableEdges15;
-            guna2Panel5.Dock = DockStyle.Bottom;
-            guna2Panel5.Location = new Point(0, 689);
-            guna2Panel5.Name = "guna2Panel5";
-            guna2Panel5.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2Panel5.Size = new Size(221, 53);
-            guna2Panel5.TabIndex = 8;
-            // 
-            // btnClinics
-            // 
-            btnClinics.CustomizableEdges = customizableEdges9;
-            btnClinics.DisabledState.BorderColor = Color.DarkGray;
-            btnClinics.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnClinics.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnClinics.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnClinics.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            btnClinics.ForeColor = Color.White;
-            btnClinics.Location = new Point(0, 0);
-            btnClinics.Name = "btnClinics";
-            btnClinics.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btnClinics.Size = new Size(221, 53);
-            btnClinics.TabIndex = 5;
-            btnClinics.Text = "Clinics";
-            btnClinics.Click += btnClinics_Click;
-            // 
             // menuContainer
             // 
             menuContainer.Controls.Add(flowLayoutPanel1);
             menuContainer.CustomizableEdges = customizableEdges25;
             menuContainer.Dock = DockStyle.Top;
             menuContainer.Location = new Point(0, 289);
+            menuContainer.MaximumSize = new Size(0, 211);
+            menuContainer.MinimumSize = new Size(0, 53);
             menuContainer.Name = "menuContainer";
             menuContainer.ShadowDecoration.CustomizableEdges = customizableEdges26;
-            menuContainer.Size = new Size(221, 53);
+            menuContainer.Size = new Size(221, 211);
             menuContainer.TabIndex = 7;
             // 
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.Controls.Add(btnAppointments);
-            flowLayoutPanel1.Controls.Add(guna2Button1);
-            flowLayoutPanel1.Controls.Add(guna2Button2);
-            flowLayoutPanel1.Controls.Add(guna2Button3);
+            flowLayoutPanel1.Controls.Add(btnView);
+            flowLayoutPanel1.Controls.Add(btnUpdate);
+            flowLayoutPanel1.Controls.Add(btnDelete);
             flowLayoutPanel1.Dock = DockStyle.Fill;
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(221, 53);
+            flowLayoutPanel1.Size = new Size(221, 211);
             flowLayoutPanel1.TabIndex = 0;
             // 
             // btnAppointments
@@ -290,57 +294,60 @@
             btnAppointments.Text = "Appointments";
             btnAppointments.Click += btnAppointments_Click;
             // 
-            // guna2Button1
+            // btnView
             // 
-            guna2Button1.CustomizableEdges = customizableEdges19;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.Dock = DockStyle.Top;
-            guna2Button1.Font = new Font("Segoe UI", 9F);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(0, 53);
-            guna2Button1.Margin = new Padding(0);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            guna2Button1.Size = new Size(221, 53);
-            guna2Button1.TabIndex = 0;
-            guna2Button1.Text = "View Appointments";
+            btnView.CustomizableEdges = customizableEdges19;
+            btnView.DisabledState.BorderColor = Color.DarkGray;
+            btnView.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnView.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnView.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnView.Dock = DockStyle.Top;
+            btnView.Font = new Font("Segoe UI", 9F);
+            btnView.ForeColor = Color.White;
+            btnView.Location = new Point(0, 53);
+            btnView.Margin = new Padding(0);
+            btnView.Name = "btnView";
+            btnView.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            btnView.Size = new Size(221, 53);
+            btnView.TabIndex = 0;
+            btnView.Text = "View Appointments";
+            btnView.Click += btnView_Click;
             // 
-            // guna2Button2
+            // btnUpdate
             // 
-            guna2Button2.CustomizableEdges = customizableEdges21;
-            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button2.Font = new Font("Segoe UI", 9F);
-            guna2Button2.ForeColor = Color.White;
-            guna2Button2.Location = new Point(0, 106);
-            guna2Button2.Margin = new Padding(0);
-            guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            guna2Button2.Size = new Size(221, 53);
-            guna2Button2.TabIndex = 0;
-            guna2Button2.Text = "Update Appointments";
+            btnUpdate.CustomizableEdges = customizableEdges21;
+            btnUpdate.DisabledState.BorderColor = Color.DarkGray;
+            btnUpdate.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnUpdate.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnUpdate.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnUpdate.Font = new Font("Segoe UI", 9F);
+            btnUpdate.ForeColor = Color.White;
+            btnUpdate.Location = new Point(0, 106);
+            btnUpdate.Margin = new Padding(0);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            btnUpdate.Size = new Size(221, 53);
+            btnUpdate.TabIndex = 0;
+            btnUpdate.Text = "Update Appointments";
+            btnUpdate.Click += btnUpdate_Click;
             // 
-            // guna2Button3
+            // btnDelete
             // 
-            guna2Button3.CustomizableEdges = customizableEdges23;
-            guna2Button3.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button3.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button3.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button3.Font = new Font("Segoe UI", 9F);
-            guna2Button3.ForeColor = Color.White;
-            guna2Button3.Location = new Point(0, 159);
-            guna2Button3.Margin = new Padding(0);
-            guna2Button3.Name = "guna2Button3";
-            guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            guna2Button3.Size = new Size(221, 55);
-            guna2Button3.TabIndex = 0;
-            guna2Button3.Text = "Delete Appointments";
+            btnDelete.CustomizableEdges = customizableEdges23;
+            btnDelete.DisabledState.BorderColor = Color.DarkGray;
+            btnDelete.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnDelete.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnDelete.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnDelete.Font = new Font("Segoe UI", 9F);
+            btnDelete.ForeColor = Color.White;
+            btnDelete.Location = new Point(0, 159);
+            btnDelete.Margin = new Padding(0);
+            btnDelete.Name = "btnDelete";
+            btnDelete.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            btnDelete.Size = new Size(221, 52);
+            btnDelete.TabIndex = 0;
+            btnDelete.Text = "Delete Appointments";
+            btnDelete.Click += btnDelete_Click;
             // 
             // guna2Panel3
             // 
@@ -601,9 +608,9 @@
         private ReaLTaiizor.Controls.NightControlBox nightControlBox2;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2TextBox tbxSearchBar;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnDelete;
+        private Guna.UI2.WinForms.Guna2Button btnUpdate;
+        private Guna.UI2.WinForms.Guna2Button btnView;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private Guna.UI2.WinForms.Guna2Panel menuContainer;
         private System.Windows.Forms.Timer menuTransition;

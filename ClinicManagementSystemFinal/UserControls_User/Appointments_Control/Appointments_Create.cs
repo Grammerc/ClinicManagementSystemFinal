@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace ClinicManagementSystemFinal.UserControls_User
 {
-    public partial class Appointments_User : UserControl
+    public partial class Appointments_Create : UserControl
     {
 
         private OleDbConnection conn = new OleDbConnection();
         private string userLoginId;
-        public Appointments_User(string loginId)
+        public Appointments_Create(string loginId)
         {
             InitializeComponent();
             cbxClinicName.SelectedIndexChanged += new EventHandler(cbxClinicName_SelectedIndexChanged);

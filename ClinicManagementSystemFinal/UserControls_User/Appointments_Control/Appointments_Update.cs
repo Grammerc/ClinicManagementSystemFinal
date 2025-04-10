@@ -8,10 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ClinicManagementSystemFinal.UserControls_User.Appointments_Control
+namespace ClinicManagementSystemFinal.UserControls_User
 {
     public partial class Appointments_Update : UserControl
     {
+
         public Appointments_Update()
         {
             InitializeComponent();

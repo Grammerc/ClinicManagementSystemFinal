@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClinicManagementSystemFinal.UserControls_User;
+using ClinicManagementSystemFinal.UserControls_User.Appointments_Control;
 
 namespace ClinicManagementSystemFinal
 {
@@ -215,7 +216,7 @@ namespace ClinicManagementSystemFinal
         private void btnAppointment_Click(object sender, EventArgs e)
         {
             menuTransition.Start();
-            LoadControl(new Appointments_User(userLoginId));
+            LoadControl(new Appointments_Create(userLoginId));
         }
 
         private void btnDoctor_Click(object sender, EventArgs e)
@@ -294,21 +295,21 @@ namespace ClinicManagementSystemFinal
             LoadControl(new Dashboard_User());
         }
 
-		private void btnAppointments_Click(object sender, EventArgs e)
-		{
-			if (menuContainer.Height == 53)
-			{
-				menuContainer.Height = 215; 
-			}
-			else
-			{
-				menuContainer.Height = 53; 
-			}
+        private void btnAppointments_Click(object sender, EventArgs e)
+        {
+            if (menuContainer.Height == 53)
+            {
+                menuContainer.Height = 215;
+            }
+            else
+            {
+                menuContainer.Height = 53;
+            }
 
-			LoadControl(new Appointments_User(userLoginId));
-		}
+            LoadControl(new Appointments_Create(userLoginId));
+        }
 
-		private void btnClinics_Click(object sender, EventArgs e)
+        private void btnClinics_Click(object sender, EventArgs e)
         {
             LoadControl(new Clinics());
         }
@@ -329,27 +330,42 @@ namespace ClinicManagementSystemFinal
         }
 
         bool menuExpand = false;
-		private void menuTransition_Tick(object sender, EventArgs e)
-		{
-		if (menuExpand == false)
-			{
-				menuContainer.Height += 10;
-				if (menuContainer.Height >= 215)
-				{
-					menuTransition.Stop();
-					menuExpand = true;
-				}
-			}
-			else
-			{
-				menuContainer.Height -= 10;
-				if (menuContainer.Height <= 53)
-				{
-					menuTransition.Stop();
-					menuExpand = false;
-				}
-			}
-		}
-	}
+        private void menuTransition_Tick(object sender, EventArgs e)
+        {
+            if (menuExpand == false)
+            {
+                menuContainer.Height += 10;
+                if (menuContainer.Height >= 215)
+                {
+                    menuTransition.Stop();
+                    menuExpand = true;
+                }
+            }
+            else
+            {
+                menuContainer.Height -= 10;
+                if (menuContainer.Height <= 53)
+                {
+                    menuTransition.Stop();
+                    menuExpand = false;
+                }
+            }
+        }
+
+        private void btnView_Click(object sender, EventArgs e)
+        {
+            LoadControl(new Appointments_Read(userLoginId));
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            LoadControl(new Appointments_Update());
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            LoadControl(new Appointments_Remove());
+        }
+    }
 }
 

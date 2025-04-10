@@ -42,6 +42,7 @@
             c3 = new DataGridViewTextBoxColumn();
             c4 = new DataGridViewTextBoxColumn();
             c5 = new DataGridViewTextBoxColumn();
+            c6 = new DataGridViewTextBoxColumn();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvRead).BeginInit();
             guna2Panel1.SuspendLayout();
@@ -80,7 +81,7 @@
             dgvRead.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvRead.ColumnHeadersHeight = 17;
             dgvRead.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvRead.Columns.AddRange(new DataGridViewColumn[] { c1, c2, c3, c4, c5 });
+            dgvRead.Columns.AddRange(new DataGridViewColumn[] { c1, c2, c3, c4, c5, c6 });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
@@ -146,13 +147,18 @@
             // 
             // c4
             // 
-            c4.HeaderText = "Doctor-In-Charge";
+            c4.HeaderText = "Time Slot";
             c4.Name = "c4";
             // 
             // c5
             // 
-            c5.HeaderText = "Status";
+            c5.HeaderText = "Doctor-In-Charge";
             c5.Name = "c5";
+            // 
+            // c6
+            // 
+            c6.HeaderText = "Status";
+            c6.Name = "c6";
             // 
             // Appointments_Read
             // 
@@ -181,5 +187,6 @@
         private DataGridViewTextBoxColumn c3;
         private DataGridViewTextBoxColumn c4;
         private DataGridViewTextBoxColumn c5;
+        private DataGridViewTextBoxColumn c6;
     }
 }

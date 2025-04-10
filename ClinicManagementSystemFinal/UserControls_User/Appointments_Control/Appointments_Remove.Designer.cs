@@ -57,6 +57,7 @@
             c3 = new DataGridViewTextBoxColumn();
             c4 = new DataGridViewTextBoxColumn();
             c5 = new DataGridViewTextBoxColumn();
+            c6 = new DataGridViewTextBoxColumn();
             Delete = new DataGridViewButtonColumn();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvRead).BeginInit();
@@ -205,7 +206,7 @@
             dgvRemove.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dgvRemove.ColumnHeadersHeight = 17;
             dgvRemove.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvRemove.Columns.AddRange(new DataGridViewColumn[] { c1, c2, c3, c4, c5, Delete });
+            dgvRemove.Columns.AddRange(new DataGridViewColumn[] { c1, c2, c3, c4, c5, c6, Delete });
             dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = Color.White;
             dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
@@ -242,6 +243,7 @@
             dgvRemove.ThemeStyle.RowsStyle.Height = 25;
             dgvRemove.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgvRemove.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgvRemove.CellClick += dgvRemove_CellClick;
             dgvRemove.CellContentClick += dgvRemove_CellContentClick;
             // 
             // panel1
@@ -280,13 +282,18 @@
             // 
             // c4
             // 
-            c4.HeaderText = "Doctor-In-Charge";
+            c4.HeaderText = "Time Slot";
             c4.Name = "c4";
             // 
             // c5
             // 
-            c5.HeaderText = "Status";
+            c5.HeaderText = "Doctor-In-Charge";
             c5.Name = "c5";
+            // 
+            // c6
+            // 
+            c6.HeaderText = "Status";
+            c6.Name = "c6";
             // 
             // Delete
             // 
@@ -339,6 +346,7 @@
         private DataGridViewTextBoxColumn c3;
         private DataGridViewTextBoxColumn c4;
         private DataGridViewTextBoxColumn c5;
+        private DataGridViewTextBoxColumn c6;
         private DataGridViewButtonColumn Delete;
     }
 }

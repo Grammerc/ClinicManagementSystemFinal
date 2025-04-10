@@ -18,14 +18,14 @@ namespace ClinicManagementSystemFinal.UserControls_User.Appointments_Control
         {
             InitializeComponent();
             userLoginId = loginId;
-           // this.Load += Appointments_Remove_Load;
+            // this.Load += Appointments_Remove_Load;
 
             MessageBox.Show("Event Attached");
-            dgvRemove.CellContentClick += dgvRemove_CellContentClick;
+
         }
 
         private bool isProcessingClick = false;
-        private void dgvRemove_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvRemove_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             MessageBox.Show($"Clicked: Row {e.RowIndex}, Column {e.ColumnIndex} - {dgvRemove.Columns[e.ColumnIndex].Name}");
             if (isProcessingClick) return;
@@ -86,6 +86,7 @@ namespace ClinicManagementSystemFinal.UserControls_User.Appointments_Control
             A.AppointmentDate AS [Date],
             C.ClinicName AS [Clinic],
             A.ReasonForVisit AS [Reason For Visit],
+            A.TimeSlot AS [Time Slot],
             D.DoctorName AS [Doctor-In-Charge],
             A.Status
         FROM ((Appointments A
@@ -102,11 +103,10 @@ namespace ClinicManagementSystemFinal.UserControls_User.Appointments_Control
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
 
-                dgvRemove.DataSource = null; // Clear previous binding
-                dgvRemove.Columns.Clear();   // Clear old columns
+                dgvRemove.DataSource = null;
+                dgvRemove.Columns.Clear();
                 dgvRemove.AutoGenerateColumns = false;
 
-                // Add hidden AppointmentID column
                 DataGridViewTextBoxColumn idCol = new DataGridViewTextBoxColumn();
                 idCol.Name = "AppointmentID";
                 idCol.HeaderText = "ID";
@@ -114,14 +114,13 @@ namespace ClinicManagementSystemFinal.UserControls_User.Appointments_Control
                 idCol.DataPropertyName = "AppointmentID";
                 dgvRemove.Columns.Add(idCol);
 
-                // Add columns c1 to c5
                 dgvRemove.Columns.Add(new DataGridViewTextBoxColumn { Name = "c1", HeaderText = "Date", DataPropertyName = "Date" });
                 dgvRemove.Columns.Add(new DataGridViewTextBoxColumn { Name = "c2", HeaderText = "Clinic", DataPropertyName = "Clinic" });
                 dgvRemove.Columns.Add(new DataGridViewTextBoxColumn { Name = "c3", HeaderText = "Reason For Visit", DataPropertyName = "Reason For Visit" });
-                dgvRemove.Columns.Add(new DataGridViewTextBoxColumn { Name = "c4", HeaderText = "Doctor-In-Charge", DataPropertyName = "Doctor-In-Charge" });
-                dgvRemove.Columns.Add(new DataGridViewTextBoxColumn { Name = "c5", HeaderText = "Status", DataPropertyName = "Status" });
+                dgvRemove.Columns.Add(new DataGridViewTextBoxColumn { Name = "c4", HeaderText = "Time Slot", DataPropertyName = "Time Slot" });
+                dgvRemove.Columns.Add(new DataGridViewTextBoxColumn { Name = "c5", HeaderText = "Doctor-In-Charge", DataPropertyName = "Doctor-In-Charge" });
+                dgvRemove.Columns.Add(new DataGridViewTextBoxColumn { Name = "c6", HeaderText = "Status", DataPropertyName = "Status" });
 
-                // Add Delete Button Column only once
                 DataGridViewButtonColumn deleteCol = new DataGridViewButtonColumn();
                 deleteCol.Name = "Delete";
                 deleteCol.HeaderText = "Delete";
@@ -129,7 +128,6 @@ namespace ClinicManagementSystemFinal.UserControls_User.Appointments_Control
                 deleteCol.UseColumnTextForButtonValue = true;
                 dgvRemove.Columns.Add(deleteCol);
 
-                // Set data source last
                 dgvRemove.DataSource = dt;
 
                 conn.Close();
@@ -139,6 +137,11 @@ namespace ClinicManagementSystemFinal.UserControls_User.Appointments_Control
         private void Appointments_Remove_Load(object sender, EventArgs e)
         {
             LoadAppointments();
+        }
+
+        private void dgvRemove_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

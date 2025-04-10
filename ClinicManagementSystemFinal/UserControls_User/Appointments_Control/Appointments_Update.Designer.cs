@@ -46,9 +46,9 @@
             c1 = new DataGridViewTextBoxColumn();
             c2 = new DataGridViewTextBoxColumn();
             c3 = new DataGridViewTextBoxColumn();
-            c4 = new DataGridViewTextBoxColumn();
             c5 = new DataGridViewTextBoxColumn();
-            c6 = new DataGridViewButtonColumn();
+            c4 = new DataGridViewTextBoxColumn();
+            c6 = new DataGridViewTextBoxColumn();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvAppointments).BeginInit();
             SuspendLayout();
@@ -86,7 +86,7 @@
             dgvAppointments.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvAppointments.ColumnHeadersHeight = 17;
             dgvAppointments.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvAppointments.Columns.AddRange(new DataGridViewColumn[] { c1, c2, c3, c4, c5, c6 });
+            dgvAppointments.Columns.AddRange(new DataGridViewColumn[] { c1, c2, c3, c5, c4, c6 });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
@@ -138,7 +138,7 @@
             btnUpdate.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnUpdate.Size = new Size(180, 45);
             btnUpdate.TabIndex = 13;
-            btnUpdate.Text = "guna2Button1";
+            btnUpdate.Text = "Update";
             // 
             // scheduleDate
             // 
@@ -166,6 +166,7 @@
             scheduleTime.Font = new Font("Segoe UI", 10F);
             scheduleTime.ForeColor = Color.FromArgb(68, 88, 112);
             scheduleTime.ItemHeight = 30;
+            scheduleTime.Items.AddRange(new object[] { "8:00 A.M. - 9:00 A.M.", "9:00 A.M. - 10:00 A.M", "10:00 A.M. - 11:00 A.M.", "11:00 A.M. - 12:00 A.M. ", "12:00 A.M. - 1:00 A.M.", "1:00 P.M. - 2:00  P.M.", "2:00  P.M. - 3:00  P.M.", "3:00  P.M. - 4:00  P.M.", "4:00 P.M. - 5:00  P.M.", "5:00  P.M. - 6:00  P.M." });
             scheduleTime.Location = new Point(277, 438);
             scheduleTime.Name = "scheduleTime";
             scheduleTime.ShadowDecoration.CustomizableEdges = customizableEdges6;
@@ -187,19 +188,19 @@
             c3.HeaderText = "Reason For Visit";
             c3.Name = "c3";
             // 
-            // c4
-            // 
-            c4.HeaderText = "Doctor-In-Charge";
-            c4.Name = "c4";
-            // 
             // c5
             // 
-            c5.HeaderText = "Status";
+            c5.HeaderText = "Doctor-In-Charge";
             c5.Name = "c5";
+            // 
+            // c4
+            // 
+            c4.HeaderText = "Time Slot";
+            c4.Name = "c4";
             // 
             // c6
             // 
-            c6.HeaderText = "Delete";
+            c6.HeaderText = "Status";
             c6.Name = "c6";
             // 
             // Appointments_Update
@@ -231,8 +232,8 @@
         private DataGridViewTextBoxColumn c1;
         private DataGridViewTextBoxColumn c2;
         private DataGridViewTextBoxColumn c3;
-        private DataGridViewTextBoxColumn c4;
         private DataGridViewTextBoxColumn c5;
-        private DataGridViewButtonColumn c6;
+        private DataGridViewTextBoxColumn c4;
+        private DataGridViewTextBoxColumn c6;
     }
 }

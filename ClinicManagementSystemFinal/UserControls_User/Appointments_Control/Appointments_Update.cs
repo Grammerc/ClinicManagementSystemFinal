@@ -36,19 +36,20 @@ namespace ClinicManagementSystemFinal.UserControls_User
             {
                 conn.Open();
                 string query = @"
-SELECT 
-    A.AppointmentID,
-    A.AppointmentDate AS [Date],
-    C.ClinicName AS [Clinic],
-    A.ReasonForVisit AS [Reason For Visit],
-    D.DoctorName AS [Doctor-In-Charge],
-    A.Status
-FROM ((Appointments A
-INNER JOIN Clinics C ON A.ClinicID = C.ClinicID)
-INNER JOIN Doctors D ON A.DoctorID = D.DoctorID)
-INNER JOIN Information I ON A.UserInfoID = I.UserInfoID
-WHERE I.LoginID = @loginId
-ORDER BY A.AppointmentDate DESC";
+        SELECT 
+            A.AppointmentID,
+            A.AppointmentDate AS [Date],
+            C.ClinicName AS [Clinic],
+            A.ReasonForVisit AS [Reason For Visit],
+            A.TimeSlot AS [Time Slot],
+            D.DoctorName AS [Doctor-In-Charge],
+            A.Status
+        FROM ((Appointments A
+        INNER JOIN Clinics C ON A.ClinicID = C.ClinicID)
+        INNER JOIN Doctors D ON A.DoctorID = D.DoctorID)
+        INNER JOIN Information I ON A.UserInfoID = I.UserInfoID
+        WHERE I.LoginID = @loginId
+        ORDER BY A.AppointmentDate DESC";
 
                 OleDbCommand cmd = new OleDbCommand(query, conn);
                 cmd.Parameters.AddWithValue("@loginId", userLoginId);
@@ -62,8 +63,9 @@ ORDER BY A.AppointmentDate DESC";
                 dgvAppointments.Columns["c1"].DataPropertyName = "Date";
                 dgvAppointments.Columns["c2"].DataPropertyName = "Clinic";
                 dgvAppointments.Columns["c3"].DataPropertyName = "Reason For Visit";
-                dgvAppointments.Columns["c4"].DataPropertyName = "Doctor-In-Charge";
-                dgvAppointments.Columns["c5"].DataPropertyName = "Status";
+                dgvAppointments.Columns["c4"].DataPropertyName = "Time Slot";
+                dgvAppointments.Columns["c5"].DataPropertyName = "Doctor-In-Charge";
+                dgvAppointments.Columns["c6"].DataPropertyName = "Status";
 
                 dgvAppointments.DataSource = dt;
 

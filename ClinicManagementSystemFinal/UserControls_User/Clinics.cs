@@ -43,7 +43,7 @@ namespace ClinicManagementSystemFinal.UserControls_User
             cbxTimeSlot.Items.Clear();
             cbxServices.Items.Clear();
 
-            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Downloads\Login.accdb;";
+            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;";
             using (OleDbConnection conn = new OleDbConnection(connStr))
             {
                 conn.Open();
@@ -90,7 +90,7 @@ namespace ClinicManagementSystemFinal.UserControls_User
 
         private void ApplyClinicFilters()
         {
-            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Downloads\Login.accdb;";
+            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;";
             using (OleDbConnection conn = new OleDbConnection(connStr))
             {
                 conn.Open();

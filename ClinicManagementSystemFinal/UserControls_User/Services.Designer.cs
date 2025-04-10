@@ -76,55 +76,55 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges51 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges51 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             label6 = new Label();
             panel1 = new Panel();
             panel3 = new Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
             panelService9 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2ImageButton9 = new Guna.UI2.WinForms.Guna2ImageButton();
+            btnImage9 = new Guna.UI2.WinForms.Guna2ImageButton();
             guna2Panel10 = new Guna.UI2.WinForms.Guna2Panel();
+            serviceName9 = new Label();
             panelService8 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2ImageButton8 = new Guna.UI2.WinForms.Guna2ImageButton();
+            btnImage8 = new Guna.UI2.WinForms.Guna2ImageButton();
             guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
+            serviceName8 = new Label();
             panelService7 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2ImageButton7 = new Guna.UI2.WinForms.Guna2ImageButton();
+            btnImage7 = new Guna.UI2.WinForms.Guna2ImageButton();
             guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
+            serviceName7 = new Label();
             panelService6 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2ImageButton6 = new Guna.UI2.WinForms.Guna2ImageButton();
+            btnImage6 = new Guna.UI2.WinForms.Guna2ImageButton();
             guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
+            serviceName6 = new Label();
             panelService5 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2ImageButton5 = new Guna.UI2.WinForms.Guna2ImageButton();
+            btnImage5 = new Guna.UI2.WinForms.Guna2ImageButton();
             guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
+            serviceName5 = new Label();
             panelService4 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2ImageButton4 = new Guna.UI2.WinForms.Guna2ImageButton();
+            btnImage4 = new Guna.UI2.WinForms.Guna2ImageButton();
             guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
+            serviceName4 = new Label();
             panelService3 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2ImageButton3 = new Guna.UI2.WinForms.Guna2ImageButton();
+            btnImage3 = new Guna.UI2.WinForms.Guna2ImageButton();
             guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            serviceName3 = new Label();
             panelService2 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
-            guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            btnImage2 = new Guna.UI2.WinForms.Guna2ImageButton();
+            guna2Panel3as = new Guna.UI2.WinForms.Guna2Panel();
+            serviceName2 = new Label();
             panelService1 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            btnImage1 = new Guna.UI2.WinForms.Guna2ImageButton();
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            label1 = new Label();
+            serviceName1 = new Label();
             panel2 = new Panel();
             tableLayoutPanel2 = new TableLayoutPanel();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            label9 = new Label();
-            label10 = new Label();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            btnNext = new Guna.UI2.WinForms.Guna2Button();
+            btnPrevious = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel1.SuspendLayout();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
@@ -144,7 +144,7 @@
             panelService3.SuspendLayout();
             guna2Panel4.SuspendLayout();
             panelService2.SuspendLayout();
-            guna2Panel3.SuspendLayout();
+            guna2Panel3as.SuspendLayout();
             panelService1.SuspendLayout();
             guna2Panel2.SuspendLayout();
             panel2.SuspendLayout();
@@ -168,9 +168,9 @@
             label6.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.Location = new Point(3, 15);
             label6.Name = "label6";
-            label6.Size = new Size(232, 25);
+            label6.Size = new Size(110, 25);
             label6.TabIndex = 2;
-            label6.Text = "Appointment Form";
+            label6.Text = "Services";
             // 
             // panel1
             // 
@@ -218,7 +218,7 @@
             // 
             // panelService9
             // 
-            panelService9.Controls.Add(guna2ImageButton9);
+            panelService9.Controls.Add(btnImage9);
             panelService9.Controls.Add(guna2Panel10);
             panelService9.CustomizableEdges = customizableEdges6;
             panelService9.Location = new Point(531, 363);
@@ -227,24 +227,25 @@
             panelService9.Size = new Size(258, 174);
             panelService9.TabIndex = 8;
             // 
-            // guna2ImageButton9
+            // btnImage9
             // 
-            guna2ImageButton9.CheckedState.ImageSize = new Size(64, 64);
-            guna2ImageButton9.Dock = DockStyle.Fill;
-            guna2ImageButton9.HoverState.ImageSize = new Size(64, 64);
-            guna2ImageButton9.Image = (Image)resources.GetObject("guna2ImageButton9.Image");
-            guna2ImageButton9.ImageOffset = new Point(0, 0);
-            guna2ImageButton9.ImageRotate = 0F;
-            guna2ImageButton9.Location = new Point(0, 35);
-            guna2ImageButton9.Name = "guna2ImageButton9";
-            guna2ImageButton9.PressedState.ImageSize = new Size(64, 64);
-            guna2ImageButton9.ShadowDecoration.CustomizableEdges = customizableEdges3;
-            guna2ImageButton9.Size = new Size(258, 139);
-            guna2ImageButton9.TabIndex = 3;
+            btnImage9.CheckedState.ImageSize = new Size(64, 64);
+            btnImage9.Cursor = Cursors.Hand;
+            btnImage9.Dock = DockStyle.Fill;
+            btnImage9.HoverState.ImageSize = new Size(64, 64);
+            btnImage9.Image = (Image)resources.GetObject("btnImage9.Image");
+            btnImage9.ImageOffset = new Point(0, 0);
+            btnImage9.ImageRotate = 0F;
+            btnImage9.Location = new Point(0, 35);
+            btnImage9.Name = "btnImage9";
+            btnImage9.PressedState.ImageSize = new Size(64, 64);
+            btnImage9.ShadowDecoration.CustomizableEdges = customizableEdges3;
+            btnImage9.Size = new Size(258, 139);
+            btnImage9.TabIndex = 3;
             // 
             // guna2Panel10
             // 
-            guna2Panel10.Controls.Add(label10);
+            guna2Panel10.Controls.Add(serviceName9);
             guna2Panel10.CustomizableEdges = customizableEdges4;
             guna2Panel10.Dock = DockStyle.Top;
             guna2Panel10.Location = new Point(0, 0);
@@ -253,9 +254,20 @@
             guna2Panel10.Size = new Size(258, 35);
             guna2Panel10.TabIndex = 2;
             // 
+            // serviceName9
+            // 
+            serviceName9.Anchor = AnchorStyles.Left;
+            serviceName9.AutoSize = true;
+            serviceName9.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            serviceName9.Location = new Point(103, 10);
+            serviceName9.Name = "serviceName9";
+            serviceName9.Size = new Size(53, 14);
+            serviceName9.TabIndex = 1;
+            serviceName9.Text = "label10";
+            // 
             // panelService8
             // 
-            panelService8.Controls.Add(guna2ImageButton8);
+            panelService8.Controls.Add(btnImage8);
             panelService8.Controls.Add(guna2Panel9);
             panelService8.CustomizableEdges = customizableEdges11;
             panelService8.Location = new Point(267, 363);
@@ -264,24 +276,25 @@
             panelService8.Size = new Size(258, 174);
             panelService8.TabIndex = 7;
             // 
-            // guna2ImageButton8
+            // btnImage8
             // 
-            guna2ImageButton8.CheckedState.ImageSize = new Size(64, 64);
-            guna2ImageButton8.Dock = DockStyle.Fill;
-            guna2ImageButton8.HoverState.ImageSize = new Size(64, 64);
-            guna2ImageButton8.Image = (Image)resources.GetObject("guna2ImageButton8.Image");
-            guna2ImageButton8.ImageOffset = new Point(0, 0);
-            guna2ImageButton8.ImageRotate = 0F;
-            guna2ImageButton8.Location = new Point(0, 35);
-            guna2ImageButton8.Name = "guna2ImageButton8";
-            guna2ImageButton8.PressedState.ImageSize = new Size(64, 64);
-            guna2ImageButton8.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2ImageButton8.Size = new Size(258, 139);
-            guna2ImageButton8.TabIndex = 3;
+            btnImage8.CheckedState.ImageSize = new Size(64, 64);
+            btnImage8.Cursor = Cursors.Hand;
+            btnImage8.Dock = DockStyle.Fill;
+            btnImage8.HoverState.ImageSize = new Size(64, 64);
+            btnImage8.Image = (Image)resources.GetObject("btnImage8.Image");
+            btnImage8.ImageOffset = new Point(0, 0);
+            btnImage8.ImageRotate = 0F;
+            btnImage8.Location = new Point(0, 35);
+            btnImage8.Name = "btnImage8";
+            btnImage8.PressedState.ImageSize = new Size(64, 64);
+            btnImage8.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnImage8.Size = new Size(258, 139);
+            btnImage8.TabIndex = 3;
             // 
             // guna2Panel9
             // 
-            guna2Panel9.Controls.Add(label9);
+            guna2Panel9.Controls.Add(serviceName8);
             guna2Panel9.CustomizableEdges = customizableEdges9;
             guna2Panel9.Dock = DockStyle.Top;
             guna2Panel9.Location = new Point(0, 0);
@@ -290,9 +303,20 @@
             guna2Panel9.Size = new Size(258, 35);
             guna2Panel9.TabIndex = 2;
             // 
+            // serviceName8
+            // 
+            serviceName8.Anchor = AnchorStyles.Left;
+            serviceName8.AutoSize = true;
+            serviceName8.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            serviceName8.Location = new Point(107, 10);
+            serviceName8.Name = "serviceName8";
+            serviceName8.Size = new Size(45, 14);
+            serviceName8.TabIndex = 1;
+            serviceName8.Text = "label9";
+            // 
             // panelService7
             // 
-            panelService7.Controls.Add(guna2ImageButton7);
+            panelService7.Controls.Add(btnImage7);
             panelService7.Controls.Add(guna2Panel8);
             panelService7.CustomizableEdges = customizableEdges16;
             panelService7.Location = new Point(3, 363);
@@ -301,24 +325,25 @@
             panelService7.Size = new Size(258, 174);
             panelService7.TabIndex = 6;
             // 
-            // guna2ImageButton7
+            // btnImage7
             // 
-            guna2ImageButton7.CheckedState.ImageSize = new Size(64, 64);
-            guna2ImageButton7.Dock = DockStyle.Fill;
-            guna2ImageButton7.HoverState.ImageSize = new Size(64, 64);
-            guna2ImageButton7.Image = (Image)resources.GetObject("guna2ImageButton7.Image");
-            guna2ImageButton7.ImageOffset = new Point(0, 0);
-            guna2ImageButton7.ImageRotate = 0F;
-            guna2ImageButton7.Location = new Point(0, 35);
-            guna2ImageButton7.Name = "guna2ImageButton7";
-            guna2ImageButton7.PressedState.ImageSize = new Size(64, 64);
-            guna2ImageButton7.ShadowDecoration.CustomizableEdges = customizableEdges13;
-            guna2ImageButton7.Size = new Size(258, 139);
-            guna2ImageButton7.TabIndex = 3;
+            btnImage7.CheckedState.ImageSize = new Size(64, 64);
+            btnImage7.Cursor = Cursors.Hand;
+            btnImage7.Dock = DockStyle.Fill;
+            btnImage7.HoverState.ImageSize = new Size(64, 64);
+            btnImage7.Image = (Image)resources.GetObject("btnImage7.Image");
+            btnImage7.ImageOffset = new Point(0, 0);
+            btnImage7.ImageRotate = 0F;
+            btnImage7.Location = new Point(0, 35);
+            btnImage7.Name = "btnImage7";
+            btnImage7.PressedState.ImageSize = new Size(64, 64);
+            btnImage7.ShadowDecoration.CustomizableEdges = customizableEdges13;
+            btnImage7.Size = new Size(258, 139);
+            btnImage7.TabIndex = 3;
             // 
             // guna2Panel8
             // 
-            guna2Panel8.Controls.Add(label8);
+            guna2Panel8.Controls.Add(serviceName7);
             guna2Panel8.CustomizableEdges = customizableEdges14;
             guna2Panel8.Dock = DockStyle.Top;
             guna2Panel8.Location = new Point(0, 0);
@@ -327,9 +352,20 @@
             guna2Panel8.Size = new Size(258, 35);
             guna2Panel8.TabIndex = 2;
             // 
+            // serviceName7
+            // 
+            serviceName7.Anchor = AnchorStyles.Left;
+            serviceName7.AutoSize = true;
+            serviceName7.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            serviceName7.Location = new Point(107, 10);
+            serviceName7.Name = "serviceName7";
+            serviceName7.Size = new Size(45, 14);
+            serviceName7.TabIndex = 1;
+            serviceName7.Text = "label8";
+            // 
             // panelService6
             // 
-            panelService6.Controls.Add(guna2ImageButton6);
+            panelService6.Controls.Add(btnImage6);
             panelService6.Controls.Add(guna2Panel7);
             panelService6.CustomizableEdges = customizableEdges21;
             panelService6.Location = new Point(531, 183);
@@ -338,24 +374,25 @@
             panelService6.Size = new Size(258, 174);
             panelService6.TabIndex = 5;
             // 
-            // guna2ImageButton6
+            // btnImage6
             // 
-            guna2ImageButton6.CheckedState.ImageSize = new Size(64, 64);
-            guna2ImageButton6.Dock = DockStyle.Fill;
-            guna2ImageButton6.HoverState.ImageSize = new Size(64, 64);
-            guna2ImageButton6.Image = (Image)resources.GetObject("guna2ImageButton6.Image");
-            guna2ImageButton6.ImageOffset = new Point(0, 0);
-            guna2ImageButton6.ImageRotate = 0F;
-            guna2ImageButton6.Location = new Point(0, 35);
-            guna2ImageButton6.Name = "guna2ImageButton6";
-            guna2ImageButton6.PressedState.ImageSize = new Size(64, 64);
-            guna2ImageButton6.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            guna2ImageButton6.Size = new Size(258, 139);
-            guna2ImageButton6.TabIndex = 3;
+            btnImage6.CheckedState.ImageSize = new Size(64, 64);
+            btnImage6.Cursor = Cursors.Hand;
+            btnImage6.Dock = DockStyle.Fill;
+            btnImage6.HoverState.ImageSize = new Size(64, 64);
+            btnImage6.Image = (Image)resources.GetObject("btnImage6.Image");
+            btnImage6.ImageOffset = new Point(0, 0);
+            btnImage6.ImageRotate = 0F;
+            btnImage6.Location = new Point(0, 35);
+            btnImage6.Name = "btnImage6";
+            btnImage6.PressedState.ImageSize = new Size(64, 64);
+            btnImage6.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            btnImage6.Size = new Size(258, 139);
+            btnImage6.TabIndex = 3;
             // 
             // guna2Panel7
             // 
-            guna2Panel7.Controls.Add(label7);
+            guna2Panel7.Controls.Add(serviceName6);
             guna2Panel7.CustomizableEdges = customizableEdges19;
             guna2Panel7.Dock = DockStyle.Top;
             guna2Panel7.Location = new Point(0, 0);
@@ -364,9 +401,20 @@
             guna2Panel7.Size = new Size(258, 35);
             guna2Panel7.TabIndex = 2;
             // 
+            // serviceName6
+            // 
+            serviceName6.Anchor = AnchorStyles.Left;
+            serviceName6.AutoSize = true;
+            serviceName6.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            serviceName6.Location = new Point(107, 10);
+            serviceName6.Name = "serviceName6";
+            serviceName6.Size = new Size(45, 14);
+            serviceName6.TabIndex = 1;
+            serviceName6.Text = "label7";
+            // 
             // panelService5
             // 
-            panelService5.Controls.Add(guna2ImageButton5);
+            panelService5.Controls.Add(btnImage5);
             panelService5.Controls.Add(guna2Panel6);
             panelService5.CustomizableEdges = customizableEdges26;
             panelService5.Location = new Point(267, 183);
@@ -375,24 +423,25 @@
             panelService5.Size = new Size(258, 174);
             panelService5.TabIndex = 4;
             // 
-            // guna2ImageButton5
+            // btnImage5
             // 
-            guna2ImageButton5.CheckedState.ImageSize = new Size(64, 64);
-            guna2ImageButton5.Dock = DockStyle.Fill;
-            guna2ImageButton5.HoverState.ImageSize = new Size(64, 64);
-            guna2ImageButton5.Image = (Image)resources.GetObject("guna2ImageButton5.Image");
-            guna2ImageButton5.ImageOffset = new Point(0, 0);
-            guna2ImageButton5.ImageRotate = 0F;
-            guna2ImageButton5.Location = new Point(0, 35);
-            guna2ImageButton5.Name = "guna2ImageButton5";
-            guna2ImageButton5.PressedState.ImageSize = new Size(64, 64);
-            guna2ImageButton5.ShadowDecoration.CustomizableEdges = customizableEdges23;
-            guna2ImageButton5.Size = new Size(258, 139);
-            guna2ImageButton5.TabIndex = 3;
+            btnImage5.CheckedState.ImageSize = new Size(64, 64);
+            btnImage5.Cursor = Cursors.Hand;
+            btnImage5.Dock = DockStyle.Fill;
+            btnImage5.HoverState.ImageSize = new Size(64, 64);
+            btnImage5.Image = (Image)resources.GetObject("btnImage5.Image");
+            btnImage5.ImageOffset = new Point(0, 0);
+            btnImage5.ImageRotate = 0F;
+            btnImage5.Location = new Point(0, 35);
+            btnImage5.Name = "btnImage5";
+            btnImage5.PressedState.ImageSize = new Size(64, 64);
+            btnImage5.ShadowDecoration.CustomizableEdges = customizableEdges23;
+            btnImage5.Size = new Size(258, 139);
+            btnImage5.TabIndex = 3;
             // 
             // guna2Panel6
             // 
-            guna2Panel6.Controls.Add(label5);
+            guna2Panel6.Controls.Add(serviceName5);
             guna2Panel6.CustomizableEdges = customizableEdges24;
             guna2Panel6.Dock = DockStyle.Top;
             guna2Panel6.Location = new Point(0, 0);
@@ -401,9 +450,20 @@
             guna2Panel6.Size = new Size(258, 35);
             guna2Panel6.TabIndex = 2;
             // 
+            // serviceName5
+            // 
+            serviceName5.Anchor = AnchorStyles.Left;
+            serviceName5.AutoSize = true;
+            serviceName5.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            serviceName5.Location = new Point(107, 10);
+            serviceName5.Name = "serviceName5";
+            serviceName5.Size = new Size(45, 14);
+            serviceName5.TabIndex = 1;
+            serviceName5.Text = "label5";
+            // 
             // panelService4
             // 
-            panelService4.Controls.Add(guna2ImageButton4);
+            panelService4.Controls.Add(btnImage4);
             panelService4.Controls.Add(guna2Panel5);
             panelService4.CustomizableEdges = customizableEdges31;
             panelService4.Location = new Point(3, 183);
@@ -412,24 +472,25 @@
             panelService4.Size = new Size(258, 174);
             panelService4.TabIndex = 3;
             // 
-            // guna2ImageButton4
+            // btnImage4
             // 
-            guna2ImageButton4.CheckedState.ImageSize = new Size(64, 64);
-            guna2ImageButton4.Dock = DockStyle.Fill;
-            guna2ImageButton4.HoverState.ImageSize = new Size(64, 64);
-            guna2ImageButton4.Image = (Image)resources.GetObject("guna2ImageButton4.Image");
-            guna2ImageButton4.ImageOffset = new Point(0, 0);
-            guna2ImageButton4.ImageRotate = 0F;
-            guna2ImageButton4.Location = new Point(0, 35);
-            guna2ImageButton4.Name = "guna2ImageButton4";
-            guna2ImageButton4.PressedState.ImageSize = new Size(64, 64);
-            guna2ImageButton4.ShadowDecoration.CustomizableEdges = customizableEdges28;
-            guna2ImageButton4.Size = new Size(258, 139);
-            guna2ImageButton4.TabIndex = 3;
+            btnImage4.CheckedState.ImageSize = new Size(64, 64);
+            btnImage4.Cursor = Cursors.Hand;
+            btnImage4.Dock = DockStyle.Fill;
+            btnImage4.HoverState.ImageSize = new Size(64, 64);
+            btnImage4.Image = (Image)resources.GetObject("btnImage4.Image");
+            btnImage4.ImageOffset = new Point(0, 0);
+            btnImage4.ImageRotate = 0F;
+            btnImage4.Location = new Point(0, 35);
+            btnImage4.Name = "btnImage4";
+            btnImage4.PressedState.ImageSize = new Size(64, 64);
+            btnImage4.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            btnImage4.Size = new Size(258, 139);
+            btnImage4.TabIndex = 3;
             // 
             // guna2Panel5
             // 
-            guna2Panel5.Controls.Add(label4);
+            guna2Panel5.Controls.Add(serviceName4);
             guna2Panel5.CustomizableEdges = customizableEdges29;
             guna2Panel5.Dock = DockStyle.Top;
             guna2Panel5.Location = new Point(0, 0);
@@ -438,9 +499,20 @@
             guna2Panel5.Size = new Size(258, 35);
             guna2Panel5.TabIndex = 2;
             // 
+            // serviceName4
+            // 
+            serviceName4.Anchor = AnchorStyles.Left;
+            serviceName4.AutoSize = true;
+            serviceName4.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            serviceName4.Location = new Point(107, 10);
+            serviceName4.Name = "serviceName4";
+            serviceName4.Size = new Size(45, 14);
+            serviceName4.TabIndex = 1;
+            serviceName4.Text = "label4";
+            // 
             // panelService3
             // 
-            panelService3.Controls.Add(guna2ImageButton3);
+            panelService3.Controls.Add(btnImage3);
             panelService3.Controls.Add(guna2Panel4);
             panelService3.CustomizableEdges = customizableEdges36;
             panelService3.Location = new Point(531, 3);
@@ -449,24 +521,25 @@
             panelService3.Size = new Size(258, 174);
             panelService3.TabIndex = 2;
             // 
-            // guna2ImageButton3
+            // btnImage3
             // 
-            guna2ImageButton3.CheckedState.ImageSize = new Size(64, 64);
-            guna2ImageButton3.Dock = DockStyle.Fill;
-            guna2ImageButton3.HoverState.ImageSize = new Size(64, 64);
-            guna2ImageButton3.Image = (Image)resources.GetObject("guna2ImageButton3.Image");
-            guna2ImageButton3.ImageOffset = new Point(0, 0);
-            guna2ImageButton3.ImageRotate = 0F;
-            guna2ImageButton3.Location = new Point(0, 35);
-            guna2ImageButton3.Name = "guna2ImageButton3";
-            guna2ImageButton3.PressedState.ImageSize = new Size(64, 64);
-            guna2ImageButton3.ShadowDecoration.CustomizableEdges = customizableEdges33;
-            guna2ImageButton3.Size = new Size(258, 139);
-            guna2ImageButton3.TabIndex = 3;
+            btnImage3.CheckedState.ImageSize = new Size(64, 64);
+            btnImage3.Cursor = Cursors.Hand;
+            btnImage3.Dock = DockStyle.Fill;
+            btnImage3.HoverState.ImageSize = new Size(64, 64);
+            btnImage3.Image = (Image)resources.GetObject("btnImage3.Image");
+            btnImage3.ImageOffset = new Point(0, 0);
+            btnImage3.ImageRotate = 0F;
+            btnImage3.Location = new Point(0, 35);
+            btnImage3.Name = "btnImage3";
+            btnImage3.PressedState.ImageSize = new Size(64, 64);
+            btnImage3.ShadowDecoration.CustomizableEdges = customizableEdges33;
+            btnImage3.Size = new Size(258, 139);
+            btnImage3.TabIndex = 3;
             // 
             // guna2Panel4
             // 
-            guna2Panel4.Controls.Add(label3);
+            guna2Panel4.Controls.Add(serviceName3);
             guna2Panel4.CustomizableEdges = customizableEdges34;
             guna2Panel4.Dock = DockStyle.Top;
             guna2Panel4.Location = new Point(0, 0);
@@ -475,10 +548,21 @@
             guna2Panel4.Size = new Size(258, 35);
             guna2Panel4.TabIndex = 2;
             // 
+            // serviceName3
+            // 
+            serviceName3.Anchor = AnchorStyles.Left;
+            serviceName3.AutoSize = true;
+            serviceName3.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            serviceName3.Location = new Point(107, 10);
+            serviceName3.Name = "serviceName3";
+            serviceName3.Size = new Size(45, 14);
+            serviceName3.TabIndex = 1;
+            serviceName3.Text = "label3";
+            // 
             // panelService2
             // 
-            panelService2.Controls.Add(guna2ImageButton2);
-            panelService2.Controls.Add(guna2Panel3);
+            panelService2.Controls.Add(btnImage2);
+            panelService2.Controls.Add(guna2Panel3as);
             panelService2.CustomizableEdges = customizableEdges41;
             panelService2.Location = new Point(267, 3);
             panelService2.Name = "panelService2";
@@ -486,35 +570,47 @@
             panelService2.Size = new Size(258, 174);
             panelService2.TabIndex = 1;
             // 
-            // guna2ImageButton2
+            // btnImage2
             // 
-            guna2ImageButton2.CheckedState.ImageSize = new Size(64, 64);
-            guna2ImageButton2.Dock = DockStyle.Fill;
-            guna2ImageButton2.HoverState.ImageSize = new Size(64, 64);
-            guna2ImageButton2.Image = (Image)resources.GetObject("guna2ImageButton2.Image");
-            guna2ImageButton2.ImageOffset = new Point(0, 0);
-            guna2ImageButton2.ImageRotate = 0F;
-            guna2ImageButton2.Location = new Point(0, 35);
-            guna2ImageButton2.Name = "guna2ImageButton2";
-            guna2ImageButton2.PressedState.ImageSize = new Size(64, 64);
-            guna2ImageButton2.ShadowDecoration.CustomizableEdges = customizableEdges38;
-            guna2ImageButton2.Size = new Size(258, 139);
-            guna2ImageButton2.TabIndex = 3;
+            btnImage2.CheckedState.ImageSize = new Size(64, 64);
+            btnImage2.Cursor = Cursors.Hand;
+            btnImage2.Dock = DockStyle.Fill;
+            btnImage2.HoverState.ImageSize = new Size(64, 64);
+            btnImage2.Image = (Image)resources.GetObject("btnImage2.Image");
+            btnImage2.ImageOffset = new Point(0, 0);
+            btnImage2.ImageRotate = 0F;
+            btnImage2.Location = new Point(0, 35);
+            btnImage2.Name = "btnImage2";
+            btnImage2.PressedState.ImageSize = new Size(64, 64);
+            btnImage2.ShadowDecoration.CustomizableEdges = customizableEdges38;
+            btnImage2.Size = new Size(258, 139);
+            btnImage2.TabIndex = 3;
             // 
-            // guna2Panel3
+            // guna2Panel3as
             // 
-            guna2Panel3.Controls.Add(label2);
-            guna2Panel3.CustomizableEdges = customizableEdges39;
-            guna2Panel3.Dock = DockStyle.Top;
-            guna2Panel3.Location = new Point(0, 0);
-            guna2Panel3.Name = "guna2Panel3";
-            guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges40;
-            guna2Panel3.Size = new Size(258, 35);
-            guna2Panel3.TabIndex = 2;
+            guna2Panel3as.Controls.Add(serviceName2);
+            guna2Panel3as.CustomizableEdges = customizableEdges39;
+            guna2Panel3as.Dock = DockStyle.Top;
+            guna2Panel3as.Location = new Point(0, 0);
+            guna2Panel3as.Name = "guna2Panel3as";
+            guna2Panel3as.ShadowDecoration.CustomizableEdges = customizableEdges40;
+            guna2Panel3as.Size = new Size(258, 35);
+            guna2Panel3as.TabIndex = 2;
+            // 
+            // serviceName2
+            // 
+            serviceName2.Anchor = AnchorStyles.Left;
+            serviceName2.AutoSize = true;
+            serviceName2.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            serviceName2.Location = new Point(107, 10);
+            serviceName2.Name = "serviceName2";
+            serviceName2.Size = new Size(45, 14);
+            serviceName2.TabIndex = 1;
+            serviceName2.Text = "label2";
             // 
             // panelService1
             // 
-            panelService1.Controls.Add(guna2ImageButton1);
+            panelService1.Controls.Add(btnImage1);
             panelService1.Controls.Add(guna2Panel2);
             panelService1.CustomizableEdges = customizableEdges46;
             panelService1.Location = new Point(3, 3);
@@ -523,25 +619,25 @@
             panelService1.Size = new Size(258, 174);
             panelService1.TabIndex = 0;
             // 
-            // guna2ImageButton1
+            // btnImage1
             // 
-            guna2ImageButton1.CheckedState.ImageSize = new Size(64, 64);
-            guna2ImageButton1.Dock = DockStyle.Fill;
-            guna2ImageButton1.HoverState.ImageSize = new Size(64, 64);
-            guna2ImageButton1.Image = (Image)resources.GetObject("guna2ImageButton1.Image");
-            guna2ImageButton1.ImageOffset = new Point(0, 0);
-            guna2ImageButton1.ImageRotate = 0F;
-            guna2ImageButton1.Location = new Point(0, 35);
-            guna2ImageButton1.Name = "guna2ImageButton1";
-            guna2ImageButton1.PressedState.ImageSize = new Size(64, 64);
-            guna2ImageButton1.ShadowDecoration.CustomizableEdges = customizableEdges43;
-            guna2ImageButton1.Size = new Size(258, 139);
-            guna2ImageButton1.TabIndex = 1;
-            guna2ImageButton1.Click += guna2ImageButton1_Click;
+            btnImage1.CheckedState.ImageSize = new Size(64, 64);
+            btnImage1.Cursor = Cursors.Hand;
+            btnImage1.Dock = DockStyle.Fill;
+            btnImage1.HoverState.ImageSize = new Size(64, 64);
+            btnImage1.Image = (Image)resources.GetObject("btnImage1.Image");
+            btnImage1.ImageOffset = new Point(0, 0);
+            btnImage1.ImageRotate = 0F;
+            btnImage1.Location = new Point(0, 35);
+            btnImage1.Name = "btnImage1";
+            btnImage1.PressedState.ImageSize = new Size(64, 64);
+            btnImage1.ShadowDecoration.CustomizableEdges = customizableEdges43;
+            btnImage1.Size = new Size(258, 139);
+            btnImage1.TabIndex = 1;
             // 
             // guna2Panel2
             // 
-            guna2Panel2.Controls.Add(label1);
+            guna2Panel2.Controls.Add(serviceName1);
             guna2Panel2.CustomizableEdges = customizableEdges44;
             guna2Panel2.Dock = DockStyle.Top;
             guna2Panel2.Location = new Point(0, 0);
@@ -550,16 +646,16 @@
             guna2Panel2.Size = new Size(258, 35);
             guna2Panel2.TabIndex = 0;
             // 
-            // label1
+            // serviceName1
             // 
-            label1.Anchor = AnchorStyles.Left;
-            label1.AutoSize = true;
-            label1.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(12, 10);
-            label1.Name = "label1";
-            label1.Size = new Size(45, 14);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
+            serviceName1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            serviceName1.AutoSize = true;
+            serviceName1.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            serviceName1.Location = new Point(105, 10);
+            serviceName1.Name = "serviceName1";
+            serviceName1.Size = new Size(31, 14);
+            serviceName1.TabIndex = 0;
+            serviceName1.Text = "123";
             // 
             // panel2
             // 
@@ -575,8 +671,8 @@
             tableLayoutPanel2.ColumnCount = 2;
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel2.Controls.Add(guna2Button2, 1, 0);
-            tableLayoutPanel2.Controls.Add(guna2Button1, 0, 0);
+            tableLayoutPanel2.Controls.Add(btnNext, 1, 0);
+            tableLayoutPanel2.Controls.Add(btnPrevious, 0, 0);
             tableLayoutPanel2.Dock = DockStyle.Fill;
             tableLayoutPanel2.Location = new Point(0, 0);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -586,127 +682,41 @@
             tableLayoutPanel2.Size = new Size(793, 64);
             tableLayoutPanel2.TabIndex = 0;
             // 
-            // label2
+            // btnNext
             // 
-            label2.Anchor = AnchorStyles.Left;
-            label2.AutoSize = true;
-            label2.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(107, 10);
-            label2.Name = "label2";
-            label2.Size = new Size(45, 14);
-            label2.TabIndex = 1;
-            label2.Text = "label2";
+            btnNext.Anchor = AnchorStyles.None;
+            btnNext.CustomizableEdges = customizableEdges48;
+            btnNext.DisabledState.BorderColor = Color.DarkGray;
+            btnNext.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnNext.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnNext.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnNext.Font = new Font("Segoe UI", 9F);
+            btnNext.ForeColor = Color.White;
+            btnNext.Location = new Point(504, 9);
+            btnNext.Name = "btnNext";
+            btnNext.ShadowDecoration.CustomizableEdges = customizableEdges49;
+            btnNext.Size = new Size(180, 45);
+            btnNext.TabIndex = 1;
+            btnNext.Text = "Next";
+            btnNext.Click += btnNext_Click;
             // 
-            // label3
+            // btnPrevious
             // 
-            label3.Anchor = AnchorStyles.Left;
-            label3.AutoSize = true;
-            label3.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(107, 10);
-            label3.Name = "label3";
-            label3.Size = new Size(45, 14);
-            label3.TabIndex = 1;
-            label3.Text = "label3";
-            // 
-            // label4
-            // 
-            label4.Anchor = AnchorStyles.Left;
-            label4.AutoSize = true;
-            label4.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(107, 10);
-            label4.Name = "label4";
-            label4.Size = new Size(45, 14);
-            label4.TabIndex = 1;
-            label4.Text = "label4";
-            // 
-            // label5
-            // 
-            label5.Anchor = AnchorStyles.Left;
-            label5.AutoSize = true;
-            label5.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(107, 10);
-            label5.Name = "label5";
-            label5.Size = new Size(45, 14);
-            label5.TabIndex = 1;
-            label5.Text = "label5";
-            // 
-            // label7
-            // 
-            label7.Anchor = AnchorStyles.Left;
-            label7.AutoSize = true;
-            label7.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.Location = new Point(107, 10);
-            label7.Name = "label7";
-            label7.Size = new Size(45, 14);
-            label7.TabIndex = 1;
-            label7.Text = "label7";
-            // 
-            // label8
-            // 
-            label8.Anchor = AnchorStyles.Left;
-            label8.AutoSize = true;
-            label8.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(107, 10);
-            label8.Name = "label8";
-            label8.Size = new Size(45, 14);
-            label8.TabIndex = 1;
-            label8.Text = "label8";
-            // 
-            // label9
-            // 
-            label9.Anchor = AnchorStyles.Left;
-            label9.AutoSize = true;
-            label9.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.Location = new Point(107, 10);
-            label9.Name = "label9";
-            label9.Size = new Size(45, 14);
-            label9.TabIndex = 1;
-            label9.Text = "label9";
-            // 
-            // label10
-            // 
-            label10.Anchor = AnchorStyles.Left;
-            label10.AutoSize = true;
-            label10.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label10.Location = new Point(103, 10);
-            label10.Name = "label10";
-            label10.Size = new Size(53, 14);
-            label10.TabIndex = 1;
-            label10.Text = "label10";
-            // 
-            // guna2Button1
-            // 
-            guna2Button1.Anchor = AnchorStyles.None;
-            guna2Button1.CustomizableEdges = customizableEdges50;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.Font = new Font("Segoe UI", 9F);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(108, 9);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges51;
-            guna2Button1.Size = new Size(180, 45);
-            guna2Button1.TabIndex = 0;
-            guna2Button1.Text = "Previous";
-            // 
-            // guna2Button2
-            // 
-            guna2Button2.Anchor = AnchorStyles.None;
-            guna2Button2.CustomizableEdges = customizableEdges48;
-            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button2.Font = new Font("Segoe UI", 9F);
-            guna2Button2.ForeColor = Color.White;
-            guna2Button2.Location = new Point(504, 9);
-            guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges49;
-            guna2Button2.Size = new Size(180, 45);
-            guna2Button2.TabIndex = 1;
-            guna2Button2.Text = "Next";
+            btnPrevious.Anchor = AnchorStyles.None;
+            btnPrevious.CustomizableEdges = customizableEdges50;
+            btnPrevious.DisabledState.BorderColor = Color.DarkGray;
+            btnPrevious.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnPrevious.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnPrevious.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnPrevious.Font = new Font("Segoe UI", 9F);
+            btnPrevious.ForeColor = Color.White;
+            btnPrevious.Location = new Point(108, 9);
+            btnPrevious.Name = "btnPrevious";
+            btnPrevious.ShadowDecoration.CustomizableEdges = customizableEdges51;
+            btnPrevious.Size = new Size(180, 45);
+            btnPrevious.TabIndex = 0;
+            btnPrevious.Text = "Previous";
+            btnPrevious.Click += btnPrevious_Click;
             // 
             // Services
             // 
@@ -716,6 +726,7 @@
             Controls.Add(guna2Panel1);
             Name = "Services";
             Size = new Size(793, 662);
+            Load += Services_Load;
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();
             panel1.ResumeLayout(false);
@@ -743,8 +754,8 @@
             guna2Panel4.ResumeLayout(false);
             guna2Panel4.PerformLayout();
             panelService2.ResumeLayout(false);
-            guna2Panel3.ResumeLayout(false);
-            guna2Panel3.PerformLayout();
+            guna2Panel3as.ResumeLayout(false);
+            guna2Panel3as.PerformLayout();
             panelService1.ResumeLayout(false);
             guna2Panel2.ResumeLayout(false);
             guna2Panel2.PerformLayout();
@@ -771,34 +782,34 @@
         private Panel panel2;
         private TableLayoutPanel tableLayoutPanel2;
         private Label label6;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton9;
+        private Guna.UI2.WinForms.Guna2ImageButton btnImage9;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel10;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton8;
+        private Guna.UI2.WinForms.Guna2ImageButton btnImage8;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel9;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton7;
+        private Guna.UI2.WinForms.Guna2ImageButton btnImage7;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel8;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton6;
+        private Guna.UI2.WinForms.Guna2ImageButton btnImage6;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton5;
+        private Guna.UI2.WinForms.Guna2ImageButton btnImage5;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton4;
+        private Guna.UI2.WinForms.Guna2ImageButton btnImage4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton3;
+        private Guna.UI2.WinForms.Guna2ImageButton btnImage3;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
+        private Guna.UI2.WinForms.Guna2ImageButton btnImage2;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel3as;
+        private Guna.UI2.WinForms.Guna2ImageButton btnImage1;
+        private Label serviceName9;
+        private Label serviceName8;
+        private Label serviceName7;
+        private Label serviceName6;
+        private Label serviceName5;
+        private Label serviceName4;
+        private Label serviceName3;
+        private Label serviceName2;
+        private Guna.UI2.WinForms.Guna2Button btnNext;
+        private Guna.UI2.WinForms.Guna2Button btnPrevious;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Label label1;
-        private Label label10;
-        private Label label9;
-        private Label label8;
-        private Label label7;
-        private Label label5;
-        private Label label4;
-        private Label label3;
-        private Label label2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Label serviceName1;
     }
 }

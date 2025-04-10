@@ -32,7 +32,7 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
         {
             List<string> clinicNames = new List<string>();
 
-            OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Downloads\Login.accdb;Persist Security Info=False;");
+            OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;");
             conn.Open();
 
             OleDbCommand cmd = new OleDbCommand(@"

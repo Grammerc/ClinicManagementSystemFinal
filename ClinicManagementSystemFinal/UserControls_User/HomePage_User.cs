@@ -214,6 +214,7 @@ namespace ClinicManagementSystemFinal
 
         private void btnAppointment_Click(object sender, EventArgs e)
         {
+            menuTransition.Start();
             LoadControl(new Appointments_User(userLoginId));
         }
 
@@ -241,11 +242,14 @@ namespace ClinicManagementSystemFinal
         {
             guna2ShadowForm1.SetShadowForm(this);
             LoadProfilePicture(userLoginId);
+
+
+            menuContainer.Height = 53;
         }
 
         private void LoadProfilePicture(string loginId)
         {
-            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Downloads\Login.accdb;Persist Security Info=False;";
+            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;";
             using (OleDbConnection conn = new OleDbConnection(connStr))
             {
                 conn.Open();
@@ -290,12 +294,21 @@ namespace ClinicManagementSystemFinal
             LoadControl(new Dashboard_User());
         }
 
-        private void btnAppointments_Click(object sender, EventArgs e)
-        {
-            LoadControl(new Appointments_User(userLoginId));
-        }
+		private void btnAppointments_Click(object sender, EventArgs e)
+		{
+			if (menuContainer.Height == 53)
+			{
+				menuContainer.Height = 215; 
+			}
+			else
+			{
+				menuContainer.Height = 53; 
+			}
 
-        private void btnClinics_Click(object sender, EventArgs e)
+			LoadControl(new Appointments_User(userLoginId));
+		}
+
+		private void btnClinics_Click(object sender, EventArgs e)
         {
             LoadControl(new Clinics());
         }
@@ -314,6 +327,29 @@ namespace ClinicManagementSystemFinal
         {
 
         }
-    }
+
+        bool menuExpand = false;
+		private void menuTransition_Tick(object sender, EventArgs e)
+		{
+		if (menuExpand == false)
+			{
+				menuContainer.Height += 10;
+				if (menuContainer.Height >= 215)
+				{
+					menuTransition.Stop();
+					menuExpand = true;
+				}
+			}
+			else
+			{
+				menuContainer.Height -= 10;
+				if (menuContainer.Height <= 53)
+				{
+					menuTransition.Stop();
+					menuExpand = false;
+				}
+			}
+		}
+	}
 }
 

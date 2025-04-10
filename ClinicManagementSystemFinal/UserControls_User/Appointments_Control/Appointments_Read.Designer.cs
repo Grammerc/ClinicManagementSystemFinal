@@ -36,13 +36,13 @@
             panel2 = new Panel();
             label4 = new Label();
             dgvRead = new Guna.UI2.WinForms.Guna2DataGridView();
-            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             Clinic = new DataGridViewTextBoxColumn();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
             Column5 = new DataGridViewButtonColumn();
+            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvRead).BeginInit();
             guna2Panel1.SuspendLayout();
@@ -79,7 +79,8 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dgvRead.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dgvRead.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvRead.ColumnHeadersHeight = 17;
+            dgvRead.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dgvRead.Columns.AddRange(new DataGridViewColumn[] { Clinic, Column1, Column2, Column3, Column4, Column5 });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
@@ -107,7 +108,7 @@
             dgvRead.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
             dgvRead.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
             dgvRead.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            dgvRead.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvRead.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dgvRead.ThemeStyle.HeaderStyle.Height = 17;
             dgvRead.ThemeStyle.ReadOnly = false;
             dgvRead.ThemeStyle.RowsStyle.BackColor = Color.White;
@@ -117,17 +118,6 @@
             dgvRead.ThemeStyle.RowsStyle.Height = 25;
             dgvRead.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgvRead.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            // 
-            // guna2Panel1
-            // 
-            guna2Panel1.Controls.Add(dgvRead);
-            guna2Panel1.CustomizableEdges = customizableEdges1;
-            guna2Panel1.Dock = DockStyle.Fill;
-            guna2Panel1.Location = new Point(0, 56);
-            guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Panel1.Size = new Size(793, 606);
-            guna2Panel1.TabIndex = 9;
             // 
             // Clinic
             // 
@@ -159,6 +149,17 @@
             Column5.HeaderText = "Edit";
             Column5.Name = "Column5";
             // 
+            // guna2Panel1
+            // 
+            guna2Panel1.Controls.Add(dgvRead);
+            guna2Panel1.CustomizableEdges = customizableEdges1;
+            guna2Panel1.Dock = DockStyle.Fill;
+            guna2Panel1.Location = new Point(0, 56);
+            guna2Panel1.Name = "guna2Panel1";
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Panel1.Size = new Size(793, 606);
+            guna2Panel1.TabIndex = 9;
+            // 
             // Appointments_Read
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -167,6 +168,7 @@
             Controls.Add(panel2);
             Name = "Appointments_Read";
             Size = new Size(793, 662);
+            Load += Appointments_Read_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvRead).EndInit();

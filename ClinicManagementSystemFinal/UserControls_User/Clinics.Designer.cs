@@ -241,7 +241,7 @@
             label5.AutoSize = true;
             label5.Location = new Point(3, 5);
             label5.Name = "label5";
-            label5.Size = new Size(57, 15);
+            label5.Size = new Size(56, 15);
             label5.TabIndex = 1;
             label5.Text = "Time Slot";
             // 

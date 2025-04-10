@@ -76,7 +76,7 @@ namespace ClinicManagementSystemFinal
 
         private bool UpdatePasswordInDatabase(string email, string newPassword)
         {
-            string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael Perocho\source\repos\ClinicManagementSystemFinal\ProjectClinic\ClinicManagementSystemFinal\Login.accdb;Persist Security Info=False;";
+            string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Users\Raphael Perocho\source\repos\ClinicManagementSystemFinal\ProjectClinic\ClinicManagementSystemFinal\Login.accdb;Persist Security Info=False;";
 
             using (OleDbConnection connection = new OleDbConnection(connectionString))
             {

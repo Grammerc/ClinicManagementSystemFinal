@@ -45,7 +45,6 @@ namespace ClinicManagementSystemFinal.UserControls_User
 
                 conn.Close();
             }
-            MessageBox.Show("Services loaded" +  serviceNames.Count);
             DisplayServices();
         }
         private void DisplayServices()

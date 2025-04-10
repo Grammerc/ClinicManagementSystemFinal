@@ -49,6 +49,7 @@
             c5 = new DataGridViewTextBoxColumn();
             c4 = new DataGridViewTextBoxColumn();
             c6 = new DataGridViewTextBoxColumn();
+            Select = new DataGridViewButtonColumn();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvAppointments).BeginInit();
             SuspendLayout();
@@ -86,7 +87,7 @@
             dgvAppointments.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvAppointments.ColumnHeadersHeight = 17;
             dgvAppointments.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvAppointments.Columns.AddRange(new DataGridViewColumn[] { c1, c2, c3, c5, c4, c6 });
+            dgvAppointments.Columns.AddRange(new DataGridViewColumn[] { c1, c2, c3, c5, c4, c6, Select });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
@@ -123,6 +124,7 @@
             dgvAppointments.ThemeStyle.RowsStyle.Height = 25;
             dgvAppointments.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgvAppointments.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgvAppointments.CellClick += dgvAppointments_CellClick;
             // 
             // btnUpdate
             // 
@@ -203,6 +205,13 @@
             c6.HeaderText = "Status";
             c6.Name = "c6";
             // 
+            // Select
+            // 
+            Select.HeaderText = "Select";
+            Select.Name = "Select";
+            Select.Resizable = DataGridViewTriState.True;
+            Select.SortMode = DataGridViewColumnSortMode.Automatic;
+            // 
             // Appointments_Update
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -235,5 +244,6 @@
         private DataGridViewTextBoxColumn c5;
         private DataGridViewTextBoxColumn c4;
         private DataGridViewTextBoxColumn c6;
+        private DataGridViewButtonColumn Select;
     }
 }

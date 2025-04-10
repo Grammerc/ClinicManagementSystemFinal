@@ -256,10 +256,10 @@
             // 
             // serviceName9
             // 
-            serviceName9.Anchor = AnchorStyles.Left;
             serviceName9.AutoSize = true;
+            serviceName9.Dock = DockStyle.Top;
             serviceName9.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            serviceName9.Location = new Point(103, 10);
+            serviceName9.Location = new Point(0, 0);
             serviceName9.Name = "serviceName9";
             serviceName9.Size = new Size(53, 14);
             serviceName9.TabIndex = 1;
@@ -305,10 +305,10 @@
             // 
             // serviceName8
             // 
-            serviceName8.Anchor = AnchorStyles.Left;
             serviceName8.AutoSize = true;
+            serviceName8.Dock = DockStyle.Top;
             serviceName8.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            serviceName8.Location = new Point(107, 10);
+            serviceName8.Location = new Point(0, 0);
             serviceName8.Name = "serviceName8";
             serviceName8.Size = new Size(45, 14);
             serviceName8.TabIndex = 1;
@@ -354,10 +354,10 @@
             // 
             // serviceName7
             // 
-            serviceName7.Anchor = AnchorStyles.Left;
             serviceName7.AutoSize = true;
+            serviceName7.Dock = DockStyle.Top;
             serviceName7.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            serviceName7.Location = new Point(107, 10);
+            serviceName7.Location = new Point(0, 0);
             serviceName7.Name = "serviceName7";
             serviceName7.Size = new Size(45, 14);
             serviceName7.TabIndex = 1;
@@ -403,10 +403,10 @@
             // 
             // serviceName6
             // 
-            serviceName6.Anchor = AnchorStyles.Left;
             serviceName6.AutoSize = true;
+            serviceName6.Dock = DockStyle.Top;
             serviceName6.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            serviceName6.Location = new Point(107, 10);
+            serviceName6.Location = new Point(0, 0);
             serviceName6.Name = "serviceName6";
             serviceName6.Size = new Size(45, 14);
             serviceName6.TabIndex = 1;
@@ -452,10 +452,10 @@
             // 
             // serviceName5
             // 
-            serviceName5.Anchor = AnchorStyles.Left;
             serviceName5.AutoSize = true;
+            serviceName5.Dock = DockStyle.Top;
             serviceName5.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            serviceName5.Location = new Point(107, 10);
+            serviceName5.Location = new Point(0, 0);
             serviceName5.Name = "serviceName5";
             serviceName5.Size = new Size(45, 14);
             serviceName5.TabIndex = 1;
@@ -501,10 +501,10 @@
             // 
             // serviceName4
             // 
-            serviceName4.Anchor = AnchorStyles.Left;
             serviceName4.AutoSize = true;
+            serviceName4.Dock = DockStyle.Top;
             serviceName4.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            serviceName4.Location = new Point(107, 10);
+            serviceName4.Location = new Point(0, 0);
             serviceName4.Name = "serviceName4";
             serviceName4.Size = new Size(45, 14);
             serviceName4.TabIndex = 1;
@@ -550,10 +550,10 @@
             // 
             // serviceName3
             // 
-            serviceName3.Anchor = AnchorStyles.Left;
             serviceName3.AutoSize = true;
+            serviceName3.Dock = DockStyle.Top;
             serviceName3.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            serviceName3.Location = new Point(107, 10);
+            serviceName3.Location = new Point(0, 0);
             serviceName3.Name = "serviceName3";
             serviceName3.Size = new Size(45, 14);
             serviceName3.TabIndex = 1;
@@ -599,10 +599,10 @@
             // 
             // serviceName2
             // 
-            serviceName2.Anchor = AnchorStyles.Left;
             serviceName2.AutoSize = true;
+            serviceName2.Dock = DockStyle.Top;
             serviceName2.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            serviceName2.Location = new Point(107, 10);
+            serviceName2.Location = new Point(0, 0);
             serviceName2.Name = "serviceName2";
             serviceName2.Size = new Size(45, 14);
             serviceName2.TabIndex = 1;
@@ -648,10 +648,10 @@
             // 
             // serviceName1
             // 
-            serviceName1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             serviceName1.AutoSize = true;
+            serviceName1.Dock = DockStyle.Top;
             serviceName1.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            serviceName1.Location = new Point(105, 10);
+            serviceName1.Location = new Point(0, 0);
             serviceName1.Name = "serviceName1";
             serviceName1.Size = new Size(31, 14);
             serviceName1.TabIndex = 0;

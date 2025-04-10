@@ -33,11 +33,11 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel2 = new Panel();
             label4 = new Label();
             dgvRead = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -48,21 +48,21 @@
             Column4 = new DataGridViewTextBoxColumn();
             Column5 = new DataGridViewButtonColumn();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            label1 = new Label();
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            dgvRemove = new Guna.UI2.WinForms.Guna2DataGridView();
             panel1 = new Panel();
-            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
-            dataGridViewButtonColumn1 = new DataGridViewButtonColumn();
+            label1 = new Label();
+            c1 = new DataGridViewTextBoxColumn();
+            c2 = new DataGridViewTextBoxColumn();
+            c3 = new DataGridViewTextBoxColumn();
+            c4 = new DataGridViewTextBoxColumn();
+            c5 = new DataGridViewTextBoxColumn();
+            Delete = new DataGridViewButtonColumn();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvRead).BeginInit();
             guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
             guna2Panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvRemove).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -180,10 +180,21 @@
             guna2Panel1.Size = new Size(793, 662);
             guna2Panel1.TabIndex = 11;
             // 
-            // guna2DataGridView1
+            // guna2Panel2
+            // 
+            guna2Panel2.Controls.Add(dgvRemove);
+            guna2Panel2.CustomizableEdges = customizableEdges1;
+            guna2Panel2.Dock = DockStyle.Fill;
+            guna2Panel2.Location = new Point(0, 56);
+            guna2Panel2.Name = "guna2Panel2";
+            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Panel2.Size = new Size(793, 606);
+            guna2Panel2.TabIndex = 11;
+            // 
+            // dgvRemove
             // 
             dataGridViewCellStyle4.BackColor = Color.White;
-            guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dgvRemove.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
@@ -191,10 +202,10 @@
             dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            guna2DataGridView1.ColumnHeadersHeight = 17;
-            guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            guna2DataGridView1.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewButtonColumn1 });
+            dgvRemove.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dgvRemove.ColumnHeadersHeight = 17;
+            dgvRemove.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvRemove.Columns.AddRange(new DataGridViewColumn[] { c1, c2, c3, c4, c5, Delete });
             dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = Color.White;
             dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
@@ -202,35 +213,45 @@
             dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
-            guna2DataGridView1.Dock = DockStyle.Fill;
-            guna2DataGridView1.GridColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.Location = new Point(0, 0);
-            guna2DataGridView1.Name = "guna2DataGridView1";
-            guna2DataGridView1.RowHeadersVisible = false;
-            guna2DataGridView1.Size = new Size(793, 606);
-            guna2DataGridView1.TabIndex = 8;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 17;
-            guna2DataGridView1.ThemeStyle.ReadOnly = false;
-            guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            guna2DataGridView1.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
-            guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            guna2DataGridView1.ThemeStyle.RowsStyle.Height = 25;
-            guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgvRemove.DefaultCellStyle = dataGridViewCellStyle6;
+            dgvRemove.Dock = DockStyle.Fill;
+            dgvRemove.GridColor = Color.FromArgb(231, 229, 255);
+            dgvRemove.Location = new Point(0, 0);
+            dgvRemove.Name = "dgvRemove";
+            dgvRemove.RowHeadersVisible = false;
+            dgvRemove.Size = new Size(793, 606);
+            dgvRemove.TabIndex = 8;
+            dgvRemove.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            dgvRemove.ThemeStyle.AlternatingRowsStyle.Font = null;
+            dgvRemove.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            dgvRemove.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            dgvRemove.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            dgvRemove.ThemeStyle.BackColor = Color.White;
+            dgvRemove.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            dgvRemove.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            dgvRemove.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvRemove.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            dgvRemove.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            dgvRemove.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvRemove.ThemeStyle.HeaderStyle.Height = 17;
+            dgvRemove.ThemeStyle.ReadOnly = false;
+            dgvRemove.ThemeStyle.RowsStyle.BackColor = Color.White;
+            dgvRemove.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvRemove.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            dgvRemove.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            dgvRemove.ThemeStyle.RowsStyle.Height = 25;
+            dgvRemove.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dgvRemove.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgvRemove.CellContentClick += dgvRemove_CellContentClick;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(label1);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(793, 56);
+            panel1.TabIndex = 10;
             // 
             // label1
             // 
@@ -242,55 +263,35 @@
             label1.TabIndex = 1;
             label1.Text = "Current Appointments";
             // 
-            // guna2Panel2
+            // c1
             // 
-            guna2Panel2.Controls.Add(guna2DataGridView1);
-            guna2Panel2.CustomizableEdges = customizableEdges1;
-            guna2Panel2.Dock = DockStyle.Fill;
-            guna2Panel2.Location = new Point(0, 56);
-            guna2Panel2.Name = "guna2Panel2";
-            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Panel2.Size = new Size(793, 606);
-            guna2Panel2.TabIndex = 11;
+            c1.HeaderText = "Date";
+            c1.Name = "c1";
             // 
-            // panel1
+            // c2
             // 
-            panel1.Controls.Add(label1);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(793, 56);
-            panel1.TabIndex = 10;
+            c2.HeaderText = "Clinic ";
+            c2.Name = "c2";
             // 
-            // dataGridViewTextBoxColumn1
+            // c3
             // 
-            dataGridViewTextBoxColumn1.HeaderText = "Date";
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            c3.HeaderText = "Reason For Visit";
+            c3.Name = "c3";
             // 
-            // dataGridViewTextBoxColumn2
+            // c4
             // 
-            dataGridViewTextBoxColumn2.HeaderText = "Clinic ";
-            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            c4.HeaderText = "Doctor-In-Charge";
+            c4.Name = "c4";
             // 
-            // dataGridViewTextBoxColumn3
+            // c5
             // 
-            dataGridViewTextBoxColumn3.HeaderText = "Reason For Visit";
-            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            c5.HeaderText = "Status";
+            c5.Name = "c5";
             // 
-            // dataGridViewTextBoxColumn4
+            // Delete
             // 
-            dataGridViewTextBoxColumn4.HeaderText = "Doctor-In-Charge";
-            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            dataGridViewTextBoxColumn5.HeaderText = "Status";
-            dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewButtonColumn1
-            // 
-            dataGridViewButtonColumn1.HeaderText = "Delete";
-            dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
+            Delete.HeaderText = "Delete";
+            Delete.Name = "Delete";
             // 
             // Appointments_Remove
             // 
@@ -300,12 +301,13 @@
             Controls.Add(guna2Panel1);
             Name = "Appointments_Remove";
             Size = new Size(793, 662);
+            Load += Appointments_Remove_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvRead).EndInit();
             guna2Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
             guna2Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvRemove).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -324,7 +326,7 @@
         private DataGridViewButtonColumn Column5;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvRemove;
         private Panel panel1;
         private Label label1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
@@ -332,6 +334,11 @@
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private DataGridViewButtonColumn dataGridViewButtonColumn1;
+        private DataGridViewTextBoxColumn c1;
+        private DataGridViewTextBoxColumn c2;
+        private DataGridViewTextBoxColumn c3;
+        private DataGridViewTextBoxColumn c4;
+        private DataGridViewTextBoxColumn c5;
+        private DataGridViewButtonColumn Delete;
     }
 }

@@ -364,7 +364,7 @@ namespace ClinicManagementSystemFinal
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            LoadControl(new Appointments_Remove());
+            LoadControl(new Appointments_Remove(userLoginId));
         }
     }
 }

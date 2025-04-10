@@ -149,9 +149,9 @@
             // panel2
             // 
             panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 182);
+            panel2.Location = new Point(0, 160);
             panel2.Name = "panel2";
-            panel2.Size = new Size(543, 211);
+            panel2.Size = new Size(543, 233);
             panel2.TabIndex = 1;
             // 
             // panel1
@@ -179,11 +179,12 @@
             // pbxCanvaDoctor
             // 
             pbxCanvaDoctor.CustomizableEdges = customizableEdges5;
+            pbxCanvaDoctor.Dock = DockStyle.Right;
             pbxCanvaDoctor.ImageRotate = 0F;
-            pbxCanvaDoctor.Location = new Point(319, 0);
+            pbxCanvaDoctor.Location = new Point(339, 0);
             pbxCanvaDoctor.Name = "pbxCanvaDoctor";
             pbxCanvaDoctor.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            pbxCanvaDoctor.Size = new Size(186, 213);
+            pbxCanvaDoctor.Size = new Size(204, 213);
             pbxCanvaDoctor.TabIndex = 2;
             pbxCanvaDoctor.TabStop = false;
             pbxCanvaDoctor.Tag = "";

@@ -64,10 +64,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage_User));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel10 = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
@@ -94,6 +98,8 @@
             guna2Panel11 = new Guna.UI2.WinForms.Guna2Panel();
             nightControlBox2 = new ReaLTaiizor.Controls.NightControlBox();
             panelMainDesktop = new Guna.UI2.WinForms.Guna2Panel();
+            tbxSearchBar = new Guna.UI2.WinForms.Guna2TextBox();
+            guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             guna2Panel1.SuspendLayout();
             guna2Panel8.SuspendLayout();
             guna2Panel7.SuspendLayout();
@@ -104,6 +110,7 @@
             guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbxProfilePic).BeginInit();
             guna2Panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             SuspendLayout();
             // 
             // guna2Panel1
@@ -394,12 +401,14 @@
             // 
             // guna2Panel11
             // 
+            guna2Panel11.Controls.Add(guna2PictureBox1);
+            guna2Panel11.Controls.Add(tbxSearchBar);
             guna2Panel11.Controls.Add(nightControlBox2);
-            guna2Panel11.CustomizableEdges = customizableEdges35;
+            guna2Panel11.CustomizableEdges = customizableEdges39;
             guna2Panel11.Dock = DockStyle.Top;
             guna2Panel11.Location = new Point(221, 0);
             guna2Panel11.Name = "guna2Panel11";
-            guna2Panel11.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            guna2Panel11.ShadowDecoration.CustomizableEdges = customizableEdges40;
             guna2Panel11.Size = new Size(793, 80);
             guna2Panel11.TabIndex = 4;
             // 
@@ -429,13 +438,43 @@
             // panelMainDesktop
             // 
             panelMainDesktop.BackColor = Color.WhiteSmoke;
-            panelMainDesktop.CustomizableEdges = customizableEdges37;
+            panelMainDesktop.CustomizableEdges = customizableEdges41;
             panelMainDesktop.Dock = DockStyle.Fill;
             panelMainDesktop.Location = new Point(221, 80);
             panelMainDesktop.Name = "panelMainDesktop";
-            panelMainDesktop.ShadowDecoration.CustomizableEdges = customizableEdges38;
+            panelMainDesktop.ShadowDecoration.CustomizableEdges = customizableEdges42;
             panelMainDesktop.Size = new Size(793, 662);
             panelMainDesktop.TabIndex = 5;
+            // 
+            // tbxSearchBar
+            // 
+            tbxSearchBar.CustomizableEdges = customizableEdges37;
+            tbxSearchBar.DefaultText = "";
+            tbxSearchBar.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            tbxSearchBar.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            tbxSearchBar.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            tbxSearchBar.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            tbxSearchBar.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            tbxSearchBar.Font = new Font("Segoe UI", 9F);
+            tbxSearchBar.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            tbxSearchBar.Location = new Point(435, 24);
+            tbxSearchBar.Name = "tbxSearchBar";
+            tbxSearchBar.PlaceholderText = "";
+            tbxSearchBar.SelectedText = "";
+            tbxSearchBar.ShadowDecoration.CustomizableEdges = customizableEdges38;
+            tbxSearchBar.Size = new Size(215, 36);
+            tbxSearchBar.TabIndex = 2;
+            // 
+            // guna2PictureBox1
+            // 
+            guna2PictureBox1.CustomizableEdges = customizableEdges35;
+            guna2PictureBox1.ImageRotate = 0F;
+            guna2PictureBox1.Location = new Point(664, 32);
+            guna2PictureBox1.Name = "guna2PictureBox1";
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            guna2PictureBox1.Size = new Size(56, 45);
+            guna2PictureBox1.TabIndex = 3;
+            guna2PictureBox1.TabStop = false;
             // 
             // HomePage_User
             // 
@@ -463,6 +502,7 @@
             guna2Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbxProfilePic).EndInit();
             guna2Panel11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -508,5 +548,7 @@
         private Guna.UI2.WinForms.Guna2Panel panelDesktop;
         private PictureBox pbxProfilePic;
         private ReaLTaiizor.Controls.NightControlBox nightControlBox2;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2TextBox tbxSearchBar;
     }
 }

@@ -41,7 +41,7 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
         {
             cbxPatientQueue.Items.Clear();
 
-            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;";
+            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Downloads\Login.accdb;Persist Security Info=False;";
             using (OleDbConnection conn = new OleDbConnection(connStr))
             {
                 conn.Open();
@@ -88,7 +88,7 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
             {
                 string clinicId = selectedClinic.Value;
 
-                string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;";
+                string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Downloads\Login.accdb;Persist Security Info=False;";
                 using (OleDbConnection conn = new OleDbConnection(connStr))
                 {
                     conn.Open();
@@ -108,7 +108,7 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
 
         private void LoadPatientQueue(string clinicId, DateTime selectedDate)
         {
-            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;";
+            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Downloads\Login.accdb;Persist Security Info=False;";
             using (OleDbConnection conn = new OleDbConnection(connStr))
             {
                 conn.Open();

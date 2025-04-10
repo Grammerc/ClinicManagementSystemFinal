@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace ClinicManagementSystemFinal.UserControls_Doctors
 {
-    public partial class Dashboard_Doctors : UserControl
+    public partial class LastPatient : UserControl
     {
-        public Dashboard_Doctors()
+        public LastPatient()
         {
             InitializeComponent();
-        }
-
-        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -9,6 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="ZToBeRemoved\**" />
+    <EmbeddedResource Remove="ZToBeRemoved\**" />
+    <None Remove="ZToBeRemoved\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Bunifu.UI.WinForms" Version="8.0.0" />
     <PackageReference Include="FontAwesome.Sharp" Version="6.6.0" />
     <PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.7" />
@@ -19,10 +25,6 @@
     <PackageReference Include="RestSharp" Version="112.1.0" />
     <PackageReference Include="System.Data.OleDb" Version="9.0.3" />
     <PackageReference Include="WinForms.DataVisualization" Version="1.10.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="ZToBeRemoved\" />
   </ItemGroup>
 
 </Project>

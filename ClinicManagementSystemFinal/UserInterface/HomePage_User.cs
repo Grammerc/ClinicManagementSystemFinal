@@ -245,7 +245,7 @@ namespace ClinicManagementSystemFinal
 
         private void LoadProfilePicture(string loginId)
         {
-            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;";
+            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Downloads\Login.accdb;Persist Security Info=False;";
             using (OleDbConnection conn = new OleDbConnection(connStr))
             {
                 conn.Open();

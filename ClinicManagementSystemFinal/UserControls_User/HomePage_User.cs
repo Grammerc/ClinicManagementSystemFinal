@@ -359,7 +359,7 @@ namespace ClinicManagementSystemFinal
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            LoadControl(new Appointments_Update());
+            LoadControl(new Appointments_Update(userLoginId));
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

@@ -287,7 +287,7 @@ namespace ClinicManagementSystemFinal
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-
+            LoadControl(new Dashboard_User());
         }
 
         private void btnAppointments_Click(object sender, EventArgs e)

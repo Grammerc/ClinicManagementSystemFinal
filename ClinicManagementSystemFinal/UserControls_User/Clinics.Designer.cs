@@ -42,8 +42,15 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clinics));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnSubmit = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
@@ -67,30 +74,35 @@
             panel4 = new Panel();
             tableLayoutPanel2 = new TableLayoutPanel();
             panelClinic6 = new TableLayoutPanel();
+            clinicImage6 = new Guna.UI2.WinForms.Guna2ImageButton();
             tableLayoutPanel19 = new TableLayoutPanel();
             panel15 = new Panel();
             clinicsName6 = new Label();
             panel16 = new Panel();
             clinicTag6 = new Label();
             panelClinic5 = new TableLayoutPanel();
+            clinicImage5 = new Guna.UI2.WinForms.Guna2ImageButton();
             tableLayoutPanel17 = new TableLayoutPanel();
             panel13 = new Panel();
             clinicsName5 = new Label();
             panel14 = new Panel();
             clinicTag5 = new Label();
             panelClinic4 = new TableLayoutPanel();
+            clinicImage4 = new Guna.UI2.WinForms.Guna2ImageButton();
             tableLayoutPanel15 = new TableLayoutPanel();
             panel11 = new Panel();
             clinicsName4 = new Label();
             panel12 = new Panel();
             clinicTag4 = new Label();
             panelClinic3 = new TableLayoutPanel();
+            clinicImage3 = new Guna.UI2.WinForms.Guna2ImageButton();
             tableLayoutPanel13 = new TableLayoutPanel();
             panel9 = new Panel();
             clinicsName3 = new Label();
             panel10 = new Panel();
             clinicTag3 = new Label();
             panelClinic2 = new TableLayoutPanel();
+            clinicImage2 = new Guna.UI2.WinForms.Guna2ImageButton();
             tableLayoutPanel11 = new TableLayoutPanel();
             panel7 = new Panel();
             clinicsName2 = new Label();
@@ -102,6 +114,7 @@
             clinicsName1 = new Label();
             panel6 = new Panel();
             clinicTag1 = new Label();
+            clinicImage1 = new Guna.UI2.WinForms.Guna2ImageButton();
             panel3 = new Panel();
             label4 = new Label();
             panel2 = new Panel();
@@ -411,11 +424,11 @@
             guna2Panel2.Controls.Add(panel4);
             guna2Panel2.Controls.Add(panel3);
             guna2Panel2.Controls.Add(panel1);
-            guna2Panel2.CustomizableEdges = customizableEdges15;
+            guna2Panel2.CustomizableEdges = customizableEdges21;
             guna2Panel2.Dock = DockStyle.Fill;
             guna2Panel2.Location = new Point(0, 56);
             guna2Panel2.Name = "guna2Panel2";
-            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges22;
             guna2Panel2.Size = new Size(793, 606);
             guna2Panel2.TabIndex = 6;
             // 
@@ -453,6 +466,7 @@
             // 
             panelClinic6.ColumnCount = 1;
             panelClinic6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            panelClinic6.Controls.Add(clinicImage6, 0, 0);
             panelClinic6.Controls.Add(tableLayoutPanel19, 0, 1);
             panelClinic6.Dock = DockStyle.Fill;
             panelClinic6.Location = new Point(531, 223);
@@ -462,6 +476,21 @@
             panelClinic6.RowStyles.Add(new RowStyle(SizeType.Percent, 40F));
             panelClinic6.Size = new Size(259, 214);
             panelClinic6.TabIndex = 5;
+            // 
+            // clinicImage6
+            // 
+            clinicImage6.CheckedState.ImageSize = new Size(64, 64);
+            clinicImage6.Dock = DockStyle.Fill;
+            clinicImage6.HoverState.ImageSize = new Size(64, 64);
+            clinicImage6.Image = (Image)resources.GetObject("clinicImage6.Image");
+            clinicImage6.ImageOffset = new Point(0, 0);
+            clinicImage6.ImageRotate = 0F;
+            clinicImage6.Location = new Point(3, 3);
+            clinicImage6.Name = "clinicImage6";
+            clinicImage6.PressedState.ImageSize = new Size(64, 64);
+            clinicImage6.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            clinicImage6.Size = new Size(253, 122);
+            clinicImage6.TabIndex = 2;
             // 
             // tableLayoutPanel19
             // 
@@ -515,6 +544,7 @@
             // 
             panelClinic5.ColumnCount = 1;
             panelClinic5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            panelClinic5.Controls.Add(clinicImage5, 0, 0);
             panelClinic5.Controls.Add(tableLayoutPanel17, 0, 1);
             panelClinic5.Dock = DockStyle.Fill;
             panelClinic5.Location = new Point(267, 223);
@@ -524,6 +554,21 @@
             panelClinic5.RowStyles.Add(new RowStyle(SizeType.Percent, 40F));
             panelClinic5.Size = new Size(258, 214);
             panelClinic5.TabIndex = 4;
+            // 
+            // clinicImage5
+            // 
+            clinicImage5.CheckedState.ImageSize = new Size(64, 64);
+            clinicImage5.Dock = DockStyle.Fill;
+            clinicImage5.HoverState.ImageSize = new Size(64, 64);
+            clinicImage5.Image = (Image)resources.GetObject("clinicImage5.Image");
+            clinicImage5.ImageOffset = new Point(0, 0);
+            clinicImage5.ImageRotate = 0F;
+            clinicImage5.Location = new Point(3, 3);
+            clinicImage5.Name = "clinicImage5";
+            clinicImage5.PressedState.ImageSize = new Size(64, 64);
+            clinicImage5.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            clinicImage5.Size = new Size(252, 122);
+            clinicImage5.TabIndex = 2;
             // 
             // tableLayoutPanel17
             // 
@@ -577,6 +622,7 @@
             // 
             panelClinic4.ColumnCount = 1;
             panelClinic4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            panelClinic4.Controls.Add(clinicImage4, 0, 0);
             panelClinic4.Controls.Add(tableLayoutPanel15, 0, 1);
             panelClinic4.Dock = DockStyle.Fill;
             panelClinic4.Location = new Point(3, 223);
@@ -586,6 +632,21 @@
             panelClinic4.RowStyles.Add(new RowStyle(SizeType.Percent, 40F));
             panelClinic4.Size = new Size(258, 214);
             panelClinic4.TabIndex = 3;
+            // 
+            // clinicImage4
+            // 
+            clinicImage4.CheckedState.ImageSize = new Size(64, 64);
+            clinicImage4.Dock = DockStyle.Fill;
+            clinicImage4.HoverState.ImageSize = new Size(64, 64);
+            clinicImage4.Image = (Image)resources.GetObject("clinicImage4.Image");
+            clinicImage4.ImageOffset = new Point(0, 0);
+            clinicImage4.ImageRotate = 0F;
+            clinicImage4.Location = new Point(3, 3);
+            clinicImage4.Name = "clinicImage4";
+            clinicImage4.PressedState.ImageSize = new Size(64, 64);
+            clinicImage4.ShadowDecoration.CustomizableEdges = customizableEdges17;
+            clinicImage4.Size = new Size(252, 122);
+            clinicImage4.TabIndex = 2;
             // 
             // tableLayoutPanel15
             // 
@@ -639,6 +700,7 @@
             // 
             panelClinic3.ColumnCount = 1;
             panelClinic3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            panelClinic3.Controls.Add(clinicImage3, 0, 0);
             panelClinic3.Controls.Add(tableLayoutPanel13, 0, 1);
             panelClinic3.Dock = DockStyle.Fill;
             panelClinic3.Location = new Point(531, 3);
@@ -648,6 +710,21 @@
             panelClinic3.RowStyles.Add(new RowStyle(SizeType.Percent, 40F));
             panelClinic3.Size = new Size(259, 214);
             panelClinic3.TabIndex = 2;
+            // 
+            // clinicImage3
+            // 
+            clinicImage3.CheckedState.ImageSize = new Size(64, 64);
+            clinicImage3.Dock = DockStyle.Fill;
+            clinicImage3.HoverState.ImageSize = new Size(64, 64);
+            clinicImage3.Image = (Image)resources.GetObject("clinicImage3.Image");
+            clinicImage3.ImageOffset = new Point(0, 0);
+            clinicImage3.ImageRotate = 0F;
+            clinicImage3.Location = new Point(3, 3);
+            clinicImage3.Name = "clinicImage3";
+            clinicImage3.PressedState.ImageSize = new Size(64, 64);
+            clinicImage3.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            clinicImage3.Size = new Size(253, 122);
+            clinicImage3.TabIndex = 2;
             // 
             // tableLayoutPanel13
             // 
@@ -701,6 +778,7 @@
             // 
             panelClinic2.ColumnCount = 1;
             panelClinic2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            panelClinic2.Controls.Add(clinicImage2, 0, 0);
             panelClinic2.Controls.Add(tableLayoutPanel11, 0, 1);
             panelClinic2.Dock = DockStyle.Fill;
             panelClinic2.Location = new Point(267, 3);
@@ -710,6 +788,21 @@
             panelClinic2.RowStyles.Add(new RowStyle(SizeType.Percent, 40F));
             panelClinic2.Size = new Size(258, 214);
             panelClinic2.TabIndex = 1;
+            // 
+            // clinicImage2
+            // 
+            clinicImage2.CheckedState.ImageSize = new Size(64, 64);
+            clinicImage2.Dock = DockStyle.Fill;
+            clinicImage2.HoverState.ImageSize = new Size(64, 64);
+            clinicImage2.Image = (Image)resources.GetObject("clinicImage2.Image");
+            clinicImage2.ImageOffset = new Point(0, 0);
+            clinicImage2.ImageRotate = 0F;
+            clinicImage2.Location = new Point(3, 3);
+            clinicImage2.Name = "clinicImage2";
+            clinicImage2.PressedState.ImageSize = new Size(64, 64);
+            clinicImage2.ShadowDecoration.CustomizableEdges = customizableEdges19;
+            clinicImage2.Size = new Size(252, 122);
+            clinicImage2.TabIndex = 2;
             // 
             // tableLayoutPanel11
             // 
@@ -764,6 +857,7 @@
             panelClinic1.ColumnCount = 1;
             panelClinic1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             panelClinic1.Controls.Add(tableLayoutPanel9, 0, 1);
+            panelClinic1.Controls.Add(clinicImage1, 0, 0);
             panelClinic1.Dock = DockStyle.Fill;
             panelClinic1.Location = new Point(3, 3);
             panelClinic1.Name = "panelClinic1";
@@ -820,6 +914,21 @@
             clinicTag1.Size = new Size(38, 15);
             clinicTag1.TabIndex = 0;
             clinicTag1.Text = "label8";
+            // 
+            // clinicImage1
+            // 
+            clinicImage1.CheckedState.ImageSize = new Size(64, 64);
+            clinicImage1.Dock = DockStyle.Fill;
+            clinicImage1.HoverState.ImageSize = new Size(64, 64);
+            clinicImage1.Image = (Image)resources.GetObject("clinicImage1.Image");
+            clinicImage1.ImageOffset = new Point(0, 0);
+            clinicImage1.ImageRotate = 0F;
+            clinicImage1.Location = new Point(3, 3);
+            clinicImage1.Name = "clinicImage1";
+            clinicImage1.PressedState.ImageSize = new Size(64, 64);
+            clinicImage1.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            clinicImage1.Size = new Size(252, 122);
+            clinicImage1.TabIndex = 1;
             // 
             // panel3
             // 
@@ -981,5 +1090,11 @@
         private Label clinicsName1;
         private Panel panel6;
         private Label clinicTag1;
+        private Guna.UI2.WinForms.Guna2ImageButton clinicImage6;
+        private Guna.UI2.WinForms.Guna2ImageButton clinicImage5;
+        private Guna.UI2.WinForms.Guna2ImageButton clinicImage4;
+        private Guna.UI2.WinForms.Guna2ImageButton clinicImage3;
+        private Guna.UI2.WinForms.Guna2ImageButton clinicImage2;
+        private Guna.UI2.WinForms.Guna2ImageButton clinicImage1;
     }
 }

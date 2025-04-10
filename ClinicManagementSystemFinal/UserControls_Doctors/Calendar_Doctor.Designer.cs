@@ -75,10 +75,10 @@
             guna2GroupBox1.CustomizableEdges = customizableEdges1;
             guna2GroupBox1.Font = new Font("Segoe UI", 9F);
             guna2GroupBox1.ForeColor = Color.FromArgb(125, 137, 149);
-            guna2GroupBox1.Location = new Point(109, 22);
+            guna2GroupBox1.Location = new Point(3, 6);
             guna2GroupBox1.Name = "guna2GroupBox1";
             guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2GroupBox1.Size = new Size(300, 200);
+            guna2GroupBox1.Size = new Size(300, 216);
             guna2GroupBox1.TabIndex = 0;
             guna2GroupBox1.Text = "guna2GroupBox1";
             // 

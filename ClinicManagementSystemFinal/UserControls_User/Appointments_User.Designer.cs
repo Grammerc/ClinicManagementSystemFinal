@@ -118,7 +118,7 @@
             btnSubmit.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnSubmit.Font = new Font("Segoe UI", 9F);
             btnSubmit.ForeColor = Color.White;
-            btnSubmit.Location = new Point(564, 22);
+            btnSubmit.Location = new Point(604, 11);
             btnSubmit.Name = "btnSubmit";
             btnSubmit.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnSubmit.Size = new Size(177, 56);
@@ -362,6 +362,7 @@
             tbxOtherConcerns.ShadowDecoration.CustomizableEdges = customizableEdges18;
             tbxOtherConcerns.Size = new Size(781, 37);
             tbxOtherConcerns.TabIndex = 0;
+            tbxOtherConcerns.Visible = false;
             // 
             // Appointments_User
             // 

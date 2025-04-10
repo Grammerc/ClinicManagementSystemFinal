@@ -83,7 +83,7 @@
             dungeonLabel3.BackColor = Color.Transparent;
             dungeonLabel3.Font = new Font("Segoe UI", 11F);
             dungeonLabel3.ForeColor = Color.FromArgb(76, 76, 77);
-            dungeonLabel3.Location = new Point(153, 24);
+            dungeonLabel3.Location = new Point(166, 22);
             dungeonLabel3.Name = "dungeonLabel3";
             dungeonLabel3.Size = new Size(110, 20);
             dungeonLabel3.TabIndex = 6;

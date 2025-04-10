@@ -24,7 +24,12 @@ namespace ClinicManagementSystemFinal
 
         private void label10_Click(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void tabPage6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

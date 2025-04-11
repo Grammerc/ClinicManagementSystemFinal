@@ -20,14 +20,14 @@ namespace ClinicManagementSystemFinal.UserControls_User.Appointments_Control
             userLoginId = loginId;
             // this.Load += Appointments_Remove_Load;
 
-            MessageBox.Show("Event Attached");
+            //MessageBox.Show("Event Attached");
 
         }
 
         private bool isProcessingClick = false;
         private void dgvRemove_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            MessageBox.Show($"Clicked: Row {e.RowIndex}, Column {e.ColumnIndex} - {dgvRemove.Columns[e.ColumnIndex].Name}");
+            //MessageBox.Show($"Clicked: Row {e.RowIndex}, Column {e.ColumnIndex} - {dgvRemove.Columns[e.ColumnIndex].Name}");
             if (isProcessingClick) return;
             isProcessingClick = true;
 
@@ -62,7 +62,7 @@ namespace ClinicManagementSystemFinal.UserControls_User.Appointments_Control
 
         private void DeleteAppointment(int appointmentId)
         {
-            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;";
+            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\Downloads\Login.accdb;";
             using (OleDbConnection conn = new OleDbConnection(connStr))
             {
                 conn.Open();
@@ -76,7 +76,7 @@ namespace ClinicManagementSystemFinal.UserControls_User.Appointments_Control
 
         private void LoadAppointments()
         {
-            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;";
+            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\Downloads\Login.accdb;";
             using (OleDbConnection conn = new OleDbConnection(connStr))
             {
                 conn.Open();

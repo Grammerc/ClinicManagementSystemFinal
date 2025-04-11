@@ -52,7 +52,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             label4 = new Label();
-            patientName = new Label();
+            lblName = new Label();
             label3 = new Label();
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
@@ -84,7 +84,7 @@
             // guna2Panel1
             // 
             guna2Panel1.Controls.Add(label4);
-            guna2Panel1.Controls.Add(patientName);
+            guna2Panel1.Controls.Add(lblName);
             guna2Panel1.Controls.Add(label3);
             guna2Panel1.CustomizableEdges = customizableEdges1;
             guna2Panel1.Dock = DockStyle.Top;
@@ -103,14 +103,14 @@
             label4.TabIndex = 2;
             label4.Text = "Hi";
             // 
-            // patientName
+            // lblName
             // 
-            patientName.AutoSize = true;
-            patientName.Location = new Point(49, 10);
-            patientName.Name = "patientName";
-            patientName.Size = new Size(84, 15);
-            patientName.TabIndex = 1;
-            patientName.Text = "{patientName}";
+            lblName.AutoSize = true;
+            lblName.Location = new Point(49, 10);
+            lblName.Name = "lblName";
+            lblName.Size = new Size(84, 15);
+            lblName.TabIndex = 1;
+            lblName.Text = "{patientName}";
             // 
             // label3
             // 
@@ -336,7 +336,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
         private Label label1;
         private Label label4;
-        private Label patientName;
+        private Label lblName;
         private Label label5;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2PictureBox pbxCanvaDoctor;

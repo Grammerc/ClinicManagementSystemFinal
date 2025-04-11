@@ -18,7 +18,7 @@ namespace ClinicManagementSystemFinal.UserControls_User
         private List<string> serviceNames = new List<string>();
         private int currentPage = 0;
         private const int servicesPerPage = 9;
-        private string imageFolderPath = @"C:\Users\Raphael Perocho\source\repos\ClinicManagementSystemFinal\ProjectClinic\ClinicManagementSystemFinal\Pictures\ServiceImages";
+        private string imageFolderPath = @"C:\Users\Raphael\Source\Repos\ClinicManagementSystemFinal\ClinicManagementSystemFinal\Pictures\ServiceImages\";
         public Services()
         {
             InitializeComponent();
@@ -31,7 +31,7 @@ namespace ClinicManagementSystemFinal.UserControls_User
         {
             serviceNames.Clear();
 
-            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;";
+            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\Downloads\Login.accdb;";
             using (OleDbConnection conn = new OleDbConnection(connStr))
             {
                 conn.Open();

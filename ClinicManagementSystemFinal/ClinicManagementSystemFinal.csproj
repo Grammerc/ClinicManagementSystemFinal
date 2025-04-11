@@ -28,6 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Pictures\ProfilePictures\" />
     <Folder Include="Pictures\ServiceImages\" />
   </ItemGroup>
 

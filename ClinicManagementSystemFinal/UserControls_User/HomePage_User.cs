@@ -246,11 +246,32 @@ namespace ClinicManagementSystemFinal
 
 
             menuContainer.Height = 53;
+            LoadUserName(userLoginId);
+        }
+
+        private void LoadUserName(string loginId)
+        {
+            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\Downloads\Login.accdb;";
+            using (OleDbConnection conn = new OleDbConnection(connStr))
+            {
+                conn.Open();
+                string query = "SELECT Name FROM Information WHERE LoginID = @loginId";
+                OleDbCommand cmd = new OleDbCommand(query, conn);
+                cmd.Parameters.AddWithValue("@loginId", loginId);
+
+                object result = cmd.ExecuteScalar();
+                if (result != null && result != DBNull.Value)
+                {
+                    lblName.Text = result.ToString();
+                }
+
+                conn.Close();
+            }
         }
 
         private void LoadProfilePicture(string loginId)
         {
-            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;";
+            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\Downloads\Login.accdb;Persist Security Info=False;";
             using (OleDbConnection conn = new OleDbConnection(connStr))
             {
                 conn.Open();
@@ -292,7 +313,7 @@ namespace ClinicManagementSystemFinal
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            LoadControl(new Dashboard_User());
+            LoadControl(new Dashboard_User(userLoginId));
         }
 
         private void btnAppointments_Click(object sender, EventArgs e)

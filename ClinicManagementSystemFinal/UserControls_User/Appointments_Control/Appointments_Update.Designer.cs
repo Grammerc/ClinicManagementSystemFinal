@@ -35,14 +35,9 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel2 = new Panel();
             label4 = new Label();
             dgvAppointments = new Guna.UI2.WinForms.Guna2DataGridView();
-            btnUpdate = new Guna.UI2.WinForms.Guna2Button();
-            scheduleDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            scheduleTime = new Guna.UI2.WinForms.Guna2ComboBox();
             c1 = new DataGridViewTextBoxColumn();
             c2 = new DataGridViewTextBoxColumn();
             c3 = new DataGridViewTextBoxColumn();
@@ -50,6 +45,8 @@
             c4 = new DataGridViewTextBoxColumn();
             c6 = new DataGridViewTextBoxColumn();
             Select = new DataGridViewButtonColumn();
+            scheduleDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            scheduleTime = new Guna.UI2.WinForms.Guna2ComboBox();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvAppointments).BeginInit();
             SuspendLayout();
@@ -126,55 +123,6 @@
             dgvAppointments.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dgvAppointments.CellClick += dgvAppointments_CellClick;
             // 
-            // btnUpdate
-            // 
-            btnUpdate.CustomizableEdges = customizableEdges1;
-            btnUpdate.DisabledState.BorderColor = Color.DarkGray;
-            btnUpdate.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnUpdate.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnUpdate.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnUpdate.Font = new Font("Segoe UI", 9F);
-            btnUpdate.ForeColor = Color.White;
-            btnUpdate.Location = new Point(558, 438);
-            btnUpdate.Name = "btnUpdate";
-            btnUpdate.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnUpdate.Size = new Size(180, 45);
-            btnUpdate.TabIndex = 13;
-            btnUpdate.Text = "Update";
-            // 
-            // scheduleDate
-            // 
-            scheduleDate.Checked = true;
-            scheduleDate.CustomizableEdges = customizableEdges3;
-            scheduleDate.Font = new Font("Segoe UI", 9F);
-            scheduleDate.Format = DateTimePickerFormat.Long;
-            scheduleDate.Location = new Point(46, 438);
-            scheduleDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            scheduleDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            scheduleDate.Name = "scheduleDate";
-            scheduleDate.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            scheduleDate.Size = new Size(200, 36);
-            scheduleDate.TabIndex = 14;
-            scheduleDate.Value = new DateTime(2025, 4, 11, 0, 21, 9, 996);
-            // 
-            // scheduleTime
-            // 
-            scheduleTime.BackColor = Color.Transparent;
-            scheduleTime.CustomizableEdges = customizableEdges5;
-            scheduleTime.DrawMode = DrawMode.OwnerDrawFixed;
-            scheduleTime.DropDownStyle = ComboBoxStyle.DropDownList;
-            scheduleTime.FocusedColor = Color.FromArgb(94, 148, 255);
-            scheduleTime.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            scheduleTime.Font = new Font("Segoe UI", 10F);
-            scheduleTime.ForeColor = Color.FromArgb(68, 88, 112);
-            scheduleTime.ItemHeight = 30;
-            scheduleTime.Items.AddRange(new object[] { "8:00 A.M. - 9:00 A.M.", "9:00 A.M. - 10:00 A.M", "10:00 A.M. - 11:00 A.M.", "11:00 A.M. - 12:00 A.M. ", "12:00 A.M. - 1:00 A.M.", "1:00 P.M. - 2:00  P.M.", "2:00  P.M. - 3:00  P.M.", "3:00  P.M. - 4:00  P.M.", "4:00 P.M. - 5:00  P.M.", "5:00  P.M. - 6:00  P.M." });
-            scheduleTime.Location = new Point(277, 438);
-            scheduleTime.Name = "scheduleTime";
-            scheduleTime.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            scheduleTime.Size = new Size(221, 36);
-            scheduleTime.TabIndex = 15;
-            // 
             // c1
             // 
             c1.HeaderText = "Date";
@@ -212,13 +160,45 @@
             Select.Resizable = DataGridViewTriState.True;
             Select.SortMode = DataGridViewColumnSortMode.Automatic;
             // 
+            // scheduleDate
+            // 
+            scheduleDate.Checked = true;
+            scheduleDate.CustomizableEdges = customizableEdges1;
+            scheduleDate.Font = new Font("Segoe UI", 9F);
+            scheduleDate.Format = DateTimePickerFormat.Long;
+            scheduleDate.Location = new Point(46, 438);
+            scheduleDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            scheduleDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            scheduleDate.Name = "scheduleDate";
+            scheduleDate.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            scheduleDate.Size = new Size(200, 36);
+            scheduleDate.TabIndex = 14;
+            scheduleDate.Value = new DateTime(2025, 4, 11, 0, 21, 9, 996);
+            // 
+            // scheduleTime
+            // 
+            scheduleTime.BackColor = Color.Transparent;
+            scheduleTime.CustomizableEdges = customizableEdges3;
+            scheduleTime.DrawMode = DrawMode.OwnerDrawFixed;
+            scheduleTime.DropDownStyle = ComboBoxStyle.DropDownList;
+            scheduleTime.FocusedColor = Color.FromArgb(94, 148, 255);
+            scheduleTime.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            scheduleTime.Font = new Font("Segoe UI", 10F);
+            scheduleTime.ForeColor = Color.FromArgb(68, 88, 112);
+            scheduleTime.ItemHeight = 30;
+            scheduleTime.Items.AddRange(new object[] { "8:00 A.M. - 9:00 A.M.", "9:00 A.M. - 10:00 A.M", "10:00 A.M. - 11:00 A.M.", "11:00 A.M. - 12:00 A.M. ", "12:00 A.M. - 1:00 A.M.", "1:00 P.M. - 2:00  P.M.", "2:00  P.M. - 3:00  P.M.", "3:00  P.M. - 4:00  P.M.", "4:00 P.M. - 5:00  P.M.", "5:00  P.M. - 6:00  P.M." });
+            scheduleTime.Location = new Point(277, 438);
+            scheduleTime.Name = "scheduleTime";
+            scheduleTime.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            scheduleTime.Size = new Size(221, 36);
+            scheduleTime.TabIndex = 15;
+            // 
             // Appointments_Update
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(scheduleTime);
             Controls.Add(scheduleDate);
-            Controls.Add(btnUpdate);
             Controls.Add(dgvAppointments);
             Controls.Add(panel2);
             Name = "Appointments_Update";
@@ -235,7 +215,6 @@
         private Panel panel2;
         private Label label4;
         private Guna.UI2.WinForms.Guna2DataGridView dgvAppointments;
-        private Guna.UI2.WinForms.Guna2Button btnUpdate;
         private Guna.UI2.WinForms.Guna2DateTimePicker scheduleDate;
         private Guna.UI2.WinForms.Guna2ComboBox scheduleTime;
         private DataGridViewTextBoxColumn c1;

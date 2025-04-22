@@ -40,7 +40,7 @@ namespace ClinicManagementSystemFinal.UserControls_User
 
         private void LoadAppointments()
         {
-            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\Downloads\Login.accdb;";
+            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;";
             using (OleDbConnection conn = new OleDbConnection(connStr))
             {
                 conn.Open();
@@ -129,7 +129,7 @@ namespace ClinicManagementSystemFinal.UserControls_User
 
                 if (result == DialogResult.OK)
                 {
-                    string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\Downloads\Login.accdb;";
+                    string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;";
                     using (OleDbConnection conn = new OleDbConnection(connStr))
                     {
                         conn.Open();
@@ -189,7 +189,7 @@ namespace ClinicManagementSystemFinal.UserControls_User
 
             if (result == DialogResult.OK)
             {
-                string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\Downloads\Login.accdb;";
+                string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;";
                 using (OleDbConnection conn = new OleDbConnection(connStr))
                 {
                     conn.Open();

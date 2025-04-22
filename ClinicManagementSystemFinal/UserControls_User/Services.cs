@@ -9,21 +9,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using Guna.UI2.WinForms;
 
 namespace ClinicManagementSystemFinal.UserControls_User
 {
+    
     public partial class Services : UserControl
     {
-
+        private string userLoginId;
         private List<string> serviceNames = new List<string>();
         private int currentPage = 0;
         private const int servicesPerPage = 9;
-        private string imageFolderPath = @"C:\Users\Raphael\Source\Repos\ClinicManagementSystemFinal\ClinicManagementSystemFinal\Pictures\ServiceImages\";
-        public Services()
+        private string imageFolderPath = @"C:\Users\Raphael Perocho\source\repos\ClinicManagementSystemFinal\ProjectClinic\ClinicManagementSystemFinal\Pictures\ServiceImages\";
+        public Services(string loginId)
         {
             InitializeComponent();
             this.Load += new EventHandler(Services_Load);
-
+            userLoginId = loginId;
 
         }
 
@@ -31,7 +33,7 @@ namespace ClinicManagementSystemFinal.UserControls_User
         {
             serviceNames.Clear();
 
-            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\Downloads\Login.accdb;";
+            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;";
             using (OleDbConnection conn = new OleDbConnection(connStr))
             {
                 conn.Open();
@@ -54,55 +56,55 @@ namespace ClinicManagementSystemFinal.UserControls_User
                 int index = currentPage * servicesPerPage + i;
 
                 var lbl = Controls.Find($"serviceName{i + 1}", true).FirstOrDefault() as Label;
-                var btn = Controls.Find($"btnImage{i + 1}", true).FirstOrDefault() as Guna.UI2.WinForms.Guna2ImageButton;
+                var btn = Controls.Find($"btnImage{i + 1}", true).FirstOrDefault() as Guna2ImageButton;
+                if (lbl == null || btn == null) continue;
 
-                if (lbl == null)
-                    MessageBox.Show($"Label 'serviceName{i + 1}' not found");
-
-                if (btn == null)
-                    MessageBox.Show($"Guna2ImageButton 'btnImage{i + 1}' not found");
-
-                if (lbl != null && btn != null)
+                if (index < serviceNames.Count)
                 {
-                    if (index < serviceNames.Count)
-                    {
-                        string service = serviceNames[index];
-                        lbl.Text = service;
+                    string service = serviceNames[index];
+                    lbl.Text = service;
 
-                        string imagePath = Path.Combine(imageFolderPath, $"{service}.png");
-                        if (!File.Exists(imagePath))
-                            imagePath = Path.Combine(imageFolderPath, $"{service}.jpg");
+                    // load picture (png first, then jpg)
+                    string imgPath = Path.Combine(imageFolderPath, $"{service}.png");
+                    if (!File.Exists(imgPath))
+                        imgPath = Path.Combine(imageFolderPath, $"{service}.jpg");
+                    btn.Image = File.Exists(imgPath) ? Image.FromFile(imgPath) : null;
 
-                        if (File.Exists(imagePath))
-                        {
-                            btn.Image = Image.FromFile(imagePath);
-                            btn.ImageSize = btn.Size;
-                            btn.HoverState.ImageSize = btn.Size; 
-                            btn.PressedState.ImageSize = btn.Size; 
-                        }
-                        else
-                        {
-                            btn.Image = null;
-                        }
+                    //── STOP THE HOVER‑ZOOM ──────────────────────────────
+                    btn.ImageSize = btn.Size;
+                    btn.HoverState.ImageSize = btn.Size;     // <- same size
+                    btn.PressedState.ImageSize = btn.Size;
 
-                        lbl.Visible = true;
-                        btn.Visible = true;
-                        btn.ImageSize = new Size(btn.Width, btn.Height); 
-                        btn.ImageRotate = 0;
-                        btn.ImageOffset = new Point(0, 0);
-                        btn.BackColor = Color.Transparent;
-                        btn.UseTransparentBackground = true;
-                    }
-                    else
-                    {
-                        lbl.Text = "";
-                        lbl.Visible = false;
-                        btn.Image = null;
-                        btn.Visible = false;
-                    }
+                    //── make clickable → Clinics with filter ─────────────
+                    btn.Tag = service;
+                    btn.Click -= ServiceImage_Click;
+                    btn.Click += ServiceImage_Click;
+
+                    lbl.Visible = btn.Visible = true;
+                }
+                else
+                {
+                    lbl.Visible = btn.Visible = false;
+                    btn.Image = null;
                 }
             }
         }
+
+        private void ServiceImage_Click(object sender, EventArgs e)
+        {
+            if (sender is not Guna2ImageButton btn || btn.Tag == null) return;
+
+            string serviceName = btn.Tag.ToString();
+
+            // locate the host HomePage_User form
+            var host = this.FindForm() as HomePage_User;
+            if (host == null) return;
+
+            // show Clinics with the service filter pre‑selected
+            host.LoadControl(new Clinics(userLoginId, serviceName));
+        }
+
+
 
         private Control GetControlRecursive(Control parent, string name)
         {

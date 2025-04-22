@@ -251,7 +251,7 @@ namespace ClinicManagementSystemFinal
 
         private void LoadUserName(string loginId)
         {
-            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\Downloads\Login.accdb;";
+            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;";
             using (OleDbConnection conn = new OleDbConnection(connStr))
             {
                 conn.Open();
@@ -271,7 +271,7 @@ namespace ClinicManagementSystemFinal
 
         private void LoadProfilePicture(string loginId)
         {
-            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\Downloads\Login.accdb;Persist Security Info=False;";
+            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;";
             using (OleDbConnection conn = new OleDbConnection(connStr))
             {
                 conn.Open();
@@ -332,12 +332,12 @@ namespace ClinicManagementSystemFinal
 
         private void btnClinics_Click(object sender, EventArgs e)
         {
-            LoadControl(new Clinics());
+            LoadControl(new Clinics(userLoginId));
         }
 
         private void btnService_Click(object sender, EventArgs e)
         {
-            LoadControl(new Services());
+            LoadControl(new Services(userLoginId));
         }
 
         private void guna2ImageButton3_Click(object sender, EventArgs e)

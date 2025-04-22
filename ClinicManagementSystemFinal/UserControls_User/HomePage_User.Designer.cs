@@ -368,9 +368,12 @@
             // 
             // pbxProfilePic
             // 
+            pbxProfilePic.Image = (Image)resources.GetObject("pbxProfilePic.Image");
+            pbxProfilePic.InitialImage = (Image)resources.GetObject("pbxProfilePic.InitialImage");
             pbxProfilePic.Location = new Point(67, 47);
             pbxProfilePic.Name = "pbxProfilePic";
             pbxProfilePic.Size = new Size(100, 101);
+            pbxProfilePic.SizeMode = PictureBoxSizeMode.StretchImage;
             pbxProfilePic.TabIndex = 4;
             pbxProfilePic.TabStop = false;
             // 

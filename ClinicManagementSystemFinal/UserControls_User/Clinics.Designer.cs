@@ -40,18 +40,15 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clinics));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clinics));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            btnSubmit = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel6 = new TableLayoutPanel();
@@ -72,7 +69,7 @@
             panel1 = new Panel();
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             panel4 = new Panel();
-            tableLayoutPanel2 = new TableLayoutPanel();
+            panelSuperMain = new TableLayoutPanel();
             panelClinic6 = new TableLayoutPanel();
             clinicImage6 = new Guna.UI2.WinForms.Guna2ImageButton();
             tableLayoutPanel19 = new TableLayoutPanel();
@@ -118,7 +115,6 @@
             panel3 = new Panel();
             label4 = new Label();
             panel2 = new Panel();
-            guna2Panel8.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel6.SuspendLayout();
             tableLayoutPanel7.SuspendLayout();
@@ -128,7 +124,7 @@
             panel1.SuspendLayout();
             guna2Panel2.SuspendLayout();
             panel4.SuspendLayout();
-            tableLayoutPanel2.SuspendLayout();
+            panelSuperMain.SuspendLayout();
             panelClinic6.SuspendLayout();
             tableLayoutPanel19.SuspendLayout();
             panel15.SuspendLayout();
@@ -156,30 +152,12 @@
             panel2.SuspendLayout();
             SuspendLayout();
             // 
-            // btnSubmit
-            // 
-            btnSubmit.CustomizableEdges = customizableEdges1;
-            btnSubmit.DisabledState.BorderColor = Color.DarkGray;
-            btnSubmit.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnSubmit.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnSubmit.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnSubmit.Dock = DockStyle.Fill;
-            btnSubmit.Font = new Font("Segoe UI", 9F);
-            btnSubmit.ForeColor = Color.White;
-            btnSubmit.Location = new Point(0, 0);
-            btnSubmit.Name = "btnSubmit";
-            btnSubmit.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnSubmit.Size = new Size(258, 58);
-            btnSubmit.TabIndex = 0;
-            btnSubmit.Text = "Submit";
-            // 
             // guna2Panel8
             // 
-            guna2Panel8.Controls.Add(btnSubmit);
-            guna2Panel8.CustomizableEdges = customizableEdges3;
+            guna2Panel8.CustomizableEdges = customizableEdges1;
             guna2Panel8.Location = new Point(531, 67);
             guna2Panel8.Name = "guna2Panel8";
-            guna2Panel8.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2Panel8.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Panel8.Size = new Size(258, 58);
             guna2Panel8.TabIndex = 5;
             // 
@@ -221,7 +199,7 @@
             // cbxTimeSlot
             // 
             cbxTimeSlot.BackColor = Color.Transparent;
-            cbxTimeSlot.CustomizableEdges = customizableEdges5;
+            cbxTimeSlot.CustomizableEdges = customizableEdges3;
             cbxTimeSlot.DrawMode = DrawMode.OwnerDrawFixed;
             cbxTimeSlot.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxTimeSlot.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -231,7 +209,7 @@
             cbxTimeSlot.ItemHeight = 30;
             cbxTimeSlot.Location = new Point(3, 29);
             cbxTimeSlot.Name = "cbxTimeSlot";
-            cbxTimeSlot.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            cbxTimeSlot.ShadowDecoration.CustomizableEdges = customizableEdges4;
             cbxTimeSlot.Size = new Size(252, 36);
             cbxTimeSlot.TabIndex = 2;
             // 
@@ -262,7 +240,7 @@
             // cbxInsuranceCoverage
             // 
             cbxInsuranceCoverage.BackColor = Color.Transparent;
-            cbxInsuranceCoverage.CustomizableEdges = customizableEdges7;
+            cbxInsuranceCoverage.CustomizableEdges = customizableEdges5;
             cbxInsuranceCoverage.DrawMode = DrawMode.OwnerDrawFixed;
             cbxInsuranceCoverage.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxInsuranceCoverage.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -272,7 +250,7 @@
             cbxInsuranceCoverage.ItemHeight = 30;
             cbxInsuranceCoverage.Location = new Point(3, 29);
             cbxInsuranceCoverage.Name = "cbxInsuranceCoverage";
-            cbxInsuranceCoverage.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            cbxInsuranceCoverage.ShadowDecoration.CustomizableEdges = customizableEdges6;
             cbxInsuranceCoverage.Size = new Size(252, 36);
             cbxInsuranceCoverage.TabIndex = 3;
             // 
@@ -303,7 +281,7 @@
             // cbxSpecialization
             // 
             cbxSpecialization.BackColor = Color.Transparent;
-            cbxSpecialization.CustomizableEdges = customizableEdges9;
+            cbxSpecialization.CustomizableEdges = customizableEdges7;
             cbxSpecialization.DrawMode = DrawMode.OwnerDrawFixed;
             cbxSpecialization.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxSpecialization.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -313,7 +291,7 @@
             cbxSpecialization.ItemHeight = 30;
             cbxSpecialization.Location = new Point(3, 29);
             cbxSpecialization.Name = "cbxSpecialization";
-            cbxSpecialization.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            cbxSpecialization.ShadowDecoration.CustomizableEdges = customizableEdges8;
             cbxSpecialization.Size = new Size(252, 36);
             cbxSpecialization.TabIndex = 2;
             // 
@@ -344,7 +322,7 @@
             // cbxServices
             // 
             cbxServices.BackColor = Color.Transparent;
-            cbxServices.CustomizableEdges = customizableEdges11;
+            cbxServices.CustomizableEdges = customizableEdges9;
             cbxServices.DrawMode = DrawMode.OwnerDrawFixed;
             cbxServices.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxServices.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -354,7 +332,7 @@
             cbxServices.ItemHeight = 30;
             cbxServices.Location = new Point(3, 29);
             cbxServices.Name = "cbxServices";
-            cbxServices.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            cbxServices.ShadowDecoration.CustomizableEdges = customizableEdges10;
             cbxServices.Size = new Size(252, 36);
             cbxServices.TabIndex = 2;
             // 
@@ -395,7 +373,7 @@
             // cbxLocation
             // 
             cbxLocation.BackColor = Color.Transparent;
-            cbxLocation.CustomizableEdges = customizableEdges13;
+            cbxLocation.CustomizableEdges = customizableEdges11;
             cbxLocation.DrawMode = DrawMode.OwnerDrawFixed;
             cbxLocation.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxLocation.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -405,7 +383,7 @@
             cbxLocation.ItemHeight = 30;
             cbxLocation.Location = new Point(3, 29);
             cbxLocation.Name = "cbxLocation";
-            cbxLocation.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            cbxLocation.ShadowDecoration.CustomizableEdges = customizableEdges12;
             cbxLocation.Size = new Size(252, 36);
             cbxLocation.TabIndex = 1;
             cbxLocation.SelectedIndexChanged += cbxLocation_SelectedIndexChanged;
@@ -424,43 +402,43 @@
             guna2Panel2.Controls.Add(panel4);
             guna2Panel2.Controls.Add(panel3);
             guna2Panel2.Controls.Add(panel1);
-            guna2Panel2.CustomizableEdges = customizableEdges21;
+            guna2Panel2.CustomizableEdges = customizableEdges19;
             guna2Panel2.Dock = DockStyle.Fill;
             guna2Panel2.Location = new Point(0, 56);
             guna2Panel2.Name = "guna2Panel2";
-            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges20;
             guna2Panel2.Size = new Size(793, 606);
             guna2Panel2.TabIndex = 6;
             // 
             // panel4
             // 
-            panel4.Controls.Add(tableLayoutPanel2);
+            panel4.Controls.Add(panelSuperMain);
             panel4.Dock = DockStyle.Fill;
             panel4.Location = new Point(0, 129);
             panel4.Name = "panel4";
             panel4.Size = new Size(793, 440);
             panel4.TabIndex = 2;
             // 
-            // tableLayoutPanel2
+            // panelSuperMain
             // 
-            tableLayoutPanel2.ColumnCount = 3;
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
-            tableLayoutPanel2.Controls.Add(panelClinic6, 2, 1);
-            tableLayoutPanel2.Controls.Add(panelClinic5, 1, 1);
-            tableLayoutPanel2.Controls.Add(panelClinic4, 0, 1);
-            tableLayoutPanel2.Controls.Add(panelClinic3, 2, 0);
-            tableLayoutPanel2.Controls.Add(panelClinic2, 1, 0);
-            tableLayoutPanel2.Controls.Add(panelClinic1, 0, 0);
-            tableLayoutPanel2.Dock = DockStyle.Fill;
-            tableLayoutPanel2.Location = new Point(0, 0);
-            tableLayoutPanel2.Name = "tableLayoutPanel2";
-            tableLayoutPanel2.RowCount = 2;
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel2.Size = new Size(793, 440);
-            tableLayoutPanel2.TabIndex = 0;
+            panelSuperMain.ColumnCount = 3;
+            panelSuperMain.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
+            panelSuperMain.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
+            panelSuperMain.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
+            panelSuperMain.Controls.Add(panelClinic6, 2, 1);
+            panelSuperMain.Controls.Add(panelClinic5, 1, 1);
+            panelSuperMain.Controls.Add(panelClinic4, 0, 1);
+            panelSuperMain.Controls.Add(panelClinic3, 2, 0);
+            panelSuperMain.Controls.Add(panelClinic2, 1, 0);
+            panelSuperMain.Controls.Add(panelClinic1, 0, 0);
+            panelSuperMain.Dock = DockStyle.Fill;
+            panelSuperMain.Location = new Point(0, 0);
+            panelSuperMain.Name = "panelSuperMain";
+            panelSuperMain.RowCount = 2;
+            panelSuperMain.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            panelSuperMain.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            panelSuperMain.Size = new Size(793, 440);
+            panelSuperMain.TabIndex = 0;
             // 
             // panelClinic6
             // 
@@ -488,7 +466,7 @@
             clinicImage6.Location = new Point(3, 3);
             clinicImage6.Name = "clinicImage6";
             clinicImage6.PressedState.ImageSize = new Size(64, 64);
-            clinicImage6.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            clinicImage6.ShadowDecoration.CustomizableEdges = customizableEdges13;
             clinicImage6.Size = new Size(253, 122);
             clinicImage6.TabIndex = 2;
             // 
@@ -566,7 +544,7 @@
             clinicImage5.Location = new Point(3, 3);
             clinicImage5.Name = "clinicImage5";
             clinicImage5.PressedState.ImageSize = new Size(64, 64);
-            clinicImage5.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            clinicImage5.ShadowDecoration.CustomizableEdges = customizableEdges14;
             clinicImage5.Size = new Size(252, 122);
             clinicImage5.TabIndex = 2;
             // 
@@ -644,7 +622,7 @@
             clinicImage4.Location = new Point(3, 3);
             clinicImage4.Name = "clinicImage4";
             clinicImage4.PressedState.ImageSize = new Size(64, 64);
-            clinicImage4.ShadowDecoration.CustomizableEdges = customizableEdges17;
+            clinicImage4.ShadowDecoration.CustomizableEdges = customizableEdges15;
             clinicImage4.Size = new Size(252, 122);
             clinicImage4.TabIndex = 2;
             // 
@@ -722,7 +700,7 @@
             clinicImage3.Location = new Point(3, 3);
             clinicImage3.Name = "clinicImage3";
             clinicImage3.PressedState.ImageSize = new Size(64, 64);
-            clinicImage3.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            clinicImage3.ShadowDecoration.CustomizableEdges = customizableEdges16;
             clinicImage3.Size = new Size(253, 122);
             clinicImage3.TabIndex = 2;
             // 
@@ -800,7 +778,7 @@
             clinicImage2.Location = new Point(3, 3);
             clinicImage2.Name = "clinicImage2";
             clinicImage2.PressedState.ImageSize = new Size(64, 64);
-            clinicImage2.ShadowDecoration.CustomizableEdges = customizableEdges19;
+            clinicImage2.ShadowDecoration.CustomizableEdges = customizableEdges17;
             clinicImage2.Size = new Size(252, 122);
             clinicImage2.TabIndex = 2;
             // 
@@ -926,7 +904,7 @@
             clinicImage1.Location = new Point(3, 3);
             clinicImage1.Name = "clinicImage1";
             clinicImage1.PressedState.ImageSize = new Size(64, 64);
-            clinicImage1.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            clinicImage1.ShadowDecoration.CustomizableEdges = customizableEdges18;
             clinicImage1.Size = new Size(252, 122);
             clinicImage1.TabIndex = 1;
             // 
@@ -965,7 +943,6 @@
             Controls.Add(panel2);
             Name = "Clinics";
             Size = new Size(793, 662);
-            guna2Panel8.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel6.ResumeLayout(false);
             tableLayoutPanel6.PerformLayout();
@@ -980,7 +957,7 @@
             panel1.ResumeLayout(false);
             guna2Panel2.ResumeLayout(false);
             panel4.ResumeLayout(false);
-            tableLayoutPanel2.ResumeLayout(false);
+            panelSuperMain.ResumeLayout(false);
             panelClinic6.ResumeLayout(false);
             tableLayoutPanel19.ResumeLayout(false);
             panel15.ResumeLayout(false);
@@ -1031,7 +1008,7 @@
         private Label label4;
         private Panel panel2;
         private Panel panel4;
-        private TableLayoutPanel tableLayoutPanel2;
+        private TableLayoutPanel panelSuperMain;
         private Panel panel3;
         private TableLayoutPanel tableLayoutPanel7;
         private TableLayoutPanel tableLayoutPanel5;
@@ -1046,7 +1023,6 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
         private Label label2;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2Button btnSubmit;
         private TableLayoutPanel tableLayoutPanel6;
         private Guna.UI2.WinForms.Guna2ComboBox cbxTimeSlot;
         private Label label5;

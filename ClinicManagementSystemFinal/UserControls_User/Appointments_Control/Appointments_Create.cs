@@ -13,9 +13,21 @@ namespace ClinicManagementSystemFinal.UserControls_User
 {
     public partial class Appointments_Create : UserControl
     {
-
         private OleDbConnection conn = new OleDbConnection();
         private string userLoginId;
+        readonly string[] AllSlots =
+{
+    "8:00 A.M. - 9:00 A.M.",
+    "9:00 A.M. - 10:00 A.M",
+    "10:00 A.M. - 11:00 A.M.",
+    "11:00 A.M. - 12:00 A.M.",
+    "12:00 A.M. - 1:00 A.M.",
+    "1:00 P.M. - 2:00  P.M.",
+    "2:00  P.M. - 3:00  P.M.",
+    "3:00  P.M. - 4:00  P.M.",
+    "4:00 P.M. - 5:00  P.M.",
+    "5:00  P.M. - 6:00  P.M."
+};
         public Appointments_Create(string loginId)
         {
             InitializeComponent();
@@ -24,6 +36,9 @@ namespace ClinicManagementSystemFinal.UserControls_User
             Persist Security Info=False;";
             LoadClinicNames();
             userLoginId = loginId;
+            cbxDoctor.SelectedIndexChanged += (s, e) => RefreshTimeSlots();
+            cbxDate.ValueChanged += (s, e) => RefreshTimeSlots();
+            RefreshTimeSlots();
         }
 
 
@@ -92,6 +107,19 @@ namespace ClinicManagementSystemFinal.UserControls_User
                 int doctorID = Convert.ToInt32(cbxDoctor.SelectedValue);
 
                 int userInfoID = GetUserInfoID(userLoginId);
+                using (var check = new OleDbCommand(
+       "SELECT 1 FROM Appointments WHERE DoctorID=? AND AppointmentDate=? AND TimeSlot=? AND Status IN ('Pending','Approved')", conn))
+                {
+                    check.Parameters.AddWithValue("?", doctorID);
+                    check.Parameters.AddWithValue("?", selectedDate);
+                    check.Parameters.AddWithValue("?", selectedTime);
+                    if (check.ExecuteScalar() != null)
+                    {
+                        MessageBox.Show("That time slot has just been taken. Pick another one.");
+                        RefreshTimeSlots();
+                        return;
+                    }
+                }
 
                 OleDbCommand insertCmd = new OleDbCommand(@"
     INSERT INTO Appointments 
@@ -209,6 +237,39 @@ namespace ClinicManagementSystemFinal.UserControls_User
 
                 conn.Close();
             }
+            RefreshTimeSlots();
+        }
+        void RefreshTimeSlots()
+        {
+            cbxTimeSlot.Items.Clear();
+
+            if (cbxDoctor.SelectedValue == null) return;     // no doctor chosen yet
+
+            int doctorId = Convert.ToInt32(cbxDoctor.SelectedValue);
+            DateTime d0 = cbxDate.Value.Date;
+            DateTime d1 = d0.AddDays(1);
+
+            using var c = new OleDbConnection(
+                @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;");
+            c.Open();
+            var cmd = new OleDbCommand(
+                @"SELECT TimeSlot FROM Appointments
+          WHERE DoctorID = ?
+            AND AppointmentDate >= ? AND AppointmentDate < ?
+            AND Status IN ('Pending','Approved')", c);
+            cmd.Parameters.AddWithValue("?", doctorId);
+            cmd.Parameters.AddWithValue("?", d0);
+            cmd.Parameters.AddWithValue("?", d1);
+
+            var taken = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+            using (var r = cmd.ExecuteReader())
+                while (r.Read()) taken.Add(r.GetString(0));
+
+            foreach (string slot in AllSlots)
+                if (!taken.Contains(slot))
+                    cbxTimeSlot.Items.Add(slot);
+
+            cbxTimeSlot.SelectedIndex = cbxTimeSlot.Items.Count > 0 ? 0 : -1;
         }
     }
 }

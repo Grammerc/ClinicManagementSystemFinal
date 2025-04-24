@@ -9,9 +9,8 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
     {
         readonly string appointmentId;
         readonly Guna.UI2.WinForms.Guna2ImageButton targetButton;
-        readonly PatientQueue host;   // ① keep a reference to the queue
+        readonly PatientQueue host; 
 
-        // ② NEW overload – three arguments
         public StatusChange(string apptId,
                             Guna.UI2.WinForms.Guna2ImageButton statusButton,
                             PatientQueue owner)
@@ -20,14 +19,14 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
             appointmentId = apptId;
             targetButton = statusButton;
             host = owner;
+
+            btnApproved.Click += btnApproved_Click;
+            btnCancel.Click += btnCancel_Click;
+            btnPending.Click += btnPending_Click;
+            btnComplete.Click += btnComplete_Click;
         }
 
-        // ③ (optional) keep the old two-argument ctor so existing code still compiles
-        public StatusChange(string apptId,
-                            Guna.UI2.WinForms.Guna2ImageButton statusButton)
-            : this(apptId, statusButton, null) { }
-
-        void UpdateStatus(string newStatus, Image statusImage)
+        void UpdateStatus(string newStatus)
         {
             const string CONN =
                 @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;";
@@ -41,16 +40,13 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
                 cmd.ExecuteNonQuery();
             }
 
-            if (targetButton != null) targetButton.Image = statusImage;
-
-            host?.RefreshCurrentQueue();   // ④ refresh list if we have a host
-
+            host?.RefreshCurrentQueue();
             Close();
         }
 
-        void btnApproved_Click(object sender, EventArgs e) => UpdateStatus("Approved", btnApproved.Image);
-        void btnComplete_Click(object sender, EventArgs e) => UpdateStatus("Completed", btnComplete.Image);
-        void btnCancel_Click(object sender, EventArgs e) => UpdateStatus("Cancelled", btnCancel.Image);
-        void btnPending_Click(object sender, EventArgs e) => UpdateStatus("Pending", btnPending.Image);
+        void btnApproved_Click(object s, EventArgs e) => UpdateStatus("Approved");
+        void btnCancel_Click(object s, EventArgs e) => UpdateStatus("Cancelled");
+        void btnPending_Click(object s, EventArgs e) => UpdateStatus("Pending");
+        void btnComplete_Click(object s, EventArgs e) => UpdateStatus("Completed");
     }
 }

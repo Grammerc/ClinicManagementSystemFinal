@@ -17,6 +17,7 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
         private MyClinics myClinicsControl;
         readonly AppointmentUC apptUC;
         readonly PatientQueue queueUC;
+
         
         public HomePage_Doctor(string loginId)
         {
@@ -28,6 +29,12 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
 
             apptUC = new AppointmentUC(doctorLoginId);
             queueUC = new PatientQueue(doctorLoginId);
+
+            queueUC.PatientSelected += (uid, pname, pphoto, cid) =>
+            {
+                var mh = new MedicalHistory(uid, pname, pphoto, cid, doctorLoginId);
+                LoadControl(mh);
+            };
         }
 
         public void LoadControl(Control c)
@@ -79,7 +86,7 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
 
         private void btnPatientQueue_Click(object sender, EventArgs e)
         {
-            LoadControl(new PatientQueue(doctorLoginId));
+            LoadControl(queueUC);
         }
 
         private void btnMyClinics_Click(object sender, EventArgs e)

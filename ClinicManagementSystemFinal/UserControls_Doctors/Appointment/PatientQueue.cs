@@ -8,13 +8,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using Guna.UI2.WinForms;
 
 namespace ClinicManagementSystemFinal.UserControls_Doctors
 {
+    
     public partial class PatientQueue : UserControl
     {
         private string doctorLoginId;
         private List<string> displayedAppointmentIds = new List<string>();
+        public event Action<string, string, string, string> PatientSelected;
+        private string clinicPicFolder =
+    @"C:\Users\Raphael Perocho\source\repos\ClinicManagementSystemFinal\ProjectClinic\ClinicManagementSystemFinal\Pictures\ClinicPictures\";
+
+        private string[] picExt = { ".png", ".jpg", ".jpeg" };
 
         public PatientQueue(string loginId)
         {
@@ -53,8 +61,24 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
             if (displayedAppointmentIds.Count >= idx)
             {
                 var sc = new StatusChange(displayedAppointmentIds[idx - 1], btn, this);
-                sc.ShowDialog();
+                sc.Show(this);   
             }
+        }
+
+        void ShowClinicPhoto(string clinicName)
+        {
+            string path = picExt
+                .Select(ext => System.IO.Path.Combine(clinicPicFolder, clinicName + ext))
+                .FirstOrDefault(System.IO.File.Exists);
+
+            if (path != null)
+            {
+                if (pbxClinic.Image != null) { var old = pbxClinic.Image; pbxClinic.Image = null; old.Dispose(); }
+                pbxClinic.Image = Image.FromFile(path);
+                pbxClinic.SizeMode = PictureBoxSizeMode.Zoom;
+            }
+            else
+                pbxClinic.Image = null;      // or a placeholder if you prefer
         }
 
         static readonly string IconDir =
@@ -65,14 +89,16 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
             string filename = status switch
             {
                 "Approved" => "approved.png",
-                "Completed" => "completed",
-                "Cancelled" => "declined",   
-                _ => "pending"
+                "Completed" => "completed.png",
+                "Cancelled" => "declined.png",   
+                _ => "pending.png"
             };
 
             string path = System.IO.Path.Combine(IconDir, filename);
             return System.IO.File.Exists(path) ? Image.FromFile(path) : null;
         }
+
+
 
         private void LoadDoctorClinics()
         {
@@ -135,6 +161,8 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
 
                     object result = cmd.ExecuteScalar();
                     lblClinicLocation.Text = result != null ? result.ToString() : "Unknown";
+                    if (cbxPatientQueue.Items.Count > 0)
+                        ShowClinicPhoto(((ComboBoxItem)cbxPatientQueue.Items[0]).Text);
 
                     conn.Close();
                 }
@@ -189,10 +217,14 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
                 conn.Open();
 
                 string query = @"
-SELECT TOP 6 A.AppointmentID,
+SELECT TOP 6
+       A.AppointmentID,
        A.Status,
+       A.ClinicID,
+       A.UserInfoID,
        I.Name,
-       I.ProfileImagePath
+       I.ProfileImagePath,
+       I.ProfilePicture
 FROM   (Appointments  A
         INNER JOIN Information I ON A.UserInfoID = I.UserInfoID)
         INNER JOIN Doctors     D ON A.DoctorID    = D.DoctorID
@@ -231,24 +263,57 @@ ORDER  BY A.AppointmentDate, A.AppointmentID";
                         hasPatients = true;
                         panelInvisible.Visible = false;
 
+                        string userId = reader["UserInfoID"].ToString();
+                        string clinicIdRow = reader["ClinicID"].ToString();
                         string name = reader["Name"].ToString();
                         string imgPath = reader["ProfileImagePath"].ToString();
+                        byte[] blob = reader["ProfilePicture"] as byte[];
                         string status = reader["Status"].ToString();
 
-                        var nameLabel = Controls.Find($"lblName{index}", true).FirstOrDefault() as Label;
-                        var pictureBox = Controls.Find($"pbxProfile{index}", true).FirstOrDefault() as PictureBox;
-                        var statusBox = Controls.Find($"pbxStatus{index}", true).FirstOrDefault() as Guna.UI2.WinForms.Guna2ImageButton;
-                        var panel = Controls.Find($"panelPatient{index}", true).FirstOrDefault() as Panel;
+                        var nameLabel = Controls.Find($"lblName{index}", true)
+                                        .FirstOrDefault() as Label;
 
-                        if (nameLabel != null) nameLabel.Text = name;
+                        var pictureBtn = Controls.Find($"pbxProfile{index}", true)
+                                        .FirstOrDefault() as Guna2ImageButton;   // 🠘 cast corrected
 
-                        if (pictureBox != null && System.IO.File.Exists(imgPath))
-                            pictureBox.Load(imgPath);
+                        var statusBox = Controls.Find($"pbxStatus{index}", true)
+                                        .FirstOrDefault() as Guna2ImageButton;
 
+                        var panel = Controls.Find($"panelPatient{index}", true)
+                                        .FirstOrDefault() as Panel;
+
+                        /* ---------- name label ---------- */
+                        if (nameLabel != null)
+                        {
+                            nameLabel.Text = name;
+                            nameLabel.Cursor = Cursors.Hand;
+                            nameLabel.Click += (s, e) =>
+                                PatientSelected?.Invoke(userId, name, imgPath, clinicIdRow);
+                        }
+
+                        /* ---------- profile thumbnail ---------- */
+                        if (pictureBtn != null)
+                        {
+                            Image pic = null;
+
+                            if (!string.IsNullOrWhiteSpace(imgPath) && File.Exists(imgPath))
+                                pic = Image.FromFile(imgPath);
+                            else if (blob != null && blob.Length > 0)
+                                using (var ms = new MemoryStream(blob))
+                                    pic = Image.FromStream(ms);
+
+                            pictureBtn.Image = pic; // fallback
+                            pictureBtn.ImageRotate = 0;
+                            pictureBtn.Cursor = Cursors.Hand;
+                            pictureBtn.Click += (s, e) =>
+                                PatientSelected?.Invoke(userId, name, imgPath, clinicIdRow);
+                        }
+
+                        /* ---------- status icon ---------- */
                         if (statusBox != null)
                         {
                             statusBox.Image = GetStatusIcon(status);
-                            statusBox.Tag = index - 1;              // slot 0-5 for StatusIcon_Click
+                            statusBox.Tag = index - 1;
                         }
 
                         if (panel != null) panel.Visible = true;
@@ -258,6 +323,7 @@ ORDER  BY A.AppointmentDate, A.AppointmentID";
                     }
 
                     panelInvisible.Visible = !hasPatients;
+
 
 
 
@@ -291,8 +357,7 @@ ORDER  BY A.AppointmentDate, A.AppointmentID";
         {
             if (displayedAppointmentIds.Count >= 1)
             {
-                StatusChange statusForm = new StatusChange(displayedAppointmentIds[0], pbxStatus1);
-                statusForm.ShowDialog();
+                
             }
         }
     }

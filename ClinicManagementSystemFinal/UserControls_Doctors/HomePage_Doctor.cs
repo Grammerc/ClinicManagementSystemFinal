@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AppointmentUC = ClinicManagementSystemFinal.UserControls_Doctors.Appointment.Appointment;
 
 namespace ClinicManagementSystemFinal.UserControls_Doctors
 {
@@ -14,6 +15,9 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
     {
         private string doctorLoginId;
         private MyClinics myClinicsControl;
+        readonly AppointmentUC apptUC;
+        readonly PatientQueue queueUC;
+        
         public HomePage_Doctor(string loginId)
         {
             InitializeComponent();
@@ -21,6 +25,9 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
 
             myClinicsControl = new MyClinics();
             myClinicsControl.LoadMyClinics(doctorLoginId);
+
+            apptUC = new AppointmentUC(doctorLoginId);
+            queueUC = new PatientQueue(doctorLoginId);
         }
 
         public void LoadControl(Control c)
@@ -59,7 +66,15 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
 
         private void btnCalendar_Click(object sender, EventArgs e)
         {
-            LoadControl(new Calendar_Doctor());
+            var cal = new Calendar_Doctor(doctorLoginId, apptUC);
+            cal.DayClicked += d =>
+            {
+                queueUC.JumpToDate(d);
+                if (!queueUC.JumpToFirstClinicWithPatients(d))
+                    MessageBox.Show("No pending patients on " + d.ToShortDateString());
+                LoadControl(queueUC);
+            };
+            LoadControl(cal);
         }
 
         private void btnPatientQueue_Click(object sender, EventArgs e)
@@ -77,6 +92,11 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
             this.Hide();
             SignIn loginForm = new SignIn();
             loginForm.Show();
+        }
+
+        private void btnAppointments_Click(object sender, EventArgs e)
+        {
+            LoadControl(apptUC);
         }
     }
 }

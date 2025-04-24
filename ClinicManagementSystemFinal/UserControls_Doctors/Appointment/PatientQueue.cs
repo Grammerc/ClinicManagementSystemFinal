@@ -15,17 +15,28 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
     {
         private string doctorLoginId;
         private List<string> displayedAppointmentIds = new List<string>();
+
         public PatientQueue(string loginId)
         {
             InitializeComponent();
-            HideAllPatientPanels();
-            cbxDate.Value = DateTime.Today;
-            cbxDate.ValueChanged += cbxDate_ValueChanged;
-            doctorLoginId = loginId;
-            LoadDoctorClinics();
 
+            doctorLoginId = loginId;
+
+            HideAllPatientPanels();
+            cbxDate.Value = DateTime.Today;  
+            cbxDate.ValueChanged += cbxDate_ValueChanged;
+
+            LoadDoctorClinics();
+            cbxPatientQueue.SelectedIndexChanged += cbxPatientQueue_SelectedIndexChanged;
+            if (cbxPatientQueue.Items.Count > 0)
+                cbxPatientQueue.SelectedIndex = 0;
+            LoadPatientQueue(((ComboBoxItem)cbxPatientQueue.SelectedItem).Value, cbxDate.Value.Date);
+
+            foreach (var btn in new[] { pbxStatus1, pbxStatus2, pbxStatus3, pbxStatus4, pbxStatus5, pbxStatus6 })
+                btn.Click += StatusIcon_Click;
         }
 
+      
         private void HideAllPatientPanels()
         {
             for (int i = 1; i <= 6; i++)
@@ -35,13 +46,39 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
             }
         }
 
+        void StatusIcon_Click(object sender, EventArgs e)
+        {
+            var btn = sender as Guna.UI2.WinForms.Guna2ImageButton;
+            int idx = int.Parse(btn.Name.Substring(btn.Name.Length - 1));    // 1-6
+            if (displayedAppointmentIds.Count >= idx)
+            {
+                var sc = new StatusChange(displayedAppointmentIds[idx - 1], btn, this);
+                sc.ShowDialog();
+            }
+        }
 
+        static readonly string IconDir =
+    @"C:\Users\Raphael Perocho\source\repos\ClinicManagementSystemFinal\ProjectClinic\ClinicManagementSystemFinal\Pictures\StatusIcons";
+
+        Image GetStatusIcon(string status)
+        {
+            string filename = status switch
+            {
+                "Approved" => "approved.png",
+                "Completed" => "completed",
+                "Cancelled" => "declined",   
+                _ => "pending"
+            };
+
+            string path = System.IO.Path.Combine(IconDir, filename);
+            return System.IO.File.Exists(path) ? Image.FromFile(path) : null;
+        }
 
         private void LoadDoctorClinics()
         {
             cbxPatientQueue.Items.Clear();
 
-            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\Downloads\Login.accdb;Persist Security Info=False;";
+            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;";
             using (OleDbConnection conn = new OleDbConnection(connStr))
             {
                 conn.Open();
@@ -88,7 +125,7 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
             {
                 string clinicId = selectedClinic.Value;
 
-                string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\Downloads\Login.accdb;Persist Security Info=False;";
+                string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;";
                 using (OleDbConnection conn = new OleDbConnection(connStr))
                 {
                     conn.Open();
@@ -106,23 +143,71 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
             }
         }
 
+        public void JumpToDate(DateTime d)
+        {
+            cbxDate.Value = d.Date;
+        }
+
+        public bool JumpToFirstClinicWithPatients(DateTime d)
+        {
+            for (int i = 0; i < cbxPatientQueue.Items.Count; i++)
+            {
+                var item = (ComboBoxItem)cbxPatientQueue.Items[i];
+                if (CountPatients(item.Value, d) > 0)
+                {
+                    cbxPatientQueue.SelectedIndex = i;
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        int CountPatients(string clinicId, DateTime d)
+        {
+            using var conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;");
+            conn.Open();
+            var cmd = new OleDbCommand(
+    @"SELECT COUNT(*) FROM Appointments A
+      INNER JOIN Doctors D ON A.DoctorID = D.DoctorID
+      WHERE D.LoginID = ?
+        AND A.ClinicID = ?
+        AND A.AppointmentDate >= ? AND A.AppointmentDate < ?", conn);
+            cmd.Parameters.AddWithValue("?", doctorLoginId);
+            cmd.Parameters.AddWithValue("?", clinicId);
+            DateTime d0 = d.Date;
+            DateTime d1 = d0.AddDays(1);
+            cmd.Parameters.AddWithValue("?", d0);
+            cmd.Parameters.AddWithValue("?", d1);
+            return Convert.ToInt32(cmd.ExecuteScalar());
+        }
+
         private void LoadPatientQueue(string clinicId, DateTime selectedDate)
         {
-            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\Downloads\Login.accdb;Persist Security Info=False;";
+            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;";
             using (OleDbConnection conn = new OleDbConnection(connStr))
             {
                 conn.Open();
 
                 string query = @"
-                SELECT TOP 6 A.AppointmentID, I.Name, I.ProfilePicture
-                FROM Appointments A
-                INNER JOIN Information I ON A.UserInfoID = I.UserInfoID
-                WHERE A.ClinicID = @clinicID AND A.AppointmentDate = @apptDate AND A.Status = 'Pending'
-                ORDER BY A.AppointmentID ASC";
+SELECT TOP 6 A.AppointmentID,
+       A.Status,
+       I.Name,
+       I.ProfileImagePath
+FROM   (Appointments  A
+        INNER JOIN Information I ON A.UserInfoID = I.UserInfoID)
+        INNER JOIN Doctors     D ON A.DoctorID    = D.DoctorID
+WHERE  D.LoginID              = ?
+  AND  A.ClinicID             = ?
+  AND  A.AppointmentDate >= ? AND A.AppointmentDate < ?
+ORDER  BY A.AppointmentDate, A.AppointmentID";
 
                 OleDbCommand cmd = new OleDbCommand(query, conn);
-                cmd.Parameters.AddWithValue("@clinicID", clinicId);
-                cmd.Parameters.AddWithValue("@apptDate", selectedDate);
+                cmd.Parameters.AddWithValue("?", doctorLoginId);
+                cmd.Parameters.AddWithValue("?", clinicId);
+                DateTime d0 = selectedDate.Date;
+                DateTime d1 = d0.AddDays(1);
+                cmd.Parameters.AddWithValue("?", d0);
+                cmd.Parameters.AddWithValue("?", d1);
 
                 using (OleDbDataReader reader = cmd.ExecuteReader())
                 {
@@ -144,38 +229,49 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
                     while (reader.Read() && index <= 6)
                     {
                         hasPatients = true;
-                        if (hasPatients)
-                        {
-                            panelInvisible.Visible = false;
-                        }
+                        panelInvisible.Visible = false;
+
                         string name = reader["Name"].ToString();
-                        byte[] photo = reader["ProfilePicture"] != DBNull.Value ? (byte[])reader["ProfilePicture"] : null;
+                        string imgPath = reader["ProfileImagePath"].ToString();
+                        string status = reader["Status"].ToString();
 
                         var nameLabel = Controls.Find($"lblName{index}", true).FirstOrDefault() as Label;
                         var pictureBox = Controls.Find($"pbxProfile{index}", true).FirstOrDefault() as PictureBox;
+                        var statusBox = Controls.Find($"pbxStatus{index}", true).FirstOrDefault() as Guna.UI2.WinForms.Guna2ImageButton;
                         var panel = Controls.Find($"panelPatient{index}", true).FirstOrDefault() as Panel;
 
                         if (nameLabel != null) nameLabel.Text = name;
-                        if (pictureBox != null && photo != null)
+
+                        if (pictureBox != null && System.IO.File.Exists(imgPath))
+                            pictureBox.Load(imgPath);
+
+                        if (statusBox != null)
                         {
-                            using (MemoryStream ms = new MemoryStream(photo))
-                            {
-                                pictureBox.Image = Image.FromStream(ms);
-                            }
+                            statusBox.Image = GetStatusIcon(status);
+                            statusBox.Tag = index - 1;              // slot 0-5 for StatusIcon_Click
                         }
+
                         if (panel != null) panel.Visible = true;
 
-                        index++;
                         displayedAppointmentIds.Add(reader["AppointmentID"].ToString());
-
-
-                        panelInvisible.Visible = !hasPatients;
-
+                        index++;
                     }
+
+                    panelInvisible.Visible = !hasPatients;
+
+
 
                     conn.Close();
                 }
             }
+        }
+
+  
+
+        public void RefreshCurrentQueue()
+        {
+            if (cbxPatientQueue.SelectedItem is ComboBoxItem sel)
+                LoadPatientQueue(sel.Value, cbxDate.Value.Date);
         }
 
         private void cbxDate_ValueChanged(object sender, EventArgs e)

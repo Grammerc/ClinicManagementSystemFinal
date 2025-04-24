@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StatusChange));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             tableLayoutPanel1 = new TableLayoutPanel();
-            btnCancel = new Guna.UI2.WinForms.Guna2ImageButton();
             btnPending = new Guna.UI2.WinForms.Guna2ImageButton();
             btnComplete = new Guna.UI2.WinForms.Guna2ImageButton();
-            btnSkip = new Guna.UI2.WinForms.Guna2ImageButton();
             nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
+            btnCancel = new Guna.UI2.WinForms.Guna2ImageButton();
+            btnApproved = new Guna.UI2.WinForms.Guna2ImageButton();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -47,11 +47,11 @@
             tableLayoutPanel1.ColumnCount = 2;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Controls.Add(btnCancel, 0, 2);
             tableLayoutPanel1.Controls.Add(btnPending, 1, 1);
             tableLayoutPanel1.Controls.Add(btnComplete, 0, 1);
-            tableLayoutPanel1.Controls.Add(btnSkip, 1, 2);
             tableLayoutPanel1.Controls.Add(nightControlBox1, 1, 0);
+            tableLayoutPanel1.Controls.Add(btnCancel, 0, 2);
+            tableLayoutPanel1.Controls.Add(btnApproved, 1, 2);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -61,20 +61,6 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.Size = new Size(300, 300);
             tableLayoutPanel1.TabIndex = 0;
-            // 
-            // btnCancel
-            // 
-            btnCancel.CheckedState.ImageSize = new Size(64, 64);
-            btnCancel.HoverState.ImageSize = new Size(64, 64);
-            btnCancel.Image = (Image)resources.GetObject("btnCancel.Image");
-            btnCancel.ImageOffset = new Point(0, 0);
-            btnCancel.ImageRotate = 0F;
-            btnCancel.Location = new Point(3, 163);
-            btnCancel.Name = "btnCancel";
-            btnCancel.PressedState.ImageSize = new Size(64, 64);
-            btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges5;
-            btnCancel.Size = new Size(115, 98);
-            btnCancel.TabIndex = 2;
             // 
             // btnPending
             // 
@@ -86,7 +72,7 @@
             btnPending.Location = new Point(153, 23);
             btnPending.Name = "btnPending";
             btnPending.PressedState.ImageSize = new Size(64, 64);
-            btnPending.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnPending.ShadowDecoration.CustomizableEdges = customizableEdges1;
             btnPending.Size = new Size(115, 98);
             btnPending.TabIndex = 1;
             // 
@@ -100,23 +86,9 @@
             btnComplete.Location = new Point(3, 23);
             btnComplete.Name = "btnComplete";
             btnComplete.PressedState.ImageSize = new Size(64, 64);
-            btnComplete.ShadowDecoration.CustomizableEdges = customizableEdges7;
+            btnComplete.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnComplete.Size = new Size(115, 98);
             btnComplete.TabIndex = 0;
-            // 
-            // btnSkip
-            // 
-            btnSkip.CheckedState.ImageSize = new Size(64, 64);
-            btnSkip.HoverState.ImageSize = new Size(64, 64);
-            btnSkip.Image = (Image)resources.GetObject("btnSkip.Image");
-            btnSkip.ImageOffset = new Point(0, 0);
-            btnSkip.ImageRotate = 0F;
-            btnSkip.Location = new Point(153, 163);
-            btnSkip.Name = "btnSkip";
-            btnSkip.PressedState.ImageSize = new Size(64, 64);
-            btnSkip.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnSkip.Size = new Size(115, 98);
-            btnSkip.TabIndex = 3;
             // 
             // nightControlBox1
             // 
@@ -141,6 +113,34 @@
             nightControlBox1.Size = new Size(139, 31);
             nightControlBox1.TabIndex = 4;
             // 
+            // btnCancel
+            // 
+            btnCancel.CheckedState.ImageSize = new Size(64, 64);
+            btnCancel.HoverState.ImageSize = new Size(64, 64);
+            btnCancel.Image = (Image)resources.GetObject("btnCancel.Image");
+            btnCancel.ImageOffset = new Point(0, 0);
+            btnCancel.ImageRotate = 0F;
+            btnCancel.Location = new Point(3, 163);
+            btnCancel.Name = "btnCancel";
+            btnCancel.PressedState.ImageSize = new Size(64, 64);
+            btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges3;
+            btnCancel.Size = new Size(115, 98);
+            btnCancel.TabIndex = 2;
+            // 
+            // btnApproved
+            // 
+            btnApproved.CheckedState.ImageSize = new Size(64, 64);
+            btnApproved.HoverState.ImageSize = new Size(64, 64);
+            btnApproved.Image = (Image)resources.GetObject("btnApproved.Image");
+            btnApproved.ImageOffset = new Point(0, 0);
+            btnApproved.ImageRotate = 0F;
+            btnApproved.Location = new Point(153, 163);
+            btnApproved.Name = "btnApproved";
+            btnApproved.PressedState.ImageSize = new Size(64, 64);
+            btnApproved.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnApproved.Size = new Size(115, 98);
+            btnApproved.TabIndex = 3;
+            // 
             // StatusChange
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -149,7 +149,6 @@
             Controls.Add(tableLayoutPanel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "StatusChange";
-            Load += StatusChange_Load;
             tableLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -160,7 +159,7 @@
         private Guna.UI2.WinForms.Guna2ImageButton btnCancel;
         private Guna.UI2.WinForms.Guna2ImageButton btnPending;
         private Guna.UI2.WinForms.Guna2ImageButton btnComplete;
-        private Guna.UI2.WinForms.Guna2ImageButton btnSkip;
+        private Guna.UI2.WinForms.Guna2ImageButton btnApproved;
         private ReaLTaiizor.Controls.NightControlBox nightControlBox1;
     }
 }

@@ -39,25 +39,26 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label4 = new Label();
             label2 = new Label();
             paneldashboard1 = new Panel();
+            lblAppointments = new Label();
             label3 = new Label();
             paneldashboard2 = new Panel();
-            label14 = new Label();
+            lblPending = new Label();
             panelTitleDashboard = new Panel();
             label6 = new Label();
             label5 = new Label();
             paneldashboard3 = new Panel();
-            label17 = new Label();
+            lblNewPatients = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
             paneldashboard4 = new Panel();
-            label18 = new Label();
+            lblHoursWorked = new Label();
             panel3 = new Panel();
             panelMainDashboard = new Panel();
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
@@ -68,12 +69,23 @@
             label16 = new Label();
             guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             label21 = new Label();
-            guna2CirclePictureBox3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             label11 = new Label();
             guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
+            panel1 = new Panel();
+            label10 = new Label();
             label12 = new Label();
+            label13 = new Label();
+            guna2CirclePictureBox5 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            panel2 = new Panel();
+            label7 = new Label();
+            label8 = new Label();
+            label9 = new Label();
+            guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            panel4 = new Panel();
+            label14 = new Label();
+            label15 = new Label();
+            label17 = new Label();
+            guna2CirclePictureBox6 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             paneldashboard1.SuspendLayout();
             paneldashboard2.SuspendLayout();
             panelTitleDashboard.SuspendLayout();
@@ -87,10 +99,13 @@
             guna2Panel1.SuspendLayout();
             guna2Panel4.SuspendLayout();
             guna2Panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).BeginInit();
             guna2Panel7.SuspendLayout();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox5).BeginInit();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).BeginInit();
+            panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox6).BeginInit();
             SuspendLayout();
             // 
             // label4
@@ -106,15 +121,15 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(106, 7);
+            label2.Location = new Point(44, 7);
             label2.Name = "label2";
-            label2.Size = new Size(83, 15);
+            label2.Size = new Size(145, 15);
             label2.TabIndex = 0;
-            label2.Text = "Appointments";
+            label2.Text = "Appointments Completed";
             // 
             // paneldashboard1
             // 
-            paneldashboard1.Controls.Add(label12);
+            paneldashboard1.Controls.Add(lblAppointments);
             paneldashboard1.Controls.Add(label2);
             paneldashboard1.Dock = DockStyle.Fill;
             paneldashboard1.Location = new Point(3, 3);
@@ -122,18 +137,27 @@
             paneldashboard1.Size = new Size(192, 121);
             paneldashboard1.TabIndex = 1;
             // 
+            // lblAppointments
+            // 
+            lblAppointments.AutoSize = true;
+            lblAppointments.Location = new Point(160, 34);
+            lblAppointments.Name = "lblAppointments";
+            lblAppointments.Size = new Size(19, 15);
+            lblAppointments.TabIndex = 1;
+            lblAppointments.Text = "00";
+            // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(116, 7);
+            label3.Location = new Point(59, 7);
             label3.Name = "label3";
-            label3.Size = new Size(65, 15);
+            label3.Size = new Size(130, 15);
             label3.TabIndex = 2;
-            label3.Text = "Operations";
+            label3.Text = "Appointments Pending";
             // 
             // paneldashboard2
             // 
-            paneldashboard2.Controls.Add(label14);
+            paneldashboard2.Controls.Add(lblPending);
             paneldashboard2.Controls.Add(label3);
             paneldashboard2.Dock = DockStyle.Fill;
             paneldashboard2.Location = new Point(201, 3);
@@ -141,14 +165,14 @@
             paneldashboard2.Size = new Size(192, 121);
             paneldashboard2.TabIndex = 2;
             // 
-            // label14
+            // lblPending
             // 
-            label14.AutoSize = true;
-            label14.Location = new Point(175, 34);
-            label14.Name = "label14";
-            label14.Size = new Size(14, 15);
-            label14.TabIndex = 3;
-            label14.Text = "#";
+            lblPending.AutoSize = true;
+            lblPending.Location = new Point(162, 34);
+            lblPending.Name = "lblPending";
+            lblPending.Size = new Size(19, 15);
+            lblPending.TabIndex = 3;
+            lblPending.Text = "00";
             // 
             // panelTitleDashboard
             // 
@@ -162,11 +186,11 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(131, 7);
+            label6.Location = new Point(105, 7);
             label6.Name = "label6";
-            label6.Size = new Size(52, 15);
+            label6.Size = new Size(83, 15);
             label6.TabIndex = 2;
-            label6.Text = "Earnings";
+            label6.Text = "Hours Worked";
             // 
             // label5
             // 
@@ -179,7 +203,7 @@
             // 
             // paneldashboard3
             // 
-            paneldashboard3.Controls.Add(label17);
+            paneldashboard3.Controls.Add(lblNewPatients);
             paneldashboard3.Controls.Add(label5);
             paneldashboard3.Dock = DockStyle.Fill;
             paneldashboard3.Location = new Point(399, 3);
@@ -187,14 +211,14 @@
             paneldashboard3.Size = new Size(192, 121);
             paneldashboard3.TabIndex = 3;
             // 
-            // label17
+            // lblNewPatients
             // 
-            label17.AutoSize = true;
-            label17.Location = new Point(164, 34);
-            label17.Name = "label17";
-            label17.Size = new Size(14, 15);
-            label17.TabIndex = 3;
-            label17.Text = "#";
+            lblNewPatients.AutoSize = true;
+            lblNewPatients.Location = new Point(164, 34);
+            lblNewPatients.Name = "lblNewPatients";
+            lblNewPatients.Size = new Size(19, 15);
+            lblNewPatients.TabIndex = 3;
+            lblNewPatients.Text = "00";
             // 
             // tableLayoutPanel1
             // 
@@ -217,7 +241,7 @@
             // 
             // paneldashboard4
             // 
-            paneldashboard4.Controls.Add(label18);
+            paneldashboard4.Controls.Add(lblHoursWorked);
             paneldashboard4.Controls.Add(label6);
             paneldashboard4.Dock = DockStyle.Fill;
             paneldashboard4.Location = new Point(597, 3);
@@ -225,14 +249,14 @@
             paneldashboard4.Size = new Size(193, 121);
             paneldashboard4.TabIndex = 2;
             // 
-            // label18
+            // lblHoursWorked
             // 
-            label18.AutoSize = true;
-            label18.Location = new Point(169, 34);
-            label18.Name = "label18";
-            label18.Size = new Size(14, 15);
-            label18.TabIndex = 3;
-            label18.Text = "#";
+            lblHoursWorked.AutoSize = true;
+            lblHoursWorked.Location = new Point(169, 34);
+            lblHoursWorked.Name = "lblHoursWorked";
+            lblHoursWorked.Size = new Size(19, 15);
+            lblHoursWorked.TabIndex = 3;
+            lblHoursWorked.Text = "00";
             // 
             // panel3
             // 
@@ -271,7 +295,7 @@
             label1.AutoSize = true;
             label1.Location = new Point(3, 18);
             label1.Name = "label1";
-            label1.Size = new Size(145, 15);
+            label1.Size = new Size(144, 15);
             label1.TabIndex = 1;
             label1.Text = "Your Appointments Today";
             // 
@@ -361,10 +385,10 @@
             // 
             // guna2Panel3
             // 
+            guna2Panel3.Controls.Add(panel4);
+            guna2Panel3.Controls.Add(panel2);
+            guna2Panel3.Controls.Add(panel1);
             guna2Panel3.Controls.Add(label21);
-            guna2Panel3.Controls.Add(guna2CirclePictureBox3);
-            guna2Panel3.Controls.Add(guna2CirclePictureBox2);
-            guna2Panel3.Controls.Add(guna2CirclePictureBox1);
             guna2Panel3.Controls.Add(label11);
             guna2Panel3.CustomizableEdges = customizableEdges8;
             guna2Panel3.Dock = DockStyle.Top;
@@ -383,43 +407,10 @@
             label21.TabIndex = 4;
             label21.Text = "View All";
             // 
-            // guna2CirclePictureBox3
-            // 
-            guna2CirclePictureBox3.ImageRotate = 0F;
-            guna2CirclePictureBox3.Location = new Point(11, 188);
-            guna2CirclePictureBox3.Name = "guna2CirclePictureBox3";
-            guna2CirclePictureBox3.ShadowDecoration.CustomizableEdges = customizableEdges5;
-            guna2CirclePictureBox3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CirclePictureBox3.Size = new Size(64, 64);
-            guna2CirclePictureBox3.TabIndex = 3;
-            guna2CirclePictureBox3.TabStop = false;
-            // 
-            // guna2CirclePictureBox2
-            // 
-            guna2CirclePictureBox2.ImageRotate = 0F;
-            guna2CirclePictureBox2.Location = new Point(11, 118);
-            guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
-            guna2CirclePictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CirclePictureBox2.Size = new Size(64, 64);
-            guna2CirclePictureBox2.TabIndex = 2;
-            guna2CirclePictureBox2.TabStop = false;
-            // 
-            // guna2CirclePictureBox1
-            // 
-            guna2CirclePictureBox1.ImageRotate = 0F;
-            guna2CirclePictureBox1.Location = new Point(11, 48);
-            guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges7;
-            guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CirclePictureBox1.Size = new Size(64, 64);
-            guna2CirclePictureBox1.TabIndex = 1;
-            guna2CirclePictureBox1.TabStop = false;
-            // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(11, 12);
+            label11.Location = new Point(5, 14);
             label11.Name = "label11";
             label11.Size = new Size(68, 15);
             label11.TabIndex = 0;
@@ -438,14 +429,155 @@
             guna2Panel7.Size = new Size(793, 662);
             guna2Panel7.TabIndex = 1;
             // 
+            // panel1
+            // 
+            panel1.Controls.Add(label10);
+            panel1.Controls.Add(label12);
+            panel1.Controls.Add(label13);
+            panel1.Controls.Add(guna2CirclePictureBox5);
+            panel1.Dock = DockStyle.Bottom;
+            panel1.Location = new Point(0, 208);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(200, 83);
+            panel1.TabIndex = 7;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(76, 55);
+            label10.Name = "label10";
+            label10.Size = new Size(90, 15);
+            label10.TabIndex = 10;
+            label10.Text = "Reason For Visit";
+            // 
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(160, 34);
+            label12.Location = new Point(76, 29);
             label12.Name = "label12";
-            label12.Size = new Size(14, 15);
-            label12.TabIndex = 1;
-            label12.Text = "#";
+            label12.Size = new Size(31, 15);
+            label12.TabIndex = 9;
+            label12.Text = "Date";
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(75, 9);
+            label13.Name = "label13";
+            label13.Size = new Size(39, 15);
+            label13.TabIndex = 8;
+            label13.Text = "Name";
+            // 
+            // guna2CirclePictureBox5
+            // 
+            guna2CirclePictureBox5.ImageRotate = 0F;
+            guna2CirclePictureBox5.Location = new Point(6, 13);
+            guna2CirclePictureBox5.Name = "guna2CirclePictureBox5";
+            guna2CirclePictureBox5.ShadowDecoration.CustomizableEdges = customizableEdges7;
+            guna2CirclePictureBox5.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            guna2CirclePictureBox5.Size = new Size(64, 64);
+            guna2CirclePictureBox5.TabIndex = 7;
+            guna2CirclePictureBox5.TabStop = false;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(label7);
+            panel2.Controls.Add(label8);
+            panel2.Controls.Add(label9);
+            panel2.Controls.Add(guna2CirclePictureBox1);
+            panel2.Dock = DockStyle.Bottom;
+            panel2.Location = new Point(0, 125);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(200, 83);
+            panel2.TabIndex = 8;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(76, 55);
+            label7.Name = "label7";
+            label7.Size = new Size(90, 15);
+            label7.TabIndex = 10;
+            label7.Text = "Reason For Visit";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(76, 29);
+            label8.Name = "label8";
+            label8.Size = new Size(31, 15);
+            label8.TabIndex = 9;
+            label8.Text = "Date";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(75, 9);
+            label9.Name = "label9";
+            label9.Size = new Size(39, 15);
+            label9.TabIndex = 8;
+            label9.Text = "Name";
+            // 
+            // guna2CirclePictureBox1
+            // 
+            guna2CirclePictureBox1.ImageRotate = 0F;
+            guna2CirclePictureBox1.Location = new Point(6, 13);
+            guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            guna2CirclePictureBox1.Size = new Size(64, 64);
+            guna2CirclePictureBox1.TabIndex = 7;
+            guna2CirclePictureBox1.TabStop = false;
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(label14);
+            panel4.Controls.Add(label15);
+            panel4.Controls.Add(label17);
+            panel4.Controls.Add(guna2CirclePictureBox6);
+            panel4.Dock = DockStyle.Bottom;
+            panel4.Location = new Point(0, 42);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(200, 83);
+            panel4.TabIndex = 9;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Location = new Point(76, 55);
+            label14.Name = "label14";
+            label14.Size = new Size(90, 15);
+            label14.TabIndex = 10;
+            label14.Text = "Reason For Visit";
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Location = new Point(76, 29);
+            label15.Name = "label15";
+            label15.Size = new Size(31, 15);
+            label15.TabIndex = 9;
+            label15.Text = "Date";
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Location = new Point(75, 9);
+            label17.Name = "label17";
+            label17.Size = new Size(39, 15);
+            label17.TabIndex = 8;
+            label17.Text = "Name";
+            // 
+            // guna2CirclePictureBox6
+            // 
+            guna2CirclePictureBox6.ImageRotate = 0F;
+            guna2CirclePictureBox6.Location = new Point(6, 13);
+            guna2CirclePictureBox6.Name = "guna2CirclePictureBox6";
+            guna2CirclePictureBox6.ShadowDecoration.CustomizableEdges = customizableEdges5;
+            guna2CirclePictureBox6.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            guna2CirclePictureBox6.Size = new Size(64, 64);
+            guna2CirclePictureBox6.TabIndex = 7;
+            guna2CirclePictureBox6.TabStop = false;
             // 
             // Dashboard_Doctors
             // 
@@ -475,10 +607,16 @@
             guna2Panel4.PerformLayout();
             guna2Panel3.ResumeLayout(false);
             guna2Panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).EndInit();
             guna2Panel7.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox5).EndInit();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).EndInit();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox6).EndInit();
             ResumeLayout(false);
         }
 
@@ -503,16 +641,28 @@
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         private Label label1;
         private Label label11;
-        private Label label14;
-        private Label label17;
-        private Label label18;
+        private Label lblPending;
+        private Label lblNewPatients;
+        private Label lblHoursWorked;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private Label label16;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Label label21;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox3;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox2;
+        private Label lblAppointments;
+        private Panel panel4;
+        private Label label14;
+        private Label label15;
+        private Label label17;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox6;
+        private Panel panel2;
+        private Label label7;
+        private Label label8;
+        private Label label9;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Panel panel1;
+        private Label label10;
         private Label label12;
+        private Label label13;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox5;
     }
 }

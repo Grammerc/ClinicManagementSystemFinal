@@ -45,15 +45,15 @@
             panelTitleBar = new Guna.UI2.WinForms.Guna2Panel();
             guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            pictureBox1 = new PictureBox();
             panelDesktop = new Guna.UI2.WinForms.Guna2Panel();
             pictureBox4 = new PictureBox();
-            pictureBox1 = new PictureBox();
             panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelDesktop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label4
@@ -157,6 +157,15 @@
             guna2PictureBox1.TabIndex = 9;
             guna2PictureBox1.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(188, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(123, 91);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
             // panelDesktop
             // 
             panelDesktop.Controls.Add(pictureBox4);
@@ -182,16 +191,6 @@
             pictureBox4.TabIndex = 15;
             pictureBox4.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(188, 12);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(123, 91);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            // 
             // FrontPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -206,10 +205,10 @@
             panelTitleBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panelDesktop.ResumeLayout(false);
             panelDesktop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 

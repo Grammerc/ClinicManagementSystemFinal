@@ -73,6 +73,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panelMainDesktop = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel11 = new Guna.UI2.WinForms.Guna2Panel();
+            nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
             guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -95,10 +96,9 @@
             btnSettings = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel10 = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
-            btnBillings = new Guna.UI2.WinForms.Guna2Button();
+            btnAppointments = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
             guna2Panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             guna2Panel2.SuspendLayout();
@@ -135,6 +135,29 @@
             guna2Panel11.Size = new Size(793, 80);
             guna2Panel11.TabIndex = 9;
             // 
+            // nightControlBox1
+            // 
+            nightControlBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            nightControlBox1.BackColor = Color.Transparent;
+            nightControlBox1.CloseHoverColor = Color.FromArgb(199, 80, 80);
+            nightControlBox1.CloseHoverForeColor = Color.White;
+            nightControlBox1.DefaultLocation = true;
+            nightControlBox1.DisableMaximizeColor = Color.FromArgb(105, 105, 105);
+            nightControlBox1.DisableMinimizeColor = Color.FromArgb(105, 105, 105);
+            nightControlBox1.EnableCloseColor = Color.FromArgb(160, 160, 160);
+            nightControlBox1.EnableMaximizeButton = true;
+            nightControlBox1.EnableMaximizeColor = Color.FromArgb(160, 160, 160);
+            nightControlBox1.EnableMinimizeButton = true;
+            nightControlBox1.EnableMinimizeColor = Color.FromArgb(160, 160, 160);
+            nightControlBox1.Location = new Point(654, 0);
+            nightControlBox1.MaximizeHoverColor = Color.FromArgb(15, 255, 255, 255);
+            nightControlBox1.MaximizeHoverForeColor = Color.White;
+            nightControlBox1.MinimizeHoverColor = Color.FromArgb(15, 255, 255, 255);
+            nightControlBox1.MinimizeHoverForeColor = Color.White;
+            nightControlBox1.Name = "nightControlBox1";
+            nightControlBox1.Size = new Size(139, 31);
+            nightControlBox1.TabIndex = 3;
+            // 
             // iconPictureBox1
             // 
             iconPictureBox1.BackColor = SystemColors.Control;
@@ -143,7 +166,7 @@
             iconPictureBox1.IconColor = SystemColors.ControlText;
             iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconPictureBox1.IconSize = 53;
-            iconPictureBox1.Location = new Point(545, 24);
+            iconPictureBox1.Location = new Point(587, 13);
             iconPictureBox1.Name = "iconPictureBox1";
             iconPictureBox1.Size = new Size(61, 53);
             iconPictureBox1.TabIndex = 1;
@@ -403,7 +426,7 @@
             // 
             // guna2Panel9
             // 
-            guna2Panel9.Controls.Add(btnBillings);
+            guna2Panel9.Controls.Add(btnAppointments);
             guna2Panel9.CustomizableEdges = customizableEdges36;
             guna2Panel9.Dock = DockStyle.Top;
             guna2Panel9.Location = new Point(0, 448);
@@ -412,21 +435,22 @@
             guna2Panel9.Size = new Size(221, 53);
             guna2Panel9.TabIndex = 12;
             // 
-            // btnBillings
+            // btnAppointments
             // 
-            btnBillings.CustomizableEdges = customizableEdges34;
-            btnBillings.DisabledState.BorderColor = Color.DarkGray;
-            btnBillings.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnBillings.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnBillings.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnBillings.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            btnBillings.ForeColor = Color.White;
-            btnBillings.Location = new Point(0, 0);
-            btnBillings.Name = "btnBillings";
-            btnBillings.ShadowDecoration.CustomizableEdges = customizableEdges35;
-            btnBillings.Size = new Size(221, 53);
-            btnBillings.TabIndex = 7;
-            btnBillings.Text = "Billings";
+            btnAppointments.CustomizableEdges = customizableEdges34;
+            btnAppointments.DisabledState.BorderColor = Color.DarkGray;
+            btnAppointments.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnAppointments.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnAppointments.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAppointments.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnAppointments.ForeColor = Color.White;
+            btnAppointments.Location = new Point(0, 0);
+            btnAppointments.Name = "btnAppointments";
+            btnAppointments.ShadowDecoration.CustomizableEdges = customizableEdges35;
+            btnAppointments.Size = new Size(221, 53);
+            btnAppointments.TabIndex = 7;
+            btnAppointments.Text = "Appointments";
+            btnAppointments.Click += btnAppointments_Click;
             // 
             // guna2Panel8
             // 
@@ -458,29 +482,6 @@
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges41;
             guna2Panel1.Size = new Size(221, 742);
             guna2Panel1.TabIndex = 6;
-            // 
-            // nightControlBox1
-            // 
-            nightControlBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            nightControlBox1.BackColor = Color.Transparent;
-            nightControlBox1.CloseHoverColor = Color.FromArgb(199, 80, 80);
-            nightControlBox1.CloseHoverForeColor = Color.White;
-            nightControlBox1.DefaultLocation = true;
-            nightControlBox1.DisableMaximizeColor = Color.FromArgb(105, 105, 105);
-            nightControlBox1.DisableMinimizeColor = Color.FromArgb(105, 105, 105);
-            nightControlBox1.EnableCloseColor = Color.FromArgb(160, 160, 160);
-            nightControlBox1.EnableMaximizeButton = true;
-            nightControlBox1.EnableMaximizeColor = Color.FromArgb(160, 160, 160);
-            nightControlBox1.EnableMinimizeButton = true;
-            nightControlBox1.EnableMinimizeColor = Color.FromArgb(160, 160, 160);
-            nightControlBox1.Location = new Point(651, 3);
-            nightControlBox1.MaximizeHoverColor = Color.FromArgb(15, 255, 255, 255);
-            nightControlBox1.MaximizeHoverForeColor = Color.White;
-            nightControlBox1.MinimizeHoverColor = Color.FromArgb(15, 255, 255, 255);
-            nightControlBox1.MinimizeHoverForeColor = Color.White;
-            nightControlBox1.Name = "nightControlBox1";
-            nightControlBox1.Size = new Size(139, 31);
-            nightControlBox1.TabIndex = 3;
             // 
             // HomePage_Doctor
             // 
@@ -538,7 +539,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel9;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel8;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Button btnBillings;
+        private Guna.UI2.WinForms.Guna2Button btnAppointments;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private ReaLTaiizor.Controls.NightControlBox nightControlBox1;
     }

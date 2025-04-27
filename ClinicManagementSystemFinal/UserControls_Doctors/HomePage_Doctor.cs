@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClinicManagementSystemFinal.UserControls_Doctors;
 using ClinicManagementSystemFinal.UserInterface;
 using AppointmentUC = ClinicManagementSystemFinal.UserControls_Doctors.Appointment.Appointment;
 
@@ -14,44 +8,45 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
 {
     public partial class HomePage_Doctor : Form
     {
-        private string doctorLoginId;
-        private MyClinics myClinicsControl;
-        private AppointmentUC apptUC;
-        private PatientQueue queueUC;
-
+        private readonly string doctorLoginId;
+        private readonly MyClinics myClinicsControl;
+        private readonly AppointmentUC apptUC;
+        private readonly PatientQueue queueUC;
 
         public HomePage_Doctor(string loginId)
         {
             InitializeComponent();
             doctorLoginId = loginId;
-
             myClinicsControl = new MyClinics();
-            myClinicsControl.LoadMyClinics(doctorLoginId);
-
             apptUC = new AppointmentUC(doctorLoginId);
             queueUC = new PatientQueue(doctorLoginId);
 
-            queueUC.PatientSelected += (uid, pname, pphoto, cid) =>
+            myClinicsControl.EditRequested += clinicId =>
             {
-                var mh = new MedicalHistory(uid, pname, pphoto, cid, doctorLoginId);
+                var edit = new EditClinic(clinicId);
+                LoadControl(edit);
+            };
+
+            queueUC.PatientSelected += (uid, name, photo, cid) =>
+            {
+                var mh = new MedicalHistory(uid, name, photo, cid, doctorLoginId);
                 LoadControl(mh);
             };
+
+            myClinicsControl.LoadMyClinics(doctorLoginId);
         }
 
         public void LoadControl(Control c)
         {
-            if (panelMainDesktop.Controls.Count > 0)
-                panelMainDesktop.Controls.RemoveAt(0);
-
-
-            if (c is Form childForm)
+            panelMainDesktop.Controls.Clear();
+            if (c is Form f)
             {
-                childForm.TopLevel = false;
-                childForm.FormBorderStyle = FormBorderStyle.None;
-                childForm.Dock = DockStyle.Fill;
-                panelMainDesktop.Controls.Add(childForm);
-                panelMainDesktop.Tag = childForm;
-                childForm.Show();
+                f.TopLevel = false;
+                f.FormBorderStyle = FormBorderStyle.None;
+                f.Dock = DockStyle.Fill;
+                panelMainDesktop.Controls.Add(f);
+                panelMainDesktop.Tag = f;
+                f.Show();
             }
             else
             {
@@ -64,14 +59,10 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
 
         private void HomePage_Doctor_Load(object sender, EventArgs e)
         {
-            myClinicsControl.LoadMyClinics(doctorLoginId);
-        }
-
-        private void btnDashboard_Click(object sender, EventArgs e)
-        {
             LoadControl(new Dashboard_Doctors());
         }
 
+        private void btnDashboard_Click(object sender, EventArgs e) => LoadControl(new Dashboard_Doctors());
         private void btnCalendar_Click(object sender, EventArgs e)
         {
             var cal = new Calendar_Doctor(doctorLoginId, apptUC);
@@ -84,32 +75,14 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
             };
             LoadControl(cal);
         }
-
-        private void btnPatientQueue_Click(object sender, EventArgs e)
-        {
-            LoadControl(queueUC);
-        }
-
-        private void btnMyClinics_Click(object sender, EventArgs e)
-        {
-            LoadControl(myClinicsControl);
-        }
-
+        private void btnPatientQueue_Click(object sender, EventArgs e) => LoadControl(queueUC);
+        private void btnMyClinics_Click(object sender, EventArgs e) => LoadControl(myClinicsControl);
+        private void btnAppointments_Click(object sender, EventArgs e) => LoadControl(apptUC);
+        private void btnViewPatients_Click(object sender, EventArgs e) => LoadControl(new FindPeople(doctorLoginId));
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            SignIn loginForm = new SignIn();
-            loginForm.Show();
-        }
-
-        private void btnAppointments_Click(object sender, EventArgs e)
-        {
-            LoadControl(apptUC);
-        }
-
-        private void btnViewPatients_Click(object sender, EventArgs e)
-        {
-            LoadControl(new FindPeople(doctorLoginId));
+            Hide();
+            new SignIn().Show();
         }
     }
 }

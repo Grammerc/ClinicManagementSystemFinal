@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClinicManagementSystemFinal.UserInterface;
 using AppointmentUC = ClinicManagementSystemFinal.UserControls_Doctors.Appointment.Appointment;
 
 namespace ClinicManagementSystemFinal.UserControls_Doctors
@@ -18,7 +19,7 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
         private AppointmentUC apptUC;
         private PatientQueue queueUC;
 
-        
+
         public HomePage_Doctor(string loginId)
         {
             InitializeComponent();
@@ -104,6 +105,11 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
         private void btnAppointments_Click(object sender, EventArgs e)
         {
             LoadControl(apptUC);
+        }
+
+        private void btnViewPatients_Click(object sender, EventArgs e)
+        {
+            LoadControl(new FindPeople(doctorLoginId));
         }
     }
 }

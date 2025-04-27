@@ -41,6 +41,9 @@
             pbxProfilePicture = new PictureBox();
             btnChangeImage = new Guna.UI2.WinForms.Guna2Button();
             panel1 = new Panel();
+            rdbDoctor = new Guna.UI2.WinForms.Guna2RadioButton();
+            rdbSecretary = new Guna.UI2.WinForms.Guna2RadioButton();
+            rdbUser = new Guna.UI2.WinForms.Guna2RadioButton();
             dungeonLabel1 = new ReaLTaiizor.Controls.DungeonLabel();
             tbxName = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             dungeonLabel2 = new ReaLTaiizor.Controls.DungeonLabel();
@@ -52,9 +55,6 @@
             btnRegister = new ReaLTaiizor.Controls.Button();
             dungeonLabel5 = new ReaLTaiizor.Controls.DungeonLabel();
             guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(components);
-            guna2RadioButton1 = new Guna.UI2.WinForms.Guna2RadioButton();
-            guna2RadioButton2 = new Guna.UI2.WinForms.Guna2RadioButton();
-            guna2RadioButton3 = new Guna.UI2.WinForms.Guna2RadioButton();
             ((System.ComponentModel.ISupportInitialize)pbxProfilePicture).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -173,9 +173,9 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(86, 116, 127);
-            panel1.Controls.Add(guna2RadioButton3);
-            panel1.Controls.Add(guna2RadioButton2);
-            panel1.Controls.Add(guna2RadioButton1);
+            panel1.Controls.Add(rdbDoctor);
+            panel1.Controls.Add(rdbSecretary);
+            panel1.Controls.Add(rdbUser);
             panel1.Controls.Add(btnChangeImage);
             panel1.Controls.Add(pbxProfilePicture);
             panel1.Dock = DockStyle.Left;
@@ -184,6 +184,60 @@
             panel1.Size = new Size(450, 565);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
+            // 
+            // rdbDoctor
+            // 
+            rdbDoctor.AutoSize = true;
+            rdbDoctor.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
+            rdbDoctor.CheckedState.BorderThickness = 0;
+            rdbDoctor.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
+            rdbDoctor.CheckedState.InnerColor = Color.White;
+            rdbDoctor.CheckedState.InnerOffset = -4;
+            rdbDoctor.Location = new Point(26, 62);
+            rdbDoctor.Name = "rdbDoctor";
+            rdbDoctor.Size = new Size(61, 19);
+            rdbDoctor.TabIndex = 6;
+            rdbDoctor.Text = "Doctor";
+            rdbDoctor.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
+            rdbDoctor.UncheckedState.BorderThickness = 2;
+            rdbDoctor.UncheckedState.FillColor = Color.Transparent;
+            rdbDoctor.UncheckedState.InnerColor = Color.Transparent;
+            // 
+            // rdbSecretary
+            // 
+            rdbSecretary.AutoSize = true;
+            rdbSecretary.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
+            rdbSecretary.CheckedState.BorderThickness = 0;
+            rdbSecretary.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
+            rdbSecretary.CheckedState.InnerColor = Color.White;
+            rdbSecretary.CheckedState.InnerOffset = -4;
+            rdbSecretary.Location = new Point(26, 37);
+            rdbSecretary.Name = "rdbSecretary";
+            rdbSecretary.Size = new Size(73, 19);
+            rdbSecretary.TabIndex = 5;
+            rdbSecretary.Text = "Secretary";
+            rdbSecretary.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
+            rdbSecretary.UncheckedState.BorderThickness = 2;
+            rdbSecretary.UncheckedState.FillColor = Color.Transparent;
+            rdbSecretary.UncheckedState.InnerColor = Color.Transparent;
+            // 
+            // rdbUser
+            // 
+            rdbUser.AutoSize = true;
+            rdbUser.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
+            rdbUser.CheckedState.BorderThickness = 0;
+            rdbUser.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
+            rdbUser.CheckedState.InnerColor = Color.White;
+            rdbUser.CheckedState.InnerOffset = -4;
+            rdbUser.Location = new Point(26, 12);
+            rdbUser.Name = "rdbUser";
+            rdbUser.Size = new Size(48, 19);
+            rdbUser.TabIndex = 4;
+            rdbUser.Text = "User";
+            rdbUser.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
+            rdbUser.UncheckedState.BorderThickness = 2;
+            rdbUser.UncheckedState.FillColor = Color.Transparent;
+            rdbUser.UncheckedState.InnerColor = Color.Transparent;
             // 
             // dungeonLabel1
             // 
@@ -384,60 +438,6 @@
             dungeonLabel5.TabIndex = 29;
             dungeonLabel5.Text = "PASSWORD";
             // 
-            // guna2RadioButton1
-            // 
-            guna2RadioButton1.AutoSize = true;
-            guna2RadioButton1.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2RadioButton1.CheckedState.BorderThickness = 0;
-            guna2RadioButton1.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
-            guna2RadioButton1.CheckedState.InnerColor = Color.White;
-            guna2RadioButton1.CheckedState.InnerOffset = -4;
-            guna2RadioButton1.Location = new Point(26, 12);
-            guna2RadioButton1.Name = "guna2RadioButton1";
-            guna2RadioButton1.Size = new Size(48, 19);
-            guna2RadioButton1.TabIndex = 4;
-            guna2RadioButton1.Text = "User";
-            guna2RadioButton1.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
-            guna2RadioButton1.UncheckedState.BorderThickness = 2;
-            guna2RadioButton1.UncheckedState.FillColor = Color.Transparent;
-            guna2RadioButton1.UncheckedState.InnerColor = Color.Transparent;
-            // 
-            // guna2RadioButton2
-            // 
-            guna2RadioButton2.AutoSize = true;
-            guna2RadioButton2.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2RadioButton2.CheckedState.BorderThickness = 0;
-            guna2RadioButton2.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
-            guna2RadioButton2.CheckedState.InnerColor = Color.White;
-            guna2RadioButton2.CheckedState.InnerOffset = -4;
-            guna2RadioButton2.Location = new Point(26, 37);
-            guna2RadioButton2.Name = "guna2RadioButton2";
-            guna2RadioButton2.Size = new Size(73, 19);
-            guna2RadioButton2.TabIndex = 5;
-            guna2RadioButton2.Text = "Secretary";
-            guna2RadioButton2.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
-            guna2RadioButton2.UncheckedState.BorderThickness = 2;
-            guna2RadioButton2.UncheckedState.FillColor = Color.Transparent;
-            guna2RadioButton2.UncheckedState.InnerColor = Color.Transparent;
-            // 
-            // guna2RadioButton3
-            // 
-            guna2RadioButton3.AutoSize = true;
-            guna2RadioButton3.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2RadioButton3.CheckedState.BorderThickness = 0;
-            guna2RadioButton3.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
-            guna2RadioButton3.CheckedState.InnerColor = Color.White;
-            guna2RadioButton3.CheckedState.InnerOffset = -4;
-            guna2RadioButton3.Location = new Point(26, 62);
-            guna2RadioButton3.Name = "guna2RadioButton3";
-            guna2RadioButton3.Size = new Size(61, 19);
-            guna2RadioButton3.TabIndex = 6;
-            guna2RadioButton3.Text = "Doctor";
-            guna2RadioButton3.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
-            guna2RadioButton3.UncheckedState.BorderThickness = 2;
-            guna2RadioButton3.UncheckedState.FillColor = Color.Transparent;
-            guna2RadioButton3.UncheckedState.InnerColor = Color.Transparent;
-            // 
             // Register
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -504,5 +504,8 @@
         private Guna.UI2.WinForms.Guna2RadioButton guna2RadioButton3;
         private Guna.UI2.WinForms.Guna2RadioButton guna2RadioButton2;
         private Guna.UI2.WinForms.Guna2RadioButton guna2RadioButton1;
+        private Guna.UI2.WinForms.Guna2RadioButton rdbDoctor;
+        private Guna.UI2.WinForms.Guna2RadioButton rdbSecretary;
+        private Guna.UI2.WinForms.Guna2RadioButton rdbUser;
     }
 }

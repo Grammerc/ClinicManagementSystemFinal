@@ -49,47 +49,80 @@ namespace ClinicManagementSystemFinal
                 {
                     conn.Open();
 
-                    if (string.IsNullOrWhiteSpace(tbxUsername.Text) || string.IsNullOrWhiteSpace(tbxPassword.Text) || string.IsNullOrWhiteSpace(tbxName.Text) || string.IsNullOrWhiteSpace(tbxEmail.Text))
+  
+                    if (string.IsNullOrWhiteSpace(tbxUsername.Text)
+                     || string.IsNullOrWhiteSpace(tbxPassword.Text)
+                     || string.IsNullOrWhiteSpace(tbxName.Text)
+                     || string.IsNullOrWhiteSpace(tbxEmail.Text))
                     {
                         MessageBox.Show("Please fill in all required fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
 
-                    string insertAccount = "INSERT INTO Account ([username], [password], [RoleID], [ClinicID]) VALUES (?, ?, ?, ?)";
-                    using (OleDbCommand cmd = new OleDbCommand(insertAccount, conn))
+                    using (var cmd = new OleDbCommand("SELECT COUNT(*) FROM Account WHERE [username] = ?", conn))
                     {
-                        cmd.Parameters.AddWithValue("?", tbxUsername.Text);
-                        cmd.Parameters.AddWithValue("?", tbxPassword.Text);
-                        cmd.Parameters.AddWithValue("?", 3); // RoleID = 3 = User
-                        cmd.Parameters.AddWithValue("?", 1); // Default ClinicID
-                        cmd.ExecuteNonQuery();
-                    }
-
-                    OleDbCommand getId = new OleDbCommand("SELECT @@IDENTITY", conn);
-                    int loginID = Convert.ToInt32(getId.ExecuteScalar());
-
-                    string insertInfo = "INSERT INTO Information (LoginID, Name, Email) VALUES (?, ?, ?)";
-                    OleDbCommand cmdInsertInfo = new OleDbCommand(insertInfo, conn);
-                    cmdInsertInfo.Parameters.AddWithValue("?", loginID);
-                    cmdInsertInfo.Parameters.AddWithValue("?", tbxName.Text);
-                    cmdInsertInfo.Parameters.AddWithValue("?", tbxEmail.Text);
-                    cmdInsertInfo.ExecuteNonQuery();
-
-                    if (pbxProfilePicture.Image != null)
-                    {
-                        using (MemoryStream ms = new MemoryStream())
+                        cmd.Parameters.AddWithValue("?", tbxUsername.Text.Trim());
+                        int userCount = Convert.ToInt32(cmd.ExecuteScalar());
+                        if (userCount > 0)
                         {
-                            pbxProfilePicture.Image.Save(ms, pbxProfilePicture.Image.RawFormat);
-                            byte[] imageBytes = ms.ToArray();
-
-                            string updatePic = "UPDATE Information SET ProfilePicture = ? WHERE LoginID = ?";
-                            OleDbCommand updateCmd = new OleDbCommand(updatePic, conn);
-                            updateCmd.Parameters.AddWithValue("?", imageBytes);
-                            updateCmd.Parameters.AddWithValue("?", loginID);
-                            updateCmd.ExecuteNonQuery();
+                            MessageBox.Show("That username is already taken.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
                         }
                     }
 
+                    using (var cmd = new OleDbCommand("SELECT COUNT(*) FROM Information WHERE Email = ?", conn))
+                    {
+                        cmd.Parameters.AddWithValue("?", tbxEmail.Text.Trim());
+                        int emailCount = Convert.ToInt32(cmd.ExecuteScalar());
+                        if (emailCount > 0)
+                        {
+                            MessageBox.Show("That email is already registered.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+                    }
+
+ 
+                    int roleId;
+                    if (rdbDoctor.Checked) roleId = 1;
+                    else if (rdbSecretary.Checked) roleId = 2;
+                    else       roleId = 3;
+
+                    string insertAccount = @"
+                INSERT INTO Account ([username], [password], [RoleID], [ClinicID])
+                VALUES (?, ?, ?, ?)";
+                    using (var cmd = new OleDbCommand(insertAccount, conn))
+                    {
+                        cmd.Parameters.AddWithValue("?", tbxUsername.Text.Trim());
+                        cmd.Parameters.AddWithValue("?", tbxPassword.Text);
+                        cmd.Parameters.AddWithValue("?", roleId);
+                        cmd.Parameters.AddWithValue("?", 1); 
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    int loginID = Convert.ToInt32(new OleDbCommand("SELECT @@IDENTITY", conn).ExecuteScalar());
+
+                    string insertInfo = @"
+                INSERT INTO Information (LoginID, Name, Email)
+                VALUES (?, ?, ?)";
+                    using (var cmd = new OleDbCommand(insertInfo, conn))
+                    {
+                        cmd.Parameters.AddWithValue("?", loginID);
+                        cmd.Parameters.AddWithValue("?", tbxName.Text.Trim());
+                        cmd.Parameters.AddWithValue("?", tbxEmail.Text.Trim());
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    if (pbxProfilePicture.Image != null)
+                    {
+                        using var ms = new MemoryStream();
+                        pbxProfilePicture.Image.Save(ms, pbxProfilePicture.Image.RawFormat);
+                        byte[] imageBytes = ms.ToArray();
+                        string updatePic = "UPDATE Information SET ProfilePicture = ? WHERE LoginID = ?";
+                        using var cmd = new OleDbCommand(updatePic, conn);
+                        cmd.Parameters.AddWithValue("?", imageBytes);
+                        cmd.Parameters.AddWithValue("?", loginID);
+                        cmd.ExecuteNonQuery();
+                    }
 
                     MessageBox.Show("Registration successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -104,8 +137,7 @@ namespace ClinicManagementSystemFinal
             }
 
             this.Hide();
-            SignIn signIn = new SignIn();
-            signIn.Show();
+            new SignIn().Show();
         }
 
         private void pbxProfilePicture_Click(object sender, EventArgs e)

@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClinicManagementSystemFinal.UserControls_User;
 using ClinicManagementSystemFinal.UserControls_User.Appointments_Control;
+using ClinicManagementSystemFinal.UserInterface;
 
 namespace ClinicManagementSystemFinal
 {
@@ -396,6 +397,11 @@ namespace ClinicManagementSystemFinal
         private void guna2Separator1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnFindDoctors_Click(object sender, EventArgs e)
+        {
+            LoadControl(new FindPeople(userLoginId));
         }
     }
 }

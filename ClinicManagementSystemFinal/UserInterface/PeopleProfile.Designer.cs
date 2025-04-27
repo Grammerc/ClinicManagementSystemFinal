@@ -112,7 +112,6 @@
             Controls.Add(panelMain);
             Name = "PeopleProfile";
             Size = new Size(245, 262);
-            Load += PeopleProfile_Load;
             panelMain.ResumeLayout(false);
             panelMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbxProfile).EndInit();

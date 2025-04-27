@@ -146,6 +146,7 @@
             btnFindDoctors.Size = new Size(221, 62);
             btnFindDoctors.TabIndex = 14;
             btnFindDoctors.Text = "Find Doctors";
+            btnFindDoctors.Click += btnFindDoctors_Click;
             // 
             // guna2Panel10
             // 

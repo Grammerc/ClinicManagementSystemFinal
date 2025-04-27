@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ClinicManagementSystemFinal.UserControls_Doctors
+namespace ClinicManagementSystemFinal.UserInterface
 {
-    public partial class EditClinic : UserControl
+    public partial class FindPeople : UserControl
     {
-        public EditClinic()
+        public FindPeople()
         {
             InitializeComponent();
-        }
-
-        private void tbxInsuranceCoverage_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

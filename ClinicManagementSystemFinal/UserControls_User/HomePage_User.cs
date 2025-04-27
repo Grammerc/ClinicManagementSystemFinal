@@ -387,6 +387,16 @@ namespace ClinicManagementSystemFinal
         {
             LoadControl(new Appointments_Remove(userLoginId));
         }
+
+        private void pbxProfilePic_Click(object sender, EventArgs e)
+        {
+            LoadControl(new UserInformation());
+        }
+
+        private void guna2Separator1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

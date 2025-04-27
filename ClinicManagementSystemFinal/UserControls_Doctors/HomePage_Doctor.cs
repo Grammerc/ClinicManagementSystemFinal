@@ -15,8 +15,8 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
     {
         private string doctorLoginId;
         private MyClinics myClinicsControl;
-        readonly AppointmentUC apptUC;
-        readonly PatientQueue queueUC;
+        private AppointmentUC apptUC;
+        private PatientQueue queueUC;
 
         
         public HomePage_Doctor(string loginId)

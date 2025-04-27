@@ -28,45 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            flowLayoutPanel1 = new FlowLayoutPanel();
-            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            panelMain = new FlowLayoutPanel();
+            tbxName = new Guna.UI2.WinForms.Guna2TextBox();
             SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // panelMain
             // 
-            flowLayoutPanel1.Dock = DockStyle.Bottom;
-            flowLayoutPanel1.Location = new Point(0, 110);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(793, 552);
-            flowLayoutPanel1.TabIndex = 1;
+            panelMain.Dock = DockStyle.Bottom;
+            panelMain.Location = new Point(0, 60);
+            panelMain.Name = "panelMain";
+            panelMain.Size = new Size(793, 602);
+            panelMain.TabIndex = 1;
             // 
-            // guna2TextBox1
+            // tbxName
             // 
-            guna2TextBox1.CustomizableEdges = customizableEdges1;
-            guna2TextBox1.DefaultText = "";
-            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Font = new Font("Segoe UI", 9F);
-            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(569, 32);
-            guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PlaceholderText = "";
-            guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2TextBox1.Size = new Size(200, 36);
-            guna2TextBox1.TabIndex = 2;
+            tbxName.CustomizableEdges = customizableEdges3;
+            tbxName.DefaultText = "";
+            tbxName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            tbxName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            tbxName.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            tbxName.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            tbxName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            tbxName.Font = new Font("Segoe UI", 9F);
+            tbxName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            tbxName.Location = new Point(573, 12);
+            tbxName.Name = "tbxName";
+            tbxName.PlaceholderText = "";
+            tbxName.SelectedText = "";
+            tbxName.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            tbxName.Size = new Size(200, 36);
+            tbxName.TabIndex = 2;
             // 
             // FindPeople
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(guna2TextBox1);
-            Controls.Add(flowLayoutPanel1);
+            Controls.Add(tbxName);
+            Controls.Add(panelMain);
             Name = "FindPeople";
             Size = new Size(793, 662);
             ResumeLayout(false);
@@ -74,7 +74,7 @@
 
         #endregion
 
-        private FlowLayoutPanel flowLayoutPanel1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private FlowLayoutPanel panelMain;
+        private Guna.UI2.WinForms.Guna2TextBox tbxName;
     }
 }

@@ -29,32 +29,36 @@
         private void InitializeComponent()
         {
             TabPage tabPage2;
-            DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle15 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle16 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle17 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle18 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             dgvInsurance = new Guna.UI2.WinForms.Guna2DataGridView();
-            btnSelect = new DataGridViewCheckBoxColumn();
-            InsuranceName = new DataGridViewTextBoxColumn();
+            CoverageID = new DataGridViewTextBoxColumn();
+            CoverageName = new DataGridViewTextBoxColumn();
+            Assigned = new DataGridViewCheckBoxColumn();
             dgvTime = new Guna.UI2.WinForms.Guna2DataGridView();
-            Select = new DataGridViewCheckBoxColumn();
-            TimeSlot = new DataGridViewTextBoxColumn();
+            SlotID = new DataGridViewTextBoxColumn();
+            SlotText = new DataGridViewTextBoxColumn();
+            AssignedTime = new DataGridViewCheckBoxColumn();
             btnSave = new Guna.UI2.WinForms.Guna2Button();
             tbxAddress = new Guna.UI2.WinForms.Guna2TextBox();
             label1 = new Label();
@@ -68,6 +72,7 @@
             label4 = new Label();
             foreverTabPage1 = new ReaLTaiizor.Controls.ForeverTabPage();
             tabPage1 = new TabPage();
+            tbxUsername = new Guna.UI2.WinForms.Guna2TextBox();
             btnAddPerson = new Guna.UI2.WinForms.Guna2Button();
             label9 = new Label();
             tbxName = new Guna.UI2.WinForms.Guna2TextBox();
@@ -104,27 +109,27 @@
             // 
             // dgvInsurance
             // 
-            dataGridViewCellStyle13.BackColor = Color.White;
-            dgvInsurance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
-            dataGridViewCellStyle14.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle14.Font = new Font("Segoe UI", 10F);
-            dataGridViewCellStyle14.ForeColor = Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = DataGridViewTriState.True;
-            dgvInsurance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            dgvInsurance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10F);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvInsurance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvInsurance.ColumnHeadersHeight = 20;
             dgvInsurance.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvInsurance.Columns.AddRange(new DataGridViewColumn[] { btnSelect, InsuranceName });
-            dataGridViewCellStyle15.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = Color.White;
-            dataGridViewCellStyle15.Font = new Font("Segoe UI", 10F);
-            dataGridViewCellStyle15.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle15.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle15.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle15.WrapMode = DataGridViewTriState.False;
-            dgvInsurance.DefaultCellStyle = dataGridViewCellStyle15;
+            dgvInsurance.Columns.AddRange(new DataGridViewColumn[] { CoverageID, CoverageName, Assigned });
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10F);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgvInsurance.DefaultCellStyle = dataGridViewCellStyle3;
             dgvInsurance.GridColor = Color.FromArgb(231, 229, 255);
             dgvInsurance.Location = new Point(219, 174);
             dgvInsurance.Name = "dgvInsurance";
@@ -153,40 +158,44 @@
             dgvInsurance.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgvInsurance.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
-            // btnSelect
+            // CoverageID
             // 
-            btnSelect.HeaderText = "Select";
-            btnSelect.Name = "btnSelect";
-            btnSelect.Resizable = DataGridViewTriState.True;
+            CoverageID.HeaderText = "ID";
+            CoverageID.Name = "CoverageID";
             // 
-            // InsuranceName
+            // CoverageName
             // 
-            InsuranceName.HeaderText = "Insurance Name";
-            InsuranceName.Name = "InsuranceName";
+            CoverageName.HeaderText = "Insurance Name";
+            CoverageName.Name = "CoverageName";
+            // 
+            // Assigned
+            // 
+            Assigned.HeaderText = "Select";
+            Assigned.Name = "Assigned";
             // 
             // dgvTime
             // 
-            dataGridViewCellStyle16.BackColor = Color.White;
-            dgvTime.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
-            dataGridViewCellStyle17.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle17.Font = new Font("Segoe UI", 10F);
-            dataGridViewCellStyle17.ForeColor = Color.White;
-            dataGridViewCellStyle17.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = DataGridViewTriState.True;
-            dgvTime.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle4.BackColor = Color.White;
+            dgvTime.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 10F);
+            dataGridViewCellStyle5.ForeColor = Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dgvTime.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dgvTime.ColumnHeadersHeight = 20;
             dgvTime.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvTime.Columns.AddRange(new DataGridViewColumn[] { Select, TimeSlot });
-            dataGridViewCellStyle18.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = Color.White;
-            dataGridViewCellStyle18.Font = new Font("Segoe UI", 10F);
-            dataGridViewCellStyle18.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle18.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle18.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle18.WrapMode = DataGridViewTriState.False;
-            dgvTime.DefaultCellStyle = dataGridViewCellStyle18;
+            dgvTime.Columns.AddRange(new DataGridViewColumn[] { SlotID, SlotText, AssignedTime });
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 10F);
+            dataGridViewCellStyle6.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            dgvTime.DefaultCellStyle = dataGridViewCellStyle6;
             dgvTime.GridColor = Color.FromArgb(231, 229, 255);
             dgvTime.Location = new Point(219, 334);
             dgvTime.Name = "dgvTime";
@@ -215,20 +224,25 @@
             dgvTime.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgvTime.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
-            // Select
+            // SlotID
             // 
-            Select.HeaderText = "Select";
-            Select.Name = "Select";
-            Select.Resizable = DataGridViewTriState.True;
+            SlotID.HeaderText = "ID";
+            SlotID.Name = "SlotID";
             // 
-            // TimeSlot
+            // SlotText
             // 
-            TimeSlot.HeaderText = "Time Slot";
-            TimeSlot.Name = "TimeSlot";
+            SlotText.HeaderText = "Time Slot";
+            SlotText.Name = "SlotText";
+            // 
+            // AssignedTime
+            // 
+            AssignedTime.HeaderText = "Select";
+            AssignedTime.Name = "AssignedTime";
+            AssignedTime.Resizable = DataGridViewTriState.True;
             // 
             // btnSave
             // 
-            btnSave.CustomizableEdges = customizableEdges29;
+            btnSave.CustomizableEdges = customizableEdges1;
             btnSave.DisabledState.BorderColor = Color.DarkGray;
             btnSave.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSave.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -237,13 +251,13 @@
             btnSave.ForeColor = Color.White;
             btnSave.Location = new Point(590, 494);
             btnSave.Name = "btnSave";
-            btnSave.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            btnSave.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnSave.Size = new Size(180, 45);
             btnSave.TabIndex = 15;
             // 
             // tbxAddress
             // 
-            tbxAddress.CustomizableEdges = customizableEdges31;
+            tbxAddress.CustomizableEdges = customizableEdges3;
             tbxAddress.DefaultText = "";
             tbxAddress.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             tbxAddress.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -256,7 +270,7 @@
             tbxAddress.Name = "tbxAddress";
             tbxAddress.PlaceholderText = "";
             tbxAddress.SelectedText = "";
-            tbxAddress.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            tbxAddress.ShadowDecoration.CustomizableEdges = customizableEdges4;
             tbxAddress.Size = new Size(535, 36);
             tbxAddress.TabIndex = 9;
             // 
@@ -292,7 +306,7 @@
             // 
             // tbxEmail
             // 
-            tbxEmail.CustomizableEdges = customizableEdges33;
+            tbxEmail.CustomizableEdges = customizableEdges5;
             tbxEmail.DefaultText = "";
             tbxEmail.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             tbxEmail.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -305,7 +319,7 @@
             tbxEmail.Name = "tbxEmail";
             tbxEmail.PlaceholderText = "";
             tbxEmail.SelectedText = "";
-            tbxEmail.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            tbxEmail.ShadowDecoration.CustomizableEdges = customizableEdges6;
             tbxEmail.Size = new Size(535, 36);
             tbxEmail.TabIndex = 11;
             // 
@@ -321,7 +335,7 @@
             // 
             // tbxPhoneNumber
             // 
-            tbxPhoneNumber.CustomizableEdges = customizableEdges35;
+            tbxPhoneNumber.CustomizableEdges = customizableEdges7;
             tbxPhoneNumber.DefaultText = "";
             tbxPhoneNumber.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             tbxPhoneNumber.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -334,7 +348,7 @@
             tbxPhoneNumber.Name = "tbxPhoneNumber";
             tbxPhoneNumber.PlaceholderText = "";
             tbxPhoneNumber.SelectedText = "";
-            tbxPhoneNumber.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            tbxPhoneNumber.ShadowDecoration.CustomizableEdges = customizableEdges8;
             tbxPhoneNumber.Size = new Size(535, 36);
             tbxPhoneNumber.TabIndex = 10;
             // 
@@ -351,11 +365,11 @@
             // panelTitlePatientQueue
             // 
             panelTitlePatientQueue.Controls.Add(label4);
-            panelTitlePatientQueue.CustomizableEdges = customizableEdges37;
+            panelTitlePatientQueue.CustomizableEdges = customizableEdges9;
             panelTitlePatientQueue.Dock = DockStyle.Top;
             panelTitlePatientQueue.Location = new Point(0, 0);
             panelTitlePatientQueue.Name = "panelTitlePatientQueue";
-            panelTitlePatientQueue.ShadowDecoration.CustomizableEdges = customizableEdges38;
+            panelTitlePatientQueue.ShadowDecoration.CustomizableEdges = customizableEdges10;
             panelTitlePatientQueue.Size = new Size(793, 56);
             panelTitlePatientQueue.TabIndex = 1;
             // 
@@ -391,6 +405,7 @@
             // tabPage1
             // 
             tabPage1.BackColor = Color.FromArgb(60, 70, 73);
+            tabPage1.Controls.Add(tbxUsername);
             tabPage1.Controls.Add(btnAddPerson);
             tabPage1.Controls.Add(label9);
             tabPage1.Controls.Add(tbxName);
@@ -402,9 +417,28 @@
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Add Person";
             // 
+            // tbxUsername
+            // 
+            tbxUsername.CustomizableEdges = customizableEdges11;
+            tbxUsername.DefaultText = "";
+            tbxUsername.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            tbxUsername.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            tbxUsername.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            tbxUsername.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            tbxUsername.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            tbxUsername.Font = new Font("Segoe UI", 9F);
+            tbxUsername.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            tbxUsername.Location = new Point(157, 77);
+            tbxUsername.Name = "tbxUsername";
+            tbxUsername.PlaceholderText = "";
+            tbxUsername.SelectedText = "";
+            tbxUsername.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            tbxUsername.Size = new Size(280, 36);
+            tbxUsername.TabIndex = 16;
+            // 
             // btnAddPerson
             // 
-            btnAddPerson.CustomizableEdges = customizableEdges39;
+            btnAddPerson.CustomizableEdges = customizableEdges13;
             btnAddPerson.DisabledState.BorderColor = Color.DarkGray;
             btnAddPerson.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAddPerson.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -413,7 +447,7 @@
             btnAddPerson.ForeColor = Color.White;
             btnAddPerson.Location = new Point(508, 68);
             btnAddPerson.Name = "btnAddPerson";
-            btnAddPerson.ShadowDecoration.CustomizableEdges = customizableEdges40;
+            btnAddPerson.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btnAddPerson.Size = new Size(180, 45);
             btnAddPerson.TabIndex = 15;
             btnAddPerson.Text = "Add Doctor";
@@ -430,7 +464,7 @@
             // 
             // tbxName
             // 
-            tbxName.CustomizableEdges = customizableEdges41;
+            tbxName.CustomizableEdges = customizableEdges15;
             tbxName.DefaultText = "";
             tbxName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             tbxName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -439,11 +473,11 @@
             tbxName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             tbxName.Font = new Font("Segoe UI", 9F);
             tbxName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbxName.Location = new Point(163, 77);
+            tbxName.Location = new Point(157, 144);
             tbxName.Name = "tbxName";
             tbxName.PlaceholderText = "";
             tbxName.SelectedText = "";
-            tbxName.ShadowDecoration.CustomizableEdges = customizableEdges42;
+            tbxName.ShadowDecoration.CustomizableEdges = customizableEdges16;
             tbxName.Size = new Size(280, 36);
             tbxName.TabIndex = 10;
             // 
@@ -510,8 +544,15 @@
         private Guna.UI2.WinForms.Guna2DataGridView dgvTime;
         private Guna.UI2.WinForms.Guna2DataGridView dgvInsurance;
         private DataGridViewCheckBoxColumn btnSelect;
-        private DataGridViewTextBoxColumn InsuranceName;
+        private DataGridViewTextBoxColumn colInsurance;
         private DataGridViewCheckBoxColumn Select;
-        private DataGridViewTextBoxColumn TimeSlot;
+        private DataGridViewTextBoxColumn colTime;
+        private Guna.UI2.WinForms.Guna2TextBox tbxUsername;
+        private DataGridViewTextBoxColumn CoverageID;
+        private DataGridViewTextBoxColumn CoverageName;
+        private DataGridViewCheckBoxColumn Assigned;
+        private DataGridViewTextBoxColumn SlotID;
+        private DataGridViewTextBoxColumn SlotText;
+        private DataGridViewCheckBoxColumn AssignedTime;
     }
 }

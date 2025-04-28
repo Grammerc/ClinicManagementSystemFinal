@@ -12,6 +12,7 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
     public partial class EditClinic : UserControl
     {
         readonly int _clinicId;
+        private string _selectedImagePath;
         const string CONN = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;";
 
         public EditClinic(int clinicId)
@@ -20,6 +21,7 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
             _clinicId = clinicId;
             Load += EditClinic_Load;
             btnSave.Click += BtnSave_Click;
+            btnChange.Click += BtnChange_Click;
             btnAddPerson.Click += BtnAddPerson_Click;
         }
 
@@ -28,9 +30,14 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
             using var conn = new OleDbConnection(CONN);
             conn.Open();
 
-            var cmdClinic = new OleDbCommand(
-                "SELECT ClinicName, Address, PhoneNumber, Email FROM Clinics WHERE ClinicID = ?", conn);
+            // “Picture” is your actual Clinics table field
+            using var cmdClinic = new OleDbCommand(
+                "SELECT ClinicName, Address, PhoneNumber, Email, " +
+                "       IIF(Picture IS NULL, '', Picture) AS PicPath " +
+                "  FROM Clinics " +
+                " WHERE ClinicID = ?", conn);
             cmdClinic.Parameters.AddWithValue("?", _clinicId);
+
             using var rdrClinic = cmdClinic.ExecuteReader();
             if (rdrClinic.Read())
             {
@@ -38,7 +45,14 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
                 tbxAddress.Text = rdrClinic["Address"].ToString();
                 tbxPhoneNumber.Text = rdrClinic["PhoneNumber"].ToString();
                 tbxEmail.Text = rdrClinic["Email"].ToString();
+                _selectedImagePath = rdrClinic["PicPath"].ToString();
+                if (File.Exists(_selectedImagePath))
+                {
+                    pbxClinic.Image = Image.FromFile(_selectedImagePath);
+                    pbxClinic.SizeMode = PictureBoxSizeMode.Zoom;
+                }
             }
+
 
             dgvInsurance.Rows.Clear();
             var cmdIns = new OleDbCommand(
@@ -94,16 +108,41 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
             }
         }
 
+        private void BtnChange_Click(object sender, EventArgs e)
+        {
+            using var dlg = new OpenFileDialog
+            {
+                Filter = "Image Files|*.png;*.jpg;*.jpeg;*.bmp"
+            };
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                _selectedImagePath = dlg.FileName;
+                pbxClinic.Image?.Dispose();
+                pbxClinic.Image = Image.FromFile(_selectedImagePath);
+                pbxClinic.SizeMode = PictureBoxSizeMode.Zoom;
+            }
+        }
+
         private void BtnSave_Click(object sender, EventArgs e)
         {
             using var conn = new OleDbConnection(CONN);
             conn.Open();
 
-            var cmdUpdate = new OleDbCommand(
-                "UPDATE Clinics SET Address = ?, PhoneNumber = ?, Email = ? WHERE ClinicID = ?", conn);
+            // update your Clinics.Picture column, not “PicturePath”
+            using var cmdUpdate = new OleDbCommand(
+                "UPDATE Clinics " +
+                "   SET ClinicName = ?, " +
+                "       Address    = ?, " +
+                "       PhoneNumber= ?, " +
+                "       Email      = ?, " +
+                "       Picture    = ? " +
+                " WHERE ClinicID = ?", conn);
+
+            cmdUpdate.Parameters.AddWithValue("?", tbxName.Text.Trim());
             cmdUpdate.Parameters.AddWithValue("?", tbxAddress.Text.Trim());
             cmdUpdate.Parameters.AddWithValue("?", tbxPhoneNumber.Text.Trim());
             cmdUpdate.Parameters.AddWithValue("?", tbxEmail.Text.Trim());
+            cmdUpdate.Parameters.AddWithValue("?", _selectedImagePath ?? "");
             cmdUpdate.Parameters.AddWithValue("?", _clinicId);
             cmdUpdate.ExecuteNonQuery();
 

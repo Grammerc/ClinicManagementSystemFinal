@@ -30,6 +30,9 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
             btnDashboard.Visible = !_isSecretary;
             btnCalendar.Visible = !_isSecretary;
             btnPatientQueue.Visible = !_isSecretary;
+            panelDashboard.Enabled = !_isSecretary;
+            panelCalendar.Enabled = !_isSecretary;
+            panelPatientQueue.Enabled = !_isSecretary;
 
 
             btnMyClinics.Visible = true;
@@ -76,73 +79,48 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
 
         private void LoadDoctorHeader()
         {
+            // we’ll load from Account → Information (shared table) 
+            // and Roles (to get “Doctor” or “Secretary”)
             const string sql = @"
 SELECT 
-    I.ProfileImagePath,
-    I.ProfilePicture,
-    D.DoctorName,
-    R.RoleName,
-    R.Permission
-FROM ((Account      AS A
-       INNER JOIN Doctors     AS D ON A.LoginID = D.LoginID)
-      INNER JOIN Information AS I ON A.LoginID = I.LoginID)
-     LEFT JOIN Roles       AS R ON CInt(A.RoleID) = R.RoleID
-WHERE A.LoginID = ?";
+  I.ProfileImagePath,
+  I.ProfilePicture,
+  I.Name,
+  R.RoleName
+FROM   (Account      AS A
+        INNER JOIN Information AS I ON A.LoginID = I.LoginID)
+       LEFT JOIN Roles AS R ON A.RoleID = R.RoleID
+WHERE  A.LoginID = ?";
 
-            OleDbCommand cmd = null;
-            try
+            using var conn = new OleDbConnection(CONN);
+            conn.Open();
+            using var cmd = new OleDbCommand(sql, conn);
+
+            // RoleID is numeric in Access:
+            cmd.Parameters.Add("?", OleDbType.Integer).Value = Convert.ToInt32(doctorLoginId);
+
+            using var rdr = cmd.ExecuteReader();
+            if (!rdr.Read()) return;
+
+            // 1) picture (path preferred, otherwise blob)
+            Image img = null;
+            var path = rdr["ProfileImagePath"].ToString();
+            if (!string.IsNullOrEmpty(path) && File.Exists(path))
+                img = Image.FromFile(path);
+            else if (rdr["ProfilePicture"] != DBNull.Value)
             {
-                using var conn = new OleDbConnection(CONN);
-                conn.Open();
-
-                cmd = new OleDbCommand(sql, conn);
-                cmd.Parameters.Add("?", OleDbType.Integer).Value = Convert.ToInt32(doctorLoginId);
-
-                using var rdr = cmd.ExecuteReader();
-                if (rdr.Read())
-                {
-                    // 1) Doctor name
-                    lblName.Text = rdr["DoctorName"].ToString();
-
-                    // 2) Role name
-                    lblRole.Text = rdr["RoleName"]?.ToString() ?? "(no role)";
-
-                    // 3) Profile picture (path preferred, else blob)
-                    Image img = null;
-                    var path = rdr["ProfileImagePath"].ToString();
-                    if (!string.IsNullOrEmpty(path) && File.Exists(path))
-                    {
-                        img = Image.FromFile(path);
-                    }
-                    else if (rdr["ProfilePicture"] != DBNull.Value)
-                    {
-                        var blob = (byte[])rdr["ProfilePicture"];
-                        using var ms = new MemoryStream(blob);
-                        img = Image.FromStream(ms);
-                    }
-
-                    if (img != null)
-                        pbxProfile.Image = img;
-                }
+                var blob = (byte[])rdr["ProfilePicture"];
+                using var ms = new MemoryStream(blob);
+                img = Image.FromStream(ms);
             }
-            catch (OleDbException ex)
-            {
-                var sb = new StringBuilder();
-                sb.AppendLine("ExecuteReader failed in LoadDoctorHeader.");
-                sb.AppendLine("SQL:");
-                sb.AppendLine(sql);
-                sb.AppendLine("Parameters:");
-                if (cmd != null)
-                {
-                    foreach (OleDbParameter p in cmd.Parameters)
-                        sb.AppendLine($"  {p.ParameterName} = {p.Value} ({p.OleDbType})");
-                }
-                sb.AppendLine();
-                sb.AppendLine("Exception:");
-                sb.AppendLine(ex.Message);
+            if (img != null)
+                pbxProfile.Image = img;
 
-                MessageBox.Show(sb.ToString(), "Debug", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            // 2) your name
+            lblName.Text = rdr["Name"].ToString();
+
+            // 3) role (“Doctor” or “Secretary”)
+            lblRole.Text = rdr["RoleName"]?.ToString() ?? "(no role)";
         }
 
         public void LoadControl(Control c)
@@ -221,7 +199,7 @@ WHERE A.LoginID = ?";
             => LoadControl(apptUC);
 
         private void btnViewPatients_Click(object sender, EventArgs e)
-            => LoadControl(new FindPeople(doctorLoginId));
+            => LoadControl(new FindPeople(doctorLoginId, _isSecretary));
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {

@@ -85,11 +85,11 @@
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             pbxProfile = new PictureBox();
             btnDashboard = new Guna.UI2.WinForms.Guna2Button();
-            guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            panelDashboard = new Guna.UI2.WinForms.Guna2Panel();
             btnCalendar = new Guna.UI2.WinForms.Guna2Button();
-            guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            panelCalendar = new Guna.UI2.WinForms.Guna2Panel();
             btnPatientQueue = new Guna.UI2.WinForms.Guna2Button();
-            guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
+            panelPatientQueue = new Guna.UI2.WinForms.Guna2Panel();
             btnMyClinics = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             btnLogOut = new Guna.UI2.WinForms.Guna2Button();
@@ -105,9 +105,9 @@
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbxProfile).BeginInit();
-            guna2Panel3.SuspendLayout();
-            guna2Panel4.SuspendLayout();
-            guna2Panel5.SuspendLayout();
+            panelDashboard.SuspendLayout();
+            panelCalendar.SuspendLayout();
+            panelPatientQueue.SuspendLayout();
             guna2Panel6.SuspendLayout();
             guna2Panel7.SuspendLayout();
             guna2Panel10.SuspendLayout();
@@ -272,16 +272,16 @@
             btnDashboard.Text = "Dashboard";
             btnDashboard.Click += btnDashboard_Click;
             // 
-            // guna2Panel3
+            // panelDashboard
             // 
-            guna2Panel3.Controls.Add(btnDashboard);
-            guna2Panel3.CustomizableEdges = customizableEdges11;
-            guna2Panel3.Dock = DockStyle.Top;
-            guna2Panel3.Location = new Point(0, 236);
-            guna2Panel3.Name = "guna2Panel3";
-            guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2Panel3.Size = new Size(221, 53);
-            guna2Panel3.TabIndex = 6;
+            panelDashboard.Controls.Add(btnDashboard);
+            panelDashboard.CustomizableEdges = customizableEdges11;
+            panelDashboard.Dock = DockStyle.Top;
+            panelDashboard.Location = new Point(0, 236);
+            panelDashboard.Name = "panelDashboard";
+            panelDashboard.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            panelDashboard.Size = new Size(221, 53);
+            panelDashboard.TabIndex = 6;
             // 
             // btnCalendar
             // 
@@ -300,16 +300,16 @@
             btnCalendar.Text = "Calendar";
             btnCalendar.Click += btnCalendar_Click;
             // 
-            // guna2Panel4
+            // panelCalendar
             // 
-            guna2Panel4.Controls.Add(btnCalendar);
-            guna2Panel4.CustomizableEdges = customizableEdges15;
-            guna2Panel4.Dock = DockStyle.Top;
-            guna2Panel4.Location = new Point(0, 289);
-            guna2Panel4.Name = "guna2Panel4";
-            guna2Panel4.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2Panel4.Size = new Size(221, 53);
-            guna2Panel4.TabIndex = 7;
+            panelCalendar.Controls.Add(btnCalendar);
+            panelCalendar.CustomizableEdges = customizableEdges15;
+            panelCalendar.Dock = DockStyle.Top;
+            panelCalendar.Location = new Point(0, 289);
+            panelCalendar.Name = "panelCalendar";
+            panelCalendar.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            panelCalendar.Size = new Size(221, 53);
+            panelCalendar.TabIndex = 7;
             // 
             // btnPatientQueue
             // 
@@ -328,16 +328,16 @@
             btnPatientQueue.Text = "Patient Queue";
             btnPatientQueue.Click += btnPatientQueue_Click;
             // 
-            // guna2Panel5
+            // panelPatientQueue
             // 
-            guna2Panel5.Controls.Add(btnPatientQueue);
-            guna2Panel5.CustomizableEdges = customizableEdges19;
-            guna2Panel5.Dock = DockStyle.Top;
-            guna2Panel5.Location = new Point(0, 342);
-            guna2Panel5.Name = "guna2Panel5";
-            guna2Panel5.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            guna2Panel5.Size = new Size(221, 53);
-            guna2Panel5.TabIndex = 8;
+            panelPatientQueue.Controls.Add(btnPatientQueue);
+            panelPatientQueue.CustomizableEdges = customizableEdges19;
+            panelPatientQueue.Dock = DockStyle.Top;
+            panelPatientQueue.Location = new Point(0, 342);
+            panelPatientQueue.Name = "panelPatientQueue";
+            panelPatientQueue.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            panelPatientQueue.Size = new Size(221, 53);
+            panelPatientQueue.TabIndex = 8;
             // 
             // btnMyClinics
             // 
@@ -402,6 +402,7 @@
             btnSettings.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSettings.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnSettings.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnSettings.Dock = DockStyle.Fill;
             btnSettings.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnSettings.ForeColor = Color.White;
             btnSettings.Location = new Point(0, 0);
@@ -473,8 +474,7 @@
             // 
             guna2Panel8.Controls.Add(btnSettings);
             guna2Panel8.CustomizableEdges = customizableEdges39;
-            guna2Panel8.Dock = DockStyle.Bottom;
-            guna2Panel8.Location = new Point(0, 636);
+            guna2Panel8.Location = new Point(0, 639);
             guna2Panel8.Name = "guna2Panel8";
             guna2Panel8.ShadowDecoration.CustomizableEdges = customizableEdges40;
             guna2Panel8.Size = new Size(221, 53);
@@ -483,14 +483,14 @@
             // guna2Panel1
             // 
             guna2Panel1.BackColor = Color.White;
+            guna2Panel1.Controls.Add(guna2Panel8);
             guna2Panel1.Controls.Add(guna2Panel10);
             guna2Panel1.Controls.Add(guna2Panel9);
-            guna2Panel1.Controls.Add(guna2Panel8);
             guna2Panel1.Controls.Add(guna2Panel7);
             guna2Panel1.Controls.Add(guna2Panel6);
-            guna2Panel1.Controls.Add(guna2Panel5);
-            guna2Panel1.Controls.Add(guna2Panel4);
-            guna2Panel1.Controls.Add(guna2Panel3);
+            guna2Panel1.Controls.Add(panelPatientQueue);
+            guna2Panel1.Controls.Add(panelCalendar);
+            guna2Panel1.Controls.Add(panelDashboard);
             guna2Panel1.Controls.Add(guna2Panel2);
             guna2Panel1.CustomizableEdges = customizableEdges41;
             guna2Panel1.Dock = DockStyle.Left;
@@ -519,9 +519,9 @@
             guna2Panel2.ResumeLayout(false);
             guna2Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbxProfile).EndInit();
-            guna2Panel3.ResumeLayout(false);
-            guna2Panel4.ResumeLayout(false);
-            guna2Panel5.ResumeLayout(false);
+            panelDashboard.ResumeLayout(false);
+            panelCalendar.ResumeLayout(false);
+            panelPatientQueue.ResumeLayout(false);
             guna2Panel6.ResumeLayout(false);
             guna2Panel7.ResumeLayout(false);
             guna2Panel10.ResumeLayout(false);
@@ -543,11 +543,11 @@
         private Label lblRole;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Button btnDashboard;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
+        private Guna.UI2.WinForms.Guna2Panel panelDashboard;
         private Guna.UI2.WinForms.Guna2Button btnCalendar;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
+        private Guna.UI2.WinForms.Guna2Panel panelCalendar;
         private Guna.UI2.WinForms.Guna2Button btnPatientQueue;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
+        private Guna.UI2.WinForms.Guna2Panel panelPatientQueue;
         private Guna.UI2.WinForms.Guna2Button btnMyClinics;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
         private Guna.UI2.WinForms.Guna2Button btnLogOut;

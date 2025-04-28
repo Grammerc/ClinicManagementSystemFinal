@@ -47,66 +47,76 @@ namespace ClinicManagementSystemFinal
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            const string CONNSTR =
-                @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;";
+            // read these out of the reader, then let all COM objects go out of scope & Dispose
+            string loginId;
+            string rawRoleId;
+            bool loginOk;
 
-            string loginId = null;
-            string roleName = null;
-
-            // 1) use a local connection in a using
-            using (var conn = new OleDbConnection(CONNSTR))
+            using (var conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;"))
             {
                 conn.Open();
-                using var cmd = new OleDbCommand(@"
-            SELECT A.LoginID,
-                   A.RoleID,
-                   R.RoleName
-              FROM Account AS A
-         LEFT JOIN Roles   AS R ON A.RoleID = R.RoleID
-             WHERE A.username = ?
-               AND A.password = ?", conn);
-
-                cmd.Parameters.AddWithValue("?", tbxEmail.Text.Trim());
-                cmd.Parameters.AddWithValue("?", tbxPassword.Text);
-
-                using var reader = cmd.ExecuteReader();
-                if (!reader.Read())
+                using (var cmd = new OleDbCommand("SELECT LoginID, RoleID FROM Account WHERE username = @username AND password = @password", conn))
                 {
-                    MessageBox.Show("Incorrect username or password.", "Error",
-                                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
+                    cmd.Parameters.AddWithValue("@username", tbxEmail.Text);
+                    cmd.Parameters.AddWithValue("@password", tbxPassword.Text);
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        if (!reader.Read())
+                        {
+                            MessageBox.Show("Incorrect username or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return;
+                        }
 
-                loginId = reader["LoginID"].ToString();
-                roleName = reader["RoleName"]?.ToString() ?? "";
+                        loginId = reader["LoginID"].ToString();
+                        rawRoleId = reader["RoleID"].ToString();
+                        loginOk = true;
+                    }
+                }
             }
 
-            // 2) hide the sign-in form
+            // at this point the reader, command, and connection are all closed & disposed,
+            // so there’s no more COM object in flight.
+
+            // determine role
+            bool isDoctor = false;
+            bool isSecretary = false;
+            bool isStandardUser = false;
+
+            if (int.TryParse(rawRoleId, out var numericRole))
+            {
+                isDoctor = numericRole == 1;
+                isSecretary = numericRole == 2;
+                isStandardUser = numericRole == 3;
+            }
+            else
+            {
+                isDoctor = rawRoleId.Equals("Doctor", StringComparison.OrdinalIgnoreCase);
+                isSecretary = rawRoleId.Equals("Secretary", StringComparison.OrdinalIgnoreCase);
+                isStandardUser = rawRoleId.Equals("User", StringComparison.OrdinalIgnoreCase);
+            }
+
+            // now hide this form and show the next one
             this.Hide();
 
-            // 3) dispatch based on the RoleName
-            switch (roleName.Trim().ToLowerInvariant())
+            if (isDoctor)
             {
-                case "doctor":
-                    new HomePage_Doctor(loginId, isSecretary: false)
-                        .Show();
-                    break;
-
-                case "secretary":
-                    new HomePage_Doctor(loginId, isSecretary: true)
-                        .Show();
-                    break;
-
-                case "patient":
-                    new HomePage_User(loginId)
-                        .Show();
-                    break;
-
-                default:
-                    MessageBox.Show($"Unknown role “{roleName}”.", "Error",
-                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    this.Show();
-                    break;
+                var doctorHome = new HomePage_Doctor(loginId, isSecretary: false);
+                doctorHome.Show();
+            }
+            else if (isSecretary)
+            {
+                var secretaryHome = new HomePage_Doctor(loginId, isSecretary: true);
+                secretaryHome.Show();
+            }
+            else if (isStandardUser)
+            {
+                var userHome = new HomePage_User(loginId);
+                userHome.Show();
+            }
+            else
+            {
+                MessageBox.Show("Unknown RoleID detected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.Show();
             }
         }
 

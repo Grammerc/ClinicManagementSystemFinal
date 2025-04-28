@@ -398,7 +398,7 @@ namespace ClinicManagementSystemFinal
 
         private void btnFindDoctors_Click(object sender, EventArgs e)
         {
-            LoadControl(new FindPeople(userLoginId));
+            LoadControl(new FindPeople(userLoginId, isSecretary:false));
         }
     }
 }

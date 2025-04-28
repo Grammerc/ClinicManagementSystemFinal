@@ -482,9 +482,9 @@
             label2.AutoSize = true;
             label2.Location = new Point(26, 20);
             label2.Name = "label2";
-            label2.Size = new Size(29, 15);
+            label2.Size = new Size(52, 15);
             label2.TabIndex = 1;
-            label2.Text = "Skip";
+            label2.Text = "Approve";
             // 
             // guna2ImageButton2
             // 
@@ -499,7 +499,7 @@
             guna2ImageButton2.PressedState.ImageSize = new Size(64, 64);
             guna2ImageButton2.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2ImageButton2.Size = new Size(90, 55);
-            guna2ImageButton2.TabIndex = 1;
+            guna2ImageButton2.TabIndex = 4;
             // 
             // tableLayoutPanel5
             // 
@@ -812,7 +812,6 @@
         private TableLayoutPanel tableLayoutPanel6;
         private Panel panel27;
         private Label label2;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
         private TableLayoutPanel tableLayoutPanel5;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private Panel panel26;
@@ -829,5 +828,6 @@
         private PictureBox pbxProfile;
         private Label lblTime;
         private Label lblReason;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
     }
 }

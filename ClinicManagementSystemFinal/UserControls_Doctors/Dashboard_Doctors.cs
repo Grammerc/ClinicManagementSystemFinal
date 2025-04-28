@@ -26,6 +26,7 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
             InitializeComponent();
             btnView.Click += BtnView_Click;
             _doctorLoginId = doctorLoginId;
+            rdoDay.Checked = true;
 
             _lastPatientTemplate = LastPatientCard;
             _lastPatientTemplate.Visible = false;
@@ -33,8 +34,10 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
             rdoDay.CheckedChanged += (s, e) => RefreshStats();
             rdoMonth.CheckedChanged += (s, e) => RefreshStats();
             rdoYear.CheckedChanged += (s, e) => RefreshStats();
-
-            // initial draw
+            this.VisibleChanged += (s, e) => {
+                if (this.Visible)
+                    RefreshStats();
+        };
             RefreshStats();
         }
 
@@ -79,18 +82,20 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
             // assume each completed = 1h
             var hours = completed.Select(c => (double)c).ToList();
 
-            // 3) KPI totals
-            lblAppointments.Text = completed.Sum().ToString();
-            lblPending.Text = pending.Sum().ToString();
-            lblNewPatients.Text = newPats.Sum().ToString();
-            lblHoursWorked.Text = hours.Sum().ToString("0");
-
-            // 4) build four line‐datasets
-            //    (you can tweak colors, point style etc in code or in designer)
             var dsComp = new GunaLineDataset { Label = "Completed" };
             var dsPend = new GunaLineDataset { Label = "Pending" };
             var dsNew = new GunaLineDataset { Label = "New Patients" };
             var dsHrs = new GunaLineDataset { Label = "Hours Worked" };
+
+    
+            dsComp.BorderColor = Color.Green;
+            //dsComp.PointFillColors = Color.Green;
+            dsPend.BorderColor = Color.Orange;
+            //dsPend.PointFillColors = Color.Orange;
+            dsNew.BorderColor = Color.MediumPurple;
+            //dsNew.PointFillColors = Color.MediumPurple;
+            dsHrs.BorderColor = Color.Blue;
+           // dsHrs.PointFillColors = Color.Blue;
 
             for (int i = 0; i < labels.Count; i++)
             {
@@ -101,7 +106,6 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
                 dsHrs.DataPoints.Add(new LPoint { Label = lbl, Y = hours[i] });
             }
 
-            // 5) clear & add them to your chart
             chartStats.Datasets.Clear();
             chartStats.Datasets.Add(dsComp);
             chartStats.Datasets.Add(dsPend);
@@ -109,8 +113,9 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
             chartStats.Datasets.Add(dsHrs);
 
             chartStats.Update();
+
             LoadLastPatients();
-           LoadTodaysAppointments();
+            LoadTodaysAppointments();
         }
 
         private List<string> GetTimeLabels(string period)
@@ -372,7 +377,7 @@ SELECT TOP {howMany}
             using var conn = new OleDbConnection(CONN);
             conn.Open();
 
-            // get just today’s appointments for this doctor
+            // only Approved, today
             var cmd = new OleDbCommand(@"
         SELECT 
             A.AppointmentDate,
@@ -381,26 +386,23 @@ SELECT TOP {howMany}
             A.ReasonForVisit
         FROM 
             (Appointments AS A
-             INNER JOIN Doctors AS D 
-               ON A.DoctorID = D.DoctorID)
-             INNER JOIN Information AS I 
-               ON A.UserInfoID = I.UserInfoID
+             INNER JOIN Doctors     AS D ON A.DoctorID    = D.DoctorID)
+             INNER JOIN Information AS I ON A.UserInfoID   = I.UserInfoID
         WHERE 
-            D.LoginID = ?
+            D.LoginID      = ?
+          AND A.[Status]    = 'Approved'
           AND A.AppointmentDate >= Date()
-          AND A.AppointmentDate < DateAdd('d', 1, Date())
-        ORDER BY A.AppointmentDate, A.TimeSlot
-    ", conn);
+          AND A.AppointmentDate <  DateAdd('d',1,Date())
+        ORDER BY A.AppointmentDate, A.TimeSlot;", conn);
             cmd.Parameters.AddWithValue("?", _doctorLoginId);
 
             using var rdr = cmd.ExecuteReader();
             while (rdr.Read())
             {
-                // format date/time however you like:
-                string date = rdr.GetDateTime(0).ToShortDateString();
-                string time = rdr["TimeSlot"].ToString();
-                string name = rdr["Name"].ToString();
-                string reason = rdr["ReasonForVisit"].ToString();
+                var date = ((DateTime)rdr["AppointmentDate"]).ToShortDateString();
+                var time = rdr["TimeSlot"].ToString();
+                var name = rdr["Name"].ToString();
+                var reason = rdr["ReasonForVisit"].ToString();
 
                 dgvToday.Rows.Add(date, time, name, reason);
             }

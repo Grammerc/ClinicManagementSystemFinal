@@ -60,11 +60,15 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
 
         void StatusIcon_Click(object sender, EventArgs e)
         {
-            const int idx = 1; // we only have one status icon
-            if (displayedAppointmentIds.Count >= idx)
+            if (sender is Guna.UI2.WinForms.Guna2ImageButton btn
+             && btn.Tag is int index
+             && index >= 0
+             && index < displayedAppointmentIds.Count)
             {
-                var btn = sender as Guna.UI2.WinForms.Guna2ImageButton;
-                var sc = new StatusChange(displayedAppointmentIds[idx - 1], btn, this);
+                // pull the correct appointmentId for this button
+                string apptId = displayedAppointmentIds[index];
+
+                var sc = new StatusChange(apptId, btn, this);
                 sc.Show(this);
             }
         }
@@ -82,7 +86,7 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
                 pbxClinic.SizeMode = PictureBoxSizeMode.Zoom;
             }
             else
-                pbxClinic.Image = null;      // or a placeholder if you prefer
+                pbxClinic.Image = null;     
         }
 
         static readonly string IconDir =
@@ -391,6 +395,11 @@ SELECT
                                          .OfType<Guna2ImageButton>()
                                          .First();
                 pbxStatus.Image = GetStatusIcon(status);
+
+                // store the zero-based index of this appointment in the Tag
+                pbxStatus.Tag = idx - 1;
+
+                // wire up click
                 pbxStatus.Click += StatusIcon_Click;
 
                 // finally…

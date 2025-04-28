@@ -16,17 +16,38 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
         private readonly MyClinics myClinicsControl;
         private readonly AppointmentUC apptUC;
         private readonly PatientQueue queueUC;
+        private bool _isSecretary;
 
         private const string CONN =
             @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;";
 
-        public HomePage_Doctor(string loginId)
+        public HomePage_Doctor(string loginID, bool isSecretary = false)
         {
             InitializeComponent();
-            doctorLoginId = loginId;
+            doctorLoginId = loginID;
+            _isSecretary = isSecretary;
+
+            btnDashboard.Visible = !_isSecretary;
+            btnCalendar.Visible = !_isSecretary;
+            btnPatientQueue.Visible = !_isSecretary;
+
+
+            btnMyClinics.Visible = true;
+            btnAppointments.Visible = true;
+            btnViewPatients.Visible = true;
+
 
             // Profile picture (now a PictureBox)
-            pbxProfile.Click += (s, e) => LoadControl(new DoctorInformation(doctorLoginId));
+            if (_isSecretary)
+            {
+                pbxProfile.Click += (s, e) => LoadControl(new UserInformation(doctorLoginId));
+
+            }
+            else
+            {
+                pbxProfile.Click += (s, e) => ShowDoctorDetailPopup();
+            }
+               
 
             myClinicsControl = new MyClinics();
             apptUC = new AppointmentUC(doctorLoginId);
@@ -160,6 +181,35 @@ WHERE A.LoginID = ?";
             };
             LoadControl(cal);
         }
+
+        private void ShowDoctorDetailPopup()
+        {
+            // 1) instantiate the detail control
+            var detail = new DoctorDetail(doctorLoginId);
+
+            // 2) create a new top-level form
+            var popup = new Form
+            {
+                Text = "Doctor Details",            // window title
+                StartPosition = FormStartPosition.CenterScreen,
+                FormBorderStyle = FormBorderStyle.Sizable,  // resizable with normal title bar
+                ControlBox = true,                  // shows minimize/maximize/close
+                MinimizeBox = true,
+                MaximizeBox = false,
+                ShowInTaskbar = true,
+                AutoScaleMode = AutoScaleMode.None, // keep your control's own scaling
+            };
+
+            // 3) size the form to fit your control
+            //    (you could also hard-code a Size if you prefer)
+            detail.Dock = DockStyle.Fill;
+            popup.ClientSize = detail.Size;
+
+            // 4) add your control and show
+            popup.Controls.Add(detail);
+            popup.Show();  // non-modal; use ShowDialog() if you want it modal
+        }
+
 
         private void btnPatientQueue_Click(object sender, EventArgs e)
             => LoadControl(queueUC);

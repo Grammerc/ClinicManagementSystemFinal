@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace ClinicManagementSystemFinal.UserInterface
 {
-    public partial class DoctorDetail : UserControl
+    public partial class DoctorDetail : Form
     {
         private readonly string loginId;
         private const string CONN =

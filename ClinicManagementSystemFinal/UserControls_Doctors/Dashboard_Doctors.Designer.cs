@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard_Doctors));
             Guna.Charts.WinForms.ChartFont chartFont1 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.ChartFont chartFont2 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.ChartFont chartFont3 = new Guna.Charts.WinForms.ChartFont();
@@ -52,9 +53,11 @@
             label4 = new Label();
             label2 = new Label();
             paneldashboard1 = new Panel();
+            pictureBox1 = new PictureBox();
             lblAppointments = new Label();
             label3 = new Label();
             paneldashboard2 = new Panel();
+            pictureBox2 = new PictureBox();
             lblPending = new Label();
             panelTitleDashboard = new Panel();
             rdoYear = new Guna.UI2.WinForms.Guna2RadioButton();
@@ -63,9 +66,11 @@
             label6 = new Label();
             label5 = new Label();
             paneldashboard3 = new Panel();
+            pictureBox3 = new PictureBox();
             lblNewPatients = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
             paneldashboard4 = new Panel();
+            pictureBox4 = new PictureBox();
             lblHoursWorked = new Label();
             panel3 = new Panel();
             panelView = new Panel();
@@ -85,18 +90,22 @@
             guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
             panel2 = new Panel();
             dgvToday = new Guna.UI2.WinForms.Guna2DataGridView();
-            panel1 = new Panel();
-            guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(components);
             colDate = new DataGridViewTextBoxColumn();
             colTime = new DataGridViewTextBoxColumn();
             colName = new DataGridViewTextBoxColumn();
             colReason = new DataGridViewTextBoxColumn();
+            panel1 = new Panel();
+            guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(components);
             paneldashboard1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             paneldashboard2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panelTitleDashboard.SuspendLayout();
             paneldashboard3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             tableLayoutPanel1.SuspendLayout();
             paneldashboard4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             panel3.SuspendLayout();
             panelView.SuspendLayout();
             flpLastPatients.SuspendLayout();
@@ -131,14 +140,25 @@
             // paneldashboard1
             // 
             paneldashboard1.BackColor = Color.LightSkyBlue;
-            paneldashboard1.Controls.Add(lblAppointments);
             paneldashboard1.Controls.Add(label2);
+            paneldashboard1.Controls.Add(pictureBox1);
+            paneldashboard1.Controls.Add(lblAppointments);
             paneldashboard1.Dock = DockStyle.Fill;
             paneldashboard1.ForeColor = SystemColors.ControlText;
             paneldashboard1.Location = new Point(3, 3);
             paneldashboard1.Name = "paneldashboard1";
             paneldashboard1.Size = new Size(192, 87);
             paneldashboard1.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(34, 7);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(120, 80);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 2;
+            pictureBox1.TabStop = false;
             // 
             // lblAppointments
             // 
@@ -163,14 +183,25 @@
             // paneldashboard2
             // 
             paneldashboard2.BackColor = Color.LightSkyBlue;
-            paneldashboard2.Controls.Add(lblPending);
             paneldashboard2.Controls.Add(label3);
+            paneldashboard2.Controls.Add(pictureBox2);
+            paneldashboard2.Controls.Add(lblPending);
             paneldashboard2.Dock = DockStyle.Fill;
             paneldashboard2.ForeColor = SystemColors.ControlText;
             paneldashboard2.Location = new Point(201, 3);
             paneldashboard2.Name = "paneldashboard2";
             paneldashboard2.Size = new Size(192, 87);
             paneldashboard2.TabIndex = 2;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(24, 13);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(132, 80);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 4;
+            pictureBox2.TabStop = false;
             // 
             // lblPending
             // 
@@ -269,6 +300,7 @@
             // paneldashboard3
             // 
             paneldashboard3.BackColor = Color.LightSkyBlue;
+            paneldashboard3.Controls.Add(pictureBox3);
             paneldashboard3.Controls.Add(lblNewPatients);
             paneldashboard3.Controls.Add(label5);
             paneldashboard3.Dock = DockStyle.Fill;
@@ -277,6 +309,16 @@
             paneldashboard3.Name = "paneldashboard3";
             paneldashboard3.Size = new Size(192, 87);
             paneldashboard3.TabIndex = 3;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(36, 25);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(110, 62);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 4;
+            pictureBox3.TabStop = false;
             // 
             // lblNewPatients
             // 
@@ -310,6 +352,7 @@
             // paneldashboard4
             // 
             paneldashboard4.BackColor = Color.LightSkyBlue;
+            paneldashboard4.Controls.Add(pictureBox4);
             paneldashboard4.Controls.Add(lblHoursWorked);
             paneldashboard4.Controls.Add(label6);
             paneldashboard4.Dock = DockStyle.Fill;
@@ -318,6 +361,17 @@
             paneldashboard4.Name = "paneldashboard4";
             paneldashboard4.Size = new Size(193, 87);
             paneldashboard4.TabIndex = 2;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.BackgroundImageLayout = ImageLayout.Center;
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(42, 25);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(110, 62);
+            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox4.TabIndex = 4;
+            pictureBox4.TabStop = false;
             // 
             // lblHoursWorked
             // 
@@ -467,8 +521,9 @@
             dsCompleted.BorderColor = Color.Empty;
             dsCompleted.BorderWidth = 2;
             dsCompleted.FillColor = Color.FromArgb(0, 192, 0);
-            dsCompleted.IndexLabelForeColor = Color.Transparent;
+            dsCompleted.IndexLabelForeColor = Color.Lime;
             dsCompleted.Label = "Completed";
+            dsCompleted.PointFillColors.AddRange(new Color[] { Color.FromArgb(128, 255, 128) });
             dsCompleted.PointRadius = 3;
             dsCompleted.TargetChart = chartStats;
             // 
@@ -477,6 +532,7 @@
             dsPending.BorderColor = Color.Empty;
             dsPending.FillColor = Color.Gray;
             dsPending.Label = "Pending";
+            dsPending.PointFillColors.AddRange(new Color[] { Color.FromArgb(255, 128, 0) });
             dsPending.TargetChart = chartStats;
             // 
             // dsNewPatients
@@ -484,6 +540,7 @@
             dsNewPatients.BorderColor = Color.Empty;
             dsNewPatients.FillColor = Color.Cyan;
             dsNewPatients.Label = "New Patients";
+            dsNewPatients.PointFillColors.AddRange(new Color[] { Color.FromArgb(0, 192, 192) });
             dsNewPatients.TargetChart = chartStats;
             // 
             // dsHoursWorked
@@ -491,6 +548,7 @@
             dsHoursWorked.BorderColor = Color.Empty;
             dsHoursWorked.FillColor = Color.Yellow;
             dsHoursWorked.Label = "Hours Worked";
+            dsHoursWorked.PointFillColors.AddRange(new Color[] { Color.Silver });
             dsHoursWorked.TargetChart = chartStats;
             // 
             // guna2Panel7
@@ -569,18 +627,6 @@
             dgvToday.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgvToday.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
-            // panel1
-            // 
-            panel1.Controls.Add(rdoYear);
-            panel1.Controls.Add(rdoDay);
-            panel1.Controls.Add(chartStats);
-            panel1.Controls.Add(rdoMonth);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 155);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(593, 260);
-            panel1.TabIndex = 4;
-            // 
             // colDate
             // 
             colDate.HeaderText = "Date";
@@ -601,6 +647,18 @@
             colReason.HeaderText = "Reason for Visit";
             colReason.Name = "colReason";
             // 
+            // panel1
+            // 
+            panel1.Controls.Add(rdoYear);
+            panel1.Controls.Add(rdoDay);
+            panel1.Controls.Add(chartStats);
+            panel1.Controls.Add(rdoMonth);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 155);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(593, 260);
+            panel1.TabIndex = 4;
+            // 
             // Dashboard_Doctors
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -610,15 +668,19 @@
             Size = new Size(793, 662);
             paneldashboard1.ResumeLayout(false);
             paneldashboard1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             paneldashboard2.ResumeLayout(false);
             paneldashboard2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panelTitleDashboard.ResumeLayout(false);
             panelTitleDashboard.PerformLayout();
             paneldashboard3.ResumeLayout(false);
             paneldashboard3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             tableLayoutPanel1.ResumeLayout(false);
             paneldashboard4.ResumeLayout(false);
             paneldashboard4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             panel3.ResumeLayout(false);
             panelView.ResumeLayout(false);
             panelView.PerformLayout();
@@ -678,5 +740,9 @@
         private DataGridViewTextBoxColumn colTime;
         private DataGridViewTextBoxColumn colName;
         private DataGridViewTextBoxColumn colReason;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox4;
     }
 }

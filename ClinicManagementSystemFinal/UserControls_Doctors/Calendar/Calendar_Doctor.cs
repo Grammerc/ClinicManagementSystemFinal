@@ -22,6 +22,9 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
         public Calendar_Doctor(string loginId, AppointmentUC appointmentUC)
         {
             InitializeComponent();
+
+
+
             doctorLoginId = loginId;
             apptView = appointmentUC;               // passed in by the host form
             btnPrevious.Click += (s, e) => ShiftMonth(-1);

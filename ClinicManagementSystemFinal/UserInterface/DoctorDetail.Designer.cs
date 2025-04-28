@@ -37,7 +37,7 @@
             // 
             // pbxProfile
             // 
-            pbxProfile.Location = new Point(65, 14);
+            pbxProfile.Location = new Point(65, 38);
             pbxProfile.Name = "pbxProfile";
             pbxProfile.Size = new Size(127, 111);
             pbxProfile.TabIndex = 0;
@@ -46,7 +46,7 @@
             // lblName
             // 
             lblName.AutoSize = true;
-            lblName.Location = new Point(65, 138);
+            lblName.Location = new Point(198, 38);
             lblName.Name = "lblName";
             lblName.Size = new Size(39, 15);
             lblName.TabIndex = 1;
@@ -55,7 +55,7 @@
             // lblSpec
             // 
             lblSpec.AutoSize = true;
-            lblSpec.Location = new Point(65, 171);
+            lblSpec.Location = new Point(198, 92);
             lblSpec.Name = "lblSpec";
             lblSpec.Size = new Size(79, 15);
             lblSpec.TabIndex = 2;
@@ -63,23 +63,24 @@
             // 
             // listClinics
             // 
+            listClinics.Font = new Font("Lucida Sans", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             listClinics.FormattingEnabled = true;
-            listClinics.ItemHeight = 15;
-            listClinics.Location = new Point(65, 218);
+            listClinics.ItemHeight = 24;
+            listClinics.Location = new Point(65, 168);
             listClinics.Name = "listClinics";
-            listClinics.Size = new Size(141, 124);
+            listClinics.Size = new Size(348, 124);
             listClinics.TabIndex = 3;
             // 
             // DoctorDetail
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(671, 468);
             Controls.Add(listClinics);
             Controls.Add(lblSpec);
             Controls.Add(lblName);
             Controls.Add(pbxProfile);
             Name = "DoctorDetail";
-            Size = new Size(270, 345);
             ((System.ComponentModel.ISupportInitialize)pbxProfile).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -92,5 +93,6 @@
         private Label lblSpec;
         private ListBox listClinics;
         private PictureBox pbxProfile;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
     }
 }

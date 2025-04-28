@@ -47,48 +47,67 @@ namespace ClinicManagementSystemFinal
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            conn.Open();
+            const string CONNSTR =
+                @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;";
 
-            OleDbCommand cmd = new OleDbCommand();
-            cmd.Connection = conn;
+            string loginId = null;
+            string roleName = null;
 
-            cmd.CommandText = "SELECT LoginID, RoleID FROM Account WHERE username = @username AND password = @password";
-
-            cmd.Parameters.AddWithValue("@username", tbxEmail.Text);
-            cmd.Parameters.AddWithValue("@password", tbxPassword.Text);
-
-            OleDbDataReader or = cmd.ExecuteReader();
-
-            if (or.Read())
+            // 1) use a local connection in a using
+            using (var conn = new OleDbConnection(CONNSTR))
             {
-                string loginId = or["LoginID"].ToString();
-                string roleID = or["RoleID"].ToString();
+                conn.Open();
+                using var cmd = new OleDbCommand(@"
+            SELECT A.LoginID,
+                   A.RoleID,
+                   R.RoleName
+              FROM Account AS A
+         LEFT JOIN Roles   AS R ON A.RoleID = R.RoleID
+             WHERE A.username = ?
+               AND A.password = ?", conn);
 
-                this.Hide();
+                cmd.Parameters.AddWithValue("?", tbxEmail.Text.Trim());
+                cmd.Parameters.AddWithValue("?", tbxPassword.Text);
 
-                if (roleID == "1")
+                using var reader = cmd.ExecuteReader();
+                if (!reader.Read())
                 {
-                    HomePage_Doctor doctorHome = new HomePage_Doctor(loginId);
-                    doctorHome.Show();
+                    MessageBox.Show("Incorrect username or password.", "Error",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
                 }
-                else if (roleID == "3")
-                {
-                    loginId = or["LoginID"].ToString();
-                    HomePage_User userHome = new HomePage_User(loginId);
-                    userHome.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Unknown RoleID detected.");
+
+                loginId = reader["LoginID"].ToString();
+                roleName = reader["RoleName"]?.ToString() ?? "";
+            }
+
+            // 2) hide the sign-in form
+            this.Hide();
+
+            // 3) dispatch based on the RoleName
+            switch (roleName.Trim().ToLowerInvariant())
+            {
+                case "doctor":
+                    new HomePage_Doctor(loginId, isSecretary: false)
+                        .Show();
+                    break;
+
+                case "secretary":
+                    new HomePage_Doctor(loginId, isSecretary: true)
+                        .Show();
+                    break;
+
+                case "patient":
+                    new HomePage_User(loginId)
+                        .Show();
+                    break;
+
+                default:
+                    MessageBox.Show($"Unknown role “{roleName}”.", "Error",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
                     this.Show();
-                }
+                    break;
             }
-            else
-            {
-                MessageBox.Show("Incorrect username or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
-            conn.Close();
         }
 
         private void linkRegister_Click(object sender, EventArgs e)

@@ -410,6 +410,7 @@
             btnSettings.Size = new Size(221, 53);
             btnSettings.TabIndex = 16;
             btnSettings.Text = "Settings";
+            btnSettings.Visible = false;
             // 
             // guna2Panel10
             // 

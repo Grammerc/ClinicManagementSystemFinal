@@ -35,10 +35,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             tableLayoutPanel1 = new TableLayoutPanel();
             btnPending = new Guna.UI2.WinForms.Guna2ImageButton();
-            btnComplete = new Guna.UI2.WinForms.Guna2ImageButton();
             nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
             btnCancel = new Guna.UI2.WinForms.Guna2ImageButton();
             btnApproved = new Guna.UI2.WinForms.Guna2ImageButton();
+            btnComplete = new Guna.UI2.WinForms.Guna2ImageButton();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -48,10 +48,10 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.Controls.Add(btnPending, 1, 1);
-            tableLayoutPanel1.Controls.Add(btnComplete, 0, 1);
             tableLayoutPanel1.Controls.Add(nightControlBox1, 1, 0);
             tableLayoutPanel1.Controls.Add(btnCancel, 0, 2);
             tableLayoutPanel1.Controls.Add(btnApproved, 1, 2);
+            tableLayoutPanel1.Controls.Add(btnComplete, 0, 1);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -75,20 +75,6 @@
             btnPending.ShadowDecoration.CustomizableEdges = customizableEdges1;
             btnPending.Size = new Size(115, 98);
             btnPending.TabIndex = 1;
-            // 
-            // btnComplete
-            // 
-            btnComplete.CheckedState.ImageSize = new Size(64, 64);
-            btnComplete.HoverState.ImageSize = new Size(64, 64);
-            btnComplete.Image = (Image)resources.GetObject("btnComplete.Image");
-            btnComplete.ImageOffset = new Point(0, 0);
-            btnComplete.ImageRotate = 0F;
-            btnComplete.Location = new Point(3, 23);
-            btnComplete.Name = "btnComplete";
-            btnComplete.PressedState.ImageSize = new Size(64, 64);
-            btnComplete.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnComplete.Size = new Size(115, 98);
-            btnComplete.TabIndex = 0;
             // 
             // nightControlBox1
             // 
@@ -123,7 +109,7 @@
             btnCancel.Location = new Point(3, 163);
             btnCancel.Name = "btnCancel";
             btnCancel.PressedState.ImageSize = new Size(64, 64);
-            btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges3;
+            btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnCancel.Size = new Size(115, 98);
             btnCancel.TabIndex = 2;
             // 
@@ -137,9 +123,23 @@
             btnApproved.Location = new Point(153, 163);
             btnApproved.Name = "btnApproved";
             btnApproved.PressedState.ImageSize = new Size(64, 64);
-            btnApproved.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnApproved.ShadowDecoration.CustomizableEdges = customizableEdges3;
             btnApproved.Size = new Size(115, 98);
             btnApproved.TabIndex = 3;
+            // 
+            // btnComplete
+            // 
+            btnComplete.CheckedState.ImageSize = new Size(64, 64);
+            btnComplete.HoverState.ImageSize = new Size(64, 64);
+            btnComplete.Image = (Image)resources.GetObject("btnComplete.Image");
+            btnComplete.ImageOffset = new Point(0, 0);
+            btnComplete.ImageRotate = 0F;
+            btnComplete.Location = new Point(3, 23);
+            btnComplete.Name = "btnComplete";
+            btnComplete.PressedState.ImageSize = new Size(64, 64);
+            btnComplete.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnComplete.Size = new Size(115, 98);
+            btnComplete.TabIndex = 0;
             // 
             // StatusChange
             // 
@@ -148,7 +148,9 @@
             ClientSize = new Size(300, 300);
             Controls.Add(tableLayoutPanel1);
             FormBorderStyle = FormBorderStyle.None;
+            Location = new Point(800, 800);
             Name = "StatusChange";
+            StartPosition = FormStartPosition.CenterScreen;
             tableLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
         }

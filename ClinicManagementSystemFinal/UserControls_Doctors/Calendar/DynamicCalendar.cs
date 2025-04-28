@@ -19,7 +19,13 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
         {
             InitializeComponent();
 
-            if (string.IsNullOrWhiteSpace(day)) return;      // blank padders
+            if (string.IsNullOrWhiteSpace(day))
+            {
+                lblDateToday.Text = "";
+                checkBox1.Visible = false;
+                panel1.Enabled = false;
+                return;
+            }
 
             thisDate = new DateTime(Calendar_Doctor._year, Calendar_Doctor._month, int.Parse(day));
 

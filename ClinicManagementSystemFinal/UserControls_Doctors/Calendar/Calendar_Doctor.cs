@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data.OleDb;
 using System.Globalization;
 using System.Windows.Forms;
-using AppointmentUC = ClinicManagementSystemFinal.UserControls_Doctors.Appointment.Appointment;
+using AppointmentUC = ClinicManagementSystemFinal.UserControls_Doctors.Appointment.AppointmentView_Doctors;
 
 namespace ClinicManagementSystemFinal.UserControls_Doctors
 {

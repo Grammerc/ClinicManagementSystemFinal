@@ -239,37 +239,82 @@ namespace ClinicManagementSystemFinal.UserControls_User
             }
             RefreshTimeSlots();
         }
+        private const string CONN =
+    @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;";
         void RefreshTimeSlots()
         {
+
             cbxTimeSlot.Items.Clear();
 
-            if (cbxDoctor.SelectedValue == null) return;     // no doctor chosen yet
+            // nothing to do until we've picked a clinic and a doctor
+            if (cbxClinicName.SelectedItem == null || cbxDoctor.SelectedValue == null)
+                return;
 
-            int doctorId = Convert.ToInt32(cbxDoctor.SelectedValue);
+            // figure out the clinic ID
+            int clinicID;
+            using (var conn = new OleDbConnection(CONN))
+            {
+                conn.Open();
+                using var getClinic = new OleDbCommand(
+                    "SELECT ClinicID FROM Clinics WHERE ClinicName = ?", conn);
+                getClinic.Parameters.AddWithValue("?", cbxClinicName.Text);
+                clinicID = Convert.ToInt32(getClinic.ExecuteScalar());
+            }
+
+            // first: pull all the slots this clinic has enabled
+            var allSlots = new List<string>();
+            using (var cn = new OleDbConnection(CONN))
+            {
+                cn.Open();
+                using var slotCmd = new OleDbCommand(@"
+        SELECT TS.SlotText
+          FROM (ClinicTimeSlots AS CTS
+          INNER JOIN TimeSlots    AS TS 
+            ON CTS.SlotID = TS.SlotID)
+         WHERE CTS.ClinicID = ?
+         ORDER BY TS.SlotID
+    ", cn);
+                slotCmd.Parameters.AddWithValue("?", clinicID);
+                using var r = slotCmd.ExecuteReader();
+                while (r.Read())
+                    allSlots.Add(r.GetString(0));
+            }
+
+            // then: find which ones are already taken by this doctor on that date
+            int doctorID = Convert.ToInt32(cbxDoctor.SelectedValue);
             DateTime d0 = cbxDate.Value.Date;
             DateTime d1 = d0.AddDays(1);
 
-            using var c = new OleDbConnection(
-                @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;");
-            c.Open();
-            var cmd = new OleDbCommand(
-                @"SELECT TimeSlot FROM Appointments
-          WHERE DoctorID = ?
-            AND AppointmentDate >= ? AND AppointmentDate < ?
-            AND Status IN ('Pending','Approved')", c);
-            cmd.Parameters.AddWithValue("?", doctorId);
-            cmd.Parameters.AddWithValue("?", d0);
-            cmd.Parameters.AddWithValue("?", d1);
-
             var taken = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
-            using (var r = cmd.ExecuteReader())
-                while (r.Read()) taken.Add(r.GetString(0));
+            using (var conn = new OleDbConnection(CONN))
+            {
+                conn.Open();
+                using var takenCmd = new OleDbCommand(@"
+            SELECT TimeSlot
+              FROM Appointments
+             WHERE DoctorID        = ?
+               AND AppointmentDate >= ? 
+               AND AppointmentDate < ?
+               AND Status IN ('Pending','Approved')
+        ", conn);
+                takenCmd.Parameters.AddWithValue("?", doctorID);
+                takenCmd.Parameters.AddWithValue("?", d0);
+                takenCmd.Parameters.AddWithValue("?", d1);
+                using var r = takenCmd.ExecuteReader();
+                while (r.Read())
+                    taken.Add(r.GetString(0));
+            }
 
-            foreach (string slot in AllSlots)
+            // finally: populate only the slots the clinic allows that aren't yet taken
+            foreach (var slot in allSlots)
                 if (!taken.Contains(slot))
                     cbxTimeSlot.Items.Add(slot);
 
-            cbxTimeSlot.SelectedIndex = cbxTimeSlot.Items.Count > 0 ? 0 : -1;
+            // auto-select first if there is one
+            cbxTimeSlot.SelectedIndex = cbxTimeSlot.Items.Count > 0
+                ? 0
+                : -1;
         }
+
     }
 }

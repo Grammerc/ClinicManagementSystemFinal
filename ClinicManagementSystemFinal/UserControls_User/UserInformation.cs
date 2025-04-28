@@ -158,7 +158,7 @@ namespace ClinicManagementSystemFinal
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             var host = this.FindForm() as HomePage_Doctor;
-            host?.LoadControl(new SignIn());
+            host?.LoadControl(new FrontPage());
         }
     }
 }

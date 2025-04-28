@@ -34,13 +34,11 @@ namespace ClinicManagementSystemFinal.UserInterface
             using var c = new OleDbConnection(CONN);
             c.Open();
 
-            // build the command with Val() to avoid text/number mismatches
             var cmd = new OleDbCommand(
                 "SELECT R.RoleName " +
                 "FROM   Account AS A INNER JOIN Roles AS R ON Val(A.RoleID)=Val(R.RoleID) " +
                 "WHERE  Val(A.LoginID)=?", c);
 
-            // bind the loginId as integer (falls back to string if parse fails)
             if (int.TryParse(loginId, out int idNum))
                 cmd.Parameters.Add("?", OleDbType.Integer).Value = idNum;
             else
@@ -55,7 +53,7 @@ namespace ClinicManagementSystemFinal.UserInterface
             }
             catch (OleDbException ex)
             {
-                // show exactly what went wrong
+   
                 MessageBox.Show(
                     "SQL Error in GetRole:\n" +
                     cmd.CommandText + "\n\n" +
@@ -65,7 +63,7 @@ namespace ClinicManagementSystemFinal.UserInterface
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error
                 );
-                // fall back to a safe default
+
                 return "User";
             }
         }

@@ -1,6 +1,6 @@
 ﻿namespace ClinicManagementSystemFinal.UserControls_Doctors.Appointment
 {
-    partial class Appointment
+    partial class AppointmentView_Doctors
     {
         /// <summary> 
         /// Required designer variable.
@@ -48,6 +48,7 @@
             colDate = new DataGridViewTextBoxColumn();
             colName = new DataGridViewTextBoxColumn();
             colStatus = new DataGridViewTextBoxColumn();
+            colDr = new DataGridViewTextBoxColumn();
             colReason = new DataGridViewTextBoxColumn();
             colTime = new DataGridViewTextBoxColumn();
             colApprove = new DataGridViewButtonColumn();
@@ -206,7 +207,7 @@
             dgvAppts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvAppts.ColumnHeadersHeight = 17;
             dgvAppts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvAppts.Columns.AddRange(new DataGridViewColumn[] { colDate, colName, colStatus, colReason, colTime, colApprove, colDecline });
+            dgvAppts.Columns.AddRange(new DataGridViewColumn[] { colDate, colName, colStatus, colDr, colReason, colTime, colApprove, colDecline });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
@@ -259,6 +260,11 @@
             colStatus.HeaderText = "Status";
             colStatus.Name = "colStatus";
             // 
+            // colDr
+            // 
+            colDr.HeaderText = "Dr.";
+            colDr.Name = "colDr";
+            // 
             // colReason
             // 
             colReason.HeaderText = "Reason For Visit";
@@ -279,14 +285,14 @@
             colDecline.HeaderText = "Decline";
             colDecline.Name = "colDecline";
             // 
-            // Appointment
+            // AppointmentView_Doctors
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(dgvAppts);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Name = "Appointment";
+            Name = "AppointmentView_Doctors";
             Size = new Size(793, 662);
             Load += Appointment_Load;
             panel1.ResumeLayout(false);
@@ -307,17 +313,18 @@
         private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox1;
         private Guna.UI2.WinForms.Guna2ComboBox cbxClinic;
         private Label label4;
-        private DataGridViewTextBoxColumn colDate;
-        private DataGridViewTextBoxColumn colName;
-        private DataGridViewTextBoxColumn colStatus;
-        private DataGridViewTextBoxColumn colReason;
-        private DataGridViewTextBoxColumn colTime;
-        private DataGridViewButtonColumn colApprove;
-        private DataGridViewButtonColumn colDecline;
         private Guna.UI2.WinForms.Guna2CheckBox cbxDeclined;
         private Guna.UI2.WinForms.Guna2CheckBox cbxApproved;
         private Guna.UI2.WinForms.Guna2CheckBox cbxPending;
         private Guna.UI2.WinForms.Guna2DateTimePicker cbxDateTime;
         private Guna.UI2.WinForms.Guna2CheckBox cbxSelectDate;
+        private DataGridViewTextBoxColumn colDate;
+        private DataGridViewTextBoxColumn colName;
+        private DataGridViewTextBoxColumn colStatus;
+        private DataGridViewTextBoxColumn colDr;
+        private DataGridViewTextBoxColumn colReason;
+        private DataGridViewTextBoxColumn colTime;
+        private DataGridViewButtonColumn colApprove;
+        private DataGridViewButtonColumn colDecline;
     }
 }

@@ -1,53 +1,91 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using System.Data.OleDb;
+using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
-using Org.BouncyCastle.Asn1.Pkcs;
 
 namespace ClinicManagementSystemFinal.UserInterface
 {
     public partial class DoctorDetail : UserControl
     {
-        readonly string loginId;
-        const string CONN =
+        private readonly string loginId;
+        private const string CONN =
             @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;";
 
         public DoctorDetail(string docLoginId)
         {
             InitializeComponent();
             loginId = docLoginId;
-            Load += (s, e) => Fill();
+            this.Load += DoctorDetail_Load;
         }
 
-        void Fill()
+        private void DoctorDetail_Load(object sender, EventArgs e)
         {
-            using var c = new OleDbConnection(CONN);
-            c.Open();
-            var cmd = new OleDbCommand(
-                @"SELECT I.Name, D.Specialization, I.ProfileImagePath, I.ProfilePicture
-                  FROM Information I INNER JOIN Doctors D ON I.LoginID = D.LoginID
-                  WHERE I.LoginID = ?", c);
-            cmd.Parameters.AddWithValue("?", loginId);
-            using var r = cmd.ExecuteReader();
-            if (r.Read())
-            {
-                lblName.Text = r["Name"].ToString();
-                lblSpec.Text = r["Specialization"].ToString();
-                string img = r["ProfileImagePath"].ToString();
-                byte[] blob = r["ProfilePicture"] as byte[];
-                if (!string.IsNullOrWhiteSpace(img) && File.Exists(img))
-                    pbx.Image = Image.FromFile(img);
-                else if (blob != null && blob.Length > 0)
-                    using (var ms = new MemoryStream(blob))
-                        pbx.Image = Image.FromStream(ms);
-            }
+            Fill();
+        }
 
-            var da = new OleDbDataAdapter(
-                @"SELECT ClinicName FROM Clinics
-                  WHERE ClinicID IN (SELECT ClinicID FROM Doctors WHERE LoginID = ?)", c);
-            da.SelectCommand.Parameters.AddWithValue("?", loginId);
-            var dt = new DataTable();
-            da.Fill(dt);
-            listClinics.DataSource = dt;      // listbox or grid showing clinics
+        private void Fill()
+        {
+            using (var conn = new OleDbConnection(CONN))
+            {
+                conn.Open();
+
+                // 1) Basic doctor info
+                using (var cmd = new OleDbCommand(@"
+SELECT
+    I.Name,
+    D.Specialization,
+    I.ProfileImagePath,
+    I.ProfilePicture
+  FROM Information AS I
+  INNER JOIN Doctors AS D
+    ON I.LoginID = D.LoginID
+ WHERE I.LoginID = ?", conn))
+                {
+                    cmd.Parameters.AddWithValue("?", loginId);
+                    using (var rdr = cmd.ExecuteReader())
+                    {
+                        if (rdr.Read())
+                        {
+                            lblName.Text = rdr["Name"].ToString();
+                            lblSpec.Text = rdr["Specialization"].ToString();
+
+                            // load picture: prefer file path, else blob
+                            var path = rdr["ProfileImagePath"].ToString();
+                            var blob = rdr["ProfilePicture"] as byte[];
+                            if (!string.IsNullOrWhiteSpace(path) && File.Exists(path))
+                            {
+                                pbxProfile.Image = Image.FromFile(path);
+                            }
+                            else if (blob != null && blob.Length > 0)
+                            {
+                                using var ms = new MemoryStream(blob);
+                                pbxProfile.Image = Image.FromStream(ms);
+                            }
+                            pbxProfile.SizeMode = PictureBoxSizeMode.Zoom;
+                        }
+                    }
+                }
+
+                // 2) Clinics list
+                var dt = new DataTable();
+                using (var da = new OleDbDataAdapter(@"
+SELECT
+    C.ClinicName
+  FROM Clinics AS C
+  INNER JOIN Doctors AS D
+    ON C.ClinicID = D.ClinicID
+ WHERE D.LoginID = ?", conn))
+                {
+                    da.SelectCommand.Parameters.AddWithValue("?", loginId);
+                    da.Fill(dt);
+                }
+
+                listClinics.DataSource = dt;
+                listClinics.DisplayMember = "ClinicName";
+                listClinics.ValueMember = "ClinicName";
+            }
         }
     }
 }

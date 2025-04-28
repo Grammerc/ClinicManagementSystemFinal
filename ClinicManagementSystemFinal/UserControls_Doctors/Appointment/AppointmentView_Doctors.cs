@@ -4,10 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Data.OleDb;
 using System.Windows.Forms;
+using System.Text;
 
 namespace ClinicManagementSystemFinal.UserControls_Doctors.Appointment
 {
-    public partial class Appointment : UserControl
+    public partial class AppointmentView_Doctors : UserControl
     {
         private readonly string doctorLoginId;
         DateTime? _filterDate;
@@ -15,7 +16,7 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors.Appointment
         private const string CONN =
             @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;";
 
-        public Appointment(string loginId)
+        public AppointmentView_Doctors(string loginId)
         {
             InitializeComponent();
             doctorLoginId = loginId;
@@ -64,63 +65,90 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors.Appointment
         }
 
         /* --------  Build query — clinic filter now mandatory -------- */
-        void LoadAppointments()
+        private void LoadAppointments()
         {
-            List<string> wanted = new();
+            // 1) Build the list of statuses to include
+            var wanted = new List<string>();
             if (cbxPending.Checked) wanted.Add("Pending");
             if (cbxApproved.Checked) wanted.Add("Approved");
             if (cbxDeclined.Checked) wanted.Add("Declined");
+
+            // if nothing selected or no clinic, clear and bail
             if (wanted.Count == 0 || cbxClinic.SelectedItem == null)
             {
                 dgvAppts.Rows.Clear();
                 return;
             }
 
-            string sql = @"
-SELECT  A.AppointmentID, A.AppointmentDate, A.[TimeSlot],
-        I.Name, A.ReasonForVisit, A.[Status]
-FROM   ((Appointments  AS A
-         INNER JOIN Doctors     AS D ON A.DoctorID  = D.DoctorID)
-         INNER JOIN Information AS I ON A.UserInfoID = I.UserInfoID)
-WHERE  D.LoginID  = ?
-  AND  A.ClinicID = ?
-  AND  A.[Status] IN (" + string.Join(",", wanted.ConvertAll(_ => "?")) + ")";
+            // 2) Build the SQL, now including D.DoctorName AS Dr
+            var sql = new StringBuilder(@"
+SELECT
+    A.AppointmentID,
+    A.AppointmentDate,
+    A.TimeSlot,
+    I.Name,
+    A.ReasonForVisit,
+    A.Status,
+    D.DoctorName AS Dr
+FROM
+    ((Appointments AS A
+      INNER JOIN Doctors     AS D ON A.DoctorID    = D.DoctorID)
+     INNER JOIN Information AS I ON A.UserInfoID = I.UserInfoID)
+WHERE
+    D.LoginID  = ?
+  AND A.ClinicID = ?
+  AND A.Status   IN (");
+            sql.Append(string.Join(",", wanted.ConvertAll(_ => "?")));
+            sql.Append(")");
 
+            // optional date‐filter
             if (_filterDate.HasValue)
-                sql += " AND A.AppointmentDate >= ? AND A.AppointmentDate < ?";
+                sql.Append(" AND A.AppointmentDate >= ? AND A.AppointmentDate < ?");
+            sql.Append(" ORDER BY A.AppointmentDate, A.TimeSlot;");
 
-            sql += " ORDER BY A.AppointmentDate, A.[TimeSlot];";
-
+            // 3) Run it
             using var conn = new OleDbConnection(CONN);
             conn.Open();
-            using var cmd = new OleDbCommand(sql, conn);
+            using var cmd = new OleDbCommand(sql.ToString(), conn);
 
+            // bind parameters
             cmd.Parameters.AddWithValue("?", doctorLoginId);
-            var clinicId = ((ComboItem)cbxClinic.SelectedItem).Value;
-            cmd.Parameters.AddWithValue("?", clinicId);
-            wanted.ForEach(s => cmd.Parameters.AddWithValue("?", s));
+            cmd.Parameters.AddWithValue("?", ((ComboItem)cbxClinic.SelectedItem).Value);
+            foreach (var s in wanted)
+                cmd.Parameters.AddWithValue("?", s);
             if (_filterDate.HasValue)
             {
-                DateTime d0 = _filterDate.Value.Date;   
-                DateTime d1 = d0.AddDays(1);            
+                var d0 = _filterDate.Value.Date;
                 cmd.Parameters.AddWithValue("?", d0);
-                cmd.Parameters.AddWithValue("?", d1);
+                cmd.Parameters.AddWithValue("?", d0.AddDays(1));
             }
 
             using var rdr = cmd.ExecuteReader();
+
+            // 4) Populate grid
             dgvAppts.Rows.Clear();
             while (rdr.Read())
             {
-                int r = dgvAppts.Rows.Add();
-                dgvAppts.Rows[r].Tag = rdr["AppointmentID"];
-                dgvAppts.Rows[r].Cells["colDate"].Value =
-                    ((DateTime)rdr["AppointmentDate"]).ToShortDateString();
-                dgvAppts.Rows[r].Cells["colName"].Value = rdr["Name"].ToString();
-                dgvAppts.Rows[r].Cells["colReason"].Value = rdr["ReasonForVisit"].ToString();
-                dgvAppts.Rows[r].Cells["colStatus"].Value = rdr["Status"].ToString();
-                dgvAppts.Rows[r].Cells["colTime"].Value = rdr["TimeSlot"].ToString();
+                int row = dgvAppts.Rows.Add();
+                dgvAppts.Rows[row].Tag = rdr["AppointmentID"];
+                dgvAppts.Rows[row].Cells["colDate"].Value = ((DateTime)rdr["AppointmentDate"]).ToShortDateString();
+                dgvAppts.Rows[row].Cells["colName"].Value = rdr["Name"].ToString();
+                dgvAppts.Rows[row].Cells["colStatus"].Value = rdr["Status"].ToString();
+                dgvAppts.Rows[row].Cells["colDr"].Value = rdr["Dr"].ToString();
             }
+
+            // 5) Hide the columns we no longer want, then reorder to Date, Name, Status, Dr
+            dgvAppts.SuspendLayout();
+            if (dgvAppts.Columns.Contains("colTime")) dgvAppts.Columns["colTime"].Visible = false;
+            if (dgvAppts.Columns.Contains("colReason")) dgvAppts.Columns["colReason"].Visible = false;
+
+            dgvAppts.Columns["colDate"].DisplayIndex = 0;
+            dgvAppts.Columns["colName"].DisplayIndex = 1;
+            dgvAppts.Columns["colStatus"].DisplayIndex = 2;
+            dgvAppts.Columns["colDr"].DisplayIndex = 3;
+            dgvAppts.ResumeLayout();
         }
+
 
         /* ---------- 3. Approve / Decline buttons ---------- */
         private void dgvAppts_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -218,5 +218,10 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
 
             MessageBox.Show("Doctor added to clinic.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,46 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            pbx = new PictureBox();
+            pbxProfile = new PictureBox();
             lblName = new Label();
             lblSpec = new Label();
             listClinics = new ListBox();
-            ((System.ComponentModel.ISupportInitialize)pbx).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbxProfile).BeginInit();
             SuspendLayout();
             // 
-            // pbx
+            // pbxProfile
             // 
-            pbx.Location = new Point(54, 22);
-            pbx.Name = "pbx";
-            pbx.Size = new Size(100, 50);
-            pbx.TabIndex = 0;
-            pbx.TabStop = false;
+            pbxProfile.Location = new Point(65, 14);
+            pbxProfile.Name = "pbxProfile";
+            pbxProfile.Size = new Size(127, 111);
+            pbxProfile.TabIndex = 0;
+            pbxProfile.TabStop = false;
             // 
             // lblName
             // 
             lblName.AutoSize = true;
-            lblName.Location = new Point(54, 86);
+            lblName.Location = new Point(65, 138);
             lblName.Name = "lblName";
-            lblName.Size = new Size(38, 15);
+            lblName.Size = new Size(39, 15);
             lblName.TabIndex = 1;
-            lblName.Text = "label1";
+            lblName.Text = "Name";
             // 
             // lblSpec
             // 
             lblSpec.AutoSize = true;
-            lblSpec.Location = new Point(54, 121);
+            lblSpec.Location = new Point(65, 171);
             lblSpec.Name = "lblSpec";
-            lblSpec.Size = new Size(38, 15);
+            lblSpec.Size = new Size(79, 15);
             lblSpec.TabIndex = 2;
-            lblSpec.Text = "label2";
+            lblSpec.Text = "Specialization";
             // 
             // listClinics
             // 
             listClinics.FormattingEnabled = true;
             listClinics.ItemHeight = 15;
-            listClinics.Location = new Point(54, 150);
+            listClinics.Location = new Point(65, 218);
             listClinics.Name = "listClinics";
-            listClinics.Size = new Size(120, 94);
+            listClinics.Size = new Size(141, 124);
             listClinics.TabIndex = 3;
             // 
             // DoctorDetail
@@ -77,10 +77,10 @@
             Controls.Add(listClinics);
             Controls.Add(lblSpec);
             Controls.Add(lblName);
-            Controls.Add(pbx);
+            Controls.Add(pbxProfile);
             Name = "DoctorDetail";
-            Size = new Size(217, 284);
-            ((System.ComponentModel.ISupportInitialize)pbx).EndInit();
+            Size = new Size(270, 345);
+            ((System.ComponentModel.ISupportInitialize)pbxProfile).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -91,5 +91,6 @@
         private Label lblName;
         private Label lblSpec;
         private ListBox listClinics;
+        private PictureBox pbxProfile;
     }
 }

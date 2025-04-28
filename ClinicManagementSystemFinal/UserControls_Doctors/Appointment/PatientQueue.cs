@@ -16,22 +16,26 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
     
     public partial class PatientQueue : UserControl
     {
+        private readonly Panel _patientTemplate;
         private string doctorLoginId;
         private List<string> displayedAppointmentIds = new List<string>();
         public event Action<string, string, string, string> PatientSelected;
         private string clinicPicFolder =
     @"C:\Users\Raphael Perocho\source\repos\ClinicManagementSystemFinal\ProjectClinic\ClinicManagementSystemFinal\Pictures\ClinicPictures\";
 
+        private const string CONN =
+  @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;";
         private string[] picExt = { ".png", ".jpg", ".jpeg" };
 
         public PatientQueue(string loginId)
         {
             InitializeComponent();
-
             doctorLoginId = loginId;
 
-            HideAllPatientPanels();
-            cbxDate.Value = DateTime.Today;  
+            _patientTemplate = panelTemplate;
+            _patientTemplate.Visible = false;
+
+            cbxDate.Value = DateTime.Today;
             cbxDate.ValueChanged += cbxDate_ValueChanged;
 
             LoadDoctorClinics();
@@ -40,7 +44,6 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
             if (cbxPatientQueue.Items.Count > 0)
             {
                 cbxPatientQueue.SelectedIndex = 0;
- 
                 var item = (ComboBoxItem)cbxPatientQueue.SelectedItem;
                 LoadPatientQueue(item.Value, cbxDate.Value.Date);
             }
@@ -50,28 +53,19 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
                 cbxDate.Enabled = false;
             }
 
-            foreach (var btn in new[] { pbxStatus1, pbxStatus2, pbxStatus3, pbxStatus4, pbxStatus5, pbxStatus6 })
-                btn.Click += StatusIcon_Click;
+            // Hook up single status button instead of six
+            pbxStatus.Click += StatusIcon_Click;
         }
 
-      
-        private void HideAllPatientPanels()
-        {
-            for (int i = 1; i <= 6; i++)
-            {
-                var panel = Controls.Find($"panelPatient{i}", true).FirstOrDefault();
-                if (panel is Panel) panel.Visible = false;
-            }
-        }
 
         void StatusIcon_Click(object sender, EventArgs e)
         {
-            var btn = sender as Guna.UI2.WinForms.Guna2ImageButton;
-            int idx = int.Parse(btn.Name.Substring(btn.Name.Length - 1));    // 1-6
+            const int idx = 1; // we only have one status icon
             if (displayedAppointmentIds.Count >= idx)
             {
+                var btn = sender as Guna.UI2.WinForms.Guna2ImageButton;
                 var sc = new StatusChange(displayedAppointmentIds[idx - 1], btn, this);
-                sc.Show(this);   
+                sc.Show(this);
             }
         }
 
@@ -100,7 +94,7 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
             {
                 "Approved" => "approved.png",
                 "Completed" => "completed.png",
-                "Cancelled" => "declined.png",   
+                "Cancelled" => "cancelled.png",   
                 _ => "pending.png"
             };
 
@@ -221,128 +215,194 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
 
         private void LoadPatientQueue(string clinicId, DateTime selectedDate)
         {
-            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;";
-            using (OleDbConnection conn = new OleDbConnection(connStr))
-            {
-                conn.Open();
+            flpPatients.Controls.Clear();
+            displayedAppointmentIds.Clear();
 
-                string query = @"
-SELECT TOP 6
-       A.AppointmentID,
-       A.Status,
-       A.ClinicID,
-       A.UserInfoID,
-       I.Name,
-       I.ProfileImagePath,
-       I.ProfilePicture
-FROM   (Appointments  A
+            using var conn = new OleDbConnection(CONN);
+            conn.Open();
+            const string sql = @"
+SELECT
+    A.AppointmentID,
+    A.Status,
+    A.UserInfoID,
+    I.Name,
+    I.ProfileImagePath,
+    I.ProfilePicture,
+    A.ReasonForVisit,
+    A.TimeSlot
+  FROM (Appointments A
         INNER JOIN Information I ON A.UserInfoID = I.UserInfoID)
-        INNER JOIN Doctors     D ON A.DoctorID    = D.DoctorID
-WHERE  D.LoginID              = ?
-  AND  A.ClinicID             = ?
-  AND  A.AppointmentDate >= ? AND A.AppointmentDate < ?
-ORDER  BY A.AppointmentDate, A.AppointmentID";
+       INNER JOIN Doctors D ON A.DoctorID = D.DoctorID
+ WHERE D.LoginID       = ?
+   AND A.ClinicID      = ?
+   AND A.AppointmentDate >= ? 
+   AND A.AppointmentDate < ?
+ ORDER BY A.TimeSlot ASC, A.AppointmentDate";
 
-                OleDbCommand cmd = new OleDbCommand(query, conn);
-                cmd.Parameters.AddWithValue("?", doctorLoginId);
-                cmd.Parameters.AddWithValue("?", clinicId);
-                DateTime d0 = selectedDate.Date;
-                DateTime d1 = d0.AddDays(1);
-                cmd.Parameters.AddWithValue("?", d0);
-                cmd.Parameters.AddWithValue("?", d1);
+            using var cmd = new OleDbCommand(sql, conn);
+            cmd.Parameters.AddWithValue("?", doctorLoginId);
+            cmd.Parameters.AddWithValue("?", clinicId);
+            cmd.Parameters.AddWithValue("?", selectedDate.Date);
+            cmd.Parameters.AddWithValue("?", selectedDate.Date.AddDays(1));
 
-                using (OleDbDataReader reader = cmd.ExecuteReader())
+            using var reader = cmd.ExecuteReader();
+
+            int idx = 1;
+            while (reader.Read())
+            {
+                // pull fields
+                var apptId = reader["AppointmentID"].ToString();
+                var status = reader["Status"].ToString();
+                var userId = reader["UserInfoID"].ToString();
+                var name = reader["Name"].ToString();
+                var imgPath = reader["ProfileImagePath"].ToString();
+                var blob = reader["ProfilePicture"] as byte[];
+                var reason = reader["ReasonForVisit"]?.ToString() ?? "";
+                var timeslot = reader["TimeSlot"]?.ToString() ?? "";
+
+                // build profile thumbnail once
+                Image pic = null;
+                if (!string.IsNullOrEmpty(imgPath) && File.Exists(imgPath))
                 {
-                    int index = 1;
-                    bool hasPatients = false;
-
-                    for (int i = 1; i <= 6; i++)
-                    {
-                        var panel = Controls.Find($"panelPatient{i}", true).FirstOrDefault();
-                        var nameLabel = Controls.Find($"lblName{i}", true).FirstOrDefault();
-                        var pictureBox = Controls.Find($"pbxProfile{i}", true).FirstOrDefault();
-
-                        if (panel is Panel) panel.Visible = false;
-                        if (nameLabel is Label lbl) lbl.Text = "";
-                        if (pictureBox is PictureBox pbx) pbx.Image = null;
-                    }
-
-                    displayedAppointmentIds = new List<string>();
-                    while (reader.Read() && index <= 6)
-                    {
-                        hasPatients = true;
-                        panelInvisible.Visible = false;
-
-                        string userId = reader["UserInfoID"].ToString();
-                        string clinicIdRow = reader["ClinicID"].ToString();
-                        string name = reader["Name"].ToString();
-                        string imgPath = reader["ProfileImagePath"].ToString();
-                        byte[] blob = reader["ProfilePicture"] as byte[];
-                        string status = reader["Status"].ToString();
-
-                        var nameLabel = Controls.Find($"lblName{index}", true)
-                                        .FirstOrDefault() as Label;
-
-                        var pictureBtn = Controls.Find($"pbxProfile{index}", true)
-                                        .FirstOrDefault() as Guna2ImageButton;   // 🠘 cast corrected
-
-                        var statusBox = Controls.Find($"pbxStatus{index}", true)
-                                        .FirstOrDefault() as Guna2ImageButton;
-
-                        var panel = Controls.Find($"panelPatient{index}", true)
-                                        .FirstOrDefault() as Panel;
-
-                        /* ---------- name label ---------- */
-                        if (nameLabel != null)
-                        {
-                            nameLabel.Text = name;
-                            nameLabel.Cursor = Cursors.Hand;
-                            nameLabel.Click += (s, e) =>
-                                PatientSelected?.Invoke(userId, name, imgPath, clinicIdRow);
-                        }
-
-                        /* ---------- profile thumbnail ---------- */
-                        if (pictureBtn != null)
-                        {
-                            Image pic = null;
-
-                            if (!string.IsNullOrWhiteSpace(imgPath) && File.Exists(imgPath))
-                                pic = Image.FromFile(imgPath);
-                            else if (blob != null && blob.Length > 0)
-                                using (var ms = new MemoryStream(blob))
-                                    pic = Image.FromStream(ms);
-
-                            pictureBtn.Image = pic; // fallback
-                            pictureBtn.ImageRotate = 0;
-                            pictureBtn.Cursor = Cursors.Hand;
-                            pictureBtn.Click += (s, e) =>
-                                PatientSelected?.Invoke(userId, name, imgPath, clinicIdRow);
-                        }
-
-                        /* ---------- status icon ---------- */
-                        if (statusBox != null)
-                        {
-                            statusBox.Image = GetStatusIcon(status);
-                            statusBox.Tag = index - 1;
-                        }
-
-                        if (panel != null) panel.Visible = true;
-
-                        displayedAppointmentIds.Add(reader["AppointmentID"].ToString());
-                        index++;
-                    }
-
-                    panelInvisible.Visible = !hasPatients;
-
-
-
-
-                    conn.Close();
+                    pic = Image.FromFile(imgPath);
                 }
+                else if (blob != null && blob.Length > 0)
+                {
+                    using var ms = new MemoryStream(blob);
+                    pic = Image.FromStream(ms);
+                }
+
+                // clone the template panel
+                var card = new Panel
+                {
+                    Size = _patientTemplate.Size,
+                    Margin = _patientTemplate.Margin,
+                    Padding = _patientTemplate.Padding,
+                    BackColor = _patientTemplate.BackColor
+                };
+
+                // deep-clone each control inside it
+                foreach (Control src in _patientTemplate.Controls)
+                {
+                    if (src is Panel srcPanel)
+                    {
+                        // copy the panel itself
+                        var panelCopy = new Panel
+                        {
+                            Name = srcPanel.Name,
+                            Size = srcPanel.Size,
+                            Location = srcPanel.Location,
+                            BackColor = srcPanel.BackColor,
+                            Padding = srcPanel.Padding,
+                            Margin = srcPanel.Margin
+                        };
+
+                        // now clone its children (Label, PictureBox, Guna2ImageButton)
+                        foreach (Control child in srcPanel.Controls)
+                        {
+                            Control childCopy = null;
+                            switch (child)
+                            {
+                                case Label l:
+                                    childCopy = new Label
+                                    {
+                                        Name = l.Name,
+                                        Size = l.Size,
+                                        Location = l.Location,
+                                        Font = l.Font,
+                                        ForeColor = l.ForeColor,
+                                        TextAlign = l.TextAlign,
+                                        BackColor = Color.Transparent,
+                                        AutoSize = l.AutoSize
+                                    };
+                                    break;
+                                case PictureBox pb:
+                                    childCopy = new PictureBox
+                                    {
+                                        Name = pb.Name,
+                                        Size = pb.Size,
+                                        Location = pb.Location,
+                                        SizeMode = pb.SizeMode,
+                                        BackColor = Color.Transparent
+                                    };
+                                    break;
+                                case Guna2ImageButton gb:
+                                    childCopy = new Guna2ImageButton
+                                    {
+                                        Name = gb.Name,
+                                        Size = gb.Size,
+                                        Location = gb.Location,
+                                        ImageSize = gb.ImageSize
+                                    };
+
+                                    break;
+                            }
+                            if (childCopy != null)
+                                panelCopy.Controls.Add(childCopy);
+                        }
+
+                        // add the cloned panel (with its children) to the card
+                        card.Controls.Add(panelCopy);
+                    }
+                }
+
+                // now bind data:
+
+                var lblNum = card.Controls.Find("number", true)
+                      .OfType<Label>()
+                      .First();
+                lblNum.Text = "#" + idx;
+
+                // #2) patient name
+                var lblName = card.Controls.Find("lblName", true)
+                                       .OfType<Label>()
+                                       .First();
+                // ← set the text and click handler here
+                lblName.Text = name;
+                lblName.Cursor = Cursors.Hand;
+                lblName.Click += (s, e) => PatientSelected?.Invoke(userId, name, imgPath, clinicId);
+
+                // Reason
+                // Reason
+                var lblReason = card.Controls
+                                     .Find("lblReason", true)
+                                     .OfType<Label>()
+                                     .FirstOrDefault();
+                if (lblReason != null) lblReason.Text = reason;
+
+                // Time slot
+                var lblTime = card.Controls
+                                   .Find("lblTime", true)
+                                   .OfType<Label>()
+                                   .FirstOrDefault();
+                if (lblTime != null) lblTime.Text = timeslot;
+
+                // #3) profile picture
+                var pbxProfile = card.Controls.Find("pbxProfile", true)
+                                          .OfType<PictureBox>()      // or Guna2ImageButton if you switched back
+                                          .First();
+                pbxProfile.Image = pic;
+                pbxProfile.SizeMode = PictureBoxSizeMode.Zoom;
+                pbxProfile.Cursor = Cursors.Hand;
+                pbxProfile.Click += (s, e) => PatientSelected?.Invoke(userId, name, imgPath, clinicId);
+
+                // #4) status icon
+                var pbxStatus = card.Controls.Find("pbxStatus", true)
+                                         .OfType<Guna2ImageButton>()
+                                         .First();
+                pbxStatus.Image = GetStatusIcon(status);
+                pbxStatus.Click += StatusIcon_Click;
+
+                // finally…
+                flpPatients.Controls.Add(card);
+                displayedAppointmentIds.Add(apptId);
+                idx++;
             }
+
+            panelInvisible.Visible = (displayedAppointmentIds.Count == 0);
         }
 
-  
+
 
         public void RefreshCurrentQueue()
         {

@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Guna.Charts.WinForms.ChartFont chartFont1 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.ChartFont chartFont2 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.ChartFont chartFont3 = new Guna.Charts.WinForms.ChartFont();
@@ -49,8 +44,11 @@
             Guna.Charts.WinForms.ChartFont chartFont7 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.Tick tick3 = new Guna.Charts.WinForms.Tick();
             Guna.Charts.WinForms.ChartFont chartFont8 = new Guna.Charts.WinForms.ChartFont();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             label4 = new Label();
             label2 = new Label();
             paneldashboard1 = new Panel();
@@ -59,6 +57,9 @@
             paneldashboard2 = new Panel();
             lblPending = new Label();
             panelTitleDashboard = new Panel();
+            rdoYear = new Guna.UI2.WinForms.Guna2RadioButton();
+            rdoDay = new Guna.UI2.WinForms.Guna2RadioButton();
+            rdoMonth = new Guna.UI2.WinForms.Guna2RadioButton();
             label6 = new Label();
             label5 = new Label();
             paneldashboard3 = new Panel();
@@ -67,29 +68,29 @@
             paneldashboard4 = new Panel();
             lblHoursWorked = new Label();
             panel3 = new Panel();
-            panelMainDashboard = new Panel();
+            panelView = new Panel();
+            label7 = new Label();
             flpLastPatients = new FlowLayoutPanel();
-            panel1 = new Panel();
-            lblView = new Label();
-            panel4 = new Panel();
+            LastPatientCard = new Panel();
+            pbxProfile = new PictureBox();
             lblReason = new Label();
             lblDate = new Label();
             lblName = new Label();
-            panel2 = new Panel();
-            rdoYear = new Guna.UI2.WinForms.Guna2RadioButton();
-            rdoMonth = new Guna.UI2.WinForms.Guna2RadioButton();
-            guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            label1 = new Label();
-            guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            rdoDay = new Guna.UI2.WinForms.Guna2RadioButton();
+            btnView = new Label();
             chartStats = new Guna.Charts.WinForms.GunaChart();
             dsCompleted = new Guna.Charts.WinForms.GunaLineDataset();
             dsPending = new Guna.Charts.WinForms.GunaLineDataset();
             dsNewPatients = new Guna.Charts.WinForms.GunaLineDataset();
             dsHoursWorked = new Guna.Charts.WinForms.GunaLineDataset();
             guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
+            panel2 = new Panel();
+            dgvToday = new Guna.UI2.WinForms.Guna2DataGridView();
+            panel1 = new Panel();
             guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(components);
+            colDate = new DataGridViewTextBoxColumn();
+            colTime = new DataGridViewTextBoxColumn();
+            colName = new DataGridViewTextBoxColumn();
+            colReason = new DataGridViewTextBoxColumn();
             paneldashboard1.SuspendLayout();
             paneldashboard2.SuspendLayout();
             panelTitleDashboard.SuspendLayout();
@@ -97,14 +98,14 @@
             tableLayoutPanel1.SuspendLayout();
             paneldashboard4.SuspendLayout();
             panel3.SuspendLayout();
-            panelMainDashboard.SuspendLayout();
+            panelView.SuspendLayout();
             flpLastPatients.SuspendLayout();
-            panel1.SuspendLayout();
-            panel4.SuspendLayout();
-            panel2.SuspendLayout();
-            guna2Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
+            LastPatientCard.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pbxProfile).BeginInit();
             guna2Panel7.SuspendLayout();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvToday).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // label4
@@ -119,6 +120,7 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Location = new Point(44, 7);
             label2.Name = "label2";
@@ -128,9 +130,11 @@
             // 
             // paneldashboard1
             // 
+            paneldashboard1.BackColor = Color.LightSkyBlue;
             paneldashboard1.Controls.Add(lblAppointments);
             paneldashboard1.Controls.Add(label2);
             paneldashboard1.Dock = DockStyle.Fill;
+            paneldashboard1.ForeColor = SystemColors.ControlText;
             paneldashboard1.Location = new Point(3, 3);
             paneldashboard1.Name = "paneldashboard1";
             paneldashboard1.Size = new Size(192, 87);
@@ -138,6 +142,7 @@
             // 
             // lblAppointments
             // 
+            lblAppointments.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblAppointments.AutoSize = true;
             lblAppointments.Location = new Point(160, 34);
             lblAppointments.Name = "lblAppointments";
@@ -147,6 +152,7 @@
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label3.AutoSize = true;
             label3.Location = new Point(59, 7);
             label3.Name = "label3";
@@ -156,9 +162,11 @@
             // 
             // paneldashboard2
             // 
+            paneldashboard2.BackColor = Color.LightSkyBlue;
             paneldashboard2.Controls.Add(lblPending);
             paneldashboard2.Controls.Add(label3);
             paneldashboard2.Dock = DockStyle.Fill;
+            paneldashboard2.ForeColor = SystemColors.ControlText;
             paneldashboard2.Location = new Point(201, 3);
             paneldashboard2.Name = "paneldashboard2";
             paneldashboard2.Size = new Size(192, 87);
@@ -166,6 +174,7 @@
             // 
             // lblPending
             // 
+            lblPending.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblPending.AutoSize = true;
             lblPending.Location = new Point(162, 34);
             lblPending.Name = "lblPending";
@@ -182,8 +191,64 @@
             panelTitleDashboard.Size = new Size(793, 56);
             panelTitleDashboard.TabIndex = 1;
             // 
+            // rdoYear
+            // 
+            rdoYear.AutoSize = true;
+            rdoYear.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
+            rdoYear.CheckedState.BorderThickness = 0;
+            rdoYear.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
+            rdoYear.CheckedState.InnerColor = Color.White;
+            rdoYear.CheckedState.InnerOffset = -4;
+            rdoYear.Location = new Point(531, 10);
+            rdoYear.Name = "rdoYear";
+            rdoYear.Size = new Size(47, 19);
+            rdoYear.TabIndex = 4;
+            rdoYear.Text = "Year";
+            rdoYear.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
+            rdoYear.UncheckedState.BorderThickness = 2;
+            rdoYear.UncheckedState.FillColor = Color.Transparent;
+            rdoYear.UncheckedState.InnerColor = Color.Transparent;
+            rdoYear.CheckedChanged += rdoYear_CheckedChanged;
+            // 
+            // rdoDay
+            // 
+            rdoDay.AutoSize = true;
+            rdoDay.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
+            rdoDay.CheckedState.BorderThickness = 0;
+            rdoDay.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
+            rdoDay.CheckedState.InnerColor = Color.White;
+            rdoDay.CheckedState.InnerOffset = -4;
+            rdoDay.Location = new Point(417, 10);
+            rdoDay.Name = "rdoDay";
+            rdoDay.Size = new Size(45, 19);
+            rdoDay.TabIndex = 2;
+            rdoDay.Text = "Day";
+            rdoDay.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
+            rdoDay.UncheckedState.BorderThickness = 2;
+            rdoDay.UncheckedState.FillColor = Color.Transparent;
+            rdoDay.UncheckedState.InnerColor = Color.Transparent;
+            // 
+            // rdoMonth
+            // 
+            rdoMonth.AutoSize = true;
+            rdoMonth.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
+            rdoMonth.CheckedState.BorderThickness = 0;
+            rdoMonth.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
+            rdoMonth.CheckedState.InnerColor = Color.White;
+            rdoMonth.CheckedState.InnerOffset = -4;
+            rdoMonth.Location = new Point(468, 10);
+            rdoMonth.Name = "rdoMonth";
+            rdoMonth.Size = new Size(61, 19);
+            rdoMonth.TabIndex = 3;
+            rdoMonth.Text = "Month";
+            rdoMonth.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
+            rdoMonth.UncheckedState.BorderThickness = 2;
+            rdoMonth.UncheckedState.FillColor = Color.Transparent;
+            rdoMonth.UncheckedState.InnerColor = Color.Transparent;
+            // 
             // label6
             // 
+            label6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label6.AutoSize = true;
             label6.Location = new Point(105, 7);
             label6.Name = "label6";
@@ -193,6 +258,7 @@
             // 
             // label5
             // 
+            label5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label5.AutoSize = true;
             label5.Location = new Point(113, 7);
             label5.Name = "label5";
@@ -202,9 +268,11 @@
             // 
             // paneldashboard3
             // 
+            paneldashboard3.BackColor = Color.LightSkyBlue;
             paneldashboard3.Controls.Add(lblNewPatients);
             paneldashboard3.Controls.Add(label5);
             paneldashboard3.Dock = DockStyle.Fill;
+            paneldashboard3.ForeColor = SystemColors.ControlText;
             paneldashboard3.Location = new Point(399, 3);
             paneldashboard3.Name = "paneldashboard3";
             paneldashboard3.Size = new Size(192, 87);
@@ -212,6 +280,7 @@
             // 
             // lblNewPatients
             // 
+            lblNewPatients.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblNewPatients.AutoSize = true;
             lblNewPatients.Location = new Point(164, 34);
             lblNewPatients.Name = "lblNewPatients";
@@ -240,9 +309,11 @@
             // 
             // paneldashboard4
             // 
+            paneldashboard4.BackColor = Color.LightSkyBlue;
             paneldashboard4.Controls.Add(lblHoursWorked);
             paneldashboard4.Controls.Add(label6);
             paneldashboard4.Dock = DockStyle.Fill;
+            paneldashboard4.ForeColor = SystemColors.ControlText;
             paneldashboard4.Location = new Point(597, 3);
             paneldashboard4.Name = "paneldashboard4";
             paneldashboard4.Size = new Size(193, 87);
@@ -250,6 +321,7 @@
             // 
             // lblHoursWorked
             // 
+            lblHoursWorked.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblHoursWorked.AutoSize = true;
             lblHoursWorked.Location = new Point(169, 34);
             lblHoursWorked.Name = "lblHoursWorked";
@@ -259,244 +331,110 @@
             // 
             // panel3
             // 
-            panel3.Controls.Add(panelMainDashboard);
             panel3.Controls.Add(tableLayoutPanel1);
-            panel3.Dock = DockStyle.Fill;
+            panel3.Dock = DockStyle.Top;
             panel3.Location = new Point(0, 56);
             panel3.Name = "panel3";
-            panel3.Size = new Size(793, 606);
+            panel3.Size = new Size(793, 99);
             panel3.TabIndex = 2;
+            panel3.Paint += panel3_Paint;
             // 
-            // panelMainDashboard
+            // panelView
             // 
-            panelMainDashboard.Controls.Add(flpLastPatients);
-            panelMainDashboard.Controls.Add(panel2);
-            panelMainDashboard.Dock = DockStyle.Fill;
-            panelMainDashboard.Location = new Point(0, 93);
-            panelMainDashboard.Name = "panelMainDashboard";
-            panelMainDashboard.Size = new Size(793, 513);
-            panelMainDashboard.TabIndex = 1;
+            panelView.Controls.Add(label7);
+            panelView.Controls.Add(flpLastPatients);
+            panelView.Controls.Add(btnView);
+            panelView.Dock = DockStyle.Right;
+            panelView.Location = new Point(593, 155);
+            panelView.Name = "panelView";
+            panelView.Size = new Size(200, 507);
+            panelView.TabIndex = 0;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(6, 10);
+            label7.Name = "label7";
+            label7.Size = new Size(68, 15);
+            label7.TabIndex = 1;
+            label7.Text = "Last Patient";
             // 
             // flpLastPatients
             // 
             flpLastPatients.AutoScroll = true;
-            flpLastPatients.Controls.Add(panel1);
-            flpLastPatients.Controls.Add(panel4);
-            flpLastPatients.Dock = DockStyle.Right;
+            flpLastPatients.Controls.Add(LastPatientCard);
+            flpLastPatients.Dock = DockStyle.Bottom;
             flpLastPatients.FlowDirection = FlowDirection.TopDown;
-            flpLastPatients.Location = new Point(593, 0);
+            flpLastPatients.Location = new Point(0, 39);
             flpLastPatients.Name = "flpLastPatients";
-            flpLastPatients.Size = new Size(200, 513);
+            flpLastPatients.Size = new Size(200, 468);
             flpLastPatients.TabIndex = 3;
             // 
-            // panel1
+            // LastPatientCard
             // 
-            panel1.Controls.Add(lblView);
-            panel1.Location = new Point(3, 3);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(200, 41);
-            panel1.TabIndex = 0;
+            LastPatientCard.Anchor = AnchorStyles.Top;
+            LastPatientCard.Controls.Add(pbxProfile);
+            LastPatientCard.Controls.Add(lblReason);
+            LastPatientCard.Controls.Add(lblDate);
+            LastPatientCard.Controls.Add(lblName);
+            LastPatientCard.Location = new Point(3, 3);
+            LastPatientCard.Name = "LastPatientCard";
+            LastPatientCard.Size = new Size(200, 79);
+            LastPatientCard.TabIndex = 1;
             // 
-            // lblView
+            // pbxProfile
             // 
-            lblView.AutoSize = true;
-            lblView.Location = new Point(145, 10);
-            lblView.Name = "lblView";
-            lblView.Size = new Size(49, 15);
-            lblView.TabIndex = 0;
-            lblView.Text = "View All";
-            // 
-            // panel4
-            // 
-            panel4.Controls.Add(lblReason);
-            panel4.Controls.Add(lblDate);
-            panel4.Controls.Add(lblName);
-            panel4.Location = new Point(3, 50);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(200, 79);
-            panel4.TabIndex = 1;
+            pbxProfile.Location = new Point(3, 13);
+            pbxProfile.Name = "pbxProfile";
+            pbxProfile.Size = new Size(64, 57);
+            pbxProfile.TabIndex = 3;
+            pbxProfile.TabStop = false;
             // 
             // lblReason
             // 
             lblReason.AutoSize = true;
-            lblReason.Location = new Point(50, 52);
+            lblReason.Location = new Point(67, 55);
             lblReason.Name = "lblReason";
-            lblReason.Size = new Size(88, 15);
+            lblReason.Size = new Size(105, 15);
             lblReason.TabIndex = 2;
-            lblReason.Text = "Reason for Visit";
+            lblReason.Text = "Reason for Visiting";
             // 
             // lblDate
             // 
             lblDate.AutoSize = true;
-            lblDate.Location = new Point(50, 31);
+            lblDate.Location = new Point(67, 37);
             lblDate.Name = "lblDate";
-            lblDate.Size = new Size(31, 15);
+            lblDate.Size = new Size(135, 15);
             lblDate.TabIndex = 1;
-            lblDate.Text = "Date";
+            lblDate.Text = "Date Visited In the Clinic";
             // 
             // lblName
             // 
             lblName.AutoSize = true;
-            lblName.Location = new Point(50, 12);
+            lblName.Location = new Point(67, 19);
             lblName.Name = "lblName";
-            lblName.Size = new Size(39, 15);
+            lblName.Size = new Size(118, 15);
             lblName.TabIndex = 0;
-            lblName.Text = "Name";
+            lblName.Text = "Name of the Patients";
             // 
-            // panel2
+            // btnView
             // 
-            panel2.Controls.Add(rdoYear);
-            panel2.Controls.Add(rdoMonth);
-            panel2.Controls.Add(guna2Panel2);
-            panel2.Controls.Add(rdoDay);
-            panel2.Controls.Add(chartStats);
-            panel2.Dock = DockStyle.Left;
-            panel2.Location = new Point(0, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(593, 513);
-            panel2.TabIndex = 2;
-            // 
-            // rdoYear
-            // 
-            rdoYear.AutoSize = true;
-            rdoYear.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
-            rdoYear.CheckedState.BorderThickness = 0;
-            rdoYear.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
-            rdoYear.CheckedState.InnerColor = Color.White;
-            rdoYear.CheckedState.InnerOffset = -4;
-            rdoYear.Location = new Point(535, 13);
-            rdoYear.Name = "rdoYear";
-            rdoYear.Size = new Size(47, 19);
-            rdoYear.TabIndex = 4;
-            rdoYear.Text = "Year";
-            rdoYear.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
-            rdoYear.UncheckedState.BorderThickness = 2;
-            rdoYear.UncheckedState.FillColor = Color.Transparent;
-            rdoYear.UncheckedState.InnerColor = Color.Transparent;
-            // 
-            // rdoMonth
-            // 
-            rdoMonth.AutoSize = true;
-            rdoMonth.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
-            rdoMonth.CheckedState.BorderThickness = 0;
-            rdoMonth.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
-            rdoMonth.CheckedState.InnerColor = Color.White;
-            rdoMonth.CheckedState.InnerOffset = -4;
-            rdoMonth.Location = new Point(468, 13);
-            rdoMonth.Name = "rdoMonth";
-            rdoMonth.Size = new Size(61, 19);
-            rdoMonth.TabIndex = 3;
-            rdoMonth.Text = "Month";
-            rdoMonth.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
-            rdoMonth.UncheckedState.BorderThickness = 2;
-            rdoMonth.UncheckedState.FillColor = Color.Transparent;
-            rdoMonth.UncheckedState.InnerColor = Color.Transparent;
-            // 
-            // guna2Panel2
-            // 
-            guna2Panel2.Controls.Add(label1);
-            guna2Panel2.Controls.Add(guna2DataGridView1);
-            guna2Panel2.CustomizableEdges = customizableEdges1;
-            guna2Panel2.Dock = DockStyle.Bottom;
-            guna2Panel2.Location = new Point(0, 313);
-            guna2Panel2.Name = "guna2Panel2";
-            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Panel2.Size = new Size(593, 200);
-            guna2Panel2.TabIndex = 1;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(3, 3);
-            label1.Name = "label1";
-            label1.Size = new Size(144, 15);
-            label1.TabIndex = 1;
-            label1.Text = "Your Appointments Today";
-            // 
-            // guna2DataGridView1
-            // 
-            dataGridViewCellStyle1.BackColor = Color.White;
-            guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            guna2DataGridView1.ColumnHeadersHeight = 20;
-            guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            guna2DataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1 });
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            guna2DataGridView1.Dock = DockStyle.Bottom;
-            guna2DataGridView1.GridColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.Location = new Point(0, 21);
-            guna2DataGridView1.Name = "guna2DataGridView1";
-            guna2DataGridView1.RowHeadersVisible = false;
-            guna2DataGridView1.Size = new Size(593, 179);
-            guna2DataGridView1.TabIndex = 0;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 20;
-            guna2DataGridView1.ThemeStyle.ReadOnly = false;
-            guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            guna2DataGridView1.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
-            guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            guna2DataGridView1.ThemeStyle.RowsStyle.Height = 25;
-            guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            guna2DataGridView1.CellContentClick += guna2DataGridView1_CellContentClick;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Column1";
-            Column1.Name = "Column1";
-            // 
-            // rdoDay
-            // 
-            rdoDay.AutoSize = true;
-            rdoDay.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
-            rdoDay.CheckedState.BorderThickness = 0;
-            rdoDay.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
-            rdoDay.CheckedState.InnerColor = Color.White;
-            rdoDay.CheckedState.InnerOffset = -4;
-            rdoDay.Location = new Point(408, 13);
-            rdoDay.Name = "rdoDay";
-            rdoDay.Size = new Size(45, 19);
-            rdoDay.TabIndex = 2;
-            rdoDay.Text = "Day";
-            rdoDay.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
-            rdoDay.UncheckedState.BorderThickness = 2;
-            rdoDay.UncheckedState.FillColor = Color.Transparent;
-            rdoDay.UncheckedState.InnerColor = Color.Transparent;
+            btnView.AutoSize = true;
+            btnView.Location = new Point(145, 10);
+            btnView.Name = "btnView";
+            btnView.Size = new Size(49, 15);
+            btnView.TabIndex = 0;
+            btnView.Text = "View All";
             // 
             // chartStats
             // 
             chartStats.Datasets.AddRange(new Guna.Charts.Interfaces.IGunaDataset[] { dsCompleted, dsPending, dsNewPatients, dsHoursWorked });
+            chartStats.Dock = DockStyle.Bottom;
             chartFont1.FontName = "Arial";
             chartStats.Legend.LabelFont = chartFont1;
-            chartStats.Location = new Point(0, 53);
+            chartStats.Location = new Point(0, 39);
             chartStats.Name = "chartStats";
-            chartStats.Size = new Size(593, 260);
+            chartStats.Size = new Size(593, 221);
             chartStats.TabIndex = 1;
             chartFont2.FontName = "Arial";
             chartFont2.Size = 12;
@@ -557,15 +495,111 @@
             // 
             // guna2Panel7
             // 
+            guna2Panel7.Controls.Add(panel2);
+            guna2Panel7.Controls.Add(panel1);
+            guna2Panel7.Controls.Add(panelView);
             guna2Panel7.Controls.Add(panel3);
             guna2Panel7.Controls.Add(panelTitleDashboard);
-            guna2Panel7.CustomizableEdges = customizableEdges3;
+            guna2Panel7.CustomizableEdges = customizableEdges1;
             guna2Panel7.Dock = DockStyle.Fill;
             guna2Panel7.Location = new Point(0, 0);
             guna2Panel7.Name = "guna2Panel7";
-            guna2Panel7.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2Panel7.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Panel7.Size = new Size(793, 662);
             guna2Panel7.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(dgvToday);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(0, 415);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(593, 247);
+            panel2.TabIndex = 5;
+            // 
+            // dgvToday
+            // 
+            dataGridViewCellStyle1.BackColor = Color.White;
+            dgvToday.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvToday.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgvToday.ColumnHeadersHeight = 20;
+            dgvToday.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvToday.Columns.AddRange(new DataGridViewColumn[] { colDate, colTime, colName, colReason });
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgvToday.DefaultCellStyle = dataGridViewCellStyle3;
+            dgvToday.Dock = DockStyle.Fill;
+            dgvToday.GridColor = Color.FromArgb(231, 229, 255);
+            dgvToday.Location = new Point(0, 0);
+            dgvToday.Name = "dgvToday";
+            dgvToday.RowHeadersVisible = false;
+            dgvToday.Size = new Size(593, 247);
+            dgvToday.TabIndex = 0;
+            dgvToday.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            dgvToday.ThemeStyle.AlternatingRowsStyle.Font = null;
+            dgvToday.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            dgvToday.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            dgvToday.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            dgvToday.ThemeStyle.BackColor = Color.White;
+            dgvToday.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            dgvToday.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            dgvToday.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvToday.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            dgvToday.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            dgvToday.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvToday.ThemeStyle.HeaderStyle.Height = 20;
+            dgvToday.ThemeStyle.ReadOnly = false;
+            dgvToday.ThemeStyle.RowsStyle.BackColor = Color.White;
+            dgvToday.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvToday.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            dgvToday.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            dgvToday.ThemeStyle.RowsStyle.Height = 25;
+            dgvToday.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dgvToday.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(rdoYear);
+            panel1.Controls.Add(rdoDay);
+            panel1.Controls.Add(chartStats);
+            panel1.Controls.Add(rdoMonth);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 155);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(593, 260);
+            panel1.TabIndex = 4;
+            // 
+            // colDate
+            // 
+            colDate.HeaderText = "Date";
+            colDate.Name = "colDate";
+            // 
+            // colTime
+            // 
+            colTime.HeaderText = "Time";
+            colTime.Name = "colTime";
+            // 
+            // colName
+            // 
+            colName.HeaderText = "Patient Name";
+            colName.Name = "colName";
+            // 
+            // colReason
+            // 
+            colReason.HeaderText = "Reason for Visit";
+            colReason.Name = "colReason";
             // 
             // Dashboard_Doctors
             // 
@@ -586,18 +620,17 @@
             paneldashboard4.ResumeLayout(false);
             paneldashboard4.PerformLayout();
             panel3.ResumeLayout(false);
-            panelMainDashboard.ResumeLayout(false);
+            panelView.ResumeLayout(false);
+            panelView.PerformLayout();
             flpLastPatients.ResumeLayout(false);
+            LastPatientCard.ResumeLayout(false);
+            LastPatientCard.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pbxProfile).EndInit();
+            guna2Panel7.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvToday).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            guna2Panel2.ResumeLayout(false);
-            guna2Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
-            guna2Panel7.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -615,17 +648,11 @@
         private TableLayoutPanel tableLayoutPanel1;
         private Panel paneldashboard4;
         private Panel panel3;
-        private Panel panelMainDashboard;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
-        private Label label1;
         private Label lblPending;
         private Label lblNewPatients;
         private Label lblHoursWorked;
         private Label lblAppointments;
-        private Panel panel2;
-        private DataGridViewTextBoxColumn Column1;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private Guna.UI2.WinForms.Guna2RadioButton rdoMonth;
         private Guna.UI2.WinForms.Guna2RadioButton rdoDay;
@@ -636,11 +663,20 @@
         private Guna.Charts.WinForms.GunaLineDataset dsNewPatients;
         private Guna.Charts.WinForms.GunaLineDataset dsHoursWorked;
         private FlowLayoutPanel flpLastPatients;
-        private Panel panel1;
-        private Label lblView;
-        private Panel panel4;
+        private Panel LastPatientCard;
         private Label lblReason;
         private Label lblDate;
         private Label lblName;
+        private Panel panelView;
+        private Label label7;
+        private Label btnView;
+        private PictureBox pbxProfile;
+        private Panel panel1;
+        private Panel panel2;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvToday;
+        private DataGridViewTextBoxColumn colDate;
+        private DataGridViewTextBoxColumn colTime;
+        private DataGridViewTextBoxColumn colName;
+        private DataGridViewTextBoxColumn colReason;
     }
 }

@@ -388,7 +388,7 @@ namespace ClinicManagementSystemFinal
 
         private void pbxProfilePic_Click(object sender, EventArgs e)
         {
-            LoadControl(new UserInformation());
+            LoadControl(new UserInformation(userLoginId));
         }
 
         private void guna2Separator1_Click(object sender, EventArgs e)

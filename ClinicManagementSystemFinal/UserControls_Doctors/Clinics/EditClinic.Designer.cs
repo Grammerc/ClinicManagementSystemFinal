@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             TabPage tabPage2;
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -51,6 +51,12 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            tbxAddress = new Guna.UI2.WinForms.Guna2TextBox();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            tbxEmail = new Guna.UI2.WinForms.Guna2TextBox();
+            tbxPhoneNumber = new Guna.UI2.WinForms.Guna2TextBox();
             dgvInsurance = new Guna.UI2.WinForms.Guna2DataGridView();
             CoverageID = new DataGridViewTextBoxColumn();
             CoverageName = new DataGridViewTextBoxColumn();
@@ -60,17 +66,13 @@
             SlotText = new DataGridViewTextBoxColumn();
             AssignedTime = new DataGridViewCheckBoxColumn();
             btnSave = new Guna.UI2.WinForms.Guna2Button();
-            tbxAddress = new Guna.UI2.WinForms.Guna2TextBox();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            tbxEmail = new Guna.UI2.WinForms.Guna2TextBox();
             label5 = new Label();
-            tbxPhoneNumber = new Guna.UI2.WinForms.Guna2TextBox();
             label6 = new Label();
             panelTitlePatientQueue = new Guna.UI2.WinForms.Guna2Panel();
             label4 = new Label();
             foreverTabPage1 = new ReaLTaiizor.Controls.ForeverTabPage();
+            tabPage3 = new TabPage();
+            tabPage4 = new TabPage();
             tabPage1 = new TabPage();
             tbxUsername = new Guna.UI2.WinForms.Guna2TextBox();
             btnAddPerson = new Guna.UI2.WinForms.Guna2Button();
@@ -83,29 +85,113 @@
             ((System.ComponentModel.ISupportInitialize)dgvTime).BeginInit();
             panelTitlePatientQueue.SuspendLayout();
             foreverTabPage1.SuspendLayout();
+            tabPage3.SuspendLayout();
+            tabPage4.SuspendLayout();
             tabPage1.SuspendLayout();
             SuspendLayout();
             // 
             // tabPage2
             // 
             tabPage2.BackColor = Color.FromArgb(60, 70, 73);
-            tabPage2.Controls.Add(dgvInsurance);
-            tabPage2.Controls.Add(dgvTime);
-            tabPage2.Controls.Add(btnSave);
             tabPage2.Controls.Add(tbxAddress);
             tabPage2.Controls.Add(label1);
             tabPage2.Controls.Add(label2);
             tabPage2.Controls.Add(label3);
             tabPage2.Controls.Add(tbxEmail);
-            tabPage2.Controls.Add(label5);
             tabPage2.Controls.Add(tbxPhoneNumber);
-            tabPage2.Controls.Add(label6);
             tabPage2.Location = new Point(4, 44);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
             tabPage2.Size = new Size(785, 558);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Information";
+            // 
+            // tbxAddress
+            // 
+            tbxAddress.CustomizableEdges = customizableEdges1;
+            tbxAddress.DefaultText = "";
+            tbxAddress.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            tbxAddress.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            tbxAddress.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            tbxAddress.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            tbxAddress.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            tbxAddress.Font = new Font("Segoe UI", 9F);
+            tbxAddress.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            tbxAddress.Location = new Point(215, 82);
+            tbxAddress.Name = "tbxAddress";
+            tbxAddress.PlaceholderText = "";
+            tbxAddress.SelectedText = "";
+            tbxAddress.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            tbxAddress.Size = new Size(535, 36);
+            tbxAddress.TabIndex = 9;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(94, 93);
+            label1.Name = "label1";
+            label1.Size = new Size(98, 25);
+            label1.TabIndex = 3;
+            label1.Text = "Address";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(29, 142);
+            label2.Name = "label2";
+            label2.Size = new Size(167, 25);
+            label2.TabIndex = 4;
+            label2.Text = "Phone Number";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(122, 193);
+            label3.Name = "label3";
+            label3.Size = new Size(70, 25);
+            label3.TabIndex = 5;
+            label3.Text = "Email";
+            // 
+            // tbxEmail
+            // 
+            tbxEmail.CustomizableEdges = customizableEdges3;
+            tbxEmail.DefaultText = "";
+            tbxEmail.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            tbxEmail.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            tbxEmail.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            tbxEmail.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            tbxEmail.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            tbxEmail.Font = new Font("Segoe UI", 9F);
+            tbxEmail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            tbxEmail.Location = new Point(215, 182);
+            tbxEmail.Name = "tbxEmail";
+            tbxEmail.PlaceholderText = "";
+            tbxEmail.SelectedText = "";
+            tbxEmail.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            tbxEmail.Size = new Size(535, 36);
+            tbxEmail.TabIndex = 11;
+            // 
+            // tbxPhoneNumber
+            // 
+            tbxPhoneNumber.CustomizableEdges = customizableEdges5;
+            tbxPhoneNumber.DefaultText = "";
+            tbxPhoneNumber.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            tbxPhoneNumber.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            tbxPhoneNumber.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            tbxPhoneNumber.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            tbxPhoneNumber.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            tbxPhoneNumber.Font = new Font("Segoe UI", 9F);
+            tbxPhoneNumber.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            tbxPhoneNumber.Location = new Point(215, 131);
+            tbxPhoneNumber.Name = "tbxPhoneNumber";
+            tbxPhoneNumber.PlaceholderText = "";
+            tbxPhoneNumber.SelectedText = "";
+            tbxPhoneNumber.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            tbxPhoneNumber.Size = new Size(535, 36);
+            tbxPhoneNumber.TabIndex = 10;
             // 
             // dgvInsurance
             // 
@@ -131,10 +217,10 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgvInsurance.DefaultCellStyle = dataGridViewCellStyle3;
             dgvInsurance.GridColor = Color.FromArgb(231, 229, 255);
-            dgvInsurance.Location = new Point(219, 174);
+            dgvInsurance.Location = new Point(31, 83);
             dgvInsurance.Name = "dgvInsurance";
             dgvInsurance.RowHeadersVisible = false;
-            dgvInsurance.Size = new Size(535, 139);
+            dgvInsurance.Size = new Size(719, 459);
             dgvInsurance.TabIndex = 17;
             dgvInsurance.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvInsurance.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -197,10 +283,10 @@
             dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
             dgvTime.DefaultCellStyle = dataGridViewCellStyle6;
             dgvTime.GridColor = Color.FromArgb(231, 229, 255);
-            dgvTime.Location = new Point(219, 334);
+            dgvTime.Location = new Point(25, 54);
             dgvTime.Name = "dgvTime";
             dgvTime.RowHeadersVisible = false;
-            dgvTime.Size = new Size(535, 150);
+            dgvTime.Size = new Size(754, 464);
             dgvTime.TabIndex = 16;
             dgvTime.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvTime.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -242,121 +328,34 @@
             // 
             // btnSave
             // 
-            btnSave.CustomizableEdges = customizableEdges1;
+            btnSave.CustomizableEdges = customizableEdges7;
             btnSave.DisabledState.BorderColor = Color.DarkGray;
             btnSave.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSave.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnSave.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnSave.Font = new Font("Segoe UI", 9F);
             btnSave.ForeColor = Color.White;
-            btnSave.Location = new Point(590, 494);
+            btnSave.Location = new Point(562, 5);
             btnSave.Name = "btnSave";
-            btnSave.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnSave.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnSave.Size = new Size(180, 45);
             btnSave.TabIndex = 15;
-            // 
-            // tbxAddress
-            // 
-            tbxAddress.CustomizableEdges = customizableEdges3;
-            tbxAddress.DefaultText = "";
-            tbxAddress.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            tbxAddress.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            tbxAddress.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            tbxAddress.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            tbxAddress.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbxAddress.Font = new Font("Segoe UI", 9F);
-            tbxAddress.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbxAddress.Location = new Point(219, 6);
-            tbxAddress.Name = "tbxAddress";
-            tbxAddress.PlaceholderText = "";
-            tbxAddress.SelectedText = "";
-            tbxAddress.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            tbxAddress.Size = new Size(535, 36);
-            tbxAddress.TabIndex = 9;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(98, 17);
-            label1.Name = "label1";
-            label1.Size = new Size(98, 25);
-            label1.TabIndex = 3;
-            label1.Text = "Address";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(33, 66);
-            label2.Name = "label2";
-            label2.Size = new Size(167, 25);
-            label2.TabIndex = 4;
-            label2.Text = "Phone Number";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(126, 117);
-            label3.Name = "label3";
-            label3.Size = new Size(70, 25);
-            label3.TabIndex = 5;
-            label3.Text = "Email";
-            // 
-            // tbxEmail
-            // 
-            tbxEmail.CustomizableEdges = customizableEdges5;
-            tbxEmail.DefaultText = "";
-            tbxEmail.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            tbxEmail.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            tbxEmail.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            tbxEmail.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            tbxEmail.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbxEmail.Font = new Font("Segoe UI", 9F);
-            tbxEmail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbxEmail.Location = new Point(219, 106);
-            tbxEmail.Name = "tbxEmail";
-            tbxEmail.PlaceholderText = "";
-            tbxEmail.SelectedText = "";
-            tbxEmail.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            tbxEmail.Size = new Size(535, 36);
-            tbxEmail.TabIndex = 11;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(81, 174);
+            label5.Location = new Point(31, 19);
             label5.Name = "label5";
             label5.Size = new Size(115, 50);
             label5.TabIndex = 6;
             label5.Text = "Insurance\r\nCoverage";
             // 
-            // tbxPhoneNumber
-            // 
-            tbxPhoneNumber.CustomizableEdges = customizableEdges7;
-            tbxPhoneNumber.DefaultText = "";
-            tbxPhoneNumber.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            tbxPhoneNumber.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            tbxPhoneNumber.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            tbxPhoneNumber.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            tbxPhoneNumber.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbxPhoneNumber.Font = new Font("Segoe UI", 9F);
-            tbxPhoneNumber.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbxPhoneNumber.Location = new Point(219, 55);
-            tbxPhoneNumber.Name = "tbxPhoneNumber";
-            tbxPhoneNumber.PlaceholderText = "";
-            tbxPhoneNumber.SelectedText = "";
-            tbxPhoneNumber.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            tbxPhoneNumber.Size = new Size(535, 36);
-            tbxPhoneNumber.TabIndex = 10;
-            // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(89, 334);
+            label6.Location = new Point(25, 16);
             label6.Name = "label6";
             label6.Size = new Size(111, 25);
             label6.TabIndex = 7;
@@ -364,6 +363,7 @@
             // 
             // panelTitlePatientQueue
             // 
+            panelTitlePatientQueue.Controls.Add(btnSave);
             panelTitlePatientQueue.Controls.Add(label4);
             panelTitlePatientQueue.CustomizableEdges = customizableEdges9;
             panelTitlePatientQueue.Dock = DockStyle.Top;
@@ -390,6 +390,8 @@
             foreverTabPage1.BaseColor = Color.FromArgb(45, 47, 49);
             foreverTabPage1.BGColor = Color.FromArgb(60, 70, 73);
             foreverTabPage1.Controls.Add(tabPage2);
+            foreverTabPage1.Controls.Add(tabPage3);
+            foreverTabPage1.Controls.Add(tabPage4);
             foreverTabPage1.Controls.Add(tabPage1);
             foreverTabPage1.DeactiveFontColor = Color.White;
             foreverTabPage1.Dock = DockStyle.Fill;
@@ -401,6 +403,30 @@
             foreverTabPage1.Size = new Size(793, 606);
             foreverTabPage1.SizeMode = TabSizeMode.Fixed;
             foreverTabPage1.TabIndex = 16;
+            // 
+            // tabPage3
+            // 
+            tabPage3.BackColor = Color.FromArgb(60, 70, 73);
+            tabPage3.Controls.Add(dgvInsurance);
+            tabPage3.Controls.Add(label5);
+            tabPage3.Location = new Point(4, 44);
+            tabPage3.Name = "tabPage3";
+            tabPage3.Padding = new Padding(3);
+            tabPage3.Size = new Size(785, 558);
+            tabPage3.TabIndex = 2;
+            tabPage3.Text = "Insurance Coverage";
+            // 
+            // tabPage4
+            // 
+            tabPage4.BackColor = Color.FromArgb(60, 70, 73);
+            tabPage4.Controls.Add(dgvTime);
+            tabPage4.Controls.Add(label6);
+            tabPage4.Location = new Point(4, 44);
+            tabPage4.Name = "tabPage4";
+            tabPage4.Padding = new Padding(3);
+            tabPage4.Size = new Size(785, 558);
+            tabPage4.TabIndex = 3;
+            tabPage4.Text = "TimeSlot";
             // 
             // tabPage1
             // 
@@ -506,6 +532,10 @@
             panelTitlePatientQueue.ResumeLayout(false);
             panelTitlePatientQueue.PerformLayout();
             foreverTabPage1.ResumeLayout(false);
+            tabPage3.ResumeLayout(false);
+            tabPage3.PerformLayout();
+            tabPage4.ResumeLayout(false);
+            tabPage4.PerformLayout();
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
             ResumeLayout(false);
@@ -554,5 +584,7 @@
         private DataGridViewTextBoxColumn SlotID;
         private DataGridViewTextBoxColumn SlotText;
         private DataGridViewCheckBoxColumn AssignedTime;
+        private TabPage tabPage3;
+        private TabPage tabPage4;
     }
 }

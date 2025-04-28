@@ -36,9 +36,19 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
 
             LoadDoctorClinics();
             cbxPatientQueue.SelectedIndexChanged += cbxPatientQueue_SelectedIndexChanged;
+
             if (cbxPatientQueue.Items.Count > 0)
+            {
                 cbxPatientQueue.SelectedIndex = 0;
-            LoadPatientQueue(((ComboBoxItem)cbxPatientQueue.SelectedItem).Value, cbxDate.Value.Date);
+ 
+                var item = (ComboBoxItem)cbxPatientQueue.SelectedItem;
+                LoadPatientQueue(item.Value, cbxDate.Value.Date);
+            }
+            else
+            {
+                panelInvisible.Visible = true;
+                cbxDate.Enabled = false;
+            }
 
             foreach (var btn in new[] { pbxStatus1, pbxStatus2, pbxStatus3, pbxStatus4, pbxStatus5, pbxStatus6 })
                 btn.Click += StatusIcon_Click;

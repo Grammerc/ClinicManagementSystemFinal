@@ -98,7 +98,6 @@
             guna2Panel11 = new Guna.UI2.WinForms.Guna2Panel();
             nightControlBox2 = new ReaLTaiizor.Controls.NightControlBox();
             panelMainDesktop = new Guna.UI2.WinForms.Guna2Panel();
-            menuTransition = new System.Windows.Forms.Timer(components);
             guna2Panel1.SuspendLayout();
             guna2Panel10.SuspendLayout();
             guna2Panel8.SuspendLayout();
@@ -502,10 +501,6 @@
             panelMainDesktop.Size = new Size(793, 662);
             panelMainDesktop.TabIndex = 5;
             // 
-            // menuTransition
-            // 
-            menuTransition.Tick += menuTransition_Tick;
-            // 
             // HomePage_User
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -577,7 +572,6 @@
         private Guna.UI2.WinForms.Guna2Button btnView;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private Guna.UI2.WinForms.Guna2Panel menuContainer;
-        private System.Windows.Forms.Timer menuTransition;
         private TextBox textBox1;
         private PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;

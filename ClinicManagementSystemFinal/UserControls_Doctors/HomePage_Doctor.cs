@@ -59,10 +59,10 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
 
         private void HomePage_Doctor_Load(object sender, EventArgs e)
         {
-            LoadControl(new Dashboard_Doctors());
+            LoadControl(new Dashboard_Doctors(doctorLoginId));
         }
 
-        private void btnDashboard_Click(object sender, EventArgs e) => LoadControl(new Dashboard_Doctors());
+        private void btnDashboard_Click(object sender, EventArgs e) => LoadControl(new Dashboard_Doctors(doctorLoginId));
         private void btnCalendar_Click(object sender, EventArgs e)
         {
             var cal = new Calendar_Doctor(doctorLoginId, apptUC);

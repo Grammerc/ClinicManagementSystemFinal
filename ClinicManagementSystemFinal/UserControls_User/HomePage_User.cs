@@ -216,7 +216,6 @@ namespace ClinicManagementSystemFinal
 
         private void btnAppointment_Click(object sender, EventArgs e)
         {
-            menuTransition.Start();
             LoadControl(new Appointments_Create(userLoginId));
         }
 
@@ -359,7 +358,6 @@ namespace ClinicManagementSystemFinal
                 menuContainer.Height += 10;
                 if (menuContainer.Height >= 215)
                 {
-                    menuTransition.Stop();
                     menuExpand = true;
                 }
             }
@@ -368,7 +366,6 @@ namespace ClinicManagementSystemFinal
                 menuContainer.Height -= 10;
                 if (menuContainer.Height <= 53)
                 {
-                    menuTransition.Stop();
                     menuExpand = false;
                 }
             }

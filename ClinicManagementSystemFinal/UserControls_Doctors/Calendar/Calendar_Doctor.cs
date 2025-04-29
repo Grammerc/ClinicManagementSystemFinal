@@ -15,7 +15,7 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
         public event Action<DateTime> DayClicked;
 
         const string CONN =
-            @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;";
+            @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\Downloads\Login.accdb;Persist Security Info=False;";
         
         readonly AppointmentUC apptView;
 

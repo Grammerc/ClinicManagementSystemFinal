@@ -32,7 +32,7 @@ namespace ClinicManagementSystemFinal.UserControls_User
         {
             InitializeComponent();
             cbxClinicName.SelectedIndexChanged += new EventHandler(cbxClinicName_SelectedIndexChanged);
-            conn.ConnectionString = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = ""B:\Downloads\Login.accdb"";
+            conn.ConnectionString = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = ""C:\Users\Raphael\Downloads\Login.accdb"";
             Persist Security Info=False;";
             LoadClinicNames();
             userLoginId = loginId;
@@ -89,7 +89,7 @@ namespace ClinicManagementSystemFinal.UserControls_User
             DateTime selectedDate = cbxDate.Value.Date;
             string selectedTime = cbxTimeSlot.SelectedItem.ToString();
 
-            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;";
+            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\Downloads\Login.accdb;Persist Security Info=False;";
             using (OleDbConnection conn = new OleDbConnection(connStr))
             {
                 conn.Open();
@@ -158,7 +158,7 @@ namespace ClinicManagementSystemFinal.UserControls_User
         {
             int userInfoId = -1;
 
-            using (OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;"))
+            using (OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\Downloads\Login.accdb;Persist Security Info=False;"))
             {
                 conn.Open();
                 OleDbCommand cmd = new OleDbCommand("SELECT UserInfoID FROM Information WHERE LoginID = @loginId", conn);
@@ -210,7 +210,7 @@ namespace ClinicManagementSystemFinal.UserControls_User
 
            
 
-            using (OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;"))
+            using (OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\Downloads\Login.accdb;Persist Security Info=False;"))
             {
                 conn.Open();
 
@@ -240,7 +240,7 @@ namespace ClinicManagementSystemFinal.UserControls_User
             RefreshTimeSlots();
         }
         private const string CONN =
-    @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;";
+    @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\Downloads\Login.accdb;Persist Security Info=False;";
         void RefreshTimeSlots()
         {
 

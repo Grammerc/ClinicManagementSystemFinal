@@ -44,13 +44,13 @@
             guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             flpClinics = new FlowLayoutPanel();
             pnlTemplate = new Panel();
+            btnEdit = new Button();
             lblLocation = new Label();
             lblName = new Label();
             pbxClinic = new PictureBox();
             guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             label1 = new Label();
             guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            btnEdit = new Button();
             guna2Panel1.SuspendLayout();
             guna2Panel2.SuspendLayout();
             guna2Panel4.SuspendLayout();
@@ -127,6 +127,15 @@
             pnlTemplate.TabIndex = 0;
             pnlTemplate.Visible = false;
             // 
+            // btnEdit
+            // 
+            btnEdit.Location = new Point(141, 178);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Size = new Size(75, 23);
+            btnEdit.TabIndex = 3;
+            btnEdit.Text = "Edit";
+            btnEdit.UseVisualStyleBackColor = true;
+            // 
             // lblLocation
             // 
             lblLocation.AutoSize = true;
@@ -151,6 +160,7 @@
             pbxClinic.Location = new Point(0, 0);
             pbxClinic.Name = "pbxClinic";
             pbxClinic.Size = new Size(231, 110);
+            pbxClinic.SizeMode = PictureBoxSizeMode.StretchImage;
             pbxClinic.TabIndex = 0;
             pbxClinic.TabStop = false;
             // 
@@ -174,6 +184,7 @@
             label1.Size = new Size(119, 15);
             label1.TabIndex = 0;
             label1.Text = "Don't see your clinic?";
+            label1.Click += label1_Click;
             // 
             // guna2Panel3
             // 
@@ -184,15 +195,6 @@
             guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2Panel3.Size = new Size(793, 75);
             guna2Panel3.TabIndex = 1;
-            // 
-            // btnEdit
-            // 
-            btnEdit.Location = new Point(141, 178);
-            btnEdit.Name = "btnEdit";
-            btnEdit.Size = new Size(75, 23);
-            btnEdit.TabIndex = 3;
-            btnEdit.Text = "Edit";
-            btnEdit.UseVisualStyleBackColor = true;
             // 
             // MyClinics
             // 

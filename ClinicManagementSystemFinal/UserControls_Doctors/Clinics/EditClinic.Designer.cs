@@ -29,36 +29,33 @@
         private void InitializeComponent()
         {
             TabPage tabPage2;
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditClinic));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle19 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle20 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle21 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle22 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle23 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle24 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges51 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges52 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges53 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges54 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle25 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle26 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle27 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges55 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges56 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges57 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges58 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges59 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges60 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             tbxClinicName = new Guna.UI2.WinForms.Guna2TextBox();
             label12 = new Label();
             btnChange = new Guna.UI2.WinForms.Guna2Button();
@@ -83,8 +80,6 @@
             panelTitlePatientQueue = new Guna.UI2.WinForms.Guna2Panel();
             label4 = new Label();
             foreverTabPage1 = new ReaLTaiizor.Controls.ForeverTabPage();
-            tabPage5 = new TabPage();
-            guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             tabPage3 = new TabPage();
             tabPage4 = new TabPage();
             tabPage1 = new TabPage();
@@ -100,8 +95,6 @@
             ((System.ComponentModel.ISupportInitialize)dgvTime).BeginInit();
             panelTitlePatientQueue.SuspendLayout();
             foreverTabPage1.SuspendLayout();
-            tabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
             tabPage3.SuspendLayout();
             tabPage4.SuspendLayout();
             tabPage1.SuspendLayout();
@@ -123,13 +116,13 @@
             tabPage2.Location = new Point(4, 44);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(785, 558);
+            tabPage2.Size = new Size(785, 502);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Information";
             // 
             // tbxClinicName
             // 
-            tbxClinicName.CustomizableEdges = customizableEdges41;
+            tbxClinicName.CustomizableEdges = customizableEdges1;
             tbxClinicName.DefaultText = "";
             tbxClinicName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             tbxClinicName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -142,7 +135,7 @@
             tbxClinicName.Name = "tbxClinicName";
             tbxClinicName.PlaceholderText = "";
             tbxClinicName.SelectedText = "";
-            tbxClinicName.ShadowDecoration.CustomizableEdges = customizableEdges42;
+            tbxClinicName.ShadowDecoration.CustomizableEdges = customizableEdges2;
             tbxClinicName.Size = new Size(332, 36);
             tbxClinicName.TabIndex = 15;
             // 
@@ -158,7 +151,7 @@
             // 
             // btnChange
             // 
-            btnChange.CustomizableEdges = customizableEdges43;
+            btnChange.CustomizableEdges = customizableEdges3;
             btnChange.DisabledState.BorderColor = Color.DarkGray;
             btnChange.DisabledState.CustomBorderColor = Color.DarkGray;
             btnChange.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -167,10 +160,11 @@
             btnChange.ForeColor = Color.White;
             btnChange.Location = new Point(580, 179);
             btnChange.Name = "btnChange";
-            btnChange.ShadowDecoration.CustomizableEdges = customizableEdges44;
+            btnChange.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnChange.Size = new Size(180, 45);
             btnChange.TabIndex = 13;
             btnChange.Text = "Change Image";
+            btnChange.Visible = false;
             // 
             // pbxClinic
             // 
@@ -181,10 +175,11 @@
             pbxClinic.SizeMode = PictureBoxSizeMode.StretchImage;
             pbxClinic.TabIndex = 12;
             pbxClinic.TabStop = false;
+            pbxClinic.Visible = false;
             // 
             // tbxAddress
             // 
-            tbxAddress.CustomizableEdges = customizableEdges45;
+            tbxAddress.CustomizableEdges = customizableEdges5;
             tbxAddress.DefaultText = "";
             tbxAddress.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             tbxAddress.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -197,7 +192,7 @@
             tbxAddress.Name = "tbxAddress";
             tbxAddress.PlaceholderText = "";
             tbxAddress.SelectedText = "";
-            tbxAddress.ShadowDecoration.CustomizableEdges = customizableEdges46;
+            tbxAddress.ShadowDecoration.CustomizableEdges = customizableEdges6;
             tbxAddress.Size = new Size(332, 36);
             tbxAddress.TabIndex = 9;
             // 
@@ -234,7 +229,7 @@
             // 
             // tbxEmail
             // 
-            tbxEmail.CustomizableEdges = customizableEdges47;
+            tbxEmail.CustomizableEdges = customizableEdges7;
             tbxEmail.DefaultText = "";
             tbxEmail.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             tbxEmail.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -247,13 +242,13 @@
             tbxEmail.Name = "tbxEmail";
             tbxEmail.PlaceholderText = "";
             tbxEmail.SelectedText = "";
-            tbxEmail.ShadowDecoration.CustomizableEdges = customizableEdges48;
+            tbxEmail.ShadowDecoration.CustomizableEdges = customizableEdges8;
             tbxEmail.Size = new Size(332, 36);
             tbxEmail.TabIndex = 11;
             // 
             // tbxPhoneNumber
             // 
-            tbxPhoneNumber.CustomizableEdges = customizableEdges49;
+            tbxPhoneNumber.CustomizableEdges = customizableEdges9;
             tbxPhoneNumber.DefaultText = "";
             tbxPhoneNumber.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             tbxPhoneNumber.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -266,33 +261,33 @@
             tbxPhoneNumber.Name = "tbxPhoneNumber";
             tbxPhoneNumber.PlaceholderText = "";
             tbxPhoneNumber.SelectedText = "";
-            tbxPhoneNumber.ShadowDecoration.CustomizableEdges = customizableEdges50;
+            tbxPhoneNumber.ShadowDecoration.CustomizableEdges = customizableEdges10;
             tbxPhoneNumber.Size = new Size(332, 36);
             tbxPhoneNumber.TabIndex = 10;
             // 
             // dgvInsurance
             // 
-            dataGridViewCellStyle19.BackColor = Color.White;
-            dgvInsurance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
-            dataGridViewCellStyle20.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle20.Font = new Font("Segoe UI", 10F);
-            dataGridViewCellStyle20.ForeColor = Color.White;
-            dataGridViewCellStyle20.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = DataGridViewTriState.True;
-            dgvInsurance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            dgvInsurance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10F);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvInsurance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvInsurance.ColumnHeadersHeight = 20;
             dgvInsurance.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dgvInsurance.Columns.AddRange(new DataGridViewColumn[] { CoverageID, CoverageName, Assigned });
-            dataGridViewCellStyle21.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = Color.White;
-            dataGridViewCellStyle21.Font = new Font("Segoe UI", 10F);
-            dataGridViewCellStyle21.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle21.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle21.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle21.WrapMode = DataGridViewTriState.False;
-            dgvInsurance.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10F);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgvInsurance.DefaultCellStyle = dataGridViewCellStyle3;
             dgvInsurance.GridColor = Color.FromArgb(231, 229, 255);
             dgvInsurance.Location = new Point(31, 83);
             dgvInsurance.Name = "dgvInsurance";
@@ -340,26 +335,26 @@
             // 
             dgvTime.AllowUserToResizeColumns = false;
             dgvTime.AllowUserToResizeRows = false;
-            dataGridViewCellStyle22.BackColor = Color.White;
-            dgvTime.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
-            dataGridViewCellStyle23.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle23.Font = new Font("Segoe UI", 10F);
-            dataGridViewCellStyle23.ForeColor = Color.White;
-            dataGridViewCellStyle23.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = DataGridViewTriState.True;
-            dgvTime.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle4.BackColor = Color.White;
+            dgvTime.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 10F);
+            dataGridViewCellStyle5.ForeColor = Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dgvTime.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dgvTime.ColumnHeadersHeight = 20;
             dgvTime.Columns.AddRange(new DataGridViewColumn[] { SlotID, SlotText, AssignedTime });
-            dataGridViewCellStyle24.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = Color.White;
-            dataGridViewCellStyle24.Font = new Font("Segoe UI", 10F);
-            dataGridViewCellStyle24.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle24.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle24.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle24.WrapMode = DataGridViewTriState.False;
-            dgvTime.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 10F);
+            dataGridViewCellStyle6.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            dgvTime.DefaultCellStyle = dataGridViewCellStyle6;
             dgvTime.GridColor = Color.FromArgb(231, 229, 255);
             dgvTime.Location = new Point(25, 54);
             dgvTime.Name = "dgvTime";
@@ -407,18 +402,19 @@
             // 
             // btnSave
             // 
-            btnSave.CustomizableEdges = customizableEdges51;
+            btnSave.CustomizableEdges = customizableEdges11;
             btnSave.DisabledState.BorderColor = Color.DarkGray;
             btnSave.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSave.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnSave.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnSave.Font = new Font("Segoe UI", 9F);
             btnSave.ForeColor = Color.White;
-            btnSave.Location = new Point(584, 5);
+            btnSave.Location = new Point(595, 612);
             btnSave.Name = "btnSave";
-            btnSave.ShadowDecoration.CustomizableEdges = customizableEdges52;
+            btnSave.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btnSave.Size = new Size(180, 45);
             btnSave.TabIndex = 15;
+            btnSave.Text = "Save Changes";
             // 
             // label5
             // 
@@ -442,13 +438,12 @@
             // 
             // panelTitlePatientQueue
             // 
-            panelTitlePatientQueue.Controls.Add(btnSave);
             panelTitlePatientQueue.Controls.Add(label4);
-            panelTitlePatientQueue.CustomizableEdges = customizableEdges53;
+            panelTitlePatientQueue.CustomizableEdges = customizableEdges13;
             panelTitlePatientQueue.Dock = DockStyle.Top;
             panelTitlePatientQueue.Location = new Point(0, 0);
             panelTitlePatientQueue.Name = "panelTitlePatientQueue";
-            panelTitlePatientQueue.ShadowDecoration.CustomizableEdges = customizableEdges54;
+            panelTitlePatientQueue.ShadowDecoration.CustomizableEdges = customizableEdges14;
             panelTitlePatientQueue.Size = new Size(793, 56);
             panelTitlePatientQueue.TabIndex = 1;
             // 
@@ -469,81 +464,19 @@
             foreverTabPage1.BaseColor = Color.FromArgb(45, 47, 49);
             foreverTabPage1.BGColor = Color.FromArgb(60, 70, 73);
             foreverTabPage1.Controls.Add(tabPage2);
-            foreverTabPage1.Controls.Add(tabPage5);
             foreverTabPage1.Controls.Add(tabPage3);
             foreverTabPage1.Controls.Add(tabPage4);
             foreverTabPage1.Controls.Add(tabPage1);
             foreverTabPage1.DeactiveFontColor = Color.White;
-            foreverTabPage1.Dock = DockStyle.Fill;
+            foreverTabPage1.Dock = DockStyle.Top;
             foreverTabPage1.Font = new Font("Segoe UI", 10F);
             foreverTabPage1.ItemSize = new Size(120, 40);
             foreverTabPage1.Location = new Point(0, 56);
             foreverTabPage1.Name = "foreverTabPage1";
             foreverTabPage1.SelectedIndex = 0;
-            foreverTabPage1.Size = new Size(793, 606);
+            foreverTabPage1.Size = new Size(793, 550);
             foreverTabPage1.SizeMode = TabSizeMode.Fixed;
             foreverTabPage1.TabIndex = 16;
-            // 
-            // tabPage5
-            // 
-            tabPage5.BackColor = Color.FromArgb(60, 70, 73);
-            tabPage5.Controls.Add(guna2DataGridView1);
-            tabPage5.Location = new Point(4, 44);
-            tabPage5.Name = "tabPage5";
-            tabPage5.Padding = new Padding(3);
-            tabPage5.Size = new Size(785, 558);
-            tabPage5.TabIndex = 4;
-            tabPage5.Text = "Services";
-            // 
-            // guna2DataGridView1
-            // 
-            dataGridViewCellStyle25.BackColor = Color.White;
-            guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
-            dataGridViewCellStyle26.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle26.Font = new Font("Segoe UI", 10F);
-            dataGridViewCellStyle26.ForeColor = Color.White;
-            dataGridViewCellStyle26.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle26.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = DataGridViewTriState.True;
-            guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
-            guna2DataGridView1.ColumnHeadersHeight = 4;
-            guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle27.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = Color.White;
-            dataGridViewCellStyle27.Font = new Font("Segoe UI", 10F);
-            dataGridViewCellStyle27.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle27.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle27.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle27.WrapMode = DataGridViewTriState.False;
-            guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle27;
-            guna2DataGridView1.GridColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.Location = new Point(9, 30);
-            guna2DataGridView1.Name = "guna2DataGridView1";
-            guna2DataGridView1.RowHeadersVisible = false;
-            guna2DataGridView1.Size = new Size(761, 485);
-            guna2DataGridView1.TabIndex = 0;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 10F);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4;
-            guna2DataGridView1.ThemeStyle.ReadOnly = false;
-            guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            guna2DataGridView1.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 10F);
-            guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            guna2DataGridView1.ThemeStyle.RowsStyle.Height = 25;
-            guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
             // tabPage3
             // 
@@ -553,7 +486,7 @@
             tabPage3.Location = new Point(4, 44);
             tabPage3.Name = "tabPage3";
             tabPage3.Padding = new Padding(3);
-            tabPage3.Size = new Size(785, 558);
+            tabPage3.Size = new Size(785, 502);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Insurance Coverage";
             // 
@@ -565,7 +498,7 @@
             tabPage4.Location = new Point(4, 44);
             tabPage4.Name = "tabPage4";
             tabPage4.Padding = new Padding(3);
-            tabPage4.Size = new Size(785, 558);
+            tabPage4.Size = new Size(785, 502);
             tabPage4.TabIndex = 3;
             tabPage4.Text = "TimeSlot";
             // 
@@ -580,13 +513,13 @@
             tabPage1.Location = new Point(4, 44);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(785, 558);
+            tabPage1.Size = new Size(785, 502);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Add Person";
             // 
             // tbxUsername
             // 
-            tbxUsername.CustomizableEdges = customizableEdges55;
+            tbxUsername.CustomizableEdges = customizableEdges15;
             tbxUsername.DefaultText = "";
             tbxUsername.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             tbxUsername.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -599,13 +532,13 @@
             tbxUsername.Name = "tbxUsername";
             tbxUsername.PlaceholderText = "";
             tbxUsername.SelectedText = "";
-            tbxUsername.ShadowDecoration.CustomizableEdges = customizableEdges56;
+            tbxUsername.ShadowDecoration.CustomizableEdges = customizableEdges16;
             tbxUsername.Size = new Size(280, 36);
             tbxUsername.TabIndex = 16;
             // 
             // btnAddPerson
             // 
-            btnAddPerson.CustomizableEdges = customizableEdges57;
+            btnAddPerson.CustomizableEdges = customizableEdges17;
             btnAddPerson.DisabledState.BorderColor = Color.DarkGray;
             btnAddPerson.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAddPerson.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -614,7 +547,7 @@
             btnAddPerson.ForeColor = Color.White;
             btnAddPerson.Location = new Point(508, 68);
             btnAddPerson.Name = "btnAddPerson";
-            btnAddPerson.ShadowDecoration.CustomizableEdges = customizableEdges58;
+            btnAddPerson.ShadowDecoration.CustomizableEdges = customizableEdges18;
             btnAddPerson.Size = new Size(180, 45);
             btnAddPerson.TabIndex = 15;
             btnAddPerson.Text = "Add Doctor";
@@ -631,7 +564,7 @@
             // 
             // tbxName
             // 
-            tbxName.CustomizableEdges = customizableEdges59;
+            tbxName.CustomizableEdges = customizableEdges19;
             tbxName.DefaultText = "";
             tbxName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             tbxName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -644,7 +577,7 @@
             tbxName.Name = "tbxName";
             tbxName.PlaceholderText = "";
             tbxName.SelectedText = "";
-            tbxName.ShadowDecoration.CustomizableEdges = customizableEdges60;
+            tbxName.ShadowDecoration.CustomizableEdges = customizableEdges20;
             tbxName.Size = new Size(280, 36);
             tbxName.TabIndex = 10;
             // 
@@ -662,6 +595,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(btnSave);
             Controls.Add(foreverTabPage1);
             Controls.Add(panelTitlePatientQueue);
             Name = "EditClinic";
@@ -674,8 +608,6 @@
             panelTitlePatientQueue.ResumeLayout(false);
             panelTitlePatientQueue.PerformLayout();
             foreverTabPage1.ResumeLayout(false);
-            tabPage5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
             tabPage3.ResumeLayout(false);
             tabPage3.PerformLayout();
             tabPage4.ResumeLayout(false);

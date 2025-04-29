@@ -8,7 +8,7 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
     {
         private readonly string _doctorLoginId;
         private const string CONN =
-            @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;";
+            @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\Downloads\Login.accdb;Persist Security Info=False;";
         private readonly Panel _lastPatientTemplate;
         private const int _maxLastPatients = 5;
         class AppointmentInfo

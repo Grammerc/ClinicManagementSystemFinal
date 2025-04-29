@@ -226,7 +226,7 @@
             lblTime.AutoSize = true;
             lblTime.Location = new Point(466, 11);
             lblTime.Name = "lblTime";
-            lblTime.Size = new Size(56, 15);
+            lblTime.Size = new Size(57, 15);
             lblTime.TabIndex = 2;
             lblTime.Text = "Time Slot";
             // 

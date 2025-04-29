@@ -8,7 +8,7 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
     public partial class LastPatient : UserControl
     {
         private readonly string _doctorLoginId;
-        const string CONN = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;";
+        const string CONN = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\Downloads\Login.accdb;Persist Security Info=False;";
 
         public LastPatient(string doctorLoginId)
         {

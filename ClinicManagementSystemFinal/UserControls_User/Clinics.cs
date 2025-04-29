@@ -18,7 +18,7 @@ namespace ClinicManagementSystemFinal.UserControls_User
     {
         private string userLoginId;
         private string preselectedService;
-        private string imageFolderPath = @"C:\Users\Raphael Perocho\source\repos\ClinicManagementSystemFinal\ProjectClinic\ClinicManagementSystemFinal\Pictures\ClinicPictures\";
+        private string imageFolderPath = @"C:\Users\Raphael\source\repos\ClinicManagementSystemFinal\ClinicManagementSystemFinal\Pictures\ClinicPictures";
         
         public Clinics(string loginId) : this(loginId, null) {  }
         public Clinics(string loginId, string serviceFilters)
@@ -63,7 +63,7 @@ namespace ClinicManagementSystemFinal.UserControls_User
             cbxTimeSlot.Items.Clear();
             cbxServices.Items.Clear();
 
-            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;";
+            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\Downloads\Login.accdb;";
             using (OleDbConnection conn = new OleDbConnection(connStr))
             {
                 conn.Open();
@@ -111,7 +111,7 @@ namespace ClinicManagementSystemFinal.UserControls_User
         private void ApplyClinicFilters()
         {
             const int maxPanels = 6;
-            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;";
+            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\Downloads\Login.accdb;";
             using (var conn = new OleDbConnection(connStr))
             {
                 conn.Open();

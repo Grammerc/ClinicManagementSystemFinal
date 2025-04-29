@@ -21,10 +21,10 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
         private List<string> displayedAppointmentIds = new List<string>();
         public event Action<string, string, string, string> PatientSelected;
         private string clinicPicFolder =
-    @"C:\Users\Raphael Perocho\source\repos\ClinicManagementSystemFinal\ProjectClinic\ClinicManagementSystemFinal\Pictures\ClinicPictures\";
+    @"C:\Users\Raphael\source\repos\ClinicManagementSystemFinal\ClinicManagementSystemFinal\Pictures\ClinicPictures";
 
         private const string CONN =
-  @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;";
+  @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\Downloads\Login.accdb;Persist Security Info=False;";
         private string[] picExt = { ".png", ".jpg", ".jpeg" };
 
         public PatientQueue(string loginId)
@@ -90,7 +90,7 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
         }
 
         static readonly string IconDir =
-    @"C:\Users\Raphael Perocho\source\repos\ClinicManagementSystemFinal\ProjectClinic\ClinicManagementSystemFinal\Pictures\StatusIcons";
+    @"C:\Users\Raphael\source\repos\ClinicManagementSystemFinal\ClinicManagementSystemFinal\Pictures\StatusIcons";
 
         Image GetStatusIcon(string status)
         {
@@ -112,7 +112,7 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
         {
             cbxPatientQueue.Items.Clear();
 
-            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;";
+            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\Downloads\Login.accdb;Persist Security Info=False;";
             using (OleDbConnection conn = new OleDbConnection(connStr))
             {
                 conn.Open();
@@ -159,7 +159,7 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
             {
                 string clinicId = selectedClinic.Value;
 
-                string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;";
+                string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\Downloads\Login.accdb;Persist Security Info=False;";
                 using (OleDbConnection conn = new OleDbConnection(connStr))
                 {
                     conn.Open();
@@ -200,7 +200,7 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
 
         int CountPatients(string clinicId, DateTime d)
         {
-            using var conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;");
+            using var conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\Downloads\Login.accdb;Persist Security Info=False;");
             conn.Open();
             var cmd = new OleDbCommand(
     @"SELECT COUNT(*) FROM Appointments A

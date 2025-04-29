@@ -14,7 +14,7 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
         private readonly string _clinicId;
 
         private const string CONN =
-            @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;";
+            @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\Downloads\Login.accdb;Persist Security Info=False;";
 
         public MedicalHistory(string uId, string pName, string photo, string cId, string docLogin)
         {

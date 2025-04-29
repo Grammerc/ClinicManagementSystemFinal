@@ -274,7 +274,7 @@
             cbxDate.ShadowDecoration.CustomizableEdges = customizableEdges12;
             cbxDate.Size = new Size(787, 61);
             cbxDate.TabIndex = 2;
-            cbxDate.Value = new DateTime(2025, 4, 11, 12, 40, 6, 172);
+            cbxDate.Value = new DateTime(2025, 4, 29, 0, 0, 0, 0);
             // 
             // cbxClinicName
             // 

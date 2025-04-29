@@ -4,17 +4,19 @@ using System.Data.OleDb;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using ClinicManagementSystemFinal.UserControls_Doctors.Clinics;
 
 namespace ClinicManagementSystemFinal.UserControls_Doctors
 {
     public partial class MyClinics : UserControl
     {
+        private string _loginId;           // remembers who we're loading clinics for
         public event Action<int> EditRequested;
         private readonly Panel _templatePanel;
         private readonly string imageFolderPath =
-            @"C:\Users\Raphael Perocho\source\repos\ClinicManagementSystemFinal\ProjectClinic\ClinicManagementSystemFinal\Pictures\ClinicPictures\";
-        const string CONN =
-            @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\Downloads\Login.accdb;Persist Security Info=False;";
+            @"C:\Users\Raphael\source\repos\ClinicManagementSystemFinal\ClinicManagementSystemFinal\Pictures\ClinicPictures";
+        private const string CONN =
+            @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\Downloads\Login.accdb;Persist Security Info=False;";
 
         public MyClinics()
         {
@@ -23,21 +25,26 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
             _templatePanel.Visible = false;
         }
 
+        /// <summary>
+        /// Call this to load (or reload) the list of clinics for a given user.
+        /// </summary>
         public void LoadMyClinics(string loginId)
         {
+            _loginId = loginId;   // store for later refresh
+
             var clinics = new List<(int id, string name, string address)>();
-            string sql = @"
-                SELECT C.[ClinicID], C.[ClinicName], C.[Address]
-                  FROM ([Doctors] AS D
-                  INNER JOIN [Clinics] AS C
-                    ON D.[ClinicID] = C.[ClinicID])
-                 WHERE D.[LoginID] = ?";
+            const string sql =
+                @"SELECT C.ClinicID, C.ClinicName, C.Address
+                  FROM Doctors AS D
+                  INNER JOIN Clinics AS C ON D.ClinicID = C.ClinicID
+                 WHERE D.LoginID = ?";
+
             try
             {
                 using var conn = new OleDbConnection(CONN);
                 conn.Open();
                 using var cmd = new OleDbCommand(sql, conn);
-                cmd.Parameters.Add("?", OleDbType.Integer).Value = int.Parse(loginId);
+                cmd.Parameters.Add("?", OleDbType.Integer).Value = int.Parse(_loginId);
                 using var rdr = cmd.ExecuteReader();
                 while (rdr.Read())
                 {
@@ -65,13 +72,11 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
 
                 if (card.Controls["pbxClinic"] is PictureBox pbx)
                 {
-                    string png = Path.Combine(imageFolderPath, $"{name}.png");
-                    string jpg = Path.Combine(imageFolderPath, $"{name}.jpg");
-                    pbx.Image = File.Exists(png)
-                        ? Image.FromFile(png)
-                        : File.Exists(jpg)
-                            ? Image.FromFile(jpg)
-                            : null;
+                    string png = Path.Combine(imageFolderPath, name + ".png");
+                    string jpg = Path.Combine(imageFolderPath, name + ".jpg");
+                    if (File.Exists(png)) pbx.Image = Image.FromFile(png);
+                    else if (File.Exists(jpg)) pbx.Image = Image.FromFile(jpg);
+                    else pbx.Image = null;
                     pbx.SizeMode = PictureBoxSizeMode.Zoom;
                 }
 
@@ -133,6 +138,26 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
             }
 
             return copy;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            var popup = new Form { /* … your sizing/styling … */ };
+
+            // pass in the stored loginId (_loginId) so AddClinic can link it
+            var addCtl = new AddClinic(int.Parse(_loginId));
+            addCtl.Dock = DockStyle.Fill;
+            popup.ClientSize = addCtl.PreferredSize;
+            popup.Controls.Add(addCtl);
+
+            // when AddClinic tells us it's done, close & reload
+            addCtl.ClinicAdded += (s, e2) =>
+            {
+                popup.Close();
+                LoadMyClinics(_loginId);
+            };
+
+            popup.ShowDialog(this);
         }
     }
 }

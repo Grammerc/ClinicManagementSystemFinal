@@ -41,7 +41,7 @@ namespace ClinicManagementSystemFinal
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            string connString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=""C:\Users\Raphael\Downloads\Login.accdb"";Persist Security Info=False;";
+            string connString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=""C:\Users\Raphael\source\repos\ClinicManagementSystemFinal\ClinicManagementSystemFinal\Login.accdb"";Persist Security Info=False;";
 
             using (OleDbConnection conn = new OleDbConnection(connString))
             {

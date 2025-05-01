@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using ClinicManagementSystemFinal.UserControls_Doctors;
 using ClinicManagementSystemFinal.UserInterface;
 using AppointmentUC = ClinicManagementSystemFinal.UserControls_Doctors.Appointment.AppointmentView_Doctors;
+using ClinicManagementSystemFinal.UserControls_Doctors.Appointment;
 
 namespace ClinicManagementSystemFinal.UserControls_Doctors
 {
@@ -16,9 +17,10 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
         private readonly AppointmentUC apptUC;
         private readonly PatientQueue queueUC;
         private readonly bool _isSecretary;
+        private readonly AppointmentNotification _appointmentNotification;
 
         private const string CONN =
-            @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\Downloads\Login.accdb;Persist Security Info=False;";
+            @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\source\repos\ClinicManagementSystemFinal\ClinicManagementSystemFinal\Login.accdb;Persist Security Info=False;";
 
         public HomePage_Doctor(string loginID, bool isSecretary = false)
         {
@@ -54,6 +56,8 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
                                            => LoadControl(new MedicalHistory(uid, name, photo, cid, doctorLoginId));
 
             myClinicsControl.LoadMyClinics(doctorLoginId);
+
+            _appointmentNotification = new AppointmentNotification();
         }
 
         private void HomePage_Doctor_Load(object sender, EventArgs e)
@@ -190,6 +194,12 @@ WHERE  A.LoginID = ?";
             popup.ClientSize = detail.PreferredSize;
             popup.Controls.Add(detail);
             popup.ShowDialog(this);
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+            _appointmentNotification.Stop();
         }
     }
 }

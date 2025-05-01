@@ -16,7 +16,7 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
         private readonly string imageFolderPath =
             @"C:\Users\Raphael\source\repos\ClinicManagementSystemFinal\ClinicManagementSystemFinal\Pictures\ClinicPictures";
         private const string CONN =
-            @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\Downloads\Login.accdb;Persist Security Info=False;";
+            @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\source\repos\ClinicManagementSystemFinal\ClinicManagementSystemFinal\Login.accdb;Persist Security Info=False;";
 
         public MyClinics()
         {
@@ -30,65 +30,60 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
         /// </summary>
         public void LoadMyClinics(string loginId)
         {
-            _loginId = loginId;   // store for later refresh
-
-            var clinics = new List<(int id, string name, string address)>();
-            const string sql =
-                @"SELECT C.ClinicID, C.ClinicName, C.Address
-                  FROM Doctors AS D
-                  INNER JOIN Clinics AS C ON D.ClinicID = C.ClinicID
-                 WHERE D.LoginID = ?";
-
-            try
-            {
-                using var conn = new OleDbConnection(CONN);
-                conn.Open();
-                using var cmd = new OleDbCommand(sql, conn);
-                cmd.Parameters.Add("?", OleDbType.Integer).Value = int.Parse(_loginId);
-                using var rdr = cmd.ExecuteReader();
-                while (rdr.Read())
-                {
-                    clinics.Add((
-                        rdr.GetInt32(0),
-                        rdr.GetString(1),
-                        rdr.GetString(2)
-                    ));
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(
-                    "Error loading clinics:\n" + ex.Message + "\n\nSQL was:\n" + sql,
-                    "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
+            _loginId = loginId;
             flpClinics.Controls.Clear();
 
-            foreach (var (id, name, address) in clinics)
+            using var conn = new OleDbConnection(CONN);
+            conn.Open();
+
+            using var cmd = new OleDbCommand(
+                "SELECT C.ClinicID, C.ClinicName, C.Address, C.Picture " +
+                "FROM Doctors D " +
+                "INNER JOIN Clinics C ON D.ClinicID = C.ClinicID " +
+                "WHERE D.LoginID = ?", conn);
+            cmd.Parameters.AddWithValue("?", int.Parse(loginId));
+
+            using var rdr = cmd.ExecuteReader();
+            while (rdr.Read())
             {
                 var card = CreateCardFromTemplate();
                 card.Visible = true;
 
                 if (card.Controls["pbxClinic"] is PictureBox pbx)
                 {
-                    string png = Path.Combine(imageFolderPath, name + ".png");
-                    string jpg = Path.Combine(imageFolderPath, name + ".jpg");
-                    if (File.Exists(png)) pbx.Image = Image.FromFile(png);
-                    else if (File.Exists(jpg)) pbx.Image = Image.FromFile(jpg);
-                    else pbx.Image = null;
+                    // Handle the image from the database
+                    object pictureData = rdr["Picture"];
+                    if (pictureData != DBNull.Value)
+                    {
+                        try
+                        {
+                            if (pictureData is byte[] bytes)
+                            {
+                                using (var ms = new MemoryStream(bytes))
+                                {
+                                    pbx.Image?.Dispose(); // Dispose of previous image if any
+                                    pbx.Image = Image.FromStream(ms);
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Error loading image: {ex.Message}", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
                     pbx.SizeMode = PictureBoxSizeMode.Zoom;
                 }
 
                 if (card.Controls["lblName"] is Label lblName)
-                    lblName.Text = name;
+                    lblName.Text = rdr["ClinicName"]?.ToString() ?? "Unnamed Clinic";
 
                 if (card.Controls["lblLocation"] is Label lblLoc)
-                    lblLoc.Text = address;
+                    lblLoc.Text = rdr["Address"]?.ToString() ?? "No address provided";
 
                 if (card.Controls["btnEdit"] is Button btn)
                 {
-                    btn.Tag = id;
+                    btn.Tag = rdr.GetInt32(0);
                     btn.Click -= BtnEdit_Click;
                     btn.Click += BtnEdit_Click;
                 }
@@ -100,7 +95,22 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
         private void BtnEdit_Click(object sender, EventArgs e)
         {
             if (sender is Button btn && btn.Tag is int clinicId)
-                EditRequested?.Invoke(clinicId);
+            {
+                var popup = new Form();
+                var editCtl = new EditClinic(clinicId);
+                editCtl.Dock = DockStyle.Fill;
+                popup.ClientSize = editCtl.PreferredSize;
+                popup.Controls.Add(editCtl);
+
+                // Subscribe to the ChangesSaved event
+                editCtl.ChangesSaved += (s, args) =>
+                {
+                    popup.Close();
+                    LoadMyClinics(_loginId); // Refresh the clinic list
+                };
+
+                popup.ShowDialog(this);
+            }
         }
 
         private Panel CreateCardFromTemplate()
@@ -142,12 +152,18 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
 
         private void label1_Click(object sender, EventArgs e)
         {
-            var popup = new Form { /* … your sizing/styling … */ };
+            var popup = new Form
+            {
+                StartPosition = FormStartPosition.CenterParent,
+                FormBorderStyle = FormBorderStyle.FixedDialog,
+                MaximizeBox = false,
+                MinimizeBox = false,
+                ClientSize = new Size(800, 600)  // Standard size for the AddClinic form
+            };
 
             // pass in the stored loginId (_loginId) so AddClinic can link it
             var addCtl = new AddClinic(int.Parse(_loginId));
             addCtl.Dock = DockStyle.Fill;
-            popup.ClientSize = addCtl.PreferredSize;
             popup.Controls.Add(addCtl);
 
             // when AddClinic tells us it's done, close & reload

@@ -23,6 +23,7 @@
     <PackageReference Include="Jenga.NET" Version="4.0.0" />
     <PackageReference Include="LiveCharts.WinForms" Version="0.9.7.1" />
     <PackageReference Include="mailgun_csharp" Version="0.9.0" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.3179.45" />
     <PackageReference Include="ReaLTaiizor" Version="3.8.1.2" />
     <PackageReference Include="RestSharp" Version="112.1.0" />
     <PackageReference Include="System.Data.OleDb" Version="9.0.3" />

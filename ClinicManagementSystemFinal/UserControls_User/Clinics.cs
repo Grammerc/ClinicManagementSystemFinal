@@ -63,7 +63,7 @@ namespace ClinicManagementSystemFinal.UserControls_User
             cbxTimeSlot.Items.Clear();
             cbxServices.Items.Clear();
 
-            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\Downloads\Login.accdb;";
+            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\source\repos\ClinicManagementSystemFinal\ClinicManagementSystemFinal\Login.accdb;";
             using (OleDbConnection conn = new OleDbConnection(connStr))
             {
                 conn.Open();
@@ -111,7 +111,7 @@ namespace ClinicManagementSystemFinal.UserControls_User
         private void ApplyClinicFilters()
         {
             const int maxPanels = 6;
-            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\Downloads\Login.accdb;";
+            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\source\repos\ClinicManagementSystemFinal\ClinicManagementSystemFinal\Login.accdb;";
             using (var conn = new OleDbConnection(connStr))
             {
                 conn.Open();

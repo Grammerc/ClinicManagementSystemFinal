@@ -15,7 +15,7 @@ namespace ClinicManagementSystemFinal.UserInterface
         private readonly string myLoginId;
         private readonly string myRole;
         private bool _isSecretary;
-        private const string CONN = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\Downloads\Login.accdb;Persist Security Info=False;";
+        private const string CONN = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\source\repos\ClinicManagementSystemFinal\ClinicManagementSystemFinal\Login.accdb;Persist Security Info=False;";
         public FindPeople(string loginId, bool isSecretary)
         {
             InitializeComponent();

@@ -73,15 +73,6 @@
             pictureBox4 = new PictureBox();
             lblHoursWorked = new Label();
             panel3 = new Panel();
-            panelView = new Panel();
-            label7 = new Label();
-            flpLastPatients = new FlowLayoutPanel();
-            LastPatientCard = new Panel();
-            pbxProfile = new PictureBox();
-            lblReason = new Label();
-            lblDate = new Label();
-            lblName = new Label();
-            btnView = new Label();
             chartStats = new Guna.Charts.WinForms.GunaChart();
             dsCompleted = new Guna.Charts.WinForms.GunaLineDataset();
             dsPending = new Guna.Charts.WinForms.GunaLineDataset();
@@ -95,7 +86,16 @@
             colName = new DataGridViewTextBoxColumn();
             colReason = new DataGridViewTextBoxColumn();
             panel1 = new Panel();
+            panelView = new Panel();
+            label7 = new Label();
+            flpLastPatients = new FlowLayoutPanel();
+            LastPatientCard = new Panel();
+            pbxProfile = new PictureBox();
+            lblReason = new Label();
+            lblDate = new Label();
+            lblName = new Label();
             guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(components);
+            btnView = new Label();
             paneldashboard1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             paneldashboard2.SuspendLayout();
@@ -107,14 +107,14 @@
             paneldashboard4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             panel3.SuspendLayout();
-            panelView.SuspendLayout();
-            flpLastPatients.SuspendLayout();
-            LastPatientCard.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pbxProfile).BeginInit();
             guna2Panel7.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvToday).BeginInit();
             panel1.SuspendLayout();
+            panelView.SuspendLayout();
+            flpLastPatients.SuspendLayout();
+            LastPatientCard.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pbxProfile).BeginInit();
             SuspendLayout();
             // 
             // label4
@@ -393,93 +393,6 @@
             panel3.TabIndex = 2;
             panel3.Paint += panel3_Paint;
             // 
-            // panelView
-            // 
-            panelView.Controls.Add(label7);
-            panelView.Controls.Add(flpLastPatients);
-            panelView.Controls.Add(btnView);
-            panelView.Dock = DockStyle.Right;
-            panelView.Location = new Point(593, 155);
-            panelView.Name = "panelView";
-            panelView.Size = new Size(200, 507);
-            panelView.TabIndex = 0;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(6, 10);
-            label7.Name = "label7";
-            label7.Size = new Size(68, 15);
-            label7.TabIndex = 1;
-            label7.Text = "Last Patient";
-            // 
-            // flpLastPatients
-            // 
-            flpLastPatients.AutoScroll = true;
-            flpLastPatients.Controls.Add(LastPatientCard);
-            flpLastPatients.Dock = DockStyle.Bottom;
-            flpLastPatients.FlowDirection = FlowDirection.TopDown;
-            flpLastPatients.Location = new Point(0, 39);
-            flpLastPatients.Name = "flpLastPatients";
-            flpLastPatients.Size = new Size(200, 468);
-            flpLastPatients.TabIndex = 3;
-            // 
-            // LastPatientCard
-            // 
-            LastPatientCard.Anchor = AnchorStyles.Top;
-            LastPatientCard.Controls.Add(pbxProfile);
-            LastPatientCard.Controls.Add(lblReason);
-            LastPatientCard.Controls.Add(lblDate);
-            LastPatientCard.Controls.Add(lblName);
-            LastPatientCard.Location = new Point(3, 3);
-            LastPatientCard.Name = "LastPatientCard";
-            LastPatientCard.Size = new Size(200, 79);
-            LastPatientCard.TabIndex = 1;
-            // 
-            // pbxProfile
-            // 
-            pbxProfile.Location = new Point(3, 13);
-            pbxProfile.Name = "pbxProfile";
-            pbxProfile.Size = new Size(64, 57);
-            pbxProfile.TabIndex = 3;
-            pbxProfile.TabStop = false;
-            // 
-            // lblReason
-            // 
-            lblReason.AutoSize = true;
-            lblReason.Location = new Point(67, 55);
-            lblReason.Name = "lblReason";
-            lblReason.Size = new Size(105, 15);
-            lblReason.TabIndex = 2;
-            lblReason.Text = "Reason for Visiting";
-            // 
-            // lblDate
-            // 
-            lblDate.AutoSize = true;
-            lblDate.Location = new Point(67, 37);
-            lblDate.Name = "lblDate";
-            lblDate.Size = new Size(135, 15);
-            lblDate.TabIndex = 1;
-            lblDate.Text = "Date Visited In the Clinic";
-            // 
-            // lblName
-            // 
-            lblName.AutoSize = true;
-            lblName.Location = new Point(67, 19);
-            lblName.Name = "lblName";
-            lblName.Size = new Size(118, 15);
-            lblName.TabIndex = 0;
-            lblName.Text = "Name of the Patients";
-            // 
-            // btnView
-            // 
-            btnView.AutoSize = true;
-            btnView.Location = new Point(145, 10);
-            btnView.Name = "btnView";
-            btnView.Size = new Size(49, 15);
-            btnView.TabIndex = 0;
-            btnView.Text = "View All";
-            // 
             // chartStats
             // 
             chartStats.Datasets.AddRange(new Guna.Charts.Interfaces.IGunaDataset[] { dsCompleted, dsPending, dsNewPatients, dsHoursWorked });
@@ -659,6 +572,93 @@
             panel1.Size = new Size(593, 260);
             panel1.TabIndex = 4;
             // 
+            // panelView
+            // 
+            panelView.Controls.Add(label7);
+            panelView.Controls.Add(flpLastPatients);
+            panelView.Dock = DockStyle.Right;
+            panelView.Location = new Point(593, 155);
+            panelView.Name = "panelView";
+            panelView.Size = new Size(200, 507);
+            panelView.TabIndex = 0;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(6, -2);
+            label7.Name = "label7";
+            label7.Size = new Size(68, 15);
+            label7.TabIndex = 1;
+            label7.Text = "Last Patient";
+            // 
+            // flpLastPatients
+            // 
+            flpLastPatients.AutoScroll = true;
+            flpLastPatients.Controls.Add(LastPatientCard);
+            flpLastPatients.Dock = DockStyle.Top;
+            flpLastPatients.FlowDirection = FlowDirection.TopDown;
+            flpLastPatients.Location = new Point(0, 0);
+            flpLastPatients.Name = "flpLastPatients";
+            flpLastPatients.Size = new Size(200, 468);
+            flpLastPatients.TabIndex = 3;
+            // 
+            // LastPatientCard
+            // 
+            LastPatientCard.Anchor = AnchorStyles.Top;
+            LastPatientCard.Controls.Add(btnView);
+            LastPatientCard.Controls.Add(pbxProfile);
+            LastPatientCard.Controls.Add(lblReason);
+            LastPatientCard.Controls.Add(lblDate);
+            LastPatientCard.Controls.Add(lblName);
+            LastPatientCard.Location = new Point(3, 3);
+            LastPatientCard.Name = "LastPatientCard";
+            LastPatientCard.Size = new Size(200, 79);
+            LastPatientCard.TabIndex = 1;
+            // 
+            // pbxProfile
+            // 
+            pbxProfile.Location = new Point(3, 13);
+            pbxProfile.Name = "pbxProfile";
+            pbxProfile.Size = new Size(64, 57);
+            pbxProfile.TabIndex = 3;
+            pbxProfile.TabStop = false;
+            // 
+            // lblReason
+            // 
+            lblReason.AutoSize = true;
+            lblReason.Location = new Point(67, 55);
+            lblReason.Name = "lblReason";
+            lblReason.Size = new Size(105, 15);
+            lblReason.TabIndex = 2;
+            lblReason.Text = "Reason for Visiting";
+            // 
+            // lblDate
+            // 
+            lblDate.AutoSize = true;
+            lblDate.Location = new Point(67, 37);
+            lblDate.Name = "lblDate";
+            lblDate.Size = new Size(135, 15);
+            lblDate.TabIndex = 1;
+            lblDate.Text = "Date Visited In the Clinic";
+            // 
+            // lblName
+            // 
+            lblName.AutoSize = true;
+            lblName.Location = new Point(67, 19);
+            lblName.Name = "lblName";
+            lblName.Size = new Size(118, 15);
+            lblName.TabIndex = 0;
+            lblName.Text = "Name of the Patients";
+            // 
+            // btnView
+            // 
+            btnView.AutoSize = true;
+            btnView.Location = new Point(145, -3);
+            btnView.Name = "btnView";
+            btnView.Size = new Size(49, 15);
+            btnView.TabIndex = 5;
+            btnView.Text = "View All";
+            // 
             // Dashboard_Doctors
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -682,17 +682,17 @@
             paneldashboard4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             panel3.ResumeLayout(false);
+            guna2Panel7.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvToday).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             panelView.ResumeLayout(false);
             panelView.PerformLayout();
             flpLastPatients.ResumeLayout(false);
             LastPatientCard.ResumeLayout(false);
             LastPatientCard.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbxProfile).EndInit();
-            guna2Panel7.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvToday).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -724,15 +724,6 @@
         private Guna.Charts.WinForms.GunaLineDataset dsPending;
         private Guna.Charts.WinForms.GunaLineDataset dsNewPatients;
         private Guna.Charts.WinForms.GunaLineDataset dsHoursWorked;
-        private FlowLayoutPanel flpLastPatients;
-        private Panel LastPatientCard;
-        private Label lblReason;
-        private Label lblDate;
-        private Label lblName;
-        private Panel panelView;
-        private Label label7;
-        private Label btnView;
-        private PictureBox pbxProfile;
         private Panel panel1;
         private Panel panel2;
         private Guna.UI2.WinForms.Guna2DataGridView dgvToday;
@@ -744,5 +735,14 @@
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
         private PictureBox pictureBox4;
+        private Panel panelView;
+        private Label label7;
+        private FlowLayoutPanel flpLastPatients;
+        private Panel LastPatientCard;
+        private PictureBox pbxProfile;
+        private Label lblReason;
+        private Label lblDate;
+        private Label lblName;
+        private Label btnView;
     }
 }

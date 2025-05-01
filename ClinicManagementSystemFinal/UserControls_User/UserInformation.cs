@@ -17,7 +17,7 @@ namespace ClinicManagementSystemFinal
         private readonly string _loginId;
         private string _selectedImagePath;
         private const string CONN =
-            @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\Downloads\Login.accdb;Persist Security Info=False;";
+            @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\source\repos\ClinicManagementSystemFinal\ClinicManagementSystemFinal\Login.accdb;Persist Security Info=False;";
         public UserInformation(string loginId)
         {
             InitializeComponent();

@@ -21,7 +21,7 @@ namespace ClinicManagementSystemFinal
         public SignIn()
         {
             InitializeComponent();
-            conn.ConnectionString = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = ""C:\Users\Raphael\Downloads\Login.accdb"";
+            conn.ConnectionString = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = ""C:\Users\Raphael\source\repos\ClinicManagementSystemFinal\ClinicManagementSystemFinal\Login.accdb"";
             Persist Security Info=False;";
             tbxPassword.UseSystemPasswordChar = true;
             tbxEmail.ForeColor = Color.DarkGray;
@@ -52,7 +52,7 @@ namespace ClinicManagementSystemFinal
             string rawRoleId;
             bool loginOk;
 
-            using (var conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\Downloads\Login.accdb;Persist Security Info=False;"))
+            using (var conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\source\repos\ClinicManagementSystemFinal\ClinicManagementSystemFinal\Login.accdb;Persist Security Info=False;"))
             {
                 conn.Open();
                 using (var cmd = new OleDbCommand("SELECT LoginID, RoleID FROM Account WHERE username = @username AND password = @password", conn))

@@ -31,60 +31,92 @@ namespace ClinicManagementSystemFinal.UserInterface
             {
                 conn.Open();
 
-                // 1) Basic doctor info
+                // Get doctor's information
                 using (var cmd = new OleDbCommand(@"
-SELECT
+SELECT 
     I.Name,
+    I.ProfilePicture,
     D.Specialization,
-    I.ProfileImagePath,
-    I.ProfilePicture
-  FROM Information AS I
-  INNER JOIN Doctors AS D
-    ON I.LoginID = D.LoginID
- WHERE I.LoginID = ?", conn))
+    I.Email,
+    I.PhoneNumber,
+    I.Address,
+    I.Gender,
+    I.BloodType
+FROM Information I
+INNER JOIN Doctors D ON I.LoginID = D.LoginID
+WHERE I.LoginID = ?", conn))
                 {
                     cmd.Parameters.AddWithValue("?", loginId);
                     using (var rdr = cmd.ExecuteReader())
                     {
                         if (rdr.Read())
                         {
-                            lblName.Text = rdr["Name"].ToString();
-                            lblSpec.Text = rdr["Specialization"].ToString();
+                            string name = rdr["Name"]?.ToString() ?? "N/A";
+                            string specialization = rdr["Specialization"]?.ToString() ?? "N/A";
 
-                            // load picture: prefer file path, else blob
-                            var path = rdr["ProfileImagePath"].ToString();
-                            var blob = rdr["ProfilePicture"] as byte[];
-                            if (!string.IsNullOrWhiteSpace(path) && File.Exists(path))
+                            // Set the labels
+                            lblName.Text = name;
+                            lblBigName.Text = name;
+                            lblJobTitle.Text = specialization;
+
+                            // Handle profile picture
+                            var pictureData = rdr["ProfilePicture"];
+                            if (pictureData != DBNull.Value && pictureData is byte[] imageBytes)
                             {
-                                pbxProfile.Image = Image.FromFile(path);
+                                try
+                                {
+                                    using (var ms = new MemoryStream(imageBytes))
+                                    {
+                                        pbxProfile.Image?.Dispose();
+                                        pbxProfile.Image = Image.FromStream(ms);
+                                        pbxProfile.SizeMode = PictureBoxSizeMode.Zoom;
+                                    }
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show($"Error loading profile picture: {ex.Message}", "Warning",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                }
                             }
-                            else if (blob != null && blob.Length > 0)
-                            {
-                                using var ms = new MemoryStream(blob);
-                                pbxProfile.Image = Image.FromStream(ms);
-                            }
-                            pbxProfile.SizeMode = PictureBoxSizeMode.Zoom;
                         }
                     }
                 }
 
-                // 2) Clinics list
-                var dt = new DataTable();
-                using (var da = new OleDbDataAdapter(@"
-SELECT
-    C.ClinicName
-  FROM Clinics AS C
-  INNER JOIN Doctors AS D
-    ON C.ClinicID = D.ClinicID
- WHERE D.LoginID = ?", conn))
+                // Get clinics information
+                using (var cmd = new OleDbCommand(@"
+SELECT 
+    C.ClinicName,
+    IIF(C.Address IS NULL, '', ' - ' & C.Address) & 
+    IIF(C.PhoneNumber IS NULL, '', ' (' & C.PhoneNumber & ')') as AdditionalInfo
+FROM Clinics C
+INNER JOIN Doctors D ON C.ClinicID = D.ClinicID
+WHERE D.LoginID = ?
+ORDER BY C.ClinicName", conn))
                 {
-                    da.SelectCommand.Parameters.AddWithValue("?", loginId);
-                    da.Fill(dt);
-                }
+                    cmd.Parameters.AddWithValue("?", loginId);
+                    
+                    var dt = new DataTable();
+                    using (var da = new OleDbDataAdapter(cmd))
+                    {
+                        da.Fill(dt);
+                    }
 
-                listClinics.DataSource = dt;
-                listClinics.DisplayMember = "ClinicName";
-                listClinics.ValueMember = "ClinicName";
+                    // Create a formatted list for the ListBox
+                    var formattedList = new DataTable();
+                    formattedList.Columns.Add("DisplayText", typeof(string));
+                    formattedList.Columns.Add("ClinicName", typeof(string));
+
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        string clinicName = row["ClinicName"]?.ToString() ?? "";
+                        string additionalInfo = row["AdditionalInfo"]?.ToString() ?? "";
+                        formattedList.Rows.Add(clinicName + additionalInfo, clinicName);
+                    }
+
+                    listClinics.DataSource = formattedList;
+                    listClinics.DisplayMember = "DisplayText";
+                    listClinics.ValueMember = "ClinicName";
+                }
             }
         }
     }

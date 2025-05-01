@@ -30,20 +30,30 @@
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            panelMain = new FlowLayoutPanel();
-            tbxName = new Guna.UI2.WinForms.Guna2TextBox();
-            cbxRole = new ComboBox();
             cbxSpec = new ComboBox();
+            cbxRole = new ComboBox();
+            tbxName = new Guna.UI2.WinForms.Guna2TextBox();
+            panel1 = new Panel();
+            panelMain = new FlowLayoutPanel();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // panelMain
+            // cbxSpec
             // 
-            panelMain.AutoScroll = true;
-            panelMain.Dock = DockStyle.Bottom;
-            panelMain.Location = new Point(0, 67);
-            panelMain.Name = "panelMain";
-            panelMain.Size = new Size(793, 595);
-            panelMain.TabIndex = 1;
+            cbxSpec.FormattingEnabled = true;
+            cbxSpec.Location = new Point(3, 24);
+            cbxSpec.Name = "cbxSpec";
+            cbxSpec.Size = new Size(164, 23);
+            cbxSpec.TabIndex = 4;
+            // 
+            // cbxRole
+            // 
+            cbxRole.FormattingEnabled = true;
+            cbxRole.Location = new Point(203, 24);
+            cbxRole.Name = "cbxRole";
+            cbxRole.Size = new Size(121, 23);
+            cbxRole.TabIndex = 3;
+            cbxRole.Visible = false;
             // 
             // tbxName
             // 
@@ -56,7 +66,7 @@
             tbxName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             tbxName.Font = new Font("Segoe UI", 9F);
             tbxName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbxName.Location = new Point(573, 12);
+            tbxName.Location = new Point(577, 11);
             tbxName.Name = "tbxName";
             tbxName.PlaceholderText = "";
             tbxName.SelectedText = "";
@@ -64,40 +74,43 @@
             tbxName.Size = new Size(200, 36);
             tbxName.TabIndex = 2;
             // 
-            // cbxRole
+            // panel1
             // 
-            cbxRole.FormattingEnabled = true;
-            cbxRole.Location = new Point(52, 25);
-            cbxRole.Name = "cbxRole";
-            cbxRole.Size = new Size(121, 23);
-            cbxRole.TabIndex = 3;
+            panel1.Controls.Add(cbxRole);
+            panel1.Controls.Add(tbxName);
+            panel1.Controls.Add(cbxSpec);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(793, 67);
+            panel1.TabIndex = 3;
             // 
-            // cbxSpec
+            // panelMain
             // 
-            cbxSpec.FormattingEnabled = true;
-            cbxSpec.Location = new Point(228, 25);
-            cbxSpec.Name = "cbxSpec";
-            cbxSpec.Size = new Size(121, 23);
-            cbxSpec.TabIndex = 4;
+            panelMain.AutoScroll = true;
+            panelMain.Dock = DockStyle.Top;
+            panelMain.Location = new Point(0, 67);
+            panelMain.Name = "panelMain";
+            panelMain.Size = new Size(793, 595);
+            panelMain.TabIndex = 4;
             // 
             // FindPeople
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(cbxSpec);
-            Controls.Add(cbxRole);
-            Controls.Add(tbxName);
             Controls.Add(panelMain);
+            Controls.Add(panel1);
             Name = "FindPeople";
             Size = new Size(793, 662);
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
-
-        private FlowLayoutPanel panelMain;
         private Guna.UI2.WinForms.Guna2TextBox tbxName;
         private ComboBox cbxRole;
         private ComboBox cbxSpec;
+        private Panel panel1;
+        private FlowLayoutPanel panelMain;
     }
 }

@@ -1,5 +1,4 @@
-﻿
-using System.Data.OleDb;
+﻿using System.Data.OleDb;
 using System;
 using System.Collections.Generic;
 using System.Data.OleDb;
@@ -41,7 +40,7 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors.Appointment
         /* --------  populate clinic combo  -------- */
         private void PopulateClinicCombo()
         {
-            cbxClinic.Items.Clear();                 // ② NO “All Clinics”
+            cbxClinic.Items.Clear();                 // ② NO "All Clinics"
 
             using var conn = new OleDbConnection(CONN);
             conn.Open();
@@ -168,11 +167,116 @@ WHERE
         {
             using var conn = new OleDbConnection(CONN);
             conn.Open();
-            using var cmd = new OleDbCommand(
-                "UPDATE Appointments SET [Status] = ? WHERE AppointmentID = ?", conn);
-            cmd.Parameters.AddWithValue("?", status);
-            cmd.Parameters.AddWithValue("?", apptId);
-            cmd.ExecuteNonQuery();
+            
+            // First get the appointment details for email
+            string email = "N/A";
+            string userName = "N/A";
+            string clinicName = "N/A";
+            DateTime appointmentDate = DateTime.Now;
+            string timeSlot = "N/A";
+            
+            if (status == "Approved")
+            {
+                try
+                {
+                    using var getDetailsCmd = new OleDbCommand(
+                        @"SELECT a.AppointmentID, a.AppointmentDate, a.TimeSlot, a.Status,
+                                 i.Email,
+                                 i.Name as UserName,
+                                 c.ClinicName
+                          FROM ((Appointments a
+                          INNER JOIN Information i ON a.UserInfoID = i.UserInfoID)
+                          INNER JOIN Clinics c ON a.ClinicID = c.ClinicID)
+                          WHERE a.AppointmentID = ?", conn);
+                    getDetailsCmd.Parameters.AddWithValue("?", apptId);
+                    
+                    using var rdr = getDetailsCmd.ExecuteReader();
+                    if (rdr.Read())
+                    {
+                        // Use null-coalescing operator to provide default values
+                        email = rdr["Email"]?.ToString() ?? "N/A";
+                        userName = rdr["UserName"]?.ToString() ?? "N/A";
+                        clinicName = rdr["ClinicName"]?.ToString() ?? "N/A";
+                        timeSlot = rdr["TimeSlot"]?.ToString() ?? "N/A";
+                        
+                        // Handle DateTime separately to avoid conversion errors
+                        if (rdr["AppointmentDate"] != DBNull.Value)
+                        {
+                            appointmentDate = Convert.ToDateTime(rdr["AppointmentDate"]);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Log the error but continue with default values
+                    System.Diagnostics.Debug.WriteLine($"Error retrieving appointment details: {ex.Message}");
+                }
+            }
+            
+            // Update the status
+            try
+            {
+                using var cmd = new OleDbCommand(
+                    "UPDATE Appointments SET Status = ? WHERE AppointmentID = ?", conn);
+                cmd.Parameters.AddWithValue("?", status);
+                cmd.Parameters.AddWithValue("?", apptId);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error updating appointment status: {ex.Message}", 
+                    "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            
+            // If approved, send confirmation email
+            if (status == "Approved")
+            {
+                try
+                {
+                    using var smtpClient = new System.Net.Mail.SmtpClient("smtp.gmail.com", 587)
+                    {
+                        EnableSsl = true,
+                        UseDefaultCredentials = false,
+                        Credentials = new System.Net.NetworkCredential("ClinicManagementSystemC@gmail.com", "hyop ejoi vhlm miss"),
+                        DeliveryMethod = System.Net.Mail.SmtpDeliveryMethod.Network,
+                        Timeout = 30000
+                    };
+
+                    var mailMessage = new System.Net.Mail.MailMessage
+                    {
+                        From = new System.Net.Mail.MailAddress("ClinicManagementSystemC@gmail.com", "Clinic Management System"),
+                        Subject = "Appointment Approved",
+                        Body = $@"Dear {userName},
+
+Your appointment at {clinicName} on {appointmentDate:MMMM dd, yyyy} at {timeSlot} has been approved.
+
+Please arrive 15 minutes before your scheduled appointment time.
+
+Best regards,
+Clinic Management System",
+                        IsBodyHtml = false,
+                        Priority = System.Net.Mail.MailPriority.High
+                    };
+
+                    // Only add email recipient if we have a valid email
+                    if (email != "N/A" && email.Contains("@"))
+                    {
+                        mailMessage.To.Add(new System.Net.Mail.MailAddress(email));
+                        smtpClient.Send(mailMessage);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Appointment was approved but no valid email address was found to send the confirmation.", 
+                            "Email Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Appointment was approved but email could not be sent: {ex.Message}", 
+                        "Email Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
         }
 
         /* ---------- 4. Helper class for ComboBox ---------- */

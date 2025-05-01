@@ -108,8 +108,10 @@
             // 
             // flpClinics
             // 
+            flpClinics.AutoScroll = true;
             flpClinics.Controls.Add(pnlTemplate);
             flpClinics.Dock = DockStyle.Fill;
+            flpClinics.FlowDirection = FlowDirection.TopDown;
             flpClinics.Location = new Point(0, 47);
             flpClinics.Name = "flpClinics";
             flpClinics.Size = new Size(793, 484);

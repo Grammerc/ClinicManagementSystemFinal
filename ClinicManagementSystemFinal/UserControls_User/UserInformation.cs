@@ -45,44 +45,65 @@ namespace ClinicManagementSystemFinal
 
         private void UserInformation_Load(object sender, EventArgs e)
         {
-            using var conn = new OleDbConnection(CONN);
-            conn.Open();
-
-            var cmd = new OleDbCommand(@"
-        SELECT 
-            A.username,
-            A.[Name]        AS FullName,
-            I.Email,
-            I.City,
-            I.PhoneNumber,
-            I.EmergencyContact,
-            I.EmergencyPhone,
-            I.ProfileImagePath
-        FROM Account AS A
-        INNER JOIN Information AS I
-          ON A.LoginID = I.LoginID
-        WHERE A.LoginID = ?
-    ", conn);
-            cmd.Parameters.AddWithValue("?", _loginId);
-
-            using var rdr = cmd.ExecuteReader();
-            if (rdr.Read())
+            try
             {
-                tbxUsername.Text = rdr["username"]?.ToString() ?? "";
-                tbxName.Text = rdr["FullName"]?.ToString() ?? "";
-                tbxEmail.Text = rdr["Email"]?.ToString() ?? "";
-                tbxCity.Text = rdr["City"]?.ToString() ?? "";
-                tbxPhone.Text = rdr["PhoneNumber"]?.ToString() ?? "";
-                tbxEmergency.Text = rdr["EmergencyContact"]?.ToString() ?? "";
-                tbxEmergencyPhone.Text = rdr["EmergencyPhone"]?.ToString() ?? "";
+                using var conn = new OleDbConnection(CONN);
+                conn.Open();
 
-                var path = rdr["ProfileImagePath"]?.ToString();
-                if (!string.IsNullOrEmpty(path) && File.Exists(path))
+                var cmd = new OleDbCommand(@"
+                    SELECT 
+                        A.username,
+                        I.Name,
+                        I.Email,
+                        I.Address,
+                        I.PhoneNumber,
+                        I.EmergencyContact,
+                        I.ProfileImagePath
+                    FROM Account AS A
+                    LEFT JOIN Information AS I ON A.LoginID = I.LoginID
+                    WHERE A.LoginID = ?", conn);
+
+                cmd.Parameters.AddWithValue("?", _loginId);
+
+                using var rdr = cmd.ExecuteReader();
+                if (rdr.Read())
                 {
-                    _selectedImagePath = path;
-                    pbxProfile.Image = Image.FromFile(path);
-                    pbxProfile.SizeMode = PictureBoxSizeMode.Zoom;
+                    tbxUsername.Text = rdr["username"]?.ToString() ?? "N/A";
+                    tbxName.Text = rdr["Name"]?.ToString() ?? "N/A";
+                    tbxEmail.Text = rdr["Email"]?.ToString() ?? "N/A";
+                    tbxCity.Text = rdr["Address"]?.ToString() ?? "N/A";
+                    tbxPhone.Text = rdr["PhoneNumber"]?.ToString() ?? "N/A";
+                    tbxEmergency.Text = rdr["EmergencyContact"]?.ToString() ?? "N/A";
+                    tbxEmergencyPhone.Text = rdr["PhoneNumber"]?.ToString() ?? "N/A";
+
+                    var path = rdr["ProfileImagePath"]?.ToString();
+                    if (!string.IsNullOrEmpty(path) && File.Exists(path))
+                    {
+                        _selectedImagePath = path;
+                        if (pbxProfile.Image != null)
+                        {
+                            pbxProfile.Image.Dispose();
+                            pbxProfile.Image = null;
+                        }
+                        pbxProfile.Image = Image.FromFile(path);
+                        pbxProfile.SizeMode = PictureBoxSizeMode.Zoom;
+                    }
                 }
+                else
+                {
+                    tbxUsername.Text = "N/A";
+                    tbxName.Text = "N/A";
+                    tbxEmail.Text = "N/A";
+                    tbxCity.Text = "N/A";
+                    tbxPhone.Text = "N/A";
+                    tbxEmergency.Text = "N/A";
+                    tbxEmergencyPhone.Text = "N/A";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading user information: {ex.Message}", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -100,33 +121,66 @@ namespace ClinicManagementSystemFinal
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            using var conn = new OleDbConnection(CONN);
-            conn.Open();
-            using var tran = conn.BeginTransaction();
+            try
+            {
+                using var conn = new OleDbConnection(CONN);
+                conn.Open();
+                using var tran = conn.BeginTransaction();
 
-            var cmdAcc = new OleDbCommand(
-                "UPDATE Account SET username = ?, [Name] = ? WHERE LoginID = ?", conn, tran);
-            cmdAcc.Parameters.AddWithValue("?", tbxUsername.Text.Trim());
-            cmdAcc.Parameters.AddWithValue("?", tbxName.Text.Trim());
-            cmdAcc.Parameters.AddWithValue("?", _loginId);
-            cmdAcc.ExecuteNonQuery();
+                // 1) Update Account table - only username
+                var cmdAcc = new OleDbCommand(
+                    "UPDATE Account SET username = ? WHERE LoginID = ?", conn, tran);
+                cmdAcc.Parameters.AddWithValue("?", tbxUsername.Text.Trim());
+                cmdAcc.Parameters.AddWithValue("?", _loginId);
+                cmdAcc.ExecuteNonQuery();
 
-            var cmdInfo = new OleDbCommand(
-                "UPDATE Information SET Email = ?, City = ?, PhoneNumber = ?, " +
-                "EmergencyContact = ?, EmergencyPhone = ?, ProfileImagePath = ? " +
-                "WHERE LoginID = ?", conn, tran);
-            cmdInfo.Parameters.AddWithValue("?", tbxEmail.Text.Trim());
-            cmdInfo.Parameters.AddWithValue("?", tbxCity.Text.Trim());
-            cmdInfo.Parameters.AddWithValue("?", tbxPhone.Text.Trim());
-            cmdInfo.Parameters.AddWithValue("?", tbxEmergency.Text.Trim());
-            cmdInfo.Parameters.AddWithValue("?", tbxEmergencyPhone.Text.Trim());
-            cmdInfo.Parameters.AddWithValue("?", _selectedImagePath ?? "");
-            cmdInfo.Parameters.AddWithValue("?", _loginId);
-            cmdInfo.ExecuteNonQuery();
+                // 2) Check if Information record exists
+                var checkCmd = new OleDbCommand(
+                    "SELECT COUNT(*) FROM Information WHERE LoginID = ?", conn, tran);
+                checkCmd.Parameters.AddWithValue("?", _loginId);
+                int infoCount = (int)checkCmd.ExecuteScalar();
 
-            tran.Commit();
-            MessageBox.Show("Your changes have been saved.", "Success",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // 3) Update or Insert Information
+                if (infoCount > 0)
+                {
+                    // Update existing record
+                    var cmdInfo = new OleDbCommand(
+                        "UPDATE Information SET Name = ?, Email = ?, Address = ?, PhoneNumber = ?, EmergencyContact = ?, ProfileImagePath = ? WHERE LoginID = ?", 
+                        conn, tran);
+                    cmdInfo.Parameters.AddWithValue("?", tbxName.Text.Trim());
+                    cmdInfo.Parameters.AddWithValue("?", tbxEmail.Text.Trim());
+                    cmdInfo.Parameters.AddWithValue("?", tbxCity.Text.Trim());
+                    cmdInfo.Parameters.AddWithValue("?", tbxPhone.Text.Trim());
+                    cmdInfo.Parameters.AddWithValue("?", tbxEmergency.Text.Trim());
+                    cmdInfo.Parameters.AddWithValue("?", _selectedImagePath ?? "");
+                    cmdInfo.Parameters.AddWithValue("?", _loginId);
+                    cmdInfo.ExecuteNonQuery();
+                }
+                else
+                {
+                    // Insert new record
+                    var cmdInfo = new OleDbCommand(
+                        "INSERT INTO Information (LoginID, Name, Email, Address, PhoneNumber, EmergencyContact, ProfileImagePath) VALUES (?, ?, ?, ?, ?, ?, ?)", 
+                        conn, tran);
+                    cmdInfo.Parameters.AddWithValue("?", _loginId);
+                    cmdInfo.Parameters.AddWithValue("?", tbxName.Text.Trim());
+                    cmdInfo.Parameters.AddWithValue("?", tbxEmail.Text.Trim());
+                    cmdInfo.Parameters.AddWithValue("?", tbxCity.Text.Trim());
+                    cmdInfo.Parameters.AddWithValue("?", tbxPhone.Text.Trim());
+                    cmdInfo.Parameters.AddWithValue("?", tbxEmergency.Text.Trim());
+                    cmdInfo.Parameters.AddWithValue("?", _selectedImagePath ?? "");
+                    cmdInfo.ExecuteNonQuery();
+                }
+
+                tran.Commit();
+                MessageBox.Show("Your information has been saved successfully.", "Success",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error saving information: {ex.Message}", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)

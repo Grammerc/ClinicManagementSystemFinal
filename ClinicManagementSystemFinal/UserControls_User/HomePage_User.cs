@@ -21,6 +21,9 @@ namespace ClinicManagementSystemFinal
         private int borderSize = 2;
         private Size formSize;
         private string userLoginId;
+        private const string CONN =
+            @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\source\repos\ClinicManagementSystemFinal\ClinicManagementSystemFinal\Login.accdb;Persist Security Info=False;";
+
         public HomePage_User()
         {
             InitializeComponent();
@@ -271,38 +274,74 @@ namespace ClinicManagementSystemFinal
 
         private void LoadProfilePicture(string loginId)
         {
-            string connStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\source\repos\ClinicManagementSystemFinal\ClinicManagementSystemFinal\Login.accdb;Persist Security Info=False;";
-            using (OleDbConnection conn = new OleDbConnection(connStr))
+            const string sql = @"
+SELECT 
+    I.ProfileImagePath,
+    I.ProfilePicture,
+    I.Name
+FROM Information I
+WHERE I.LoginID = ?";
+
+            using var conn = new OleDbConnection(CONN);
+            try
             {
                 conn.Open();
-                OleDbCommand cmd = new OleDbCommand("SELECT ProfilePicture FROM Information WHERE LoginID = @loginId", conn);
-                cmd.Parameters.AddWithValue("@loginId", loginId);
-                object result = cmd.ExecuteScalar();
+                using var cmd = new OleDbCommand(sql, conn);
+                cmd.Parameters.Add("?", OleDbType.Integer).Value = Convert.ToInt32(loginId);
 
-                if (result != null && result != DBNull.Value)
+                using var rdr = cmd.ExecuteReader();
+                if (rdr.Read())
                 {
-                    byte[] imageBytes = (byte[])result;
-                    using (MemoryStream ms = new MemoryStream(imageBytes))
+                    // Handle profile picture
+                    Image img = null;
+                    var path = rdr["ProfileImagePath"]?.ToString();
+                    if (!string.IsNullOrEmpty(path) && File.Exists(path))
                     {
-                        Image original = Image.FromStream(ms);
-                        pbxProfilePic.Image = CropToCircle(original);
+                        img = Image.FromFile(path);
+                    }
+                    else if (rdr["ProfilePicture"] != DBNull.Value)
+                    {
+                        var blob = (byte[])rdr["ProfilePicture"];
+                        using var ms = new MemoryStream(blob);
+                        img = Image.FromStream(ms);
+                    }
+                    
+                    if (img != null)
+                    {
+                        pbxProfilePic.Image = CropToCircle(img);
                         pbxProfilePic.SizeMode = PictureBoxSizeMode.Zoom;
                         pbxProfilePic.BackColor = Color.Transparent;
                     }
+                    else
+                    {
+                        pbxProfilePic.Image = null;
+                    }
                 }
-
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading profile picture: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                pbxProfilePic.Image = null;
+            }
+            finally
+            {
                 conn.Close();
             }
         }
 
         private Image CropToCircle(Image srcImage)
         {
+            if (srcImage == null) return null;
+
             Bitmap dstImage = new Bitmap(srcImage.Width, srcImage.Height);
             using (Graphics g = Graphics.FromImage(dstImage))
             {
+                g.SmoothingMode = SmoothingMode.AntiAlias;
+                g.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                g.PixelOffsetMode = PixelOffsetMode.HighQuality;
+
                 using (Brush brush = new TextureBrush(srcImage))
                 {
-                    g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
                     GraphicsPath path = new GraphicsPath();
                     path.AddEllipse(0, 0, srcImage.Width, srcImage.Height);
                     g.FillPath(brush, path);

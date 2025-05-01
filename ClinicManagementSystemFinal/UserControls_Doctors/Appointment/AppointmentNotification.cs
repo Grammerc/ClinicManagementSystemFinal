@@ -259,16 +259,20 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors.Appointment
             try
             {
                 Debug.WriteLine($"Attempting to send email to {userEmail}");
+                
+                // Configure SMTP client with more reliable settings
                 using var smtpClient = new SmtpClient("smtp.gmail.com", 587)
                 {
                     EnableSsl = true,
+                    UseDefaultCredentials = false,
                     Credentials = new System.Net.NetworkCredential("ClinicManagementSystemC@gmail.com", "hyop ejoi vhlm miss"),
-                    DeliveryMethod = SmtpDeliveryMethod.Network
+                    DeliveryMethod = SmtpDeliveryMethod.Network,
+                    Timeout = 30000 // 30 seconds timeout
                 };
 
                 var mailMessage = new MailMessage
                 {
-                    From = new MailAddress("ClinicManagementSystemC@gmail.com"),
+                    From = new MailAddress("ClinicManagementSystemC@gmail.com", "Clinic Management System"),
                     Subject = "Appointment Reminder",
                     Body = $@"Dear {userName},
 
@@ -277,12 +281,28 @@ This is a reminder that you have an appointment at {clinicName} on {appointmentT
 Please arrive 15 minutes before your scheduled appointment time.
 
 Best regards,
-Clinic Management System"
+Clinic Management System",
+                    IsBodyHtml = false,
+                    Priority = MailPriority.High
                 };
 
-                mailMessage.To.Add(userEmail);
-                smtpClient.Send(mailMessage);
-                Debug.WriteLine($"Email sent successfully to {userEmail}");
+                mailMessage.To.Add(new MailAddress(userEmail));
+                
+                // Add error handling for the send operation
+                try
+                {
+                    smtpClient.Send(mailMessage);
+                    Debug.WriteLine($"Email sent successfully to {userEmail}");
+                }
+                catch (SmtpException smtpEx)
+                {
+                    Debug.WriteLine($"SMTP Error sending email: {smtpEx.StatusCode} - {smtpEx.Message}");
+                    if (smtpEx.InnerException != null)
+                    {
+                        Debug.WriteLine($"SMTP Inner exception: {smtpEx.InnerException.Message}");
+                    }
+                    throw; // Re-throw to be caught by outer try-catch
+                }
             }
             catch (Exception ex)
             {

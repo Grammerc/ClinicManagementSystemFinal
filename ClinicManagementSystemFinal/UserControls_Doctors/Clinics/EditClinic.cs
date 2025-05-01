@@ -22,6 +22,7 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
         {
             InitializeComponent();
             _clinicId = clinicId;
+            btnDelete.Click += btnDelete_Click;
 
             Load += EditClinic_Load;
             btnChange.Click += BtnChange_Click;
@@ -32,30 +33,19 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
         private void EditClinic_Load(object sender, EventArgs e)
         {
             try
-        {
-            using var conn = new OleDbConnection(CONN);
-            conn.Open();
-
-                // Debug: Show the SQL query
-                string sql = "SELECT ClinicName, Address, PhoneNumber, Email, Picture " +
-                            "FROM Clinics WHERE ClinicID = ?";
-                MessageBox.Show($"Executing query: {sql}\nWith ClinicID: {_clinicId}", "Debug Info");
-
-            // 1) Load basic clinic info:
-                using (var cmd = new OleDbCommand(sql, conn))
             {
-                cmd.Parameters.AddWithValue("?", _clinicId);
-                using var r = cmd.ExecuteReader();
-                if (r.Read())
-                {
-                        // Debug: Show what we got from the database
-                        string debugInfo = $"ClinicName: {r["ClinicName"]}\n" +
-                                         $"Address: {r["Address"]}\n" +
-                                         $"PhoneNumber: {r["PhoneNumber"]}\n" +
-                                         $"Email: {r["Email"]}";
-                        MessageBox.Show(debugInfo, "Loaded Data");
+                using var conn = new OleDbConnection(CONN);
+                conn.Open();
 
-                        // Make sure to set the clinic name
+                // 1) Load basic clinic info:
+                using (var cmd = new OleDbCommand(
+                    "SELECT ClinicName, Address, PhoneNumber, Email, Picture " +
+                    "FROM Clinics WHERE ClinicID = ?", conn))
+                {
+                    cmd.Parameters.AddWithValue("?", _clinicId);
+                    using var r = cmd.ExecuteReader();
+                    if (r.Read())
+                    {
                         tbxClinicName.Text = r["ClinicName"]?.ToString() ?? string.Empty;
                         tbxAddress.Text = r["Address"]?.ToString() ?? string.Empty;
                         tbxPhoneNumber.Text = r["PhoneNumber"]?.ToString() ?? string.Empty;
@@ -69,7 +59,6 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
                             {
                                 if (pictureData is byte[] bytes)
                                 {
-                                    // Handle OLE Object data
                                     _currentImageBytes = bytes;
                                     using (var ms = new MemoryStream(_currentImageBytes))
                                     {
@@ -80,7 +69,6 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
                                 }
                                 else if (pictureData is string path && File.Exists(path))
                                 {
-                                    // Handle legacy path data
                                     _currentImageBytes = File.ReadAllBytes(path);
                                     using (var ms = new MemoryStream(_currentImageBytes))
                                     {
@@ -99,12 +87,24 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
                     }
                     else
                     {
-                        MessageBox.Show($"No clinic found with ID: {_clinicId}", "Error",
+                        MessageBox.Show("Clinic not found.", "Error",
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
                 }
-            }
 
-            // 2) Load insurance coverages, marking each as assigned or not:
+                LoadInsuranceAndTimeSlots(conn);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading clinic data: {ex.Message}", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void LoadInsuranceAndTimeSlots(OleDbConnection conn)
+        {
+            // Load insurance coverages
             dgvInsurance.Rows.Clear();
             using (var cmd = new OleDbCommand(
                 "SELECT IC.CoverageID, IC.CoverageName, " +
@@ -117,26 +117,19 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
                 using var rdr = cmd.ExecuteReader();
                 while (rdr.Read())
                 {
-                    int covId = rdr.GetInt32(0);
-                    string covName = rdr.GetString(1);
-                    object raw = rdr.GetValue(2);
-
-                    bool assigned;
-                    if (raw is bool b)
-                        assigned = b;
-                    else
-                        assigned = Convert.ToInt32(raw) != 0;
-
-                    dgvInsurance.Rows.Add(covId, covName, assigned);
+                    dgvInsurance.Rows.Add(
+                        rdr.GetInt32(0),
+                        rdr.GetString(1),
+                        Convert.ToBoolean(rdr.GetValue(2))
+                    );
                 }
             }
 
-            // 3) Load time slots, marking each as assigned or not:
+            // Load time slots
             dgvTime.Rows.Clear();
             using (var cmdAll = new OleDbCommand("SELECT SlotID, SlotText FROM TimeSlots ORDER BY SlotID", conn))
             using (var rdrAll = cmdAll.ExecuteReader())
             {
-                // cache the assigned ones
                 var assigned = new HashSet<int>();
                 using (var cmdAssigned = new OleDbCommand(
                     "SELECT SlotID FROM ClinicTimeSlots WHERE ClinicID = ?", conn))
@@ -155,12 +148,6 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
                         assigned.Contains(slotId)
                     );
                 }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error loading clinic data: {ex.Message}", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -183,9 +170,9 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
                     // Update the preview
                     using (var ms = new MemoryStream(_currentImageBytes))
                     {
-            pbxClinic.Image?.Dispose();
+                        pbxClinic.Image?.Dispose();
                         pbxClinic.Image = Image.FromStream(ms);
-            pbxClinic.SizeMode = PictureBoxSizeMode.Zoom;
+                        pbxClinic.SizeMode = PictureBoxSizeMode.Zoom;
                     }
                 }
                 catch (Exception ex)
@@ -338,6 +325,58 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
 
             MessageBox.Show("Doctor added to clinic.", "Success",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to delete this clinic? This action cannot be undone.",
+                "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) != DialogResult.Yes)
+            {
+                return;
+            }
+
+            try
+            {
+                using var conn = new OleDbConnection(CONN);
+                conn.Open();
+
+                // First delete related records
+                using (var cmd = new OleDbCommand("DELETE FROM ClinicTimeSlots WHERE ClinicID = ?", conn))
+                {
+                    cmd.Parameters.AddWithValue("?", _clinicId);
+                    cmd.ExecuteNonQuery();
+                }
+
+                using (var cmd = new OleDbCommand("DELETE FROM ClinicInsurance WHERE ClinicID = ?", conn))
+                {
+                    cmd.Parameters.AddWithValue("?", _clinicId);
+                    cmd.ExecuteNonQuery();
+                }
+
+                using (var cmd = new OleDbCommand("DELETE FROM Doctors WHERE ClinicID = ?", conn))
+                {
+                    cmd.Parameters.AddWithValue("?", _clinicId);
+                    cmd.ExecuteNonQuery();
+                }
+
+                // Finally delete the clinic
+                using (var cmd = new OleDbCommand("DELETE FROM Clinics WHERE ClinicID = ?", conn))
+                {
+                    cmd.Parameters.AddWithValue("?", _clinicId);
+                    cmd.ExecuteNonQuery();
+                }
+
+                MessageBox.Show("Clinic has been deleted successfully.", "Success",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+                ChangesSaved?.Invoke(this, EventArgs.Empty);
+                ParentForm?.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error deleting clinic: {ex.Message}", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         // no-op

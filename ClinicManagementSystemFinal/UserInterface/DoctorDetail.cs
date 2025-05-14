@@ -31,7 +31,6 @@ namespace ClinicManagementSystemFinal.UserInterface
             {
                 conn.Open();
 
-                // Get doctor's information
                 using (var cmd = new OleDbCommand(@"
 SELECT 
     I.Name,
@@ -54,12 +53,10 @@ WHERE I.LoginID = ?", conn))
                             string name = rdr["Name"]?.ToString() ?? "N/A";
                             string specialization = rdr["Specialization"]?.ToString() ?? "N/A";
 
-                            // Set the labels
                             lblName.Text = name;
                             lblBigName.Text = name;
                             lblJobTitle.Text = specialization;
 
-                            // Handle profile picture
                             var pictureData = rdr["ProfilePicture"];
                             if (pictureData != DBNull.Value && pictureData is byte[] imageBytes)
                             {
@@ -70,19 +67,24 @@ WHERE I.LoginID = ?", conn))
                                         pbxProfile.Image?.Dispose();
                                         pbxProfile.Image = Image.FromStream(ms);
                                         pbxProfile.SizeMode = PictureBoxSizeMode.Zoom;
+                                        pbxProfile.BackColor = Color.Transparent;
                                     }
                                 }
                                 catch (Exception ex)
                                 {
                                     MessageBox.Show($"Error loading profile picture: {ex.Message}", "Warning",
                                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    pbxProfile.Image = null;
                                 }
+                            }
+                            else
+                            {
+                                pbxProfile.Image = null;
                             }
                         }
                     }
                 }
 
-                // Get clinics information
                 using (var cmd = new OleDbCommand(@"
 SELECT 
     C.ClinicName,
@@ -101,7 +103,6 @@ ORDER BY C.ClinicName", conn))
                         da.Fill(dt);
                     }
 
-                    // Create a formatted list for the ListBox
                     var formattedList = new DataTable();
                     formattedList.Columns.Add("DisplayText", typeof(string));
                     formattedList.Columns.Add("ClinicName", typeof(string));

@@ -64,18 +64,15 @@ namespace ClinicManagementSystemFinal.UserControls_User
                     string service = serviceNames[index];
                     lbl.Text = service;
 
-                    // load picture (png first, then jpg)
                     string imgPath = Path.Combine(imageFolderPath, $"{service}.png");
                     if (!File.Exists(imgPath))
                         imgPath = Path.Combine(imageFolderPath, $"{service}.jpg");
                     btn.Image = File.Exists(imgPath) ? Image.FromFile(imgPath) : null;
 
-                    //── STOP THE HOVER‑ZOOM ──────────────────────────────
                     btn.ImageSize = btn.Size;
-                    btn.HoverState.ImageSize = btn.Size;     // <- same size
+                    btn.HoverState.ImageSize = btn.Size;   
                     btn.PressedState.ImageSize = btn.Size;
 
-                    //── make clickable → Clinics with filter ─────────────
                     btn.Tag = service;
                     btn.Click -= ServiceImage_Click;
                     btn.Click += ServiceImage_Click;
@@ -96,11 +93,9 @@ namespace ClinicManagementSystemFinal.UserControls_User
 
             string serviceName = btn.Tag.ToString();
 
-            // locate the host HomePage_User form
             var host = this.FindForm() as HomePage_User;
             if (host == null) return;
 
-            // show Clinics with the service filter pre‑selected
             host.LoadControl(new Clinics(userLoginId, serviceName));
         }
 

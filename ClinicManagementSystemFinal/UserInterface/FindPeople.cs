@@ -154,5 +154,10 @@ namespace ClinicManagementSystemFinal.UserInterface
                 hUsr.LoadControl(new DoctorDetail(p.LoginId));
             }
         }
+
+        private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

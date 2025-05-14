@@ -18,16 +18,13 @@ namespace ClinicManagementSystemFinal.UserControls_User.Appointments_Control
         {
             InitializeComponent();
             userLoginId = loginId;
-            // this.Load += Appointments_Remove_Load;
-
-            //MessageBox.Show("Event Attached");
+ 
 
         }
 
         private bool isProcessingClick = false;
         private void dgvRemove_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //MessageBox.Show($"Clicked: Row {e.RowIndex}, Column {e.ColumnIndex} - {dgvRemove.Columns[e.ColumnIndex].Name}");
             if (isProcessingClick) return;
             isProcessingClick = true;
 
@@ -46,7 +43,6 @@ namespace ClinicManagementSystemFinal.UserControls_User.Appointments_Control
                         int appointmentId = Convert.ToInt32(dgvRemove.Rows[e.RowIndex].Cells["AppointmentID"].Value);
                         DeleteAppointment(appointmentId);
 
-                        // Delay the reload slightly to prevent second event from interfering
                         this.BeginInvoke(new Action(() =>
                         {
                             LoadAppointments();

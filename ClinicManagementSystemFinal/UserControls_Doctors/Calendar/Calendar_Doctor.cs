@@ -92,7 +92,7 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
                 int total = highlight ? dayTotals[thisDate] : 0;
 
                 var cell = new DynamicCalendar(d.ToString(), highlight, total);
-                cell.DatePicked += apptView.SelectDate;   // hand the date to Appointment UC
+                cell.DatePicked += apptView.SelectDate;   
                 flowLayoutPanel1.Controls.Add(cell);
                 cell.DatePicked += d => DayClicked?.Invoke(d);
             }

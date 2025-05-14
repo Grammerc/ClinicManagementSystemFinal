@@ -10,7 +10,7 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
 {
     public partial class MyClinics : UserControl
     {
-        private string _loginId;           // remembers who we're loading clinics for
+        private string _loginId;  
         public event Action<int> EditRequested;
         private readonly Panel _templatePanel;
         private readonly string imageFolderPath =
@@ -25,9 +25,6 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
             _templatePanel.Visible = false;
         }
 
-        /// <summary>
-        /// Call this to load (or reload) the list of clinics for a given user.
-        /// </summary>
         public void LoadMyClinics(string loginId)
         {
             _loginId = loginId;
@@ -51,7 +48,6 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
 
                 if (card.Controls["pbxClinic"] is PictureBox pbx)
                 {
-                    // Handle the image from the database
                     object pictureData = rdr["Picture"];
                     if (pictureData != DBNull.Value)
                     {
@@ -61,7 +57,7 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
                             {
                                 using (var ms = new MemoryStream(bytes))
                                 {
-                                    pbx.Image?.Dispose(); // Dispose of previous image if any
+                                    pbx.Image?.Dispose(); 
                                     pbx.Image = Image.FromStream(ms);
                                 }
                             }
@@ -106,7 +102,7 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
                 editCtl.ChangesSaved += (s, args) =>
                 {
                     popup.Close();
-                    LoadMyClinics(_loginId); // Refresh the clinic list
+                    LoadMyClinics(_loginId);
                 };
 
                 popup.ShowDialog(this);
@@ -158,15 +154,13 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
                 FormBorderStyle = FormBorderStyle.FixedDialog,
                 MaximizeBox = false,
                 MinimizeBox = false,
-                ClientSize = new Size(800, 600)  // Standard size for the AddClinic form
+                ClientSize = new Size(800, 600)  
             };
 
-            // pass in the stored loginId (_loginId) so AddClinic can link it
             var addCtl = new AddClinic(int.Parse(_loginId));
             addCtl.Dock = DockStyle.Fill;
             popup.Controls.Add(addCtl);
 
-            // when AddClinic tells us it's done, close & reload
             addCtl.ClinicAdded += (s, e2) =>
             {
                 popup.Close();

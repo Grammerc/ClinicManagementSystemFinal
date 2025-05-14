@@ -18,7 +18,7 @@ namespace ClinicManagementSystemFinal.UserControls_User
         readonly string[] AllSlots =
 {
     "8:00 A.M. - 9:00 A.M.",
-    "9:00 A.M. - 10:00 A.M",
+    "9:00 A.M. - 10:00 A.M", //Initial timeslot changed to database timeslot
     "10:00 A.M. - 11:00 A.M.",
     "11:00 A.M. - 12:00 A.M.",
     "12:00 A.M. - 1:00 A.M.",
@@ -246,11 +246,9 @@ namespace ClinicManagementSystemFinal.UserControls_User
 
             cbxTimeSlot.Items.Clear();
 
-            // nothing to do until we've picked a clinic and a doctor
             if (cbxClinicName.SelectedItem == null || cbxDoctor.SelectedValue == null)
                 return;
 
-            // figure out the clinic ID
             int clinicID;
             using (var conn = new OleDbConnection(CONN))
             {
@@ -261,7 +259,6 @@ namespace ClinicManagementSystemFinal.UserControls_User
                 clinicID = Convert.ToInt32(getClinic.ExecuteScalar());
             }
 
-            // first: pull all the slots this clinic has enabled
             var allSlots = new List<string>();
             using (var cn = new OleDbConnection(CONN))
             {
@@ -280,7 +277,6 @@ namespace ClinicManagementSystemFinal.UserControls_User
                     allSlots.Add(r.GetString(0));
             }
 
-            // then: find which ones are already taken by this doctor on that date
             int doctorID = Convert.ToInt32(cbxDoctor.SelectedValue);
             DateTime d0 = cbxDate.Value.Date;
             DateTime d1 = d0.AddDays(1);
@@ -305,15 +301,11 @@ namespace ClinicManagementSystemFinal.UserControls_User
                     taken.Add(r.GetString(0));
             }
 
-            // finally: populate only the slots the clinic allows that aren't yet taken
             foreach (var slot in allSlots)
                 if (!taken.Contains(slot))
                     cbxTimeSlot.Items.Add(slot);
-
-            // auto-select first if there is one
-            cbxTimeSlot.SelectedIndex = cbxTimeSlot.Items.Count > 0
-                ? 0
-                : -1;
+            
+            cbxTimeSlot.SelectedIndex = cbxTimeSlot.Items.Count > 0 ? 0 : -1;
         }
 
     }

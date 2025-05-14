@@ -45,6 +45,7 @@
             cbxSpec.Name = "cbxSpec";
             cbxSpec.Size = new Size(164, 23);
             cbxSpec.TabIndex = 4;
+            cbxSpec.Visible = false;
             // 
             // cbxRole
             // 
@@ -93,6 +94,7 @@
             panelMain.Name = "panelMain";
             panelMain.Size = new Size(793, 595);
             panelMain.TabIndex = 4;
+            panelMain.Paint += panelMain_Paint;
             // 
             // FindPeople
             // 

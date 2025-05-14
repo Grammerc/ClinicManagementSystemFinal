@@ -15,7 +15,6 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
         private const string CONN =
             @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\source\repos\ClinicManagementSystemFinal\ClinicManagementSystemFinal\Login.accdb;Persist Security Info=False;";
 
-        // Add an event to notify when changes are saved
         public event EventHandler ChangesSaved;
 
         public EditClinic(int clinicId)
@@ -37,7 +36,6 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
                 using var conn = new OleDbConnection(CONN);
                 conn.Open();
 
-                // 1) Load basic clinic info:
                 using (var cmd = new OleDbCommand(
                     "SELECT ClinicName, Address, PhoneNumber, Email, Picture " +
                     "FROM Clinics WHERE ClinicID = ?", conn))
@@ -51,7 +49,6 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
                         tbxPhoneNumber.Text = r["PhoneNumber"]?.ToString() ?? string.Empty;
                         tbxEmail.Text = r["Email"]?.ToString() ?? string.Empty;
 
-                        // Handle the Picture field
                         object pictureData = r["Picture"];
                         if (pictureData != DBNull.Value)
                         {
@@ -125,7 +122,6 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
                 }
             }
 
-            // Load time slots
             dgvTime.Rows.Clear();
             using (var cmdAll = new OleDbCommand("SELECT SlotID, SlotText FROM TimeSlots ORDER BY SlotID", conn))
             using (var rdrAll = cmdAll.ExecuteReader())
@@ -164,10 +160,8 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
             {
                 try
                 {
-                    // Read the image file into a byte array
                     _currentImageBytes = File.ReadAllBytes(dlg.FileName);
 
-                    // Update the preview
                     using (var ms = new MemoryStream(_currentImageBytes))
                     {
                         pbxClinic.Image?.Dispose();
@@ -190,7 +184,6 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
                 using var conn = new OleDbConnection(CONN);
                 conn.Open();
 
-                // First verify the clinic exists
                 using (var checkCmd = new OleDbCommand("SELECT COUNT(*) FROM Clinics WHERE ClinicID = ?", conn))
                 {
                     checkCmd.Parameters.AddWithValue("?", _clinicId);
@@ -203,18 +196,15 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
                     }
                 }
 
-                // Update the Clinics table
                 string updateSql = "UPDATE Clinics SET ClinicName=?, Address=?, PhoneNumber=?, Email=?, Picture=? WHERE ClinicID=?";
                 
                 using (var cmd = new OleDbCommand(updateSql, conn))
                 {
-                    // Add parameters in the exact order they appear in the SQL
                     cmd.Parameters.AddWithValue("?", tbxClinicName.Text.Trim());
                     cmd.Parameters.AddWithValue("?", tbxAddress.Text.Trim());
                     cmd.Parameters.AddWithValue("?", tbxPhoneNumber.Text.Trim());
                     cmd.Parameters.AddWithValue("?", tbxEmail.Text.Trim());
                     
-                    // Handle the image parameter
                     if (_currentImageBytes != null)
                     {
                         cmd.Parameters.AddWithValue("?", _currentImageBytes);
@@ -230,7 +220,6 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
                     
                     if (rowsAffected > 0)
                     {
-                        // Save time slots
                         using (var deleteCmd = new OleDbCommand("DELETE FROM ClinicTimeSlots WHERE ClinicID = ?", conn))
                         {
                             deleteCmd.Parameters.AddWithValue("?", _clinicId);
@@ -252,7 +241,6 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
                             }
                         }
 
-                        // Save insurance coverages
                         using (var deleteCmd = new OleDbCommand("DELETE FROM ClinicInsurance WHERE ClinicID = ?", conn))
                         {
                             deleteCmd.Parameters.AddWithValue("?", _clinicId);
@@ -340,7 +328,6 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
                 using var conn = new OleDbConnection(CONN);
                 conn.Open();
 
-                // First delete related records
                 using (var cmd = new OleDbCommand("DELETE FROM ClinicTimeSlots WHERE ClinicID = ?", conn))
                 {
                     cmd.Parameters.AddWithValue("?", _clinicId);
@@ -359,7 +346,6 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
                     cmd.ExecuteNonQuery();
                 }
 
-                // Finally delete the clinic
                 using (var cmd = new OleDbCommand("DELETE FROM Clinics WHERE ClinicID = ?", conn))
                 {
                     cmd.Parameters.AddWithValue("?", _clinicId);
@@ -379,7 +365,6 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
             }
         }
 
-        // no-op
         private void label1_Click(object sender, EventArgs e) { }
     }
 }

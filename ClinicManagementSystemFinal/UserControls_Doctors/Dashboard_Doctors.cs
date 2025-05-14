@@ -30,7 +30,7 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
 
             _lastPatientTemplate = LastPatientCard;
             _lastPatientTemplate.Visible = false;
-            // wire-up our period-toggle radio buttons
+
             rdoDay.CheckedChanged += (s, e) => RefreshStats();
             rdoMonth.CheckedChanged += (s, e) => RefreshStats();
             rdoYear.CheckedChanged += (s, e) => RefreshStats();
@@ -69,18 +69,20 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
 
         private void RefreshStats()
         {
-            // 1) decide period
             string period = rdoDay.Checked ? "DAY"
                          : rdoMonth.Checked ? "MONTH"
                          : "YEAR";
 
-            // 2) pull labels & raw series data
             var labels = GetTimeLabels(period);
             var completed = GetCounts("Completed", period);
             var pending = GetCounts("Pending", period);
             var newPats = GetNewPatientCounts(period);
-            // assume each completed = 1h
             var hours = completed.Select(c => (double)c).ToList();
+
+            lblAppointments.Text = completed.Sum().ToString();
+            lblPending.Text = pending.Sum().ToString();
+            lblNewPatients.Text = newPats.Sum().ToString();
+            lblHoursWorked.Text = hours.Sum().ToString();
 
             var dsComp = new GunaLineDataset { Label = "Completed" };
             var dsPend = new GunaLineDataset { Label = "Pending" };
@@ -89,13 +91,9 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
 
     
             dsComp.BorderColor = Color.Green;
-            //dsComp.PointFillColors = Color.Green;
             dsPend.BorderColor = Color.Orange;
-            //dsPend.PointFillColors = Color.Orange;
             dsNew.BorderColor = Color.MediumPurple;
-            //dsNew.PointFillColors = Color.MediumPurple;
             dsHrs.BorderColor = Color.Blue;
-           // dsHrs.PointFillColors = Color.Blue;
 
             for (int i = 0; i < labels.Count; i++)
             {
@@ -120,7 +118,6 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
 
         private List<string> GetTimeLabels(string period)
         {
-            // format string & date-filter per period
             string fmt = period == "DAY" ? "yyyy-mm-dd"
                        : period == "MONTH" ? "yyyy-mm"
                                          : "yyyy";
@@ -189,7 +186,6 @@ SELECT
 
         private List<int> GetNewPatientCounts(string period)
         {
-            // same fmt & dateFilter
             string fmt = period == "DAY" ? "yyyy-mm-dd"
                        : period == "MONTH" ? "yyyy-mm"
                                          : "yyyy";
@@ -265,7 +261,7 @@ SELECT TOP {howMany}
                     Date = rdr.GetDateTime(0),
                     PatientName = rdr.GetString(5),
                     Reason = rdr.GetString(6),
-                    ProfileImagePath = rdr.GetString(2),               // now comes through as ImgPath
+                    ProfileImagePath = rdr.GetString(2),   
                     ProfileImageBlob = rdr["ProfilePicture"] as byte[],
                     ClinicId = rdr.GetInt32(4).ToString(),
                     UserInfoId = rdr.GetInt32(1).ToString()
@@ -282,7 +278,6 @@ SELECT TOP {howMany}
 
             foreach (var appt in GetLastCompletedAppointments(_maxLastPatients))
             {
-                // 1) Clone the template panel
                 var card = new Panel
                 {
                     Size = _lastPatientTemplate.Size,
@@ -290,8 +285,6 @@ SELECT TOP {howMany}
                     Padding = _lastPatientTemplate.Padding,
                     BackColor = _lastPatientTemplate.BackColor
                 };
-
-                // 2) Copy each Label from the template
                 foreach (Control ctl in _lastPatientTemplate.Controls)
                 {
                     Control copy = null;
@@ -325,8 +318,6 @@ SELECT TOP {howMany}
                     if (copy != null)
                         card.Controls.Add(copy);
                 }
-
-                // 3) Fill in the data
                 var lblDate = card.Controls.Find("lblDate", false).FirstOrDefault() as Label;
                 var lblName = card.Controls.Find("lblName", false).FirstOrDefault() as Label;
                 var lblReason = card.Controls.Find("lblReason", false).FirstOrDefault() as Label;
@@ -377,7 +368,6 @@ SELECT TOP {howMany}
             using var conn = new OleDbConnection(CONN);
             conn.Open();
 
-            // only Approved, today
             var cmd = new OleDbCommand(@"
         SELECT 
             A.AppointmentDate,

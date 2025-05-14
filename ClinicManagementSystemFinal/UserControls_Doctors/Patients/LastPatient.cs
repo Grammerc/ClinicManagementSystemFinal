@@ -45,7 +45,7 @@ ORDER BY
                 }
             }
 
-            // bind to your Guna2DataGridView (named e.g. dgvHistory)
+          
             dgvHistory.DataSource = dt;
             dgvHistory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }

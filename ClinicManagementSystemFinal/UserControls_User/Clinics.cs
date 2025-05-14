@@ -39,7 +39,6 @@ namespace ClinicManagementSystemFinal.UserControls_User
         {
             PopulateFilterComboBoxes();
 
-            //—auto‑select the incoming Service filter—
             if (!string.IsNullOrEmpty(preselectedService))
             {
                 int idx = cbxServices.Items.IndexOf(preselectedService);
@@ -122,20 +121,17 @@ namespace ClinicManagementSystemFinal.UserControls_User
                 {
                     if (!MatchesFilters(rdr)) { continue; }
 
-                    // locate controls
                     var pnl = Controls.Find($"panelClinic{i}", true).FirstOrDefault() as Panel;
                     var lblN = Controls.Find($"clinicsName{i}", true).FirstOrDefault() as Label;
                     var lblT = Controls.Find($"clinicTag{i}", true).FirstOrDefault() as Label;
                     var img = Controls.Find($"clinicImage{i}", true).FirstOrDefault() as Guna2ImageButton;
                     if (pnl == null || lblN == null || lblT == null || img == null) break;
 
-                    // show info
                     string clinicName = rdr["ClinicName"].ToString();
                     pnl.Visible = true;
                     lblN.Text = clinicName;
                     lblT.Text = rdr["Specialization"].ToString();
 
-                    // load picture (png first, then jpg)
                     string imgPath = Path.Combine(imageFolderPath, $"{clinicName}.png");
                     if (!File.Exists(imgPath))
                         imgPath = Path.Combine(imageFolderPath, $"{clinicName}.jpg");
@@ -143,14 +139,12 @@ namespace ClinicManagementSystemFinal.UserControls_User
                     if (img.Image != null) { var old = img.Image; img.Image = null; old.Dispose(); }
                     img.Image = File.Exists(imgPath) ? Image.FromFile(imgPath) : null;
 
-                    /* stop the hover‑shrink / zoom */
-                    img.ImageSize = img.Size;          // normal state
-                    img.HoverState.ImageSize = img.Size;          // hover = same size
-                    img.PressedState.ImageSize = img.Size;          // pressed = same size
-                    img.HoverState.ImageOffset = Point.Empty;       // no slide
+                    img.ImageSize = img.Size;     
+                    img.HoverState.ImageSize = img.Size;    
+                    img.PressedState.ImageSize = img.Size;      
+                    img.HoverState.ImageOffset = Point.Empty;  
                     img.PressedState.ImageOffset = Point.Empty;
 
-                    // make clickable
                     img.Tag = clinicName;
                     img.Click -= ClinicImage_Click;
                     img.Click += ClinicImage_Click;
@@ -158,7 +152,6 @@ namespace ClinicManagementSystemFinal.UserControls_User
                     i++;
                 }
 
-                // hide unused panels
                 for (int j = i; j <= maxPanels; j++)
                     (Controls.Find($"panelClinic{j}", true).FirstOrDefault() as Panel)?.Hide();
             }
@@ -169,11 +162,9 @@ namespace ClinicManagementSystemFinal.UserControls_User
             if (sender is not Guna2ImageButton img || img.Tag == null) return;
             string clinicName = img.Tag.ToString();
 
-            // find the host form (HomePage_User)
             var host = this.FindForm() as HomePage_User;
-            if (host == null) return;          // safety check
+            if (host == null) return;  
 
-            // swap in the appointment user‑control on the main panel
             host.LoadControl(new Appointments_Create(userLoginId, clinicName));
         }
 

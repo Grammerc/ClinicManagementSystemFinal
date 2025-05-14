@@ -47,7 +47,6 @@ namespace ClinicManagementSystemFinal
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            // read these out of the reader, then let all COM objects go out of scope & Dispose
             string loginId;
             string rawRoleId;
             bool loginOk;
@@ -74,10 +73,6 @@ namespace ClinicManagementSystemFinal
                 }
             }
 
-            // at this point the reader, command, and connection are all closed & disposed,
-            // so there’s no more COM object in flight.
-
-            // determine role
             bool isDoctor = false;
             bool isSecretary = false;
             bool isStandardUser = false;
@@ -95,7 +90,6 @@ namespace ClinicManagementSystemFinal
                 isStandardUser = rawRoleId.Equals("User", StringComparison.OrdinalIgnoreCase);
             }
 
-            // now hide this form and show the next one
             this.Hide();
 
             if (isDoctor)

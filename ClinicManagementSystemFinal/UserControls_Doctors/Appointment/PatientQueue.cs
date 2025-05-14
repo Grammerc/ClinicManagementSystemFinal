@@ -53,7 +53,6 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
                 cbxDate.Enabled = false;
             }
 
-            // Hook up single status button instead of six
             pbxStatus.Click += StatusIcon_Click;
         }
 
@@ -301,7 +300,6 @@ SELECT
                             Margin = srcPanel.Margin
                         };
 
-                        // now clone its children (Label, PictureBox, Guna2ImageButton)
                         foreach (Control child in srcPanel.Controls)
                         {
                             Control childCopy = null;
@@ -345,64 +343,51 @@ SELECT
                                 panelCopy.Controls.Add(childCopy);
                         }
 
-                        // add the cloned panel (with its children) to the card
                         card.Controls.Add(panelCopy);
                     }
                 }
-
-                // now bind data:
 
                 var lblNum = card.Controls.Find("number", true)
                       .OfType<Label>()
                       .First();
                 lblNum.Text = "#" + idx;
 
-                // #2) patient name
                 var lblName = card.Controls.Find("lblName", true)
                                        .OfType<Label>()
                                        .First();
-                // ← set the text and click handler here
                 lblName.Text = name;
                 lblName.Cursor = Cursors.Hand;
                 lblName.Click += (s, e) => PatientSelected?.Invoke(userId, name, imgPath, clinicId);
 
-                // Reason
-                // Reason
                 var lblReason = card.Controls
                                      .Find("lblReason", true)
                                      .OfType<Label>()
                                      .FirstOrDefault();
                 if (lblReason != null) lblReason.Text = reason;
 
-                // Time slot
                 var lblTime = card.Controls
                                    .Find("lblTime", true)
                                    .OfType<Label>()
                                    .FirstOrDefault();
                 if (lblTime != null) lblTime.Text = timeslot;
 
-                // #3) profile picture
                 var pbxProfile = card.Controls.Find("pbxProfile", true)
-                                          .OfType<PictureBox>()      // or Guna2ImageButton if you switched back
+                                          .OfType<PictureBox>()   
                                           .First();
                 pbxProfile.Image = pic;
                 pbxProfile.SizeMode = PictureBoxSizeMode.Zoom;
                 pbxProfile.Cursor = Cursors.Hand;
                 pbxProfile.Click += (s, e) => PatientSelected?.Invoke(userId, name, imgPath, clinicId);
 
-                // #4) status icon
                 var pbxStatus = card.Controls.Find("pbxStatus", true)
                                          .OfType<Guna2ImageButton>()
                                          .First();
                 pbxStatus.Image = GetStatusIcon(status);
 
-                // store the zero-based index of this appointment in the Tag
                 pbxStatus.Tag = idx - 1;
 
-                // wire up click
                 pbxStatus.Click += StatusIcon_Click;
 
-                // finally…
                 flpPatients.Controls.Add(card);
                 displayedAppointmentIds.Add(apptId);
                 idx++;

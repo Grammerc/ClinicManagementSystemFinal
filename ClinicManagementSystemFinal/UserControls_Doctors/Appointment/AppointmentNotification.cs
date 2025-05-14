@@ -17,7 +17,7 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors.Appointment
         {
             Debug.WriteLine("AppointmentNotification system initialized");
             InitializeNotificationTable();
-            _notificationTimer = new System.Timers.Timer(60000); // Check every minute
+            _notificationTimer = new System.Timers.Timer(60000); 
             _notificationTimer.Elapsed += CheckAppointments;
             _notificationTimer.Start();
             Debug.WriteLine("Notification timer started");
@@ -31,7 +31,6 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors.Appointment
                 using var conn = new OleDbConnection(CONN);
                 conn.Open();
 
-                // Get all tables
                 var schema = conn.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, new object[] { null, null, null, "TABLE" });
                 Debug.WriteLine("\nAvailable Tables:");
                 foreach (DataRow row in schema.Rows)
@@ -39,7 +38,6 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors.Appointment
                     Debug.WriteLine($"- {row["TABLE_NAME"]}");
                 }
 
-                // Verify each table's structure
                 VerifyTableStructure(conn, "Appointments");
                 VerifyTableStructure(conn, "Account");
                 VerifyTableStructure(conn, "Clinics");
@@ -66,12 +64,10 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors.Appointment
                     Debug.WriteLine($"- {row["COLUMN_NAME"]} ({row["DATA_TYPE"]})");
                 }
 
-                // Check if table has data
                 using var cmd = new OleDbCommand($"SELECT COUNT(*) FROM {tableName}", conn);
                 var count = cmd.ExecuteScalar();
                 Debug.WriteLine($"Total records in {tableName}: {count}");
 
-                // Show sample data
                 if (Convert.ToInt32(count) > 0)
                 {
                     Debug.WriteLine($"Sample data from {tableName}:");
@@ -100,10 +96,8 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors.Appointment
                 using var conn = new OleDbConnection(CONN);
                 conn.Open();
 
-                // First verify the database structure
                 VerifyDatabaseStructure();
 
-                // Check if table exists
                 bool tableExists = false;
                 try
                 {
@@ -121,14 +115,12 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors.Appointment
                     Debug.WriteLine("AppointmentNotifications table created");
                 }
 
-                // If table exists, check if it's empty
                 if (tableExists)
                 {
                     using var countCmd = new OleDbCommand("SELECT COUNT(*) FROM AppointmentNotifications", conn);
                     var count = (int)countCmd.ExecuteScalar();
                     Debug.WriteLine($"AppointmentNotifications table has {count} records");
 
-                    // If table is empty, populate it with existing approved appointments
                     if (count == 0)
                     {
                         Debug.WriteLine("Populating AppointmentNotifications table with existing approved appointments...");
@@ -165,13 +157,8 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors.Appointment
                 conn.Open();
                 Debug.WriteLine("Database connection successful");
 
-                // First verify the database structure
                 VerifyDatabaseStructure();
 
-                // Get appointments that are:
-                // 1. Approved status
-                // 2. Current time is within 1 hour before the appointment start time
-                // 3. Haven't been notified yet
                 string sql = @"
                     SELECT a.AppointmentID, a.AppointmentDate, a.Status, a.TimeSlot,
                            u.username as Email, u.Name as UserName,
@@ -194,7 +181,6 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors.Appointment
                 cmd.Parameters.AddWithValue("?", now);
                 Debug.WriteLine($"Added parameter: Current time = {now}");
 
-                // Let's also check if we have any approved appointments
                 using var checkAppointmentsCmd = new OleDbCommand(
                     "SELECT COUNT(*) FROM Appointments WHERE Status = 'Approved'", conn);
                 var approvedCount = checkAppointmentsCmd.ExecuteScalar();
@@ -241,7 +227,6 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors.Appointment
                     Debug.WriteLine($"Stack trace: {ex.InnerException.StackTrace}");
                 }
 
-                // Try to get more details about the error
                 if (ex is OleDbException oleEx)
                 {
                     Debug.WriteLine("\nOLE DB Error Details:");
@@ -267,7 +252,7 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors.Appointment
                     UseDefaultCredentials = false,
                     Credentials = new System.Net.NetworkCredential("ClinicManagementSystemC@gmail.com", "hyop ejoi vhlm miss"),
                     DeliveryMethod = SmtpDeliveryMethod.Network,
-                    Timeout = 30000 // 30 seconds timeout
+                    Timeout = 30000 
                 };
 
                 var mailMessage = new MailMessage
@@ -288,7 +273,6 @@ Clinic Management System",
 
                 mailMessage.To.Add(new MailAddress(userEmail));
                 
-                // Add error handling for the send operation
                 try
                 {
                     smtpClient.Send(mailMessage);
@@ -301,7 +285,7 @@ Clinic Management System",
                     {
                         Debug.WriteLine($"SMTP Inner exception: {smtpEx.InnerException.Message}");
                     }
-                    throw; // Re-throw to be caught by outer try-catch
+                    throw;
                 }
             }
             catch (Exception ex)

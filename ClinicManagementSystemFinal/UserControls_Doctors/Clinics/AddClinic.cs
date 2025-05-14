@@ -19,7 +19,6 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors.Clinics
         private string _generatedCode;
         private bool _isVerified = false;
         public event EventHandler ClinicAdded;
-        // adjust your path as needed
         private const string CONN =
             @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Raphael\source\repos\ClinicManagementSystemFinal\ClinicManagementSystemFinal\Login.accdb;Persist Security Info=False;";
 
@@ -42,13 +41,11 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors.Clinics
                 return;
             }
 
-            // Generate a 6-digit verification code
             Random random = new Random();
             _generatedCode = random.Next(100000, 999999).ToString();
 
             try
             {
-                // Configure the SMTP client
                 SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
                 smtp.Credentials = new NetworkCredential("ClinicManagementSystemC@gmail.com", "hyop ejoi vhlm miss");
                 smtp.EnableSsl = true;
@@ -56,7 +53,6 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors.Clinics
                 smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
                 System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
 
-                // Create the email message
                 MailMessage mail = new MailMessage();
                 mail.From = new MailAddress("ClinicManagementSystemC@gmail.com");
                 mail.To.Add(email);

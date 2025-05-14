@@ -26,7 +26,6 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
 
             lblName.Text = pName;
             
-            // Handle profile picture
             try
             {
                 if (!string.IsNullOrEmpty(photo) && File.Exists(photo))
@@ -48,7 +47,6 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
             LoadHistoryGrid();
             LoadVitalsDates();
 
-            // Wire up event handlers with null checks
             if (btnSaves != null)
                 btnSaves.Click += btnSaves_Click;
             if (btnAddVital != null)
@@ -111,7 +109,6 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
         {
             try
             {
-                // Check if dgvHistory control exists
                 if (dgvHistory == null)
                 {
                     System.Diagnostics.Debug.WriteLine("DataGridView not initialized.");
@@ -134,18 +131,15 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
                 var dt = new DataTable();
                 da.Fill(dt);
 
-                // Clear existing columns and data
                 dgvHistory.DataSource = null;
                 dgvHistory.Columns.Clear();
                 dgvHistory.DataSource = dt;
 
-                // Configure grid appearance
                 dgvHistory.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
                 dgvHistory.AllowUserToAddRows = false;
                 dgvHistory.AllowUserToDeleteRows = false;
                 dgvHistory.ReadOnly = true;
 
-                // Safely configure columns if they exist
                 try
                 {
                     if (dgvHistory.Columns.Contains("ID"))
@@ -180,7 +174,6 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
                 catch (Exception ex)
                 {
                     System.Diagnostics.Debug.WriteLine($"Error formatting columns: {ex.Message}");
-                    // Continue without formatting if there's an error
                 }
             }
             catch (Exception ex)
@@ -233,7 +226,6 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
         {
             try
             {
-                // Check if txtNote control exists
                 if (txtNote == null)
                 {
                     MessageBox.Show("Note control not initialized.", "Error",
@@ -305,7 +297,6 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
                         MessageBox.Show("Vitals recorded successfully!", "Success",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                         
-                        // Clear the fields after successful insert
                         tbxBloodPressure.Clear();
                         tbxHeartRate.Clear();
                         tbxTemperature.Clear();
@@ -313,7 +304,6 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
                         tbxHeight.Clear();
                         txtVitalNotes.Clear();
                         
-                        // Refresh the dates combobox
                         LoadVitalsDates();
                     }
                 }

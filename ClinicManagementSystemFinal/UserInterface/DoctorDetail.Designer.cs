@@ -95,9 +95,10 @@
             // lblBigName
             // 
             lblBigName.AutoSize = true;
+            lblBigName.Font = new Font("Lucida Console", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblBigName.Location = new Point(12, 322);
             lblBigName.Name = "lblBigName";
-            lblBigName.Size = new Size(69, 15);
+            lblBigName.Size = new Size(182, 27);
             lblBigName.TabIndex = 13;
             lblBigName.Text = "lblBigName";
             // 

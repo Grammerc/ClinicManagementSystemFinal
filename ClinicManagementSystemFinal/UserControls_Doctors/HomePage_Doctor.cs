@@ -7,11 +7,17 @@ using ClinicManagementSystemFinal.UserControls_Doctors;
 using ClinicManagementSystemFinal.UserInterface;
 using AppointmentUC = ClinicManagementSystemFinal.UserControls_Doctors.Appointment.AppointmentView_Doctors;
 using ClinicManagementSystemFinal.UserControls_Doctors.Appointment;
+using System.Runtime.InteropServices;
 
 namespace ClinicManagementSystemFinal.UserControls_Doctors
 {
     public partial class HomePage_Doctor : Form
     {
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
         private readonly string doctorLoginId;
         private readonly MyClinics myClinicsControl;
         private readonly AppointmentUC apptUC;
@@ -28,7 +34,6 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
             doctorLoginId = loginID;
             _isSecretary = isSecretary;
 
-            // hide or disable the doctor-only panels/buttons
             btnDashboard.Visible = !_isSecretary;
             btnCalendar.Visible = !_isSecretary;
             btnPatientQueue.Visible = !_isSecretary;
@@ -36,12 +41,9 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
             panelCalendar.Enabled = !_isSecretary;
             panelPatientQueue.Enabled = !_isSecretary;
 
-            // always show these
             btnMyClinics.Visible = true;
             btnAppointments.Visible = true;
             btnViewPatients.Visible = true;
-
-            // wire up profile‐click to a pop-up window
             if (_isSecretary)
                 pbxProfile.Click += (s, e) => ShowUserInformationPopup();
             else
@@ -58,6 +60,15 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
             myClinicsControl.LoadMyClinics(doctorLoginId);
 
             _appointmentNotification = new AppointmentNotification();
+
+            guna2Panel11.MouseDown += (s, e) =>
+            {
+                if (e.Button == MouseButtons.Left)
+                {
+                    ReleaseCapture();
+                    SendMessage(this.Handle, 0x112, 0xf012, 0);
+                }
+            };
         }
 
         private void HomePage_Doctor_Load(object sender, EventArgs e)
@@ -71,7 +82,6 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
                 MessageBox.Show("Error in LoadDoctorHeader:\n" + ex.Message, "Debug");
             }
 
-            // load the default dashboard
             if (!_isSecretary)
                 LoadControl(new Dashboard_Doctors(doctorLoginId));
         }
@@ -97,7 +107,6 @@ WHERE  A.LoginID = ?";
             using var rdr = cmd.ExecuteReader();
             if (!rdr.Read()) return;
 
-            // (1) picture
             Image img = null;
             var path = rdr["ProfileImagePath"].ToString();
             if (!string.IsNullOrEmpty(path) && File.Exists(path))
@@ -110,7 +119,6 @@ WHERE  A.LoginID = ?";
             }
             pbxProfile.Image = img;
 
-            // (2) name & (3) role
             lblName.Text = rdr["Name"].ToString();
             lblRole.Text = rdr["RoleName"].ToString();
         }
@@ -170,13 +178,11 @@ WHERE  A.LoginID = ?";
             new SignIn().Show();
         }
 
-        // pops up the DoctorDetail UserControl in its own Form
         private void ShowDoctorDetailPopup()
         {
             LoadControl(new DoctorInformation(doctorLoginId));
         }
 
-        // pops up the UserInformation UserControl in its own Form
         private void ShowUserInformationPopup()
         {
             var detail = new UserInformation(doctorLoginId);

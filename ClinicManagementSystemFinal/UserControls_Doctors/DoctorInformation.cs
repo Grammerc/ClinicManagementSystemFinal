@@ -46,11 +46,9 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
             using var rdr = cmd.ExecuteReader();
             if (rdr.Read())
             {
-                // Username and name
                 tbxUsername.Text = rdr["username"]?.ToString() ?? "";
                 tbxName.Text = rdr["DoctorName"]?.ToString() ?? "";
 
-                // Gender radio buttons
                 var gender = rdr["Gender"]?.ToString() ?? "";
                 rbnMale.Checked = gender.Equals("Male", StringComparison.OrdinalIgnoreCase);
                 rbnFemale.Checked = gender.Equals("Female", StringComparison.OrdinalIgnoreCase);
@@ -63,13 +61,11 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
                     while (listRdr.Read())
                         cbxSpec.Items.Add(listRdr.GetString(0));
                 }
-                // Specialization and email
                 string currentSpec = rdr["Specialization"]?.ToString() ?? "";
                 if (!string.IsNullOrEmpty(currentSpec))
                     cbxSpec.SelectedItem = currentSpec;
                 tbxEmail.Text = rdr["Email"]?.ToString() ?? "";
 
-                // Profile picture
                 var path = rdr["ProfileImagePath"]?.ToString();
                 if (!string.IsNullOrEmpty(path) && File.Exists(path))
                 {
@@ -101,14 +97,11 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
             conn.Open();
             using var tran = conn.BeginTransaction();
 
-            // 1) Account → username
             var cmdAcc = new OleDbCommand(
                 "UPDATE Account SET username = ? WHERE LoginID = ?", conn, tran);
             cmdAcc.Parameters.AddWithValue("?", tbxUsername.Text.Trim());
             cmdAcc.Parameters.AddWithValue("?", _loginId);
             cmdAcc.ExecuteNonQuery();
-
-            // 2) Doctors → DoctorName, Specialization
             var cmdDoc = new OleDbCommand(
                 "UPDATE Doctors SET DoctorName = ?, Specialization = ? WHERE LoginID = ?", conn, tran);
             cmdDoc.Parameters.AddWithValue("?", tbxName.Text.Trim());
@@ -116,8 +109,6 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
     cbxSpec.SelectedItem?.ToString() ?? "");
             cmdDoc.Parameters.AddWithValue("?", _loginId);
             cmdDoc.ExecuteNonQuery();
-
-            // 3) Information → Gender, Email, ProfileImagePath
             var gender = rbnMale.Checked ? "Male" : "Female";
             var cmdInfo = new OleDbCommand(
                 "UPDATE Information SET Gender = ?, Email = ?, ProfileImagePath = ? WHERE LoginID = ?", conn, tran);
@@ -126,7 +117,6 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors
             cmdInfo.Parameters.AddWithValue("?", _selectedImagePath ?? "");
             cmdInfo.Parameters.AddWithValue("?", _loginId);
             cmdInfo.ExecuteNonQuery();
-
             tran.Commit();
             MessageBox.Show("Your changes have been saved.", "Success",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);

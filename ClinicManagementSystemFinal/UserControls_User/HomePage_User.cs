@@ -62,6 +62,24 @@ namespace ClinicManagementSystemFinal
             formSize = this.ClientSize;
             this.Padding = new Padding(borderSize);
             this.BackColor = Color.FromArgb(114, 137, 218);
+
+            this.MouseDown += (s, e) =>
+            {
+                if (e.Button == MouseButtons.Left)
+                {
+                    ReleaseCapture();
+                    SendMessage(this.Handle, 0x112, 0xf012, 0);
+                }
+            };
+
+            guna2Panel11.MouseDown += (s, e) =>
+            {
+                if (e.Button == MouseButtons.Left)
+                {
+                    ReleaseCapture();
+                    SendMessage(this.Handle, 0x112, 0xf012, 0);
+                }
+            };
         }
 
         protected override void WndProc(ref Message m)
@@ -292,7 +310,6 @@ WHERE I.LoginID = ?";
                 using var rdr = cmd.ExecuteReader();
                 if (rdr.Read())
                 {
-                    // Handle profile picture
                     Image img = null;
                     var path = rdr["ProfileImagePath"]?.ToString();
                     if (!string.IsNullOrEmpty(path) && File.Exists(path))

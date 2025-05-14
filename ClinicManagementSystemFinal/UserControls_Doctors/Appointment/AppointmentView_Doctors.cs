@@ -20,7 +20,7 @@ namespace ClinicManagementSystemFinal.UserControls_Doctors.Appointment
             InitializeComponent();
             doctorLoginId = loginId;
 
-            cbxPending.Checked = true;   // or set all three true if you want every status by default
+            cbxPending.Checked = true; 
             cbxApproved.Checked = false;
             cbxDeclined.Checked = false;
 
@@ -131,20 +131,21 @@ WHERE
                 int row = dgvAppts.Rows.Add();
                 dgvAppts.Rows[row].Tag = rdr["AppointmentID"];
                 dgvAppts.Rows[row].Cells["colDate"].Value = ((DateTime)rdr["AppointmentDate"]).ToShortDateString();
+                dgvAppts.Rows[row].Cells["colTime"].Value = rdr["TimeSlot"].ToString();
                 dgvAppts.Rows[row].Cells["colName"].Value = rdr["Name"].ToString();
                 dgvAppts.Rows[row].Cells["colStatus"].Value = rdr["Status"].ToString();
                 dgvAppts.Rows[row].Cells["colDr"].Value = rdr["Dr"].ToString();
             }
 
-            // 5) Hide the columns we no longer want, then reorder to Date, Name, Status, Dr
+            // 5) Hide the columns we no longer want, then reorder to Date, Time, Name, Status, Dr
             dgvAppts.SuspendLayout();
-            if (dgvAppts.Columns.Contains("colTime")) dgvAppts.Columns["colTime"].Visible = false;
             if (dgvAppts.Columns.Contains("colReason")) dgvAppts.Columns["colReason"].Visible = false;
 
             dgvAppts.Columns["colDate"].DisplayIndex = 0;
-            dgvAppts.Columns["colName"].DisplayIndex = 1;
-            dgvAppts.Columns["colStatus"].DisplayIndex = 2;
-            dgvAppts.Columns["colDr"].DisplayIndex = 3;
+            dgvAppts.Columns["colTime"].DisplayIndex = 1;
+            dgvAppts.Columns["colName"].DisplayIndex = 2;
+            dgvAppts.Columns["colStatus"].DisplayIndex = 3;
+            dgvAppts.Columns["colDr"].DisplayIndex = 4;
             dgvAppts.ResumeLayout();
         }
 
@@ -228,8 +229,7 @@ WHERE
                     "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            
-            // If approved, send confirmation email
+
             if (status == "Approved")
             {
                 try
@@ -259,7 +259,6 @@ Clinic Management System",
                         Priority = System.Net.Mail.MailPriority.High
                     };
 
-                    // Only add email recipient if we have a valid email
                     if (email != "N/A" && email.Contains("@"))
                     {
                         mailMessage.To.Add(new System.Net.Mail.MailAddress(email));
@@ -279,7 +278,6 @@ Clinic Management System",
             }
         }
 
-        /* ---------- 4. Helper class for ComboBox ---------- */
         private class ComboItem
         {
             public string Text { get; set; }

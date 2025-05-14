@@ -25,7 +25,6 @@ namespace ClinicManagementSystemFinal.UserControls_User
             dgvAppointments.AllowUserToAddRows = false;
 
             this.Load += Appointments_Update_Load;
-            //dgvAppointments.CellClick += dgvAppointments_CellClick;
 
             if (scheduleTime.Items.Count > 0)
             {
@@ -108,7 +107,6 @@ namespace ClinicManagementSystemFinal.UserControls_User
                 dgvAppointments.ClearSelection();
                 dgvAppointments.Rows[e.RowIndex].Selected = true;
 
-                // Set current cell to a visible column
                 dgvAppointments.CurrentCell = dgvAppointments.Rows[e.RowIndex].Cells["c1"];
 
                 string appointmentId = dgvAppointments.Rows[e.RowIndex].Cells["AppointmentID"].Value.ToString();
@@ -149,7 +147,7 @@ namespace ClinicManagementSystemFinal.UserControls_User
                         if (rows > 0)
                         {
                             MessageBox.Show("Appointment successfully rescheduled.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            LoadAppointments(); // Refresh view
+                            LoadAppointments(); 
                         }
                         else
                         {

@@ -127,23 +127,19 @@ namespace ClinicManagementSystemFinal
                 conn.Open();
                 using var tran = conn.BeginTransaction();
 
-                // 1) Update Account table - only username
                 var cmdAcc = new OleDbCommand(
                     "UPDATE Account SET username = ? WHERE LoginID = ?", conn, tran);
                 cmdAcc.Parameters.AddWithValue("?", tbxUsername.Text.Trim());
                 cmdAcc.Parameters.AddWithValue("?", _loginId);
                 cmdAcc.ExecuteNonQuery();
 
-                // 2) Check if Information record exists
                 var checkCmd = new OleDbCommand(
                     "SELECT COUNT(*) FROM Information WHERE LoginID = ?", conn, tran);
                 checkCmd.Parameters.AddWithValue("?", _loginId);
                 int infoCount = (int)checkCmd.ExecuteScalar();
 
-                // 3) Update or Insert Information
                 if (infoCount > 0)
                 {
-                    // Update existing record
                     var cmdInfo = new OleDbCommand(
                         "UPDATE Information SET Name = ?, Email = ?, Address = ?, PhoneNumber = ?, EmergencyContact = ?, ProfileImagePath = ? WHERE LoginID = ?", 
                         conn, tran);
@@ -158,7 +154,6 @@ namespace ClinicManagementSystemFinal
                 }
                 else
                 {
-                    // Insert new record
                     var cmdInfo = new OleDbCommand(
                         "INSERT INTO Information (LoginID, Name, Email, Address, PhoneNumber, EmergencyContact, ProfileImagePath) VALUES (?, ?, ?, ?, ?, ?, ?)", 
                         conn, tran);
